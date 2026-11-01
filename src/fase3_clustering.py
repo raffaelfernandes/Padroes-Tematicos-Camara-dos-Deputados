@@ -254,8 +254,7 @@ def final(a) -> None:
     textos = u["texto_modelo"].fillna("").to_numpy()
     docs = textos[idx_fit].tolist()
     tag = f"{a.modelo}_nn{a.nn}_mcs{a.mcs}_{a.metodo}_ms{a.min_samples or 'padrao'}"
-    if a.reatribuicao == "original":
-        tag += "_ro"          # outliers reatribuídos no espaço original (sufixo para não sobrescrever a versão antiga)
+    tag += {"knn": "_rk", "original": "_ro", "umap": ""}[a.reatribuicao]   # sufixo por método de reatribuição
 
     # O UMAP já está em cache: o BERTopic recebe os vetores reduzidos e não reduz de novo.
     tm = BERTopic(umap_model=BaseDimensionalityReduction(),
@@ -268,7 +267,33 @@ def final(a) -> None:
     hdb_fit, _ = tm.fit_transform(docs, embeddings=red)
     hdb_fit = np.array(hdb_fit)
     sim_out = np.full(len(idx_fit), np.nan)
-    if (hdb_fit == -1).any() and a.reatribuicao == "original":
+    conf_out = np.full(len(idx_fit), np.nan)
+    if (hdb_fit == -1).any() and a.reatribuicao == "knn":
+        # Voto dos k vizinhos mais próximos do núcleo do HDBSCAN, no espaço ORIGINAL dos embeddings,
+        # com peso igual à similaridade. Na comparação de 01/11 (BERTimbau), foi melhor que o centroide
+        # no espaço original e que o reduce_outliers no UMAP em todas as medidas, inclusive nas apensadas,
+        # que não dependem do codTema.
+        En = emb[idx_fit] / np.linalg.norm(emb[idx_fit], axis=1, keepdims=True)
+        nucleo = np.nonzero(hdb_fit != -1)[0]
+        Ec, yc = En[nucleo], hdb_fit[nucleo]
+        T = int(yc.max()) + 1
+        io = np.nonzero(hdb_fit == -1)[0]
+        k = a.k_vizinhos
+        novos_fit = hdb_fit.copy()
+        for s0 in range(0, len(io), 1000):
+            bloco = io[s0:s0 + 1000]
+            S = En[bloco] @ Ec.T
+            nb = np.argpartition(-S, k, axis=1)[:, :k]
+            w = np.take_along_axis(S, nb, 1)
+            M = np.zeros((len(bloco), T))
+            np.add.at(M, (np.repeat(np.arange(len(bloco)), k), yc[nb].ravel()), w.ravel())
+            novos_fit[bloco] = M.argmax(1)
+            conf_out[bloco] = M.max(1) / M.sum(1)          # fração (ponderada) dos votos no tópico escolhido
+        Cn = np.vstack([En[nucleo][yc == t].mean(0) for t in range(T)])
+        Cn /= np.linalg.norm(Cn, axis=1, keepdims=True)
+        sim_out[io] = (En[io] * Cn[novos_fit[io]]).sum(1)  # similaridade com o centroide do tópico escolhido
+        tm.update_topics(docs, topics=novos_fit.tolist(), vectorizer_model=vetorizador("topicos"))
+    elif (hdb_fit == -1).any() and a.reatribuicao == "original":
         # Cada outlier vai para o tópico cujo centroide (média do núcleo do HDBSCAN) é o mais
         # parecido no espaço ORIGINAL dos embeddings. A anotação de 100 outliers mostrou que a
         # escolha no espaço do UMAP (padrão do reduce_outliers) erra mais.
@@ -305,7 +330,9 @@ def final(a) -> None:
     topico_u[idx_fit] = novos_fit
     hdb_u[idx_fit] = hdb_fit
     origem_u[idx_fit] = np.where(hdb_fit != -1, "hdbscan", "reduce_outliers")
-    sim_u[idx_fit] = sim_out          # similaridade do outlier com o tópico recebido (só na reatribuição "original")
+    sim_u[idx_fit] = sim_out          # similaridade do outlier com o centroide do tópico recebido
+    conf_u = np.full(len(u), np.nan)
+    conf_u[idx_fit] = conf_out        # consenso dos vizinhos (só na reatribuição "knn")
 
     # Formulaicas: centroide mais próximo no espaço original dos embeddings
     topicos_validos = sorted(t for t in set(novos_fit) if t != -1)
@@ -344,6 +371,7 @@ def final(a) -> None:
     out["topico"] = topico_u[mapa]
     out["origem_topico"] = origem_u[mapa]
     out["sim_centroide"] = sim_u[mapa]
+    out["consenso_knn"] = conf_u[mapa]
     out["topico_alt_ctfidf"] = alt_u[mapa]
 
     pct_antes = float((hdb_u[mapa][~eh_form] == -1).mean())
@@ -429,9 +457,11 @@ def main() -> None:
     f.add_argument("--limiar", type=float, default=0.0,
                    help="similaridade mínima para o reduce_outliers reatribuir um outlier")
     f.add_argument("--k-reduzido", type=int, default=32)
-    f.add_argument("--reatribuicao", choices=["original", "umap"], default="original",
-                   help='"original": centroide do núcleo no espaço dos embeddings (padrão desde 01/11); '
-                        '"umap": reduce_outliers do BERTopic no espaço reduzido (versão antiga)')
+    f.add_argument("--reatribuicao", choices=["knn", "original", "umap"], default="knn",
+                   help='"knn" (padrão): voto dos k vizinhos do núcleo no espaço original (sufixo _rk); '
+                        '"original": centroide do núcleo no espaço original (_ro); '
+                        '"umap": reduce_outliers do BERTopic no espaço reduzido (sem sufixo, versão antiga)')
+    f.add_argument("--k-vizinhos", type=int, default=15, help="vizinhos do núcleo que votam na reatribuição knn")
     a = ap.parse_args()
     grade(a) if a.cmd == "grade" else final(a)
 

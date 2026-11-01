@@ -14,7 +14,7 @@ sys.path.insert(0, "src")
 from fase4_avaliacao import Gabarito, entropia_norm, n_para_cobrir
 
 P = Path("data/processed")
-MODELO = "bertimbau_nn30_mcs100_eom_ms10"
+MODELO = "bertimbau_nn30_mcs100_eom_ms10_rk"
 COL = "topico_alt_ctfidf"          # versão principal: formulaicas pelo c-TF-IDF
 
 base = pd.read_parquet(sorted(P.glob("base_fase2_*.parquet"))[-1],

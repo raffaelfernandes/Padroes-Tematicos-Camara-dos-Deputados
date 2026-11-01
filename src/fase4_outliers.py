@@ -123,6 +123,7 @@ def metricas(a) -> None:
     linhas.append({"grupo": "outliers pelo centroide no espaço original", "n": int(out.sum()), "P_nucleo": round(P_orig, 3)})
     qual = pd.DataFrame(linhas)
 
+    sim_atrib = sim_atrib.astype(float)
     faixas = pd.qcut(sim_atrib, 5, labels=["Q1 (menor)", "Q2", "Q3", "Q4", "Q5 (maior)"])
     por_sim = (pd.DataFrame({"faixa": faixas, "sim": sim_atrib, "P": P[idx_out]})
                  .groupby("faixa", observed=True).agg(n=("P", "size"), sim_min=("sim", "min"),
