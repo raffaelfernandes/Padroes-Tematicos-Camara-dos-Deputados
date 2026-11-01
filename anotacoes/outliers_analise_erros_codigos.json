@@ -1,0 +1,21 @@
+{
+  "motivo": {
+    "H": "híbrida: mistura assuntos que estariam em tópicos diferentes",
+    "N": "nicho: assunto específico e claro, sem tópico próprio",
+    "G": "genérica: ementa ampla ou vaga, assunto difícil de definir",
+    "B": "borda: o assunto é claramente de um tópico existente",
+    "O": "outro (explicar em obs)"
+  },
+  "reatribuicao": {
+    "A": "adequada: o tópico atribuído descreve o assunto principal",
+    "P": "parcial: descreve só uma parte do assunto ou um assunto vizinho",
+    "I": "inadequada: o tópico não tem relação com o assunto"
+  },
+  "outro_seria_melhor": {
+    "S": "sim",
+    "N": "não"
+  },
+  "modelo": "bertimbau_nn30_mcs100_eom_ms10",
+  "seed": 130,
+  "n": 100
+}

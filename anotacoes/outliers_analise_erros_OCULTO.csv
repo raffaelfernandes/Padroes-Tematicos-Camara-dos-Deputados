@@ -1,0 +1,101 @@
+﻿n,id,temas_oficiais,n_temas,sim_atribuido,sim_outro,P_nucleo
+1,2190420,"Administração Pública; Direito Penal e Processual Penal; Política, Partidos e Eleições",3,0.891,0.904,0.953
+2,2191050,Meio Ambiente e Desenvolvimento Sustentável,1,0.928,0.923,0.588
+3,2192335,"Viação, Transporte e Mobilidade",1,0.904,0.921,0.007
+4,2192361,Direito e Justiça,1,0.787,0.768,0.054
+5,2197234,Direitos Humanos e Minorias; Finanças Públicas e Orçamento; Saúde,3,0.915,0.933,0.923
+6,2199285,Cidades e Desenvolvimento Urbano; Meio Ambiente e Desenvolvimento Sustentável,2,0.87,0.891,0.221
+7,2207627,Defesa e Segurança; Direito Penal e Processual Penal; Finanças Públicas e Orçamento,3,0.922,0.932,0.946
+8,2208396,Educação,1,0.93,0.938,0.989
+9,2210861,Economia,1,0.913,0.907,0.116
+10,2211940,Administração Pública,1,0.918,0.916,0.48
+11,2218309,Comunicações; Defesa e Segurança; Direitos Humanos e Minorias,3,0.921,0.928,0.79
+12,2222305,Finanças Públicas e Orçamento; Previdência e Assistência Social,2,0.948,0.947,0.956
+13,2231042,Direito Penal e Processual Penal; Direitos Humanos e Minorias,2,0.953,0.938,0.969
+14,2231979,Defesa e Segurança; Meio Ambiente e Desenvolvimento Sustentável,2,0.961,0.941,0.491
+15,2236387,Defesa e Segurança; Trabalho e Emprego,2,0.854,0.894,0.22
+16,2236607,"Direito Penal e Processual Penal; Viação, Transporte e Mobilidade",2,0.934,0.926,0.202
+17,2243099,"Energia, Recursos Hídricos e Minerais; Saúde",2,0.865,0.876,0.918
+18,2247984,"Agricultura, Pecuária, Pesca e Extrativismo; Direitos Humanos e Minorias; Finanças Públicas e Orçamento; Saúde",4,0.931,0.913,0.99
+19,2249982,Finanças Públicas e Orçamento; Previdência e Assistência Social; Saúde,3,0.93,0.94,0.89
+20,2252017,"Agricultura, Pecuária, Pesca e Extrativismo; Economia",2,0.892,0.915,0.045
+21,2252640,"Agricultura, Pecuária, Pesca e Extrativismo; Defesa e Segurança",2,0.94,0.934,0.253
+22,2254180,Direito e Defesa do Consumidor; Economia,2,0.905,0.905,0.132
+23,2255393,"Indústria, Comércio e Serviços; Meio Ambiente e Desenvolvimento Sustentável; Relações Internacionais e Comércio Exterior; Viação, Transporte e Mobilidade",4,0.877,0.886,0.982
+24,2256700,Defesa e Segurança; Trabalho e Emprego,2,0.899,0.934,0.979
+25,2259355,Educação; Meio Ambiente e Desenvolvimento Sustentável,2,0.924,0.915,0.932
+26,2260774,Defesa e Segurança; Direito Penal e Processual Penal; Direitos Humanos e Minorias,3,0.949,0.957,0.945
+27,2264364,Educação; Saúde; Trabalho e Emprego,3,0.924,0.891,0.168
+28,2269048,"Finanças Públicas e Orçamento; Viação, Transporte e Mobilidade",2,0.831,0.867,0.142
+29,2270898,Educação; Saúde; Trabalho e Emprego,3,0.927,0.928,0.993
+30,2272018,Administração Pública; Defesa e Segurança,2,0.883,0.896,0.487
+31,2274434,Trabalho e Emprego,1,0.9,0.923,0.194
+32,2279540,Direitos Humanos e Minorias; Trabalho e Emprego,2,0.903,0.91,0.64
+33,2287779,Administração Pública; Direitos Humanos e Minorias,2,0.923,0.932,0.533
+34,2292892,Administração Pública; Saúde,2,0.945,0.93,0.993
+35,2302282,Administração Pública; Direitos Humanos e Minorias; Saúde,3,0.909,0.906,0.991
+36,2303630,Administração Pública; Cidades e Desenvolvimento Urbano; Direito Civil e Processual Civil; Estrutura Fundiária,4,0.912,0.9,0.57
+37,2305188,Meio Ambiente e Desenvolvimento Sustentável,1,0.9,0.89,0.932
+38,2307913,Direito Penal e Processual Penal; Direitos Humanos e Minorias,2,0.878,0.909,0.907
+39,2315062,Direitos Humanos e Minorias; Meio Ambiente e Desenvolvimento Sustentável,2,0.925,0.931,0.947
+40,2318458,Defesa e Segurança,1,0.93,0.923,0.174
+41,2318975,"Viação, Transporte e Mobilidade",1,0.808,0.834,0.004
+42,2333545,Direitos Humanos e Minorias; Saúde,2,0.883,0.919,0.987
+43,2336847,"Energia, Recursos Hídricos e Minerais; Finanças Públicas e Orçamento",2,0.921,0.931,0.943
+44,2348638,"Direitos Humanos e Minorias; Viação, Transporte e Mobilidade",2,0.936,0.951,0.269
+45,2349318,Saúde,1,0.817,0.813,0.99
+46,2350832,Defesa e Segurança; Direito Penal e Processual Penal; Direitos Humanos e Minorias,3,0.954,0.931,0.945
+47,2357106,Esporte e Lazer,1,0.884,0.897,0.0
+48,2357634,Defesa e Segurança; Direito Penal e Processual Penal; Direitos Humanos e Minorias,3,0.908,0.921,0.975
+49,2362842,Homenagens e Datas Comemorativas,1,0.894,0.871,0.867
+50,2365294,"Energia, Recursos Hídricos e Minerais",1,0.897,0.915,0.683
+51,2371529,"Finanças Públicas e Orçamento; Indústria, Comércio e Serviços; Saúde",3,0.94,0.926,0.967
+52,2377521,Direitos Humanos e Minorias; Saúde,2,0.918,0.943,0.99
+53,2379949,Direito Civil e Processual Civil,1,0.91,0.901,0.114
+54,2380437,Administração Pública; Direitos Humanos e Minorias; Economia; Educação,4,0.914,0.944,0.655
+55,2389979,"Indústria, Comércio e Serviços; Viação, Transporte e Mobilidade",2,0.901,0.907,0.022
+56,2397843,"Cidades e Desenvolvimento Urbano; Defesa e Segurança; Homenagens e Datas Comemorativas; Indústria, Comércio e Serviços",4,0.885,0.872,0.326
+57,2398296,"Agricultura, Pecuária, Pesca e Extrativismo; Estrutura Fundiária; Meio Ambiente e Desenvolvimento Sustentável",3,0.867,0.911,0.015
+58,2406807,Administração Pública; Saúde,2,0.899,0.95,0.944
+59,2416052,Administração Pública; Educação; Finanças Públicas e Orçamento,3,0.916,0.938,0.996
+60,2423157,Direito Penal e Processual Penal; Direitos Humanos e Minorias,2,0.892,0.876,0.969
+61,2428390,"Arte, Cultura e Religião",1,0.939,0.935,0.036
+62,2433030,Educação,1,0.907,0.918,0.989
+63,2435283,"Direitos Humanos e Minorias; Viação, Transporte e Mobilidade",2,0.948,0.944,0.949
+64,2440573,Direitos Humanos e Minorias; Trabalho e Emprego,2,0.892,0.902,0.941
+65,2447780,Defesa e Segurança; Direito Penal e Processual Penal; Direitos Humanos e Minorias,3,0.932,0.918,0.975
+66,2450048,"Defesa e Segurança; Indústria, Comércio e Serviços; Viação, Transporte e Mobilidade",3,0.849,0.887,0.082
+67,2457152,Direito e Justiça; Direitos Humanos e Minorias,2,0.861,0.877,0.171
+68,2472453,Administração Pública; Esporte e Lazer,2,0.903,0.888,0.892
+69,2482280,Administração Pública; Direito Penal e Processual Penal,2,0.926,0.926,0.951
+70,2484087,Direitos Humanos e Minorias; Saúde,2,0.92,0.886,0.988
+71,2486055,Administração Pública; Direitos Humanos e Minorias; Previdência e Assistência Social; Saúde; Trabalho e Emprego,5,0.903,0.892,0.991
+72,2487498,"Direito e Defesa do Consumidor; Energia, Recursos Hídricos e Minerais",2,0.884,0.918,0.704
+73,2494389,Direitos Humanos e Minorias; Saúde,2,0.922,0.895,0.988
+74,2497079,Direitos Humanos e Minorias; Homenagens e Datas Comemorativas; Saúde,3,0.892,0.884,0.958
+75,2515007,"Cidades e Desenvolvimento Urbano; Comunicações; Direitos Humanos e Minorias; Viação, Transporte e Mobilidade",4,0.904,0.896,0.936
+76,2525183,Administração Pública; Estrutura Fundiária,2,0.884,0.932,0.039
+77,2544926,Direitos Humanos e Minorias; Previdência e Assistência Social,2,0.932,0.93,0.268
+78,2554642,Direitos Humanos e Minorias; Educação,2,0.932,0.92,0.993
+79,2557207,"Administração Pública; Economia; Energia, Recursos Hídricos e Minerais",3,0.912,0.918,0.453
+80,2566887,"Direitos Humanos e Minorias; Finanças Públicas e Orçamento; Indústria, Comércio e Serviços; Trabalho e Emprego",4,0.948,0.938,0.968
+81,2572415,Meio Ambiente e Desenvolvimento Sustentável; Turismo,2,0.918,0.923,0.401
+82,2573384,Defesa e Segurança; Direito Penal e Processual Penal,2,0.961,0.939,0.957
+83,2584000,Administração Pública; Direitos Humanos e Minorias; Finanças Públicas e Orçamento,3,0.905,0.923,0.302
+84,2587750,Direitos Humanos e Minorias,1,0.894,0.904,0.324
+85,2598959,"Administração Pública; Direito Penal e Processual Penal; Política, Partidos e Eleições; Previdência e Assistência Social",4,0.938,0.947,0.953
+86,2599306,"Indústria, Comércio e Serviços; Meio Ambiente e Desenvolvimento Sustentável",2,0.937,0.904,0.956
+87,2599551,"Cidades e Desenvolvimento Urbano; Indústria, Comércio e Serviços",2,0.876,0.927,0.0
+88,2599629,"Administração Pública; Arte, Cultura e Religião; Direitos Humanos e Minorias; Educação",4,0.908,0.922,0.384
+89,2600627,Administração Pública; Defesa e Segurança,2,0.93,0.944,0.888
+90,2600979,"Direito e Defesa do Consumidor; Economia; Indústria, Comércio e Serviços",3,0.886,0.914,0.099
+91,2602388,Direito Penal e Processual Penal; Direitos Humanos e Minorias,2,0.949,0.949,0.969
+92,2603619,Defesa e Segurança; Direito Constitucional; Previdência e Assistência Social; Trabalho e Emprego,4,0.927,0.936,0.979
+93,2607684,Administração Pública; Direitos Humanos e Minorias; Finanças Públicas e Orçamento; Saúde,4,0.923,0.942,0.987
+94,2609049,Defesa e Segurança; Direitos Humanos e Minorias,2,0.928,0.929,0.952
+95,2627551,Defesa e Segurança; Direito Penal e Processual Penal; Saúde,3,0.956,0.943,0.964
+96,2629979,"Administração Pública; Arte, Cultura e Religião; Esporte e Lazer; Finanças Públicas e Orçamento",4,0.918,0.934,0.94
+97,2631222,Administração Pública; Direito e Justiça,2,0.922,0.925,0.92
+98,2640569,Direitos Humanos e Minorias; Saúde,2,0.923,0.934,0.99
+99,2640728,Direitos Humanos e Minorias; Educação; Finanças Públicas e Orçamento,3,0.92,0.931,0.595
+100,2641186,"Indústria, Comércio e Serviços",1,0.902,0.923,0.036
