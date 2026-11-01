@@ -127,7 +127,7 @@ def metricas(a) -> None:
     faixas = pd.qcut(sim_atrib, 5, labels=["Q1 (menor)", "Q2", "Q3", "Q4", "Q5 (maior)"])
     por_sim = (pd.DataFrame({"faixa": faixas, "sim": sim_atrib, "P": P[idx_out]})
                  .groupby("faixa", observed=True).agg(n=("P", "size"), sim_min=("sim", "min"),
-                                                       sim_max=("sim", "max"), P_nucleo=("P", "mean")).round(3).reset_index())
+                                                       sim_max=("sim", "max"), P_nucleo=("P", "mean")).astype(float).round(3).reset_index())
 
     # Perfil
     d["outlier"] = out

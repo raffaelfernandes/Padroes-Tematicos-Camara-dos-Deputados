@@ -105,5 +105,84 @@ out = {"modelo": MODELO, "n_corpus": int(len(d)), "n_com_tema": int(len(dt)), "n
        "apensadas": {"pares": int(len(pares)), "mesmo_topico": round(mesmo, 4), "acaso": round(acaso, 4)},
        "dispersao": {"n": int((dt["P"] < dt["P_acaso"]).sum()), "pct": round(float((dt["P"] < dt["P_acaso"]).mean()), 4)},
        "bcubed": bc, "por_tipo": pt}
+# ---------------- Extras de 01/11: explorador, pares de temas, outliers ----------------
+# Contagens tópico x tema (para o explorador: fração do tema em cada tópico e do tópico em cada tema)
+out["matriz_n"] = {str(tp): [int(x["temas"].map(lambda s: cod[tn] in s).sum()) for tn in ordem_temas]
+                   for tp, x in dt.groupby(COL)}
+out["n_por_topico"] = {str(k): int(v) for k, v in dt[COL].value_counts().items()}
+
+# Pares de temas: o CEDI os classifica juntos (mesma proposição) e o modelo os põe no mesmo tópico,
+# cada um comparado ao acaso (lift). Pares de proposições distintas.
+N = len(dt)
+Mt = pd.crosstab(longo[COL], longo["temas"])                       # tópico x tema (contagens)
+temas_cod = list(Mt.columns)
+Na = Mt.sum(0).to_numpy().astype(float)
+TT = np.zeros((len(temas_cod), len(temas_cod)))
+idx = {c: i for i, c in enumerate(temas_cod)}
+for s_ in dt["temas"]:
+    l = [idx[c] for c in s_]
+    for i in l:
+        for j in l:
+            TT[i, j] += 1                                            # proposições com os dois temas
+mm = Mt.to_numpy().astype(float)
+S2 = float(((dt[COL].value_counts() / N) ** 2).sum())
+co_top = mm.T @ mm                                                   # pares (i, j) no mesmo tópico, i com a e j com b
+pares_out = []
+for i in range(len(temas_cod)):
+    for j in range(i + 1, len(temas_cod)):
+        if Na[i] < 300 or Na[j] < 300:
+            continue
+        nab = TT[i, j]
+        lift_cedi = nab * N / (Na[i] * Na[j])
+        lift_mod = (co_top[i, j] - nab) / ((Na[i] * Na[j] - nab) * S2)
+        pares_out.append({"tema_a": nome_tema[int(temas_cod[i])], "tema_b": nome_tema[int(temas_cod[j])],
+                          "n_a": int(Na[i]), "n_b": int(Na[j]), "n_juntos": int(nab),
+                          "lift_cedi": round(float(lift_cedi), 3), "lift_modelo": round(float(lift_mod), 3)})
+out["pares"] = pares_out
+
+# Comparação das três formas de reatribuição (BCubed, concordância dos outliers com o núcleo, apensadas)
+def resumo_versao(sufixo):
+    tv = pd.read_parquet(P / f"fase3/topicos_{MODELO.replace('_rk', '')}{sufixo}.parquet").drop(columns=["id_texto_unico"])
+    dv = base[["id", "idPropPrincipal"]].merge(tv, on="id")
+    dv["temas"] = dv["id"].map(conj)
+    dtv = dv[dv["temas"].notna()].reset_index(drop=True)
+    gv = Gabarito(list(dtv["temas"]))
+    Pv, Rv = gv.por_item(dtv[COL].to_numpy())
+    top = dtv[COL].to_numpy(); org = dtv["origem_topico"].to_numpy(); nucv = org == "hdbscan"; outv = org == "reduce_outliers"
+    T = int(top.max()) + 1
+    C = np.zeros((T, gv.n_sig)); np.add.at(C, (top[nucv], gv.sig[nucv]), 1); A = C @ gv.comp.T
+    pn = float((A[top[outv], gv.sig[outv]] / C.sum(1)[top[outv]]).mean())
+    tpv = dv.set_index("id")
+    pv = dv[dv["idPropPrincipal"].notna() & dv["idPropPrincipal"].isin(tpv.index)]
+    ap = float((tpv.loc[pv["id"], COL].to_numpy() == tpv.loc[pv["idPropPrincipal"].astype(int), COL].to_numpy()).mean())
+    return {"P": round(float(Pv.mean()), 3), "R": round(float(Rv.mean()), 3), "P_nucleo_outliers": round(pn, 3), "apensadas": round(ap, 4)}
+out["reatribuicao"] = [{"metodo": m, "ordem": i + 1, **resumo_versao(sfx)} for i, (m, sfx) in enumerate(
+    [("reduce_outliers no espaço do UMAP", ""), ("Centroide no espaço original", "_ro"), ("15 vizinhos no espaço original", "_rk")])]
+
+# Perfil dos outliers e qualidade por faixa de similaridade (saídas do fase4_outliers.py)
+F4 = P / "fase4"
+out["outliers_perfil"] = {dim: pd.read_csv(F4 / f"outliers_perfil_{dim}_{MODELO}.csv").to_dict("records")
+                          for dim in ("n_temas", "tipo", "ano", "tema")}
+out["outliers_reatrib"] = pd.read_csv(F4 / f"outliers_reatribuicao_{MODELO}.csv").to_dict("records")
+out["outliers_similaridade"] = pd.read_csv(F4 / f"outliers_por_similaridade_{MODELO}.csv").to_dict("records")
+
+# Anotação dos 100 outliers
+an = pd.read_csv("anotacoes/outliers_analise_erros.csv", encoding="utf-8-sig")
+for c in ("motivo", "reatribuicao", "outro_seria_melhor"):
+    an[c] = an[c].astype(str).str.strip().str.upper().str[:1]
+def wilson(k, n, z=1.96):
+    p_ = k / n; den = 1 + z * z / n; c_ = (p_ + z * z / (2 * n)) / den
+    m_ = z * np.sqrt(p_ * (1 - p_) / n + z * z / (4 * n * n)) / den
+    return max(0.0, c_ - m_), min(1.0, c_ + m_)
+anot = []
+for perg, cods in (("motivo", [("N", "Nicho"), ("H", "Híbrida"), ("B", "Borda"), ("G", "Ementa vaga")]),
+                   ("reatribuicao", [("A", "Adequada"), ("P", "Parcial"), ("I", "Inadequada")])):
+    for k, (c, r) in enumerate(cods):
+        n_ = int((an[perg] == c).sum()); lo, hi = wilson(n_, len(an))
+        anot.append({"pergunta": perg, "codigo": c, "rotulo": r, "ordem": k + 1, "n": n_,
+                     "pct": round(n_ / len(an), 3), "lo": round(lo, 3), "hi": round(hi, 3)})
+out["anotacao"] = anot
+out["anotacao_n"] = int(len(an))
+
 (P / "fase4/painel_dados.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
 print("ok", len(json.dumps(out)) // 1024, "KB")
