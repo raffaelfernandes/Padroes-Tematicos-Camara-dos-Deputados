@@ -54,7 +54,7 @@ O teste deve imprimir `True` e o nome da GPU. Máquina usada: RTX 3050 Laptop (6
 | 3. Clustering | `fase3_clustering.py` | embeddings e base da Fase 2 | `fase3/runs_log.csv`, `umap_*.npy`, modelo, `topicos_*.parquet`, `leitura_topicos_*.md` | G3 |
 | 4. Outliers | `fase4_outliers.py` | base, `temas_long`, tópicos e embeddings | perfil e qualidade da reatribuição, amostra de anotação em `anotacoes/`, resumo da anotação | G4 |
 | 4. Avaliação | `fase4_avaliacao.py` | base da Fase 2, `temas_long`, tópicos da Fase 3 | `fase4/relatorio_fase4.md`, `bcubed_resultados.csv`, fragmentação, convergência, dispersão, heatmap, `casos_*.md` | G4 |
-| 5. RQ1 e RQ2 | a fazer | tópicos, datas e partidos | | G5 |
+| 5. RQ1 e RQ2 | `fase5_rqs.py` | base da Fase 2 e tópicos | `fase5/relatorio_fase5.md`, `rq1_*.csv`, `rq1_serie_mensal_*.csv`, `rq2_*_leg56/57.csv`, `rq2_concentracao.csv` | G5 |
 
 ## Comandos em ordem
 
@@ -119,7 +119,23 @@ O teste deve imprimir `True` e o nome da GPU. Máquina usada: RTX 3050 Laptop (6
    uv run python src/fase4_outliers.py metricas --base data/processed/base_fase2_20261101.parquet --temas data/processed/temas_long_20261027.parquet --topicos data/processed/fase3/topicos_bertimbau_nn30_mcs100_eom_ms10_rk.parquet
    uv run python src/fase4_outliers.py resumir --anotada anotacoes/outliers_analise_erros.csv
    ```
-   Não rode `amostrar` de novo: a amostra já foi anotada. Códigos e regras de decisão em `anotacoes/outliers_analise_erros_codigos.json` e no documento de cuidados da escrita.
+   Não rode `amostrar` de novo: a amostra já foi anotada.
+   Teste de robustez com mais de um tópico por proposição (BCubed estendido com sobreposição):
+   ```powershell
+   uv run python src/fase4_multitopico.py --base data/processed/base_fase2_20261101.parquet --temas data/processed/temas_long_20261027.parquet --topicos data/processed/fase3/topicos_bertimbau_nn30_mcs100_eom_ms10_rk.parquet
+   ``` Códigos e regras de decisão em `anotacoes/outliers_analise_erros_codigos.json` e no documento de cuidados da escrita.
+
+### Fase 5: perguntas de pesquisa
+
+11. **RQ1 (picos pré-eleitorais) e RQ2 (assinaturas partidárias)**, cada uma em três versões: todas as proposições, só o núcleo do HDBSCAN e sem os dois autores de produção em massa.
+   ```powershell
+   uv run python src/fase5_rqs.py --base data/processed/base_fase2_20261101.parquet --topicos data/processed/fase3/topicos_bertimbau_nn30_mcs100_eom_ms10_rk.parquet
+   ```
+   Figuras da monografia (PDF e PNG em `outputs/figs/`; precisa de `uv add matplotlib` uma vez):
+   ```powershell
+   uv run python src/fase5_figuras.py
+   ```
+   RQ1: fração dos deputados ativos em abril a setembro de 2022 e 2026 que propuseram sobre cada tópico, contra os mesmos meses do ano anterior (Fisher com Benjamini-Hochberg) e contra a média dos anos sem eleição geral (sem 2020); 2024 contra 2023 como contraste municipal. RQ2: log-odds com prior de Dirichlet (Monroe, Colaresi e Quinn, 2008), partido contra o resto, por legislatura, com peso limitado por deputado (cada proposição pesa min(1, C/n), C = percentil 90 da produção por deputado). Assinatura partidária exige pelo menos 3 deputados no tópico e nenhum com mais de 50%.
 
 ### Extras
 
