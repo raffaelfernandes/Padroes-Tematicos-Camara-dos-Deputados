@@ -1,0 +1,311 @@
+% ============================================================
+% resultados.tex  (rascunho de 03/11/2026)
+% Entra no main.tex com \input{resultados}, depois da Metodologia.
+% As figuras ficam em figs/ (copiar de code/outputs/figs/*.pdf).
+% A figura da 56ª legislatura (fig_rq2_heatmap_leg56.pdf) vai para um apêndice.
+% Todos os números vêm da versão final (BERTimbau Large, nn30,
+% mcs100, eom, min_samples 10, reatribuição pelos 15 vizinhos).
+% ============================================================
+
+\section{Resultados}
+\label{sec:resultados}
+
+Os resultados seguem a ordem da metodologia: primeiro, o que o modelo encontrou; depois, a comparação com a classificação oficial; em seguida, a análise dos \textit{outliers}; e, por fim, as respostas às duas perguntas de pesquisa.
+
+\subsection{Os tópicos encontrados}
+\label{subsec:res-topicos}
+
+O BERTimbau Large, na configuração escolhida, organizou as 40.006 proposições em 66 tópicos. O menor tem 146 proposições, o maior tem 2.750, e a mediana é de 462. Os tópicos são, em geral, mais específicos que os 32 temas oficiais: há tópicos próprios para o Código de Trânsito, a Lei Maria da Penha, o transtorno do espectro autista, as apostas de quota fixa, o FGTS e a denominação de rodovias. A Tabela~\ref{tab:maiores} mostra os dez maiores. Depois das rodadas de correção, nenhum tópico se formou pelo formato do texto, como caixa alta, fórmulas do articulado ou número da lei citada.
+
+\begin{table}[H]
+\centering
+\caption{Os dez maiores tópicos. Pureza: fração das proposições do tópico com o tema oficial mais comum}
+\label{tab:maiores}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r >{\raggedright\arraybackslash}p{4.8cm}}
+\toprule
+\textbf{Tópico (termos principais)} & \textbf{Proposições} & \textbf{Pureza} & \textbf{Tema oficial mais comum} \\
+\midrule
+COVID e calamidade pública (covid, coronavírus, calamidade) & 2.750 & 66\% & Saúde \\
+Código Penal: crimes e penas (penal, crime, pena) & 2.567 & 90\% & Direito Penal e Processual Penal \\
+Código Civil e de Processo Civil (civil, processo civil) & 1.643 & 73\% & Direito Civil e Processual Civil \\
+SUS (saúde, sistema único) & 1.446 & 97\% & Saúde \\
+Ambiente digital e crianças (internet, dados, crianças) & 1.416 & 41\% & Direitos Humanos e Minorias \\
+Violência doméstica (violência, mulher, Maria da Penha) & 1.386 & 90\% & Direitos Humanos e Minorias \\
+LDB e educação básica (educação, diretrizes e bases) & 1.334 & 96\% & Educação \\
+Datas comemorativas (dia, conscientização, semana) & 1.193 & 79\% & Homenagens e Datas Comemorativas \\
+Código de Trânsito (trânsito, veículos) & 1.064 & 88\% & Viação, Transporte e Mobilidade \\
+CLT e relações de trabalho (trabalho, consolidação) & 948 & 98\% & Trabalho e Emprego \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+A pureza mediana dos tópicos é de 83\%. Em cinco tópicos, nenhum tema oficial chega à metade das proposições: ambiente digital e crianças, polícias e bombeiros militares, obrigações a estabelecimentos comerciais, agricultura familiar e inovação e pesquisa. Como se verá na Seção~\ref{subsec:res-frag}, essa baixa pureza indica, em parte, agendas que a classificação oficial divide entre vários temas.
+
+\subsection{Comparação com a classificação oficial}
+\label{subsec:res-bcubed}
+
+A Tabela~\ref{tab:bcubed} mostra o BCubed estendido do modelo principal, dos dois modelos de comparação e das referências. A precisão do BERTimbau é de 0,747, contra 0,245 do agrupamento aleatório com os mesmos tamanhos de grupo: quando o modelo coloca duas proposições no mesmo tópico, elas compartilham algum tema oficial três vezes mais do que ao acaso. O recall é de 0,098, cerca de quatro vezes o do acaso (0,025), dentro de um teto de 0,435 que nenhuma partição ultrapassa. A combinação de precisão alta e recall baixo indica que os tópicos são, em sua maioria, partes de temas oficiais, e não misturas de temas.
+
+\begin{table}[H]
+\centering
+\caption{BCubed estendido contra o \texttt{codTema}}
+\label{tab:bcubed}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r r r}
+\toprule
+\textbf{Versão} & \textbf{Grupos} & \textbf{Precisão} & \textbf{Recall} & \textbf{F} \\
+\midrule
+BERTimbau Large (modelo principal) & 66 & 0,747 & 0,098 & 0,173 \\
+\quad reduzido a 32 tópicos & 33 & 0,569 & 0,112 & 0,187 \\
+\quad só o núcleo (\textit{outliers} como grupos unitários) & 13.601 & 0,893 & 0,055 & 0,104 \\
+multilingual-e5-large & 60 & 0,661 & 0,097 & 0,169 \\
+Serafim 335M & 72 & 0,707 & 0,090 & 0,159 \\
+\midrule
+Aleatório com os tamanhos do BERTimbau (5 sementes) & 66 & 0,245 & 0,025 & 0,045 \\
+Teto prático (tema oficial mais frequente) & 31 & 1,000 & 0,435 & 0,606 \\
+Um grupo só & 1 & 0,244 & 0,963 & 0,389 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Três outras leituras sustentam o resultado. Na versão reduzida a 32 tópicos, a precisão cai e o recall sobe pouco, o que mostra que a diferença em relação ao CEDI vai além da granularidade: mesmo com o mesmo número de grupos, o modelo junta os temas de outro jeito. Só o núcleo do HDBSCAN, sem os \textit{outliers}, chega a uma precisão de 0,893. E a validação que não usa o gabarito confirma a coerência: 66,6\% dos 10.439 pares de proposição apensada e principal caíram no mesmo tópico, contra 2,6\% esperados ao acaso. O e5 ficou abaixo do BERTimbau em precisão e nas apensadas (58,6\%), e o Serafim, apesar do espaço vetorial mais bem distribuído, ficou entre os dois (apensadas: 65,7\%). Por tipo de proposição, PL (0,749) e PLP (0,736) têm precisão parecida; as PEC, poucas e de assuntos variados, ficam em 0,612.
+
+\textbf{Múltiplos tópicos por proposição.} Permitir que uma proposição pertença a mais de um tópico quase não muda esse quadro (Tabela~\ref{tab:multitopico}). Com um terço das proposições em dois tópicos ou mais, o recall vai de 0,10 para 0,15 e a precisão cai de 0,74 para 0,69, com a vantagem sobre o acaso estável. A atribuição de um único tópico, portanto, não explica o recall baixo. Parte dos temas múltiplos do CEDI funciona como indexação transversal: Direitos Humanos e Minorias está em 11.076 proposições, mas é o único tema em só 4,8\% delas; e ter mais temas oficiais quase não torna o texto mais ambíguo (17\% das proposições com um tema ficam entre dois tópicos, contra 23\% das que têm quatro temas ou mais).
+
+\begin{table}[H]
+\centering
+\caption{BCubed estendido com mais de um tópico por proposição (amostra de 4.000 proposições)}
+\label{tab:multitopico}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r r r}
+\toprule
+\textbf{Tópicos extras (fração mínima dos votos dos vizinhos)} & \textbf{Com 2 ou mais} & \textbf{Precisão} & \textbf{Recall} & \textbf{Aleatório (P / R)} \\
+\midrule
+Nenhum (versão atual) & 0\% & 0,739 & 0,096 & 0,243 / 0,025 \\
+34\% dos votos & 5\% & 0,737 & 0,104 & 0,242 / 0,027 \\
+25\% dos votos & 20\% & 0,716 & 0,125 & 0,243 / 0,036 \\
+15\% dos votos & 33\% & 0,685 & 0,149 & 0,241 / 0,045 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Fragmentação e convergência}
+\label{subsec:res-frag}
+
+\textbf{Fragmentação.} Os temas amplos se espalham por muitos tópicos. Administração Pública precisa de 27 tópicos para reunir 80\% das suas proposições; Direitos Humanos e Minorias e Indústria, Comércio e Serviços, de 22; Finanças Públicas e Orçamento, de 21. No outro extremo, Homenagens e Datas Comemorativas e Política, Partidos e Eleições ficam concentrados em 5 tópicos, e Direito Penal e Processual Penal, em 9. A fragmentação acompanha o tipo de tema: os que descrevem uma área de atuação do Estado (administração, direitos, finanças) se dividem em subagendas, enquanto os que descrevem um gênero de proposição (homenagens) ou um código legal (penal, trânsito) ficam reunidos.
+
+\textbf{Convergência.} Na direção oposta, alguns tópicos juntam proposições que o CEDI separa. Para medir isso par a par, a Tabela~\ref{tab:pares} compara, para pares de temas, quanto o CEDI classifica a mesma proposição nos dois temas e quanto o modelo coloca proposições dos dois temas no mesmo tópico, ambos como razão sobre o acaso.
+
+\begin{table}[H]
+\centering
+\caption{Pares de temas em que o modelo e o CEDI discordam (razão sobre o acaso; 1 = acaso)}
+\label{tab:pares}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r}
+\toprule
+\textbf{Par de temas} & \textbf{CEDI} & \textbf{Modelo} \\
+\midrule
+\multicolumn{3}{l}{\textit{O modelo aproxima temas que o CEDI raramente classifica juntos}} \\
+Direito Penal e Processual Penal $\times$ Direito e Justiça & 1,40 & 2,65 \\
+Direito Penal e Processual Penal $\times$ Direitos Humanos e Minorias & 1,24 & 1,89 \\
+Comunicações $\times$ Direito Penal e Processual Penal & 1,09 & 1,73 \\
+Previdência e Assistência Social $\times$ Saúde & 1,06 & 1,70 \\
+Saúde $\times$ Trabalho e Emprego & 1,09 & 1,66 \\
+\midrule
+\multicolumn{3}{l}{\textit{O CEDI classifica juntos temas que o modelo separa}} \\
+Economia $\times$ Relações Internacionais e Comércio Exterior & 4,25 & 1,42 \\
+Estrutura Fundiária $\times$ Agricultura, Pecuária, Pesca e Extrativismo & 11,05 & 4,08 \\
+Economia $\times$ Turismo & 2,12 & 0,79 \\
+Arte, Cultura e Religião $\times$ Turismo & 6,82 & 2,98 \\
+Cidades e Desenvolvimento Urbano $\times$ Meio Ambiente & 2,52 & 1,11 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Os pares em que o modelo aproxima mais que o CEDI sugerem agendas que atravessam a classificação, como o Direito Penal usado para proteger grupos (Direitos Humanos) e para regular os meios digitais (Comunicações), e a saúde ligada a benefícios e à relação de trabalho. Nos pares que o CEDI junta e o modelo separa, uma explicação provável é que o CEDI acrescente um dos temas como contexto, como Economia ao lado de Relações Internacionais ou de Turismo, enquanto o texto da ementa trata de um só deles. Os estudos de caso da Seção~\ref{subsec:res-casos} examinam alguns desses padrões nas ementas. Apenas 7,0\% das proposições estão dispersas, isto é, dividem tema com o resto do seu tópico menos do que o acaso prevê.
+
+\subsection{Estudos de caso}
+\label{subsec:res-casos}
+
+% ------------------------------------------------------------
+% ESTUDOS DE CASO: escrever depois da escolha final.
+% Candidatos: tópico 44 (obrigações a estabelecimentos), tópico 7
+% (ambiente digital e crianças), fragmentação de Direitos Humanos,
+% planos de saúde em jun/2022 e tópico 54 (limitação).
+% ------------------------------------------------------------
+
+\subsection{Os \textit{outliers}}
+\label{subsec:res-outliers}
+
+O HDBSCAN deixou 33,1\% das ementas substantivas fora de qualquer tópico. A taxa é parecida nos três modelos de \textit{embedding} (29,9\% no e5 e 34,4\% no Serafim, em suas melhores configurações), embora os três espaços sejam muito diferentes: o cosseno médio entre pares aleatórios vai de 0,35 no Serafim a 0,91 no e5. Isso indica que os \textit{outliers} vêm, em boa parte, do próprio \textit{corpus}, e não de uma escolha de modelo.
+
+\textbf{Onde se concentram.} O comprimento da ementa e o número de palavras de conteúdo mudam pouco a taxa. O que muda é o tipo de proposição. A taxa sobe com o número de temas oficiais (26,7\% com um tema e 43,4\% com quatro ou mais); é alta em temas de nicho ou difusos, como Relações Internacionais (61\%), Educação (47\%) e Agricultura (47\%), e baixa em gêneros padronizados, como Homenagens (14\%) e Eleições (21\%); é de 52\% nas PEC; e cresce nos anos recentes, de 32\% em 2019 para 39\% em 2026, com o mínimo em 2020 (26\%), quando a pandemia concentrou a agenda.
+
+\textbf{Por que ficam de fora.} A análise de erros de 100 \textit{outliers} (Tabela~\ref{tab:anotacao}) mostrou que 82\% são casos difíceis por natureza: assuntos claros sem proposições parecidas suficientes para formar um tópico (nicho) ou proposições que misturam assuntos de tópicos diferentes (híbridas). Só 17\% tinham um tópico pronto para elas (borda), e quase nenhuma tem ementa vaga, o que confirma o tratamento das formulaicas.
+
+\begin{table}[H]
+\centering
+\caption{Análise de erros de 100 \textit{outliers} sorteados (intervalo de confiança de Wilson de 95\%)}
+\label{tab:anotacao}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r}
+\toprule
+\textbf{Categoria} & \textbf{Proporção} & \textbf{IC 95\%} \\
+\midrule
+\multicolumn{3}{l}{\textit{Por que ficou fora do núcleo}} \\
+Nicho: assunto claro e específico, sem tópico próprio & 44\% & 35\% a 54\% \\
+Híbrida: mistura assuntos de tópicos diferentes & 38\% & 29\% a 48\% \\
+Borda: o assunto pertence a um tópico existente & 17\% & 11\% a 26\% \\
+Ementa vaga & 1\% & 0\% a 5\% \\
+\midrule
+\multicolumn{3}{l}{\textit{Adequação do tópico recebido (reatribuição anterior, no espaço do UMAP)}} \\
+Adequado & 11\% & 6\% a 19\% \\
+Parcial & 48\% & 39\% a 58\% \\
+Inadequado & 41\% & 32\% a 51\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{O que há dentro dos \textit{outliers}.} Agrupando de novo só as proposições fora do núcleo, sem os grandes tópicos, metade delas forma 79 pequenos grupos (tamanho mínimo de 30 textos; mediana de 63 textos por grupo), e a outra metade (6.473 proposições, cerca de 16\% do \textit{corpus}) continua sem grupo. Os grupos são agendas reconhecíveis que ficaram abaixo do tamanho mínimo de 100 do modelo principal, chamadas aqui de \textit{nichos} (Tabela~\ref{tab:nichos}). Baixar esse tamanho no \textit{corpus} inteiro não as revela: com tamanho mínimo de 50, o modelo passou a ter de 106 a 127 tópicos e os \textit{outliers} ficaram entre 34\% e 40\%, porque o HDBSCAN usa o tamanho menor para dividir as agendas grandes, e os nichos continuam nas regiões entre elas. Com tamanho mínimo de 50 ou mais só nos \textit{outliers}, eles viram uma massa única, sem estrutura; com 15, aparecem 168 grupos e a fração sem grupo quase não muda (48,5\%).
+
+\begin{table}[H]
+\centering
+\caption{Alguns dos maiores nichos encontrados entre os \textit{outliers}, com o tema oficial mais comum e a pureza pelo CEDI}
+\label{tab:nichos}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r >{\raggedright\arraybackslash}p{4.4cm} r}
+\toprule
+\textbf{Nicho (descrição a partir dos termos principais)} & \textbf{Proposições} & \textbf{Tema oficial mais comum} & \textbf{Pureza} \\
+\midrule
+Consumo em plataformas digitais & 220 & Direito e Defesa do Consumidor & 69\% \\
+Telecomunicações e universalização dos serviços & 199 & Comunicações & 53\% \\
+Saúde mental e prevenção do suicídio & 176 & Saúde & 80\% \\
+Violência contra crianças e adolescentes & 166 & Direitos Humanos e Minorias & 83\% \\
+Entidades sem fins lucrativos & 148 & Finanças Públicas e Orçamento & 42\% \\
+Cultura e Pronac & 136 & Arte, Cultura e Religião & 94\% \\
+Veículos elétricos e postos de combustível & 133 & Energia, Recursos Hídricos e Minerais & 61\% \\
+Bens apreendidos e lavagem de dinheiro & 132 & Direito Penal e Processual Penal & 41\% \\
+Fibromialgia e síndromes & 129 & Saúde & 68\% \\
+Inteligência artificial e governança de dados & 129 & Administração Pública & 54\% \\
+Pessoas desaparecidas & 109 & Defesa e Segurança & 74\% \\
+Alimentação escolar (PNAE) & 103 & Educação & 89\% \\
+FIES & 96 & Educação & 98\% \\
+Banco Central e Pix & 89 & Economia & 89\% \\
+Povos indígenas e comunidades tradicionais & 82 & Direitos Humanos e Minorias & 83\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+O CEDI também agrupa os nichos. A pureza mediana dos 79 nichos pelo \texttt{codTema} é de 0,761, perto da dos 66 tópicos principais (0,832) e bem acima da de grupos sorteados com os mesmos tamanhos (0,311). Nas mesmas proposições, a precisão do BCubed é de 0,704 quando elas são agrupadas pelos nichos e de 0,630 quando ficam nos tópicos para onde a reatribuição as levou (0,278 ao acaso). Isso mostra um custo da reatribuição: ela espalha os nichos entre tópicos maiores, e, em média, só 36\% das proposições de um mesmo nicho foram para o mesmo tópico. As 176 proposições sobre saúde mental e prevenção do suicídio, por exemplo, foram distribuídas entre os tópicos do SUS (61), de prevenção à violência (23), de violência doméstica (21), de parto e recém-nascidos (17) e outros. Alguns grupos são, ao contrário, bordas de tópicos existentes: o maior deles, com 385 proposições de Direito Penal, é quase idêntico ao tópico penal principal, e dois outros reúnem proposições sobre o SUS. Poucos se formam pelo tipo de ato, como um de registros públicos e declarações de utilidade pública, com pureza de 25\%.
+
+O que continua sem grupo é a parte dos \textit{outliers} sem par, e o CEDI a classifica de forma diferente: essas proposições têm mais temas oficiais (2,29 em média, contra 2,08 no núcleo; 9,5\% com quatro temas ou mais, contra 5,9\%), o que combina com as híbridas da análise de erros. Os temas sobre-representados nesse resto são os amplos, como Administração Pública (1,40 vez a sua participação no \textit{corpus}), Economia (1,25) e Educação (1,24); os sub-representados são os gêneros padronizados, como Homenagens e Datas Comemorativas (0,34), e temas com vocabulário próprio, como Defesa do Consumidor (0,64). Somando as duas partes, os 33\% de \textit{outliers} se dividem em duas metades de cerca de 16\% do \textit{corpus} cada: agendas de nicho, abaixo da granularidade escolhida, e proposições que não se agrupam nem entre si.
+
+\textbf{Qualidade da reatribuição.} A anotação também avaliou a reatribuição padrão do BERTopic, que escolhe o tópico no espaço reduzido do UMAP. Quando esse espaço e o espaço original dos vetores escolhiam tópicos diferentes, a escolha do espaço original foi a preferida em 36 de 58 casos. Esse resultado levou à troca de método, e a Tabela~\ref{tab:reatrib} compara as três formas testadas. A reatribuição pelos 15 vizinhos do núcleo foi a melhor em todas as medidas, inclusive nas apensadas, que não dependem do gabarito. Na amostra anotada, ela troca 33 das 41 reatribuições inadequadas e mantém 9 das 11 adequadas.
+
+\begin{table}[H]
+\centering
+\caption{Três formas de reatribuir os \textit{outliers}. Concordância: fração do núcleo do tópico recebido que divide algum tema oficial com a proposição}
+\label{tab:reatrib}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r r r}
+\toprule
+\textbf{Forma de reatribuir} & \textbf{Precisão} & \textbf{Recall} & \textbf{Concordância} & \textbf{Apensadas} \\
+\midrule
+\texttt{reduce\_outliers} no espaço do UMAP & 0,734 & 0,086 & 0,641 & 66,5\% \\
+Centroide do núcleo no espaço original & 0,745 & 0,089 & 0,666 & 64,3\% \\
+15 vizinhos do núcleo no espaço original & 0,747 & 0,098 & 0,686 & 66,7\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+A reatribuição acerta bem mais que o acaso (concordância de 0,686, contra 0,248 com um tópico sorteado), mas fica abaixo do próprio núcleo (0,837). A similaridade com o tópico recebido funciona como medida de confiança: nos 20\% de \textit{outliers} mais parecidos com o seu tópico, a concordância é de 0,817, próxima à do núcleo; nos 20\% menos parecidos, é de 0,583. Por isso, as duas perguntas de pesquisa foram respondidas também só com o núcleo.
+
+\subsection{RQ1: a agenda antes das eleições}
+\label{subsec:res-rq1}
+
+Nenhum tópico ganhou peso de forma significativa nas duas eleições gerais. Na versão principal, só um tópico subiu em uma delas, e outro caiu (Tabela~\ref{tab:rq1}). A Figura~\ref{fig:rq1-razoes} mostra a razão entre a janela pré-eleitoral e o controle para todos os tópicos: se houvesse um padrão eleitoral, os tópicos se acumulariam no quadrante superior direito, que está vazio.
+
+\begin{table}[H]
+\centering
+\caption{RQ1: fração dos deputados ativos que apresentaram proposição do tópico, de abril a setembro, contra os mesmos meses do ano anterior (teste exato de Fisher com correção de Benjamini-Hochberg)}
+\label{tab:rq1}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X r r r r}
+\toprule
+\textbf{Tópico} & \textbf{Controle} & \textbf{Janela} & \textbf{Razão} & \textbf{\textit{p} ajustado} \\
+\midrule
+\multicolumn{5}{l}{\textit{2022 (controle: 2021)}} \\
+Planos de saúde & 4,8\% & 18,0\% & 3,74 & $< 0{,}001$ \\
+COVID e calamidade pública & 37,9\% & 8,4\% & 0,22 & $< 0{,}001$ \\
+\midrule
+\multicolumn{5}{l}{\textit{2026 (controle: 2025); nenhum tópico com \textit{p} ajustado abaixo de 0,05}} \\
+Saneamento e água & 1,6\% & 5,5\% & 3,39 & 0,051 \\
+Violência doméstica & 13,3\% & 21,6\% & 1,62 & 0,051 \\
+\midrule
+\multicolumn{5}{l}{\textit{Contraste: eleição municipal de 2024 (controle: 2023)}} \\
+Desastres e defesa civil & 1,2\% & 8,7\% & 7,44 & $< 0{,}001$ \\
+COVID e calamidade pública & 9,1\% & 23,9\% & 2,62 & $< 0{,}001$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.62\textwidth]{figs/fig_rq1_razoes.pdf}
+\caption{Razão entre a janela pré-eleitoral e o controle em 2022 (horizontal) e em 2026 (vertical), um ponto por tópico. Nenhum tópico sobe nas duas eleições.}
+\label{fig:rq1-razoes}
+\end{figure}
+
+Os picos que aparecem estão ligados a eventos, e não ao calendário eleitoral (Figura~\ref{fig:rq1-series}). O aumento de planos de saúde em 2022 está concentrado em junho, quando 48 deputados apresentaram proposições sobre o tema em um único mês; 85\% dessas ementas tratam do rol de procedimentos, da cobertura ou da taxatividade. É a reação à decisão do Superior Tribunal de Justiça que, em junho de 2022, definiu o rol da ANS como taxativo, depois revertida pela Lei nº 14.454/2022 \citep{brasil2022lei14454}. A queda de COVID em 2022 é o fim da agenda da pandemia, que dominou 2020 e 2021. No contraste de 2024, os tópicos de desastres e de calamidade pública sobem com as enchentes do Rio Grande do Sul: em maio de 2024, 130 proposições caíram no tópico de calamidade pública, e 61\% delas citam o estado. Em 2026, saneamento e violência doméstica sobem, mas sem significância após a correção; nas versões só com o núcleo e sem os autores de produção em massa, violência doméstica passa a ser significativa, o que indica um sinal fraco e não robusto.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figs/fig_rq1_series.pdf}
+\caption{Fração mensal dos deputados ativos que apresentaram proposição de seis tópicos. Faixas cinza: abril a setembro de 2022 e 2026; linhas tracejadas: eleições gerais.}
+\label{fig:rq1-series}
+\end{figure}
+
+As três versões da análise concordam no essencial: planos de saúde sobe em 2022 e COVID cai em 2022 em todas elas. Com cerca de 400 deputados ativos por janela (323 na janela de 2022 e 403 na de 2026) e 66 testes corrigidos, o teste só detecta mudanças grandes, o que é uma limitação para efeitos pequenos.
+
+\subsection{RQ2: assinaturas temáticas dos partidos}
+\label{subsec:res-rq2}
+
+As assinaturas partidárias se concentram em poucos partidos (Tabela~\ref{tab:rq2} e Figura~\ref{fig:rq2}). Na 56ª legislatura, 11 dos 24 partidos analisados têm ao menos uma assinatura partidária; na 57ª, só 5 dos 20. Os perfis mais marcados estão nos polos. O PSL, na 56ª, e o PL, na 57ª, concentram os tópicos de Direito Penal, armas de fogo, execução e processo penal, polícias e, na 57ª, segurança pública. PT, PSOL e PCdoB concentram, na 56ª, a agenda da COVID e, ao longo das duas legislaturas, a CLT e a violência doméstica; na 57ª, PT e PSOL também concentram as inscrições no Livro dos Heróis e Heroínas da Pátria, e o PSOL, os desastres e o clima. O NOVO aparece com a CLT na 56ª e com finanças públicas na 57ª.
+
+\begin{table}[H]
+\centering
+\caption{RQ2: assinaturas partidárias (\textit{log-odds} com \textit{prior} de Dirichlet e peso limitado por deputado; ao menos 3 deputados e nenhum com mais de 50\% das proposições do partido no tópico)}
+\label{tab:rq2}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Partido} & \textbf{56ª legislatura (2019--2023)} & \textbf{57ª legislatura (2023--2026)} \\
+\midrule
+PSL / PL & Código Penal, armas de fogo, execução penal, processo penal, polícias e bombeiros militares, ambiente digital e crianças (PSL); Código Penal (PL) & Código Penal, armas de fogo, segurança pública, execução penal, processo penal, polícias e bombeiros militares, esporte (PL) \\
+\addlinespace
+PT & COVID, CLT & Heróis e Heroínas da Pátria, CLT, violência doméstica \\
+\addlinespace
+PSOL & COVID, violência doméstica & Desastres e defesa civil, Heróis e Heroínas da Pátria, violência doméstica \\
+\addlinespace
+PCdoB & COVID & Regulamentação de profissões \\
+\addlinespace
+NOVO & CLT & Finanças públicas e repasses \\
+\addlinespace
+PSB & COVID, ensino superior e cotas & -- \\
+\addlinespace
+MDB, PP, Republicanos, União & Títulos de capital nacional (MDB); denominação de rodovias e energia elétrica (PP); defesa do consumidor (Republicanos); patrimônio cultural imaterial (União) & -- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figs/fig_rq2_heatmap_leg57.pdf}
+\caption{\textit{Log-odds} ($z$, peso limitado por deputado) de cada partido contra o restante, 57ª legislatura, para os tópicos com alguma assinatura. Linhas e colunas agrupadas por semelhança. A figura da 56ª legislatura está no Apêndice.}
+\label{fig:rq2}
+\end{figure}
+
+Os partidos de centro quase não têm assinatura. Na 56ª, as que aparecem são de natureza simbólica ou distributiva: títulos de capital nacional para municípios (MDB), denominação de rodovias (PP) e reconhecimento de patrimônio cultural (União). Na 57ª, nenhum deles tem assinatura partidária. Algumas concentrações vêm de um único deputado e foram marcadas como individuais, como o Código Civil no MDB da 56ª (77\% das proposições do partido no tópico vêm de um deputado) e as alterações gerais do Código Penal na União da 57ª (56\%).
+
+As assinaturas são robustas aos autores de produção em massa: de 94\% a 100\% delas se mantêm quando esses autores são retirados. Usando só o núcleo do HDBSCAN, cerca de 75\% se mantêm.

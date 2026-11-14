@@ -1,0 +1,152 @@
+% ============================================================
+% metodologia.tex  (rascunho de 02/11/2026)
+% Entra no main.tex com \input{metodologia} no lugar da antiga
+% seção "Metodologia" do TCC I. Precisa das entradas novas de
+% ref_novas.bib e dos pacotes amsmath e amssymb no preâmbulo.
+% ============================================================
+
+\section{Metodologia}
+\label{sec:metodologia}
+
+A pesquisa é exploratória e quantitativa. O trabalho foi organizado em cinco fases, cada uma encerrada por um critério de aceite definido antes de ver os resultados da fase seguinte: montagem do \textit{corpus}, definição do texto de entrada, representação vetorial e agrupamento, avaliação contra a classificação oficial e resposta às perguntas de pesquisa. A Tabela~\ref{tab:fases} resume as fases. Todo o código está em um repositório versionado, com um \textit{script} por fase, e cada número citado neste trabalho sai de um relatório gerado por esses \textit{scripts}.
+
+\begin{table}[H]
+\centering
+\caption{Fases do trabalho, produtos e critérios de aceite}
+\label{tab:fases}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{4.6cm}}
+\toprule
+\textbf{Fase} & \textbf{O que faz} & \textbf{Critério de aceite} \\
+\midrule
+1. \textit{Corpus} & Coleta dos arquivos anuais de proposições, temas e autores; montagem da base & Cobertura do \texttt{codTema} e partido na data da proposição verificados \\
+\addlinespace
+2. Texto de entrada & Critério de ementas formulaicas, \textit{fallback} pelo inteiro teor, normalização & Critério validado em amostra independente \\
+\addlinespace
+3. Agrupamento & \textit{Embeddings}, UMAP, HDBSCAN, rótulos por c-TF-IDF, reatribuição de \textit{outliers} & Configuração escolhida só com métricas intrínsecas, sem o \texttt{codTema} \\
+\addlinespace
+4. Avaliação & BCubed estendido, validação pelas apensadas, fragmentação, convergência, análise dos \textit{outliers} & Precisão e recall acima da referência aleatória com os mesmos tamanhos de grupo \\
+\addlinespace
+5. Perguntas de pesquisa & RQ1 (picos pré-eleitorais) e RQ2 (assinaturas partidárias), com análise de sensibilidade & Resultados estáveis entre as versões da análise \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Montagem do \textit{corpus}}
+\label{subsec:corpus}
+
+Os dados vêm dos arquivos anuais do portal de Dados Abertos da Câmara dos Deputados, em formato CSV: proposições, temas das proposições e autores das proposições, de 2019 a 2026. O \textit{download} foi feito em 27/10/2026. Foram mantidos os Projetos de Lei (PL), as Propostas de Emenda à Constituição (PEC) e os Projetos de Lei Complementar (PLP) apresentados entre 01/02/2019, início da 56ª Legislatura, e 30/09/2026, data de corte que antecede as eleições gerais de 2026. O recorte cobre a 56ª Legislatura inteira e a maior parte da 57ª.
+
+O \textit{corpus} tem 40.006 proposições: 38.185 PL, 1.592 PLP e 229 PEC. O tema oficial (\texttt{codTema}) está preenchido em 99,9\% delas, com 32 temas e média de 2,14 temas por proposição, o que confirma que o gabarito é multirrótulo e não tem um tema principal. O partido de cada proposição é o do primeiro autor na data da apresentação, tal como registrado no arquivo de autores; só a grafia foi normalizada (por exemplo, REPUBLIC e PRB como Republicanos e PR como PL, que são mudanças de nome do mesmo partido). Duas verificações dessa fase orientaram decisões posteriores. A primeira é a concentração de autoria: dois deputados somam 2.348 proposições, concentradas em dezembro de 2025 e julho de 2026, o que levou às medidas por deputado das Seções~\ref{subsec:rq1} e \ref{subsec:rq2}. A segunda é a existência de 10.439 pares de proposição apensada e proposição principal, usados como validação independente na Seção~\ref{subsec:avaliacao}.
+
+\subsection{Texto de entrada}
+\label{subsec:texto}
+
+A unidade de análise é a ementa. A Lei Complementar nº 95/1998 determina que a ementa explicite, de modo conciso, o objeto da lei \citep{brasil1998lc95}, o que faz dela o resumo padronizado do assunto de cada proposição. Uma parte das ementas, porém, não informa o assunto, como em ``Altera o Decreto-Lei nº 2.848, de 1940''. Essas ementas foram chamadas de \textit{formulaicas}.
+
+\textbf{Critério de ementa formulaica.} Uma ementa é formulaica quando atende às três condições: começa com uma abertura de alteração (altera, acrescenta, revoga, dá nova redação, inclui, modifica, insere ou suprime); não cita o nome de uma lei ou código (como Código Penal ou Lei Maria da Penha); e tem no máximo $K = 1$ palavra de conteúdo depois de retiradas as referências legais e as palavras vazias. A pergunta usada na anotação foi: ``só pela ementa, é possível chegar a um dos 32 temas oficiais?''. O critério foi desenvolvido em uma amostra estratificada de 300 ementas anotadas (semente 42) e validado em uma amostra nova de 100 ementas (semente 7), que não foi usada para ajustá-lo. Na amostra de validação, a precisão e o recall foram iguais a 1,00. A anotação foi feita por um único anotador, com as colunas da regra ocultas, o que é uma limitação. O critério identificou 493 ementas formulaicas (1,23\% do \textit{corpus}).
+
+\textbf{Texto das formulaicas.} Para cada formulaica, o texto do modelo foi buscado na ordem: a ementa detalhada (\texttt{ementaDetalhada}), quando preenchida e não formulaica; e o início da justificação do projeto, extraída do PDF do inteiro teor, com 500 caracteres. A justificação substituiu o articulado (o texto dos artigos) porque, na primeira rodada da Fase 3, o articulado agrupou as formulaicas pelo formato (``passa a vigorar com a seguinte redação'') e não pelo assunto. Cabeçalhos, rodapés, assinaturas e o endereço do gabinete foram removidos. Ao final, 27 formulaicas foram resolvidas pela ementa detalhada e 466 pelo inteiro teor.
+
+\textbf{Normalização.} Ementas escritas inteiramente em maiúsculas (132) foram convertidas para minúsculas, porque o BERTimbau diferencia caixa e, na primeira rodada, reuniu 128 delas em um tópico próprio. Por fim, o texto enviado ao modelo de \textit{embedding} teve os números e as datas de referências legais removidos (``Lei nº 12.850, de 2 de agosto de 2013'' passa a ``Lei''), mantendo os nomes de leis e códigos. Essa decisão veio da terceira rodada, em que os modelos agrupavam ementas pelo número da lei citada, sem relação de assunto. O texto original continua guardado para a leitura dos tópicos. Proposições com texto idêntico foram representadas uma única vez, o que resultou em 38.860 textos únicos.
+
+\subsection{Representação vetorial}
+\label{subsec:embeddings}
+
+Os textos foram convertidos em vetores por três modelos, com a biblioteca \textit{sentence-transformers}: o BERTimbau Large \citep{souza2020bertimbau}, com média dos vetores dos \textit{tokens} (\textit{mean pooling}); o multilingual-e5-large \citep{wang2024multilingual}, com o prefixo ``query: '' recomendado para tarefas simétricas; e o Serafim 335M \citep{gomes2024serafim}, que é o próprio BERTimbau Large ajustado para similaridade de frases. A comparação entre o BERTimbau e o Serafim isola o efeito desse ajuste. Os textos foram limitados a 256 \textit{tokens} (0,02\% foram truncados) e os vetores, normalizados.
+
+Como diagnóstico da geometria de cada espaço, foi calculado o cosseno médio entre 20 mil pares aleatórios de textos: 0,805 no BERTimbau, 0,909 no e5 e 0,352 no Serafim. Valores próximos de 1 indicam um espaço anisotrópico, em que quase tudo parece semelhante a tudo.
+
+\subsection{Agrupamento e rótulos}
+\label{subsec:agrupamento}
+
+O agrupamento segue o BERTopic \citep{grootendorst2022bertopic}. Os vetores são reduzidos a 5 dimensões pelo UMAP \citep{mcinnes2018umap}, com 30 vizinhos, distância mínima 0, métrica do cosseno e semente 42, e agrupados pelo HDBSCAN \citep{campello2013hdbscan}, que separa regiões densas e deixa como \textit{outliers} os pontos que não pertencem a nenhuma. O modelo é ajustado só nas ementas substantivas; as formulaicas recebem o tópico depois (ver adiante), para que o seu texto, vindo de outra fonte, não forme grupos próprios.
+
+\textbf{Escolha da configuração.} Foi feita uma grade com o número de vizinhos do UMAP (15 e 30), o tamanho mínimo de grupo do HDBSCAN (15, 30, 50 e 100), o método de seleção de grupos (\textit{eom} e \textit{leaf}) e o parâmetro \texttt{min\_samples} (igual ao tamanho mínimo, 5 e 10). A escolha usou apenas métricas intrínsecas, sem consultar o \texttt{codTema}, para que a avaliação da Fase 4 fosse honesta: fração de \textit{outliers}; tamanho do maior tópico (meta de até 10\% do \textit{corpus}); número de tópicos entre 32 e 160; coerência NPMI média das 10 palavras principais de cada tópico, que acompanha o julgamento humano de coerência \citep{lau2014machine}; diversidade, a fração de palavras distintas entre as 25 principais de todos os tópicos \citep{dieng2020topic}; e número de tópicos dominados por um único autor ou por textos vindos do inteiro teor. A decisão final foi tomada depois da leitura das ementas representativas de cada tópico. A configuração escolhida para o BERTimbau foi 30 vizinhos, tamanho mínimo 100, método \textit{eom} e \texttt{min\_samples} igual a 10, com 66 tópicos. Nessa configuração, 33,1\% das ementas ficam fora do núcleo, o maior tópico reúne 5,6\% delas, a coerência NPMI média é 0,439, a diversidade é 0,84 e nenhum tópico é dominado por um único autor ou por textos do inteiro teor. O e5 e o Serafim foram ajustados com a mesma grade e entram como comparação.
+
+\textbf{Rótulos.} Cada tópico é descrito pelos termos de maior peso no c-TF-IDF do BERTopic, com unigramas e bigramas de pelo menos três letras. A lista de palavras vazias reúne as do português e os termos das fórmulas legislativas (altera, acrescenta, dispõe, institui, estabelece, redação, artigo, inciso, caput, vigor, entre outros). Essa lista vale só para os rótulos e para o NPMI: o texto enviado ao modelo de \textit{embedding} mantém as fórmulas, porque elas fazem parte da frase e porque o modelo principal não formou tópicos por formato depois da quarta rodada. Para comparar o modelo com o gabarito na mesma granularidade, também foi gerada uma versão com os tópicos fundidos até 32, pela função de redução de tópicos do BERTopic.
+
+\textbf{Reatribuição dos \textit{outliers}.} O HDBSCAN deixou 33,1\% das ementas substantivas fora de qualquer tópico. Cada uma delas recebe o tópico mais votado entre os 15 vizinhos mais próximos no núcleo do HDBSCAN (as ementas que o próprio algoritmo agrupou), no espaço original dos vetores, com peso igual à similaridade. Essa forma de reatribuição foi escolhida depois da análise de erros da Seção~\ref{subsec:outliers}: ela foi melhor que a reatribuição padrão do BERTopic (no espaço reduzido do UMAP) e que a do centroide mais próximo em todas as medidas, inclusive na validação pelas apensadas, que não usa o gabarito. Cada proposição reatribuída guarda duas medidas de confiança: a similaridade com o centroide do tópico recebido e a fração dos votos que esse tópico recebeu. As formulaicas recebem o tópico pela semelhança entre o c-TF-IDF do seu texto e o de cada tópico; a atribuição pelo centroide dos vetores foi calculada como alternativa.
+
+\textbf{Verificação qualitativa por rodadas.} Cada rodada de agrupamento foi lida tópico por tópico. Quando um tópico se formava pelo formato do texto e não pelo assunto, a causa foi medida e corrigida antes da rodada seguinte (Tabela~\ref{tab:rodadas}).
+
+\begin{table}[H]
+\centering
+\caption{Rodadas de verificação da Fase 3}
+\label{tab:rodadas}
+\small
+\begin{tabularx}{\textwidth}{c >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Rodada} & \textbf{O que a leitura mostrou} & \textbf{O que mudou} \\
+\midrule
+1 & 128 das 132 ementas em maiúsculas formaram um tópico próprio, e 432 das 466 formulaicas caíram em dois tópicos de formato & Normalização da caixa; justificação no lugar do articulado; ajuste só nas ementas substantivas \\
+\addlinespace
+2 & Os tópicos de formato sumiram, mas as formulaicas iam para tópicos fora do assunto, porque a ementa formulaica ia na frente da justificação & O texto das formulaicas passou a ser só a justificação \\
+\addlinespace
+3 & Os modelos agrupavam ementas pelo número da lei citada, sem relação de assunto & Números e datas de referências legais removidos do texto do \textit{embedding} \\
+\addlinespace
+4 & O efeito do número da lei caiu; o e5 formou um tópico genérico com milhares de ementas do tipo ``Altera a Lei, para\ldots'' & BERTimbau como modelo principal; formulaicas pelo c-TF-IDF \\
+\addlinespace
+5 & A análise de erros de 100 \textit{outliers} mostrou que a reatribuição no espaço do UMAP errava mais & Reatribuição pelo voto dos 15 vizinhos do núcleo no espaço original \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Avaliação contra a classificação oficial}
+\label{subsec:avaliacao}
+
+\textbf{BCubed estendido.} Como o gabarito é multirrótulo e o modelo produz uma partição, a comparação usa o BCubed estendido \citep{amigo2009comparison}, que trabalha com pares de proposições e aceita várias categorias por item. Sejam $C(e)$ os tópicos e $L(e)$ os temas oficiais da proposição $e$. Para um par $(e, e')$,
+\begin{align}
+P(e, e') &= \frac{\min\big(|C(e) \cap C(e')|,\, |L(e) \cap L(e')|\big)}{|C(e) \cap C(e')|}, \\
+R(e, e') &= \frac{\min\big(|C(e) \cap C(e')|,\, |L(e) \cap L(e')|\big)}{|L(e) \cap L(e')|}.
+\end{align}
+A precisão de $e$ é a média de $P(e, e')$ sobre as proposições que dividem algum tópico com $e$, e o recall é a média de $R(e, e')$ sobre as que dividem algum tema. A precisão e o recall do modelo são as médias sobre todas as proposições. Com um tópico por proposição, a precisão de um par vale 1 quando as duas proposições compartilham algum tema, e o recall vale o inverso do número de temas em comum.
+
+Os números do modelo são sempre apresentados ao lado de três referências: um agrupamento aleatório com os mesmos tamanhos de grupo do modelo (média de cinco sementes), que dá a precisão e o recall do acaso; um único grupo com todas as proposições, que mostra por que a medida F sozinha engana; e um teto prático, a partição em que cada proposição vai para o seu tema oficial mais frequente no \textit{corpus}. Como cada proposição tem 2,14 temas em média e uma partição coloca cada uma em um único grupo, nem esse teto passa de um recall de 0,435. O modelo foi avaliado na granularidade natural (66 tópicos) e na versão reduzida a 32 tópicos, com os \textit{outliers} reatribuídos e também tratados como grupos unitários.
+
+\textbf{Validação pelas apensadas.} Quando uma proposição trata de matéria análoga à de outra que já tramita, ela é apensada à primeira. Como essa relação é registrada pela Mesa e não depende do \texttt{codTema}, a fração de pares de apensada e principal que caem no mesmo tópico mede a coerência do agrupamento de forma independente, contra a fração esperada se os tópicos fossem sorteados com os mesmos tamanhos.
+
+\textbf{Padrões de desvio.} Três padrões descrevem como os tópicos se relacionam com os temas oficiais. Na \textit{fragmentação}, um tema oficial se espalha por vários tópicos, medida pelo número de tópicos necessários para reunir 80\% das suas proposições e pela entropia normalizada dessa distribuição. Na \textit{convergência}, um tópico reúne vários temas, medida pela pureza (fração das proposições do tópico com o tema oficial mais comum) e pelo número de temas necessários para cobrir 80\% das classificações do tópico. Na \textit{dispersão}, uma proposição divide tema com o restante do seu tópico menos do que o acaso prevê para ela. Para os pares de temas, foi calculado o \textit{lift} de duas formas: quanto o CEDI classifica a mesma proposição nos dois temas e quanto o modelo coloca proposições dos dois temas no mesmo tópico, ambos divididos pelo valor esperado ao acaso. Pares em que os dois valores divergem mostram onde o modelo e a classificação oficial organizam o assunto de formas diferentes.
+
+\subsection{Análise dos \textit{outliers}}
+\label{subsec:outliers}
+
+Como um terço das ementas fica fora do núcleo do HDBSCAN, os \textit{outliers} foram analisados em três frentes.
+
+\textbf{Perfil.} A fração de \textit{outliers} foi calculada por número de temas oficiais da proposição, tipo, ano de apresentação e tema oficial.
+
+\textbf{Qualidade da reatribuição.} Para cada proposição, a concordância com o núcleo é a fração das proposições do núcleo do seu tópico que dividem algum tema oficial com ela, ou seja, a precisão do BCubed calculada só contra o núcleo. A medida foi comparada entre membros do núcleo, \textit{outliers} reatribuídos, formulaicas e \textit{outliers} colocados em um tópico sorteado, e acompanhada por faixas de similaridade com o tópico recebido.
+
+\textbf{Análise de erros.} Foram sorteados 100 \textit{outliers} (semente 130) e anotados à mão, sem acesso aos temas oficiais nem à similaridade, que ficaram em um arquivo separado e só foram juntados ao final. Para cada proposição foram registrados: o motivo de ter ficado fora do núcleo (nicho: assunto claro e específico sem tópico próprio; híbrida: mistura assuntos que estariam em tópicos diferentes; borda: o assunto pertence a um tópico existente; ementa vaga); a adequação do tópico recebido (adequado, parcial ou inadequado); e se o segundo tópico mais próximo seria melhor. As categorias e quatro regras de decisão foram fixadas antes da anotação. A principal delas é julgar pela finalidade da proposição, que costuma vir depois de ``para'' ou ``a fim de'', e não pelas leis alteradas. As proporções são apresentadas com intervalo de confiança de Wilson de 95\% \citep{wilson1927probable}. A anotação foi feita por um único anotador, o que é uma limitação.
+
+\textbf{Nichos dentro dos \textit{outliers}.} Para saber se os \textit{outliers} escondem agendas menores, as proposições fora do núcleo foram agrupadas de novo, sem os grandes tópicos: UMAP com 15 vizinhos e HDBSCAN com tamanho mínimo de 30 e \texttt{min\_samples} igual a 10, ajustados só nelas (tamanhos de 15, 50 e 100 como sensibilidade). Cada grupo encontrado foi descrito pelos seus termos de c-TF-IDF e comparado com o \texttt{codTema}, pela pureza e pela precisão do BCubed, contra grupos sorteados com os mesmos tamanhos. O que continuou sem grupo foi caracterizado pelo número de temas oficiais e pelos temas sobre-representados.
+
+\textbf{Múltiplos tópicos por proposição.} Para medir quanto a atribuição de um único tópico custa diante de um gabarito multirrótulo, cada proposição pôde ganhar tópicos extras quando eles recebiam uma fração mínima dos votos dos 15 vizinhos (de 50\% a 15\%). O BCubed estendido com sobreposição foi estimado em uma amostra de 4.000 proposições (semente 130), comparada com o \textit{corpus} inteiro, e confrontado com uma referência aleatória que embaralha os mesmos conjuntos de tópicos entre as proposições.
+
+\subsection{RQ1: picos de agenda antes das eleições}
+\label{subsec:rq1}
+
+A RQ1 pergunta quais tópicos ganham peso nos meses que antecedem as eleições gerais. As janelas são abril a setembro de 2022 e de 2026 (eleições em 02/10/2022 e 04/10/2026), e só entram proposições de deputados. Para evitar que autores de produção em massa definam o resultado, a métrica principal conta deputados e não proposições: para um tópico $k$ e um período $W$,
+\begin{equation}
+\text{taxa}_k(W) = \frac{|D_k(W)|}{|A(W)|},
+\end{equation}
+em que $A(W)$ é o conjunto de deputados com ao menos uma proposição em $W$ e $D_k(W)$, o dos que apresentaram ao menos uma proposição do tópico $k$. O controle principal são os mesmos meses do ano anterior (2021 e 2025). Para cada tópico, a razão entre a taxa na janela e a taxa no controle é testada pelo teste exato de Fisher, com correção de \citet{benjamini1995controlling} entre os 66 tópicos. Um tópico sobe ou cai em uma eleição quando o \textit{p} ajustado fica abaixo de 0,05. Como robustez, a taxa na janela também é comparada com a média dos mesmos meses nos anos sem eleição geral (2019, 2021, 2023, 2024 e 2025; 2020 fica de fora por causa da pandemia), e a participação por volume (proposições do tópico sobre o total) é calculada como métrica secundária. A eleição municipal de 2024, comparada com 2023, entra como contraste. Um tópico que sobe nas duas eleições gerais indica um padrão eleitoral; um que sobe em uma só indica um evento da conjuntura. Os picos são interpretados à luz do equilíbrio pontuado \citep{baumgartner1993agendas}, como em \citet{greene2017exploring}.
+
+\subsection{RQ2: assinaturas temáticas dos partidos}
+\label{subsec:rq2}
+
+A RQ2 pergunta se os partidos têm assinaturas temáticas. A análise é feita por legislatura (56ª e 57ª), com o partido do primeiro autor na data da proposição e os partidos com pelo menos 100 proposições na legislatura. A assinatura é medida pelo \textit{log-odds} com \textit{prior} de Dirichlet informativo \citep{monroe2008fightin}, que compara a frequência de cada tópico no partido $i$ com a do restante $j$:
+\begin{align}
+\delta_k &= \log\frac{y_{ik} + \alpha_k}{n_i + \alpha_0 - y_{ik} - \alpha_k} - \log\frac{y_{jk} + \alpha_k}{n_j + \alpha_0 - y_{jk} - \alpha_k}, \\
+z_k &= \delta_k \bigg/ \sqrt{\frac{1}{y_{ik} + \alpha_k} + \frac{1}{y_{jk} + \alpha_k}},
+\end{align}
+em que $y_{ik}$ é o número de proposições do partido $i$ no tópico $k$, $n_i$ o total do partido e $\alpha_k = \alpha_0 \cdot y_k / n$, com $\alpha_0 = 500$, distribui o \textit{prior} conforme a frequência geral de cada tópico. O \textit{prior} reduz o peso de tópicos raros, que dariam razões altas com poucas proposições.
+
+Para que um deputado de produção em massa não defina o perfil do partido, o \textit{log-odds} é calculado também com peso limitado por deputado: cada proposição pesa $\min(1, c/n_d)$, em que $n_d$ é o número de proposições do deputado no partido e na legislatura e $c$ é o percentil 90 de $n_d$. Assim, quem produz muito passa a valer $c$ proposições, e ninguém é inflado. Um tópico é uma assinatura do partido quando o $z$ com peso limitado é positivo, com \textit{p} ajustado por Benjamini-Hochberg (dentro do partido) abaixo de 0,05, e o $z$ bruto é pelo menos 1,96. A assinatura é \textit{partidária} quando vem de pelo menos três deputados e nenhum deles responde por mais de 50\% das proposições do partido no tópico; caso contrário, é \textit{individual}.
+
+\textbf{Análise de sensibilidade.} As duas perguntas foram respondidas em três versões: com todas as proposições, só com o núcleo do HDBSCAN (sem \textit{outliers} reatribuídos nem formulaicas) e sem os dois autores de produção em massa. Um resultado só é tratado como robusto quando aparece nas três.
+
+\subsection{Ambiente e reprodutibilidade}
+\label{subsec:ambiente}
+
+O trabalho foi executado em um \textit{notebook} com GPU NVIDIA RTX 3050 de 6 GB, processador Intel Core i7-13650HX e 32 GB de memória, com Python 3.12, PyTorch 2.11 (CUDA 12.8), \textit{sentence-transformers} 6.2, BERTopic 0.17.4 e UMAP 0.5.12. Os \textit{embeddings} foram gerados em meia precisão (fp16), em cerca de dois minutos por modelo. As versões de todas as bibliotecas estão fixadas no arquivo de bloqueio do gerenciador \textit{uv}, e as sementes ficam registradas no repositório: 130 como semente global e para a análise de erros, 42 para o UMAP e para a amostra de desenvolvimento das formulaicas, e 7 para a amostra de validação.
