@@ -43,7 +43,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-SEED = 42
+from seed import SEED  # noqa: E402  (130; ver src/seed.py)
 
 
 # --------------------------------------------------------------------------

@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import math
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -34,7 +35,8 @@ import pandas as pd
 
 P = Path("data/processed")
 ANOT = Path("anotacoes")
-SEED = 130
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from seed import SEED  # noqa: E402  (130; ver src/seed.py)
 K = 15
 N_ISOLADOS, N_CONTROLE = 40, 20
 PLANILHA = ANOT / "cedi_inconsistencias.csv"

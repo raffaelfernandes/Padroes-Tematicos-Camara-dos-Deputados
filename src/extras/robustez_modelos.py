@@ -11,7 +11,7 @@ Extra da revisão do TCC (09/11/2026). Complementa a Fase 4 com quatro análises
               fração que ficaria no mesmo grupo no teto prático, ao lado dos modelos.
   sementes    refaz UMAP, HDBSCAN e reatribuição (15 vizinhos) com outras sementes do UMAP e mede
               a variação das métricas. Formulaicas pelo centroide (a diferença para o c-TF-IDF
-              é de até 0,003 no BCubed). A semente 42 reaproveita o UMAP em cache e serve de
+              é de até 0,003 no BCubed). A semente principal (SEED, 130) reaproveita o UMAP em cache e serve de
               conferência: tem que reproduzir os números da Fase 4.
   resumo      média e desvio-padrão das sementes, por modelo.
 
@@ -19,7 +19,7 @@ Uso (a partir de code/):
     python src/extras/robustez_modelos.py tabela
     python src/extras/robustez_modelos.py bootstrap --b 2000
     python src/extras/robustez_modelos.py apensadas
-    python src/extras/robustez_modelos.py sementes --modelos bertimbau serafim e5 --sementes 42 1 2 3 4
+    python src/extras/robustez_modelos.py sementes --modelos bertimbau serafim e5   (sementes 130 a 134, de src/seed.py)
     python src/extras/robustez_modelos.py resumo
 
 Saídas em data/processed/fase4/robustez/.
@@ -37,6 +37,7 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from fase4_avaliacao import Gabarito, unitarios            # noqa: E402
+from seed import SEED, SEMENTES_ESTABILIDADE                # noqa: E402
 
 MODELOS = {                        # nome no texto -> (tag dos arquivos da Fase 3, mcs, min_samples)
     "BERTimbau": ("bertimbau_nn30_mcs100_eom_ms10_rk", 100, 10),
@@ -44,7 +45,7 @@ MODELOS = {                        # nome no texto -> (tag dos arquivos da Fase 
     "e5": ("e5_nn30_mcs100_eom_ms10_rk", 100, 10),
 }
 CHAVE = {"bertimbau": "BERTimbau", "serafim": "Serafim", "e5": "e5"}
-BASE = Path("data/processed/base_fase2_20261101.parquet")
+BASE = sorted(Path("data/processed").glob("base_fase2_*.parquet"))[-1]   # a base da Fase 2 mais recente
 TEMAS = Path("data/processed/temas_long_20261027.parquet")
 FASE3 = Path("data/processed/fase3")
 FASE4 = Path("data/processed/fase4")
@@ -114,7 +115,7 @@ def bootstrap(a) -> None:
         P, R = gab.por_item(d["topico_alt_ctfidf"].to_numpy())
         itens[nome] = (P, R)
         print(f"{nome}: P={P.mean():.3f} R={R.mean():.3f}")
-    rng = np.random.default_rng(130)
+    rng = np.random.default_rng(SEED)
     n, B = len(base), a.b
     nomes = list(itens)
     est = {m: np.zeros((B, 3)) for m in nomes}
@@ -159,7 +160,7 @@ def apensadas(a) -> None:
         d = base[["id"]].merge(t, on="id", validate="one_to_one")
         top = d["topico"].to_numpy()
         obs = mesmo_topico(base, pares, top)
-        rng = np.random.default_rng(130)
+        rng = np.random.default_rng(SEED)
         aleat = np.mean([mesmo_topico(base, pares, rng.permutation(top)) for _ in range(5)])
         # entre os pares que compartilham tema, quantos caem no mesmo tópico
         st = pd.Series(top, index=base["id"].to_numpy())
@@ -204,8 +205,8 @@ def sementes(a) -> None:
                 print(f"{nome} semente {seed}: já feito")
                 continue
             t0 = time.time()
-            cache = FASE3 / f"umap_{chave}_nn30_{fc.assinatura(emb[idx_fit])}.npy"
-            if seed == 42 and cache.exists():
+            cache = FASE3 / f"umap_{chave}_nn30_s{fc.SEED}_{fc.assinatura(emb[idx_fit])}.npy"
+            if seed == fc.SEED and cache.exists():       # a semente principal reaproveita o UMAP da Fase 3
                 red = np.load(cache)
             else:
                 red = UMAP(n_neighbors=30, n_components=5, min_dist=0.0, metric="cosine",
@@ -264,7 +265,7 @@ def main() -> None:
     sp.add_parser("apensadas").set_defaults(f=apensadas)
     s = sp.add_parser("sementes")
     s.add_argument("--modelos", nargs="+", default=["bertimbau", "serafim", "e5"], choices=list(CHAVE))
-    s.add_argument("--sementes", nargs="+", type=int, default=[42, 1, 2, 3, 4])
+    s.add_argument("--sementes", nargs="+", type=int, default=SEMENTES_ESTABILIDADE)
     s.set_defaults(f=sementes)
     sp.add_parser("resumo").set_defaults(f=resumo)
     a = ap.parse_args()

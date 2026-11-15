@@ -83,7 +83,6 @@ def main() -> None:
     dom = frac.idxmax(axis=1)
     ordem = list(dict.fromkeys(dom.tolist())) + [c for c in frac.sum().sort_values(ascending=False).index if c not in set(dom)]
     frac = frac[ordem]
-    ROTULOS.update({2: "Código Civil e de Processo Civil"})
     rot_lin = [f"{ROTULOS.get(k, k)} ({n_top[k]:,})".replace(f"({n_top[k]:,})", "(" + f"{n_top[k]:,}".replace(",", ".") + ")") for k in frac.index]
     rot_col = [CURTO.get(c, c) for c in frac.columns]
 
@@ -116,8 +115,8 @@ def main() -> None:
     cb.outline.set_visible(False)
     fig.tight_layout()
     SAIDA.mkdir(parents=True, exist_ok=True)
-    fig.savefig(SAIDA / "fig_topicos_temas.pdf", bbox_inches="tight")
-    fig.savefig(SAIDA / "fig_topicos_temas.png", dpi=200, bbox_inches="tight")
+    fig.savefig(SAIDA / "fig_topicos_temas.pdf", bbox_inches="tight", pad_inches=0.15)
+    fig.savefig(SAIDA / "fig_topicos_temas.png", dpi=200, bbox_inches="tight", pad_inches=0.15)
     print(f"Figura: {SAIDA / 'fig_topicos_temas.pdf'} ({len(rot_lin)} tópicos x {len(rot_col)} temas)")
 
 

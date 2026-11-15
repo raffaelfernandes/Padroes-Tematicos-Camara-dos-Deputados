@@ -37,8 +37,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from fase3_clustering import palavras_por_topico, vetorizador  # noqa: E402
 from fase4_avaliacao import Gabarito, md, n_para_cobrir  # noqa: E402
 
-SEED = 42           # mesma semente do UMAP da Fase 3
-SEED_ALEAT = 130
+from seed import SEED  # noqa: E402  (130, a mesma do UMAP da Fase 3; ver src/seed.py)
+SEED_ALEAT = SEED
 SAIDA = Path("data/processed/fase4")
 
 

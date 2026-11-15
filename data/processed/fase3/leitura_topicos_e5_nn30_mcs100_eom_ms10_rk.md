@@ -1,684 +1,869 @@
 # Leitura dos tópicos: e5_nn30_mcs100_eom_ms10_rk
 
-Ajuste em 39513 proposições (ementas substantivas). Outliers do HDBSCAN: 29.9%, reatribuídos pelo reduce_outliers (limiar 0.0). Tópicos: 60.
+Ajuste em 39514 proposições (ementas substantivas). Outliers do HDBSCAN: 33.5%, reatribuídos pelo reduce_outliers (limiar 0.0). Tópicos: 75.
 
-Formulaicas atribuídas pelo centroide mais próximo: 493 proposições; similaridade mediana 0.927 (p10 0.907).
+Formulaicas atribuídas pelo centroide mais próximo: 492 proposições; similaridade mediana 0.911 (p10 0.895).
 
 Para cada tópico: está coeso? o rótulo faz sentido? algum autor ou formato domina?
 
-## Tópico 0 (n = 4319; formulaicas atribuídas: 362)
+## Tópico 0 (n = 2746; formulaicas atribuídas: 9)
 
-Termos: ementa, código, programa, penal, saúde, código penal, sistema, proteção, social, cria
+Termos: política, programa, rural, desenvolvimento, cria, áreas, rurais, amazônia, fundo, diretrizes
 
-- Altera a Lei nº 6.259, de 30 de outubro de 1975, que “dispõe sobre a organização das ações de Vigilância Epidemiológica, sobre o Programa Nacional de Imunizações, estabelece normas relativas à notificação compulsória de 
-- Dispõe sobre a Política Nacional de Acesso ao Tratamento Farmacológico Antiobesidade no âmbito do Sistema Único de Saúde — SUS.
-- Reduz a zero as alíquotas do Imposto sobre Produtos Industrializados – IPI, da Contribuição para o PIS/PASEP e do Imposto de Importação incidentes sobre veículos novos, adquiridos por servidores públicos, ativos e inativ
-- Altera o Decreto-Lei nª 2.848, de 07 de dezembro de 1940 – Código Penal, para dispor sobre a divulgação de conteúdos que atentam contra a cidadania digital.
-- Institui a implantação da tecnologia “Botão do Pânico” nas unidades de saúde públicas, privadas ou conveniadas.
-- [formulaica] As alterações nesta lei vem sobretudo para se fazer justiça. Os Policiais Militares e Bombeiros Militares trabalham diuturnamente e honram a farda que sustentam. São as únicas forças do Estado que não param de trabalhar,
-- [formulaica] O objetivo desta proposta é adequar a Lei nº 11.494, de 20 de junho de 2007, que regulamenta o Fundo de Manutenção e Desenvolvimento da Educação Básica e de Valorização dos Profissionais da Educação – FUNDEB, aos ditames
+- Institui a Política Nacional de Editais Adaptados para Organizações de Base Comunitária do Amazonas e estabelece critérios de credenciamento simplificados, visando promover a transparência, a equidade no acesso a recurso
+- Altera a Lei nº 10.295, de 17 de outubro de 2001, que “Dispõe sobre a Política Nacional de Conservação e Uso Racional de Energia e dá outras providências”.
+- Institui o Sistema Nacional de Inovação Biotecnológica da Amazônia (SINBIOAM), estabelece regras para o patenteamento de produtos derivados da biodiversidade amazônica e dispõe sobre a repartição de benefícios com comuni
+- Dispõe sobre a regularização de imóveis de propriedade dos Municípios e dá outras providências, altera a Lei 6.015 de 31 de dezembro de 1973.
+- Cria o Fundo Nacional de
+Desenvolvimento Urbano Integrado
+– FNDUI para apoio de ações de
+governança interfederativa no
+âmbito do Estatuto da Metrópole,
+Lei nº 13.089, de 12 de janeiro de
+2015.
+- [formulaica] A indústria de construção naval é um vetor estratégico da economia amplamente subsidiado em outros países com a magnitude do Brasil, tendo em vista que movimenta uma extensa cadeia de agentes econômicos, gera uma quantid
+- [formulaica] O presente Projeto de Lei tem como objetivo assegurar que os proprietários de imóveis rurais que estão sob processos de demarcação, aquisição ou desapropriação pela Fundação Nacional dos Povos Indígenas (FUNAI) possam co
 
-## Tópico 1 (n = 2694; formulaicas atribuídas: 10)
+## Tópico 1 (n = 2590; formulaicas atribuídas: 6)
 
-Termos: penal, código penal, código, crime, pena, crimes, contra, processo penal, código processo, processo
+Termos: penal, código penal, código, crime, pena, crimes, processo penal, contra, código processo, processo
 
-- Altera legislação para criar a qualificadora para o crime de estupro de vulneráveis cometida contra descente, parentes consanguíneos ou afins ou contra menor que o agente possua poder de mando, ou ascensão, ou laços de c
-- Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para instituir causa de aumento de pena nos crimes de furto e de roubo quando a subtração recair sobre carga transportada, bens do veículo de transp
-- Altera o Decreto-Lei nº 2.848 de 07 de dezembro de 1940 - Código Penal, para agravar as penas dos crimes cometidos contra profissionais durante o exercício da profissão.
-- Altera a lei nº 4.737, de 15 de julho de 1965, Código Eleitoral.
-- Tipifica o crime de infidelidade patrimonial, alterando o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal).
-- [formulaica] Trata-se de proposta legislativa que visa a revogação dos artigos 15 da Lei 12.016/2019, do §1º do art. 12 da Lei 7.347/1985 e da Lei 8.437/1992 (notadamente, mas não só, o art. 4º), que disciplinam, respectivamente, o m
-- [formulaica] Apesar de reconhecermos o extraordinário mérito da conquista efetivada pela Lei nº 8.429, de 2 de junho de 1992, que procedeu a regulamentação geral do § 4º do art. 37 da Constituição Federal, que dispõe sobre as consequ
+- Altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), para instituir causa de aumento de pena nos crimes contra a honra praticados mediante o emprego de inteligência artificial ou tecnologias de manipul
+- Altera o art. 122, do Decreto-lei n° 2.848, de 7 de dezembro de 1940, o Código Penal Brasileiro, para punir o induzimento, a instigação ou o auxílio a suicídio independentemente da morte ou do resultado lesão corporal de
+- Altera o Art. 217A do Decreto Lei nº 2.848, de 7 de dezembro de 1940 – Código Penal, para aumentar a pena do crime de estupro de vulnerável.
+- Altera o § 2° do art. 310 do Decreto-Lei n° 3.689, de 3 de outubro de 1941 (Código de Processo Penal) para dispor que, dentre outras hipóteses, o juiz deverá denegar a liberdade provisória, com ou sem medidas cautelares,
+- Acrescenta dispositivo ao Código Penal para definir a punição na infringência ao § 1do art. 37 da Constituição Federal, e dá outras providências.
+- [formulaica] Objeto de indignação coletiva pela sociedade, o crime de estupro ainda vem maculando o cotidiano do cidadão de bem mundo afora e, muito embora a pena estabelecida pela legislação penal brasileira esteja dentre as mais al
+- [formulaica] O presente Projeto de Lei tem por objetivo revogar a causa legal de isenção de pena prevista no § 2º do art. 348 do Código Penal, que atualmente afasta a responsabilização criminal de ascendentes, descendentes, cônjuges 
 
-## Tópico 2 (n = 2175; formulaicas atribuídas: 17)
+## Tópico 2 (n = 1988; formulaicas atribuídas: 18)
 
-Termos: saúde, único saúde, sistema único, único, sus, sistema, saúde sus, planos, medicamentos, assistência saúde
+Termos: covid, coronavírus, pandemia, pública, emergência, calamidade, calamidade pública, emergência saúde, saúde pública, durante
 
-- Institui o Programa de Capacitação de professores e funcionários de estabelecimentos de ensino público para auxílio a crianças e adolescentes que sejam portadoras de Diabetes Mellitus Tipo 1 (um) e 2 (dois).
-- Dispõe sobre a obrigatoriedade de fornecimento, pelo poder público, de sensores de monitoramento contínuo de glicose para pessoas com diabetes mellitus tipo 1, no âmbito do Sistema Único de Saúde (SUS), e dá outras provi
-- Altera a Lei nº 9.656, de 3 de junho de 1998, para dispor sobre a cobertura, pelas operadoras de planos privados de assistência à saúde, de tratamentos ou procedimentos complementares não previstos no Rol de Procedimento
-- Altera a Lei nº 9.656, de 3 de junho de 1998, para dispor sobre a rescisão unilateral de contratos de planos de saúde coletivos, por iniciativa das operadoras.
-- Altera a Lei nº 8.080, de 19 de setembro de 1990, que dispõe sobre as condições para a promoção, proteção e recuperação da saúde, a organização e o funcionamento dos serviços correspondentes, e dá outras providências.
-- [formulaica] O presente Projeto de Lei tem por finalidade alterar a redação do art. 12 da Lei nº 9.656, de 3 de junho de 1998, que dispõe sobre os planos e seguros privados de assistência à saúde, para assegurar expressamente a cober
-- [formulaica] O presente Projeto de Lei tem por objetivo acrescentar o art. 15-B à Lei nº 9.656, de 3 de junho de 1998, na forma proposta pelo art. 18 da Medida Provisória nº 1.301, de 2025, com vistas a estabelecer regra clara e obje
-
-## Tópico 3 (n = 2025; formulaicas atribuídas: 7)
-
-Termos: rural, ambiental, recursos, áreas, rurais, indígenas, ambientais, minerais, política, terras
-
-- Altera a Lei nº 12.334, de 20 de setembro de 2010, que estabelece a Política Nacional de Segurança de Barragens.
-- Altera a Lei n.º 6.538, de 22 de junho de 1978, no sentido de assegurar o mapeamento georreferenciado das propriedades rurais no Brasil.
-- Altera a Lei nº 10.257, de 10 de julho de 2001 (Estatuto da Cidade), para definir a adoção de equipamentos comunitários e espaços livres de uso público como instrumento da política urbana.
-- Altera a Lei de Política Agrícola para estabelecer que a produção agropecuária nacional é prioridade de Estado.
-- Declara a água bem estratégico, de interesse nacional, de domínio inalienável e imprescindível do Estado, estabelece o acesso à água potável como um direito humano fundamental, proíbe a privatização da utilização e consu
-- [formulaica] A retomada de investimentos no setor de infraestrutura pode ser impulsionada por diversas alterações legislativas incrementais, mas significativas para conferir segurança ao investidor e sustentabilidade econômico-financ
-- [formulaica] Possibilita que os beneficiários da Reurb-S providenciem os projetos e demais documentos técnicos necessários para a regularização de seu imóvel.
-
-## Tópico 4 (n = 1762; formulaicas atribuídas: 4)
-
-Termos: covid, coronavírus, pandemia, pública, calamidade, emergência, calamidade pública, durante, emergência saúde, saúde pública
-
-- Altera o art. 2º da Lei nº 13.982, de 2 de abril de 2020, que estabelece medidas excepcionais de proteção social a serem adotadas durante o período de enfrentamento da emergência de saúde pública de importância internaci
-- Propõe medidas para o enfrentamento das consequências sociais e econômicas decorrentes da pandemia do coronavírus.
-- Altera o Decreto-Lei nº 5.452, de 1º de maio de 1943, para autorizar, dentre outros, o parcelamento de débitos em execuções trabalhistas durante o período de estado de calamidade e enfrentamento de emergência de saúde pú
-- Dispõe sobre a vedação de adoção dos procedimentos de Consolidação da Propriedade Imobiliária, nos contratos de financiamento imobiliário de que tratam as Leis nº 9.514, de 20 de novembro de 1997, e nº 11.977, de 07 de j
-- Suspende o reajuste de preços de insumos utilizados para fins de tratamento de casos de coronavírus nas UTIs, durante situação de emergência de saúde pública de importância nacional.
+- Dispõe sobre a dispensa de carência para a contratação de planos e seguros privados de assistência à saúde por pessoas com complicações graves ou sequelas permanentes decorrentes da covid-19, alterando a Lei nº 9.656, de
+- Suspende o repasse de recursos públicos federais para organizações de saúde enquanto perdurar atraso no pagamento de salário ou remuneração dos profissionais de saúde
+- Dispõe sobre a suspensão, durante a vigência do Estado de Calamidade Pública, aprovado pelo Decreto Legislativo nº 6, de 20 de março de 2020, dos valores referente a prestações de financiamentos de veículos automotores p
+- Dispõe sobre a antecipação da comemoração de feriados em casos de estado de calamidade
+pública e epidemia do coronavírus (COVID19).
+- Suspende até 31/12/2020 o reajuste dos medicamentos.
 - [formulaica] O ano de 2020 foi marcado pela Pandemia do Covid -19, afetando diversos setores do nosso País, a contração do PIB, o isolamento social necessário para minimizar a disseminação do COVID-19, o fechamento de empresas e serv
-- [formulaica] Em decorrência da calamidade pública decretada pelo Decreto Legislativo nº 6, de 20 de março de 2020, há a necessidade de previsão de suspensão dos contratos de trabalho em decorrência das paralisações das atividades das
+- [formulaica] De tempos em tempos o Brasil e o mundo são acometidos de surtos de doenças cujas suas transmissões saem do controle das autoridades públicas, gerando temor e apreensão nos cidadãos. Foi assim com a eclosão do influenza A
 
-## Tópico 5 (n = 1091; formulaicas atribuídas: 3)
+## Tópico 3 (n = 1761; formulaicas atribuídas: 5)
 
-Termos: dia, semana, anualmente, dia dia, conscientização, celebrado, anualmente dia, celebrado anualmente, dia conscientização, comemorado
+Termos: saúde, único saúde, sistema único, sus, único, saúde sus, sistema, medicamentos, tratamento, câncer
 
-- Institui o Dia Nacional dos Bombeiros Voluntários.
-- Institui o dia 16 de março como o Dia Nacional de Homenagem ás Vítimas do Coronavírus ( COVID-19) no Brasil.
-- Institui a Política Nacional de Saúde na Escola.
-- Institui o Dia Nacional do Gengibre, a ser celebrado no dia 15 de maio.
-- Institui o Programa Tarifa Zero.
-- [formulaica] Trata da atividade de garimpagem.
-- [formulaica] Estabelece mecanismos para controle cadastral de animais domésticos.
+- Altera a lei nº 13.930, de 10 de dezembro de 2019, para o direcionamento de percentuais no custeio de medicamentos ao tratamento de doenças raras ou negligenciadas.
+- Altera a Lei nº 14.308, de 8 de março de 2022, para assegurar prioridade de acesso a exames de alta complexidade no diagnóstico e acompanhamento do câncer infantojuvenil no âmbito do Sistema Único de Saúde (SUS).
+- Dispõe sobre a autorização para prescrição de medicamentos e solicitação de exames complementares por enfermeiros devidamente habilitados, no exercício de suas funções, de acordo com protocolos clínicos e diretrizes do S
+- Altera a Lei nº 8.080, de 19 de setembro de 1990, para instituir a transparência das filas de espera de consultas, exames e tratamentos, e a divulgação dos protocolos clínicos ou de diretrizes terapêuticas para doenças u
+- Fica o poder público obrigado a fornecer gratuitamente medicamentos para pacientes em estado considerado terminal.
+- [formulaica] O presente Projeto de Lei visa aperfeiçoar a Lei nº 9.656, de 3 de junho de 1998, mediante a inclusão dos §§ 4º e 5º ao art. 4º, conforme proposta constante do art. 18 da Medida Provisória nº 1.301, de 2025, com o objeti
+- [formulaica] A presente proposição tem por objetivo aperfeiçoar a Lei n.º 14.539, de 31 de março de 2023, que institui a Política Nacional de Prevenção e Controle do Câncer no âmbito do Sistema Único de Saúde (SUS), de modo a prever 
 
-## Tópico 6 (n = 1013; formulaicas atribuídas: 1)
+## Tópico 4 (n = 1132; formulaicas atribuídas: 0)
 
-Termos: animais, tratos, maus tratos, maus, animal, domésticos, animais domésticos, cães, tratos animais, estar
+Termos: dia, conscientização, anualmente, dia dia, semana, anualmente dia, mês, celebrado, dia conscientização, celebrado anualmente
 
-- Institui a Política Nacional de Convivência Residencial Responsável com Animais de Estimação e dá outras providências.
-- Acrescenta parágrafo único ao art. 42 do Decreto-Lei nº 3.688, de 3 de outubro de 1941, para criar exceção à aplicação do inciso IV, caso fique provado que o tutor adotou medidas para impedir a proliferação de barulho pr
-- Permite a utilização de animais domésticos adestrados em apresentações públicas de entretenimento e dispõe sobre diretrizes gerais de bem-estar animal.
-- Institui diretrizes de responsabilização administrativa e civil para agentes públicos que cometem maus-tratos a animais durante o exercício da função.
-- Estabelece normas de funcionamento para estabelecimentos de hospedagem e creche de animais domésticos e dá outras providências
-- [formulaica] A Presente proposição visa punir os maus funcionários públicos que criam óbices na chegada de doações e donativos após casos de calamidade pública, impedindo que o socorro possa chegar aos flagelados pelas respectivas tr
+- "Institui o Dia Nacional de Atenção aos Portadores de Hidrocefalia, a ser comemorado, anualmente, no dia 25 de outubro, e dá outras providências".
+- Institui o Dia Nacional de Conscientização sobre o Sono e seus Distúrbios Associados, a ser celebrado anualmente no dia 15 de março, e estabelece diretrizes para ações de conscientização, prevenção, diagnóstico, tratamen
+- Institui o Dia Nacional da Juventude Cristã, a ser celebrado, anualmente, no último sábado do mês de setembro e o inclui no Calendário Oficial de Eventos da União.
+- Institui o Dia Nacional da Saúde Única.
+- Institui o ano de 2025 como Ano Nacional D. Pedro II.
 
-## Tópico 7 (n = 943; formulaicas atribuídas: 0)
+## Tópico 5 (n = 1119; formulaicas atribuídas: 0)
 
-Termos: trânsito, código trânsito, trânsito brasileiro, brasileiro, código, veículos, veículo, habilitação, automotores, veículos automotores
+Termos: trânsito, código trânsito, trânsito brasileiro, brasileiro, código, veículos, veículo, automotores, habilitação, veículos automotores
 
-- Altera a Lei nº 9.503, de 23 de setembro de 1997, que instituiu o Código de Trânsito Brasileiro (CTB), modificando o Artigo 61, que determina as velocidades em vias urbanas e rurais, o Artigo 218, que estabelece a fiscal
-- Altera a Lei nº 9.503, de 23 de setembro de 1997, para incluir o inciso XIV no artigo 29, disciplinando sobre a prioridade dos ciclistas no trânsito e a presunção de culpa em caso de acidente.
-- Altera a Lei nº 9.503, de 1997, Código de Trânsito Brasileiro, a fim de aumentar o período de validade do exame de aptidão física e mental para renovação da habilitação.
-- Suspende temporariamente a execução das cobranças de multas de quaisquer naturezas previstas no Código Nacional de Trânsito Brasileiro e dá outras providências.
-- Altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro), para dispor sobre requisitos de regularidade documental na alienação de veículos automotores pertencentes à administração pública, e dá ou
+- Dispõe sobre a vedação da criação de estacionamentos exclusivos para clientes de estabelecimentos comerciais em áreas públicas, em conformidade com o artigo 19 da Resolução Normativa nº 965/2022 do CONTRAN, e dá outras p
+- Proíbe a afixação de cartazes eximindo de responsabilidade os proprietários de estacionamentos por danos, furtos e roubos
+- Altera a Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro), para possibilitar a concessão de autorização especial de trânsito aos veículos e demais equipamentos automotores, e às suas combinações, n
+- Altera o art. 320, da Lei nº 9.503, de 23 de setembro de 1997, que institui o Código de Trânsito Brasileiro (CTB), permitindo que a receita arrecadada com a cobrança das multas de trânsito possa ser aplicada no combate à
+- Altera o Código de Trânsito Brasileiro, art. 271, §9-B e acrescenta dispositivo ao DECRETO-LEI No 2.848, DE 7 DE DEZEMBRO DE 1940, Código Penal, Capítulo IV, DE OUTRAS FALSIDADES, para tornar crime o uso de veículos irre
 
-## Tópico 8 (n = 1522; formulaicas atribuídas: 3)
+## Tópico 6 (n = 1127; formulaicas atribuídas: 2)
 
-Termos: política, programa, cria, incentivo, desenvolvimento, cria programa, amazônia, diretrizes, sustentável, apoio
+Termos: trabalho, consolidação, consolidação trabalho, clt, trabalho clt, aprovada, clt aprovada, licença, empregado, trabalho aprovada
 
-- Cria a Lei do Fundo Amazônia, regulamenta a destinação de recursos para a proteção e o desenvolvimento sustentável da Amazônia Brasileira, e dá outras providências.
-- Institui o Programa Navega Amazônia, voltado à modernização do transporte fluvial na Amazônia Legal, e dá outras providências.
-- Instituí o Programa Nacional de Fomento à Pesquisa Agrícola e dá outras providências.
-- Institui o Programa Nacional de Valorização da Cana-de-Açúcar Sustentável (PROCANAS) e estabelece incentivos para práticas agrícolas regenerativas na produção de cana-de-açúcar no Brasil.
-- Dispõe sobre o programa Conecte um Estudante.
-- [formulaica] A Política Nacional do Livro, instituída pela Lei nº 10.753, de 30 de outubro de 2003, tem como umas de suas diretrizes basilares assegurar ao cidadão o pleno exercício do direito de acesso e uso do livro, assim como apo
-- [formulaica] Permite o uso dos recursos dos Fundos Constitucionais de Financiamento do Norte (FNO), do Nordeste (FNE) e do Centro-Oeste (FCO) para o financiamento de obras públicas nessas regiões.
-
-## Tópico 9 (n = 1087; formulaicas atribuídas: 4)
-
-Termos: civil, processo civil, processo, código processo, código, código civil, advogados, advocacia, imóveis, ordem advogados
-
-- Dispõe sobre a pactuação de indexador de reajustamento em contrato de locação residencial e dá outras providências.
-- Acresce parágrafo ao caput do art. 81 da Lei nº 13.105, de 16 de março de 2015 (Código de Processo Civil), para estabelecer hipótese excepcional de aumento da multa em razão de litigância de má-fé até o décuplo do valor 
-- Altera a Lei nº 13.105, de 16 de março de 2015 (Código de Processo Civil), para disciplinar a intimação do executado na conversão do cumprimento provisório de sentença em cumprimento definitivo.
-- Altera a Lei nº 13.327, de 29 de julho de 2016, para dispor sobre o tratamento orçamentário dos honorários advocatícios de sucumbência.
-- Altera a Lei nº 13.105, de 16 de março de 2015 (Código de Processo Civil), para prever hipóteses de recebimento de comissão pelo leiloeiro público oficial.
-- [formulaica] Em decorrência do arquivamento de todas as proposições que no seu decurso tenham sido submetidas à deliberação da Câmara e ainda se encontrem em tramitação, de acordo com o que prevê o art. 105 do Regimento Interno da Câ
-- [formulaica] Trata da interposição de recurso adesivo no âmbito dos Juizados Especiais.
-
-## Tópico 10 (n = 1302; formulaicas atribuídas: 5)
-
-Termos: educação, ensino, diretrizes bases, bases educação, bases, diretrizes, educação básica, básica, estudantes, médio
-
-- Altera a Lei nº 9.394, de 20 de dezembro de 1996, que estabelece as diretrizes e bases da educação nacional, para prever a instituição de programa de auxílio financeiro destinado à matrícula de crianças de 0 (zero) a 3 (
-- Altera o § 3º do artigo 26 da Lei nº 9.394, de 20 de dezembro de 1996, que estabelece as diretrizes e bases da educação nacional - LDB, para dispor sobre educação física no ensino fundamental do 1º ao 5º ano e dá outras 
-- Altera a Lei nº 9.394, de 20 de dezembro de 1996, que estabelece as diretrizes e bases da educação nacional (LDB), para dispor sobre o aproveitamento, como professor auxiliar, de estudantes de cursos de licenciatura em m
-- Altera a Lei nº 9.394, de 20 de dezembro de 1996, que estabelece as diretrizes e bases da educação nacional, com a finalidade de combater a erotização precoce e a exposição de conteúdos sexualizados nas escolas, assegura
-- Acrescenta o art. 80-A à Lei nº 9.394, de 20 de dezembro de 1996, para instituir o Programa Empresa Amiga da Escola Pública, e dá outras providências.
-- [formulaica] O presente projeto de lei tem como objetivo afastar a incidência de multa em um percentual não superior a 10% (dez por cento) do valor da anuidade pelo profissional de educação física que deixar e de votar, sem causa jus
-- [formulaica] O presente projeto de lei visa aperfeiçoar a legislação envolvendo a Política Nacional do Livro (Lei nº 10.753/2003) e a Política Nacional de Leitura e Escrita (Lei nº 13.696/2018), mediante a inclusão da obrigatoriedade
-
-## Tópico 11 (n = 1016; formulaicas atribuídas: 2)
-
-Termos: consumidor, defesa consumidor, código defesa, telecomunicações, defesa, serviços, serviços telecomunicações, código, serviço, consumidores
-
-- Altera a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), para dispor sobre o direito do consumidor à informação na hipótese de redução de quantidade ou peso de produto embalado.
-- Altera a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), para estabelecer regras de transparência na divulgação de preços em plataformas digitais de intermediação de serviços de transporte indiv
-- Altera a Lei nº 8.078, de 11 de setembro de 1990, para dispor sobre o direito do consumidor ao atendimento pós-venda.
-- Acrescenta o inciso XI ao art. 89 da Lei nº 9.472, de 16 de julho de 1997, para estabelecer metas de cobertura de serviços de telecomunicações de interesse coletivo com mobilidade em rodovias federais, e garantir o atend
-- Altera a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), para vedar a redução unilateral, pelas instituições financeiras, dos limites de crédito de cartão de crédito e de cheque especial sem com
-- [formulaica] A prestação de serviço público ou privado exige celeridade, a sociedade, especialmente as pessoas hipossuficientes, não pode esperar mais de 6 (seis) meses para a liberação do crédito bancário, que, atualmente, só ocorre
-- [formulaica] Os contratos de compra e venda de bens móveis e imóveis que envolvem pagamento em prestações (ex: financiamentos), bem como de alienação fiduciária em garantia, são, via de regra, contratos de adesão, tendo suas cláusula
-
-## Tópico 12 (n = 792; formulaicas atribuídas: 1)
-
-Termos: trabalho, consolidação, consolidação trabalho, clt, trabalho clt, aprovada, clt aprovada, empregado, licença, trabalho aprovada
-
-- Dispõe sobre a licença à gestante e à adotante, as medidas de proteção à maternidade para policiais grávidas e lactantes e a licença-paternidade, no âmbito das forças da segurança pública e dá outras providências.
-- Altera a Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, para dispor sobre a contribuição sindical, e revoga dispositivo da Lei nº 8.112, de 11 de dezembro de 1990.
-- Altera a redação dos arts. 626 e 627 da Consolidação das Leis do Trabalho - CLT, a fim de atualizar a nomenclatura e dispor sobre os critérios para a dupla visita da fiscalização trabalhista.
-- Altera a Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943, para dispor sobre a ausência no trabalho do responsável por acompanhar criança ou adolescente em tratamento oncológic
-- Altera o Decreto- Lei 5.452, de 1 de maio de 1943 (CLT) para tratar da realização de cursos obrigatórios de aperfeiçoamento.
+- Acrescenta dispositivo ao art. 6º-A da Lei nº 10.101, de 19 de dezembro de 2000, a fim de permitir que nos Municípios de interesse turístico reconhecido por Lei Municipal, Estadual ou Federal, fica dispensada a autorizaç
+- Altera a Consolidação das Leis do Trabalho – CLT, a Lei nº 8.112, de 11 de dezembro de 1990, e estabelece normas gerais sobre licença por luto para trabalhadores da iniciativa privada e servidores públicos civis da União
+- Altera o artigo 482, da Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei 5.452, de 1º de maio de 1943, para dispor sobre o caráter pedagógico do exercício do poder disciplinar do empregador e a exigência da g
+- Dispõe sobre a aplicação, ao trabalhador temporário, do regime de teletrabalho previsto nos artigos 75-A a 75-E, da Consolidação das Leis do Trabalho (CLT), aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943.
+- Acrescenta art. 59-C à Consolidação das Leis do Trabalho para disciplinar extrapolações eventuais nos limites da jornada extraordinária de trabalho.
+- [formulaica] Trata da Licença para o Desempenho de Mandato Classista.
 - [formulaica] Apesar da recente vigência da Lei 13.467/2017, que alterou de forma significativa a Consolidação das Leis do Trabalho, algumas disposições ainda contidas no texto original do Decreto-Lei nº 5.452, de 1º de maio de 1943, 
 
-## Tópico 13 (n = 657; formulaicas atribuídas: 0)
+## Tópico 7 (n = 1124; formulaicas atribuídas: 2)
 
-Termos: transtorno, autista, espectro, transtorno espectro, espectro autista, tea, autista tea, pessoas transtorno, pessoas, pessoa transtorno
+Termos: consumidor, defesa consumidor, código defesa, defesa, serviços, telecomunicações, proteção consumidor, código, produtos, proteção
 
-- Institui o Selo Cursinho Inclusivo, destinado a reconhecer cursos preparatórios que adotem práticas de inclusão educacional para estudantes com Transtorno do Espectro Autista.
-- Altera a Lei nº 12.764, de 27 de dezembro de 2012, e a Lei nº 14.254, de 30 de novembro de 2021, para garantir aos estudantes com Transtorno do Espectro Autista (TEA) ou Transtorno do Déficit de Atenção com Hiperatividad
-- Altera a Lei nº 8.080, de 19 de setembro de 1990; a Lei nº 8.742, de 7 de dezembro de 1993; a Lei nº 9.394 de 20 de dezembro de 1996; a Lei nº 10.048, de 8 de novembro de 2000 e a Lei nº 12.764, de 27 de dezembro de 2012
-- Altera a Lei nº 12.764, de 27 de dezembro de 2012, para dispor sobre o Desenvolvimento Psicossocial Continuado da Pessoa Adulta com Transtorno do Espectro Autista.
-- Dispõe sobre a destinação de espaços reservados e adaptados para pessoas com Transtorno de Espectro Autista (TEA) em estádios e arenas esportivas com capacidade igual ou superior a vinte mil pessoas.
+- Dispõe sobre prática abusiva nas relações entre instituições financeiras e consumidores bancários.
+- Dispõe sobre a obrigatoriedade do serviço de pagamento de boletos nas agências bancárias.
+- Altera a Lei n.º 8.078, de 11 de setembro de 1990, "que dispõe sobre a proteção do consumidor e dá outras providências", para tornar obrigatória a troca de produto isento de vício nas condições em que especifica.
+- Determina às delegatárias de serviços de telecomunicações o fornecimento de fatura detalhada, desconto automático sobre o valor mensal em caso de interrupção na prestação do serviço e notificações sobre interrupção tempo
+- Altera a Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), e a Lei nº 9.472, de 16 de julho de 1997, para coibir as práticas abusivas de telemarketing, e dá outras providências.
+- [formulaica] A defesa do consumidor é assegurada pelo ordenamento jurídico em nosso país, em especial, pela Lei nº 8.078, de 11 de setembro de 1990, o chamado Código de Defesa do Consumidor. Essa norma traz definições e expectativas 
+- [formulaica] Os contratos de compra e venda de bens móveis e imóveis que envolvem pagamento em prestações (ex: financiamentos), bem como de alienação fiduciária em garantia, são, via de regra, contratos de adesão, tendo suas cláusula
 
-## Tópico 14 (n = 831; formulaicas atribuídas: 1)
+## Tópico 8 (n = 1123; formulaicas atribuídas: 10)
 
-Termos: deficiência, pessoa deficiência, pessoas deficiência, pessoa, pessoas, brasileira, estatuto pessoa, inclusão, inclusão pessoa, acessibilidade
+Termos: administração, administração pública, públicos, transparência, pública, licitações, públicas, órgãos, serviços públicos, serviços
 
-- Altera a Lei nº 13.146, de 6 de julho de 2015, para estabelecer a obrigatoriedade da disponibilização de cardápio em Braille por bares, lanchonetes e restaurantes.
-- Altera a Lei Nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), adicionando previsão legal dos Conselhos da Pessoa com Deficiência.
-- Altera a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), para dispor sobre a utilização dos dados do Cadastro-Inclusão para possibilitar o exercício, pela pessoa com deficiência, dos direitos p
-- Estabelece prioridade a pessoas com deficiência para lotação e exercício em cargos públicos no âmbito da Administração Pública direta e indireta, em conformidade com a Lei nº 13.146, de 6 de julho de 2015 (Lei Brasileira
-- Classifica o ceratocone, de graus 3 e 4, como deficiência sensorial, do tipo visual, e dá outras providências.
-- [formulaica] O Decreto 5.296, de 2004, determinou que as normas técnicas da ABNT - em especial a NBR 9050, passassem a regimentar os critérios e parâmetros técnicos a serem observados por todas as empresas brasileiras, independenteme
+- Altera a Lei nº 13.019, de 2014, que estabelece o regime jurídico das parcerias voluntárias, envolvendo ou não a transferência de recursos financeiros, entre a Administração Pública e as organizações da sociedade civil, 
+- Altera a Lei nº 9.099, de 26 de setembro de 1995, para estabelecer que os embargos de que trata o inciso IX do caput de seu art. 52 deverão ser oferecidos no prazo de quinze dias contados da ciência da decisão.
+- Dispõe sobre a obrigatoriedade do registro público de reuniões marcadas e ocorridas no âmbito da administração pública federal.
+- Altera a Lei 9.986, de 18 de julho de 2000, para estabelecer vedação à indicação para o Conselho Diretor ou a Diretoria Colegiada das Agências Reguladores nas hipóteses em que especifica.
+- Altera o § 1º do art. 54 da Lei nº 14.133, de 1º de abril de 2021 (Lei de Licitações e Contratos Administrativos), para retirar a obrigatoriedade da divulgação do extrato do edital de licitação em jornal diário de grande
+- [formulaica] : O art. 24 da Lei 8666/93 trata das hipóteses de dispensa de licitação e, nos incisos I e II, aborda as hipóteses de dispensa em virtude do valor da transação, que, para obras e serviços de engenharia, alcança até quinz
+- [formulaica] A retomada de investimentos no setor de infraestrutura pode ser impulsionada por diversas alterações legislativas incrementais, mas significativas para conferir segurança ao investidor e sustentabilidade econômico-financ
 
-## Tópico 15 (n = 729; formulaicas atribuídas: 1)
+## Tópico 9 (n = 632; formulaicas atribuídas: 1)
 
-Termos: produtos, bebidas, alimentos, resíduos, embalagens, sólidos, resíduos sólidos, comercialização, proíbe, alcoólicas
+Termos: reconhece, cultural, patrimônio, patrimônio cultural, imaterial, manifestação, manifestação cultura, cultura, declara, cultural imaterial
 
-- Modifica o Decreto-Lei nº 986, de 21 de outubro de 1969 para determinar a impressão em rótulos e embalagens de alimentos, medicamentos e cosméticos de advertência sobre a presença de corantes.
-- Altera a Lei nº 7.889, de 23 de novembro de 1989, que dispõe sobre inspeção sanitária e industrial de produtos de origem animal, e dá outras providências.
-- Dispõe sobre as condições de comercialização de produtos cosméticos mediante procedimento de refilagem e dá outras providências.
-- Dispõe sobre design de embalagens plásticas para reciclagem.
-- Proíbe a fabricação de sacos de cimento com peso superior a 25 (vinte e cinco) quilogramas e dá outras providências.
-- [formulaica] Trata do processo de armazenagem de produtos agropecuários.
-
-## Tópico 16 (n = 666; formulaicas atribuídas: 4)
-
-Termos: eleitoral, eleições, partidos, políticos, partidos políticos, código eleitoral, eleitorais, inelegibilidade, candidatos, complementar
-
-- Altera a Lei nº 9.504, de 30 de setembro de 1997, para estabelecer a impressão dos votos digitados na urna eletrônica e a realização da apuração dos votos impressos na própria seção eleitoral.
-- Altera a Lei nº 9.096, de 19 de setembro de 1995 (Lei dos Partidos Políticos), a fim de disciplinar a cisão de partidos políticos.
-- Alterar a Lei nº 4.737, de 15 de julho de 1965, que institui o Código Eleitoral, e dá outras providências.
-- Dispõe sobre as eleições nos conselhos federais e regionais de fiscalização do exercício profissional, estabelecendo a representação proporcional por chapas, a limitação de mandatos, a composição equitativa de gênero nas
-- Altera a Lei nº 9.504, de 30 de setembro de 1997, que estabelece normas para as eleições, para dispor sobre a deep fake.
-- [formulaica] Ampliar os mecanismos de participação direta na democracia se mostra adequado e necessário, na medida em que o art. 1º, caput, da Constituição Federal de 1988 consagra o modelo de Estado Democrático de Direito, que se ex
-- [formulaica] A Lei Federal Nº 9.096/95, que regulamenta o os arts. 17 e 14, § 3º, inciso V, da Constituição Federal e trata da legislação sobre os partidos políticos, traz em seu Artigo 28, de forma expressa a vedação de que partidos
-
-## Tópico 17 (n = 501; formulaicas atribuídas: 1)
-
-Termos: reconhece, cultural, patrimônio, imaterial, patrimônio cultural, manifestação, manifestação cultura, cultura, declara, cultural imaterial
-
-- Inclui a “Festa do Solimões”, realizada anualmente no município de Caracaraí, Estado de Roraima, no Calendário Turístico Oficial do Brasil.
-- Declara o tiro esportivo e os clubes de tiro esportivo como patrimônio esportivo, cultural e imaterial do Brasil.
-- Reconhece a rapadura como manifestação da cultura nacional.
-- Declara a Festa do Morro da Conceição como Manifestação da Cultura Nacional
-- Inclui e declara o Caranguejo, como Patrimônio Nacional, Histórico e Cultural do Brasile dá outras providências.
+- Eleva a "Festa de Nossa Senhora do Carmo", que se realiza na cidade de Jucás, no Estado do Ceará, patrimônio cultural imaterial do Brasil.
+- Institui o Plano Nacional de Execução Prioritária da BR-210 – Perimetral Norte, com foco no trecho localizado no estado de Roraima, e dá outras providências.
+- Concede o título de Patrimônio Nacional da Pesquisa Agropecuária em Leite à Embrapa Gado de Leite.
+- Inclui no calendário turístico oficial o Círio de Nazaré, no Município de Belém, Estado do Pará.
+- Reconhece a Axé Music como manifestação da cultura nacional.
 - [formulaica] Os indígenas são povos que, antes da invasão europeia em seu território, há milhares de anos, já habitavam o território brasileiro; assim também como a população afro-brasileira advém da milenar história e cultura enraiz
 
-## Tópico 18 (n = 787; formulaicas atribuídas: 7)
+## Tópico 10 (n = 778; formulaicas atribuídas: 2)
 
-Termos: previdência, previdência social, social, benefícios, regime geral, geral previdência, aposentadoria, crédito, inss, benefícios previdência
+Termos: transtorno, autista, espectro, transtorno espectro, espectro autista, tea, autista tea, pessoas transtorno, pessoa transtorno, pessoas
 
-- Esta Lei dispõe sobre o teto dos juros remuneratórios bancários em qualquer de suas operações, bem como Altera o Artigo 34, da Lei n° 4.595/1964, acrescentando o §1º, e o Artigo 39, da Lei n° 8.078/1990 (Código de Defesa
-- Altera a a Lei nº 8.213, de 24 de julho de 1991, para proibir o desconto de valores destinados a entidades representativas de aposentados sobre os benefícios pagos pelo INSS; cancela os contratos vigentes; e revoga o inc
-- Dispõe sobre a aposentadoria especial a segurados efetivamente expostos a agentes biológicos e cancerígenos e dá outras providências.
-- Dispõe sobre a destinação dos valores disponibilizados para resgate de pessoa física ou jurídica informados pelo Sistema de Informações de Valores a Receber (SRV) do Banco Central do Brasil (BCB).
-- Altera os arts. 12 e 11, respectivamente, das Leis nº 8.212 e 8.213, ambas de 24 de julho de 1991, para estabelecer em lei a idade mínima de dezesseis anos para inscrição do segurado obrigatório no Regime Geral de Previd
-- [formulaica] O Governo Federal apresentou no final de 2020 a Medida Provisória nº 1.016 (de 17 de dezembro de 2020) com o objetivo de estabelecer critérios, requisitos e condições para que os bancos administradores dos Fundos Constit
-- [formulaica] O presente Projeto de Lei tem por objetivo revogar o art. 56 da Lei nº 15.042, de 11 de dezembro de 2024, dispositivo que passou a obrigar sociedades seguradoras, entidades abertas de previdência complementar, sociedades
+- Dispõe sobre a criação de Delegacias Especializadas ou Núcleos Específicos para o atendimento de pessoas com Transtorno do Espectro Autista (TEA) e seus familiares.
+- Altera a Lei nº 7.713, de 1988, para conceder isenção no imposto de renda a pessoas com Transtorno do Espectro Autista (TEA), Transtorno do Déficit de Atenção com Hiperatividade (TDAH), Transtornos Hipercinéticos e aos r
+- Altera a Lei nº 12.764, de 27 de dezembro de 2012 que “Institui a Política Nacional de Proteção da Pessoa com Transtorno do Espectro Autista, para dispor sobre possibilitar tratamentos médicos complementares e alternativ
+- Altera a Lei nº 12.764, de 27 de dezembro de 2012, que “institui a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista; e altera o § 3º do art. 98 da Lei nº 8.112, de 11 de dezembro de
+- Dispõe sobre o incentivo à pesquisa das causas do Transtorno do Espectro Autista (TEA), institui parcerias público-privadas (PPPs), cria o Prêmio Nacional de Pesquisa sobre Autismo, estabelece benefícios fiscais para emp
+- [formulaica] A Agência Nacional de Saúde Suplementar ampliou as regras vigentes para o tratamento de transtornos globais do desenvolvimento, como o autismo, custeado por operadoras de saúde. Por meio da resolução 539, de julho de 202
+- [formulaica] . O Transtorno do Espectro do Autismo (TEA) afeta o desenvolvimento neurológico de aproximadamente 2 milhões de pessoas no Brasil. O TEA se manifesta desde o nascimento, acompanhando a pessoa por toda a vida. Os impactos
 
-## Tópico 19 (n = 617; formulaicas atribuídas: 1)
+## Tópico 11 (n = 802; formulaicas atribuídas: 6)
 
-Termos: energia, elétrica, energia elétrica, concessionárias, distribuição energia, distribuição, geração, solar, distribuída, permissionárias
+Termos: civil, processo civil, código civil, código processo, processo, código, juizados, juizados especiais, cíveis, especiais cíveis
 
-- Determina que parques de diversão disponham de gerador de energia elétrica de reserva.
-- Estabelece que a cobrança, pela União, de tarifas, taxas e dos custos operacionais e de manutenção de obras ou serviços públicos vinculados ao aproveitamento econômico e social dos rios e das massas de água, nas regiões 
-- Altera a Lei nº 12.212, de 20 de janeiro de 2010, para instituir novos limites para as faixas de consumo da Tarifa Social de Energia Elétrica.
-- Altera as Leis nº 9.074, de 7 de julho de 1995, nº 10.257, de 10 de julho de 2001 e nº 8.631, de 4 de março de 1993, com o objetivo garantir e ampliar os direitos dos consumidores de energia elétrica no Brasil.
-- Cria descontos nas tarifas de energia elétrica de unidades consumidoras classificadas como cooperativas, fundações e Organizações não governamentais de um modo geral sem fins lucrativos
-- [formulaica] O presente projeto visa implementar ações urgentes e necessárias para impulsionar o desenvolvimento socioeconômico do Brasil, por meio da promoção de projetos voltados à geração de energia elétrica limpa e renovável, ao 
+- Acrescenta parágrafo único ao art. 1.695 da Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), para excluir o dever de prestar alimentos da vítima de violência doméstica e familiar em relação ao agressor.
+- Altera dispositivo da Lei nº 13.105, de 16 de março de 2015 – Código de Processo Civil, de forma a permitir o pagamento parcelado do crédito do exequente no cumprimento da sentença.
+- Acrescenta o §4º no art. 2º da Lei nº 5.478, de 25 de julho de 1968 (Lei de Alimentos), para determinar que o credor menor seja substituído processualmente no polo ativo da ação de alimentos por seu responsável.
+- Altera o art. 835 do Código de Processo Civil para permitir a seleção de bens específicos do devedor em execução.
+- Altera a Lei n.º 10.406, de 10 de janeiro de 2002 - Código Civil, para excluir da sucessão os herdeiros ou legatários que abandonarem o autor da herança.
+- [formulaica] Busca a presente proposição acrescentar dispositivo na Lei nº 10.406, de 10 de janeiro de 2002 – Código Civil, de forma a permitir ao homem ou à mulher o retorno posterior ao nome de solteiro, mesmo que o divórcio ou a d
+- [formulaica] O presente Projeto de Lei objetiva alterar o inciso III do art. 15 da Lei nº 5.010, de 30 de março de 1966. Conforme a atual redação, quando a Comarca não for sede de Vara Federal, poderão ser processadas e julgadas na J
 
-## Tópico 20 (n = 948; formulaicas atribuídas: 2)
+## Tópico 12 (n = 793; formulaicas atribuídas: 1)
 
-Termos: internet, crianças, adolescentes, crianças adolescentes, criança, criança adolescente, adolescente, digitais, marco civil, civil internet
+Termos: deficiência, pessoa deficiência, pessoa, pessoas deficiência, pessoas, estatuto pessoa, inclusão pessoa, brasileira inclusão, inclusão, acessibilidade
 
-- Estabelece restrições à publicidade de serviços de acompanhantes, plataformas digitais de intermediação de encontros com conotação sexual e atividades similares, e dá outras providências.
-- Estabelece que menores de 16 anos somente poderão manter conta em aplicativos de redes sociais mediante vinculação a uma conta pré-existente de um dos responsáveis.
-- Dispõe sobre a criminalização da monetização de conteúdo infantil em redes sociais e plataformas digitais sem expressa autorização judicial, altera o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal), e a Lei
-- Estabelece a proibição de organização com o objetivo de difundir ideias nazistas, segregacionistas, discriminatórias, preconceituosas, eugênicas e propagação de violência ou ódio, seja em qualquer meio de comunicação e d
-- Altera a Lei nº 8.069, de 13 de julho de 1990 para tornar crime à sujeição de criança e adolescente ao tratamento com a utilização de bloqueadores hormonais, bem como, cirurgias de redesignação sexual na rede de saúde pú
-- [formulaica] O aumento de utilização de meios eletrônicos para a comunicação de pessoas físicas e jurídicas, tem aumentado dia após dia, o que mais se vê são pessoas com conhecimentos básicos da acessando a rede de computadores, seja
-- [formulaica] A Lei 13.709, de 14 de agosto de 2018, que trata da Lei Geral de Proteção de Dados Pessoais (LGPD) foi criada tendo como objetivo a disciplina normativa acerca do tratamento de dados pessoais, posto que vulneráveis em u
+- Dispõe sobre a obrigatoriedade de aquisição de macas, camas e cadeiras de rodas dimensionadas para obesos por hospitais, clínicas, postos de saúde e afins, públicos e privados.
+- Altera a Lei Complementar nº 142, de 8 de maio de 2013, e a Lei nº 13.146, de 6 de julho de 2015, para dispor sobre o reconhecimento da epilepsia grave, refratária ou incapacitante como condição apta à caracterização da 
+- Determina a instalação de equipamentos destinados a deficientes visuais em pontos de interesse turístico.
+- Dispõe sobre a obrigatoriedade da inclusão do Símbolo Internacional de Acessibilidade e demais símbolos de identificação de deficiências nos documentos oficiais de identidade emitidos no território nacional, e dá outras 
+- Altera a Lei nº 13.444, de 11 de maio de 2017, de forma a incluir na Identificação Civil Nacional (ICN) informações sobre deficiência, doença grave ou outra condição incapacitante ou limitante de caráter permanente.
+- [formulaica] As propostas e leis que versem sobre a inclusão das pessoas portadoras de deficiência devem abranger todos os tipos de deficiências. A omissão da lei quanto à isenção do IPI para pessoas portadoras de deficiência auditiv
 
-## Tópico 21 (n = 898; formulaicas atribuídas: 2)
+## Tópico 13 (n = 805; formulaicas atribuídas: 21)
 
-Termos: administração, administração pública, públicos, pública, transparência, licitações, contratos, públicas, serviços, público
+Termos: código, código penal, penal, crime, civil, penas, pena, crimes, aumentar, código processo
 
-- Altera a Lei n° 12.527, de 18 de novembro de 2011, para assegurar aos cidadãos fácil acesso ao inteiro teor de leis, decretos, atos de regulamentação e demais normas infralegais expedidas pelos órgãos e entidades subordi
-- Altera a Lei nº 8.078/1990 para estabelecer limites e regras de transparência na cobrança de taxa de conveniência na comercialização de ingressos para eventos.
-- Altera a Lei nº 14.133, de 1º de abril de 2021 (Lei de Licitações e Contratos Administrativos), para estabelecer requisitos temporais de constituição e compatibilidade de objeto social para participação em processos lici
-- Acrescenta o § 5º ao art. 93 da Lei nº 8.213, de 24 de julho de 1991, para inabilitar de firmar convênios, contratos ou licitações com órgãos ou entidades da administração pública, a empresa que não cumprir o disposto no
-- Altera a Lei n.º 9.491, de 1997, para determinar que a desestatização de empresas ou instituições financeiras, controladas direta ou indiretamente pela União se dará mediante prévia aprovação pelo Congresso Nacional, bem
-- [formulaica] A proposta de eliminação do sigilo de 100 anos para informações pessoais da Presidência da República e a atribuição à Câmara dos Deputados da competência para revisar decisões de classificação de informações como sigilos
-- [formulaica] Atualmente, a vedação prevista no artigo 17, §3º, da Lei 13.303, de 30 de junho de 2016 (Lei das Estatais), impossibilita que empregados públicos - aprovados em concurso público - alcancem o topo da carreira profissional
+- Declara de interesse público o medicamento Lenacapavir, para fins do disposto no art. 71 da Lei nº 9.279, de 14 de maio de 1996.
+- Estabelece a obrigatoriedade do Censo Demográfico Decenal abordar temática referente a animais domésticos.
+- Altera o inciso III do art. 6º da Lei 12.318 de 26 de agosto de 2010, para fixar os valores da multa.
+- Altera os artigos 180 e 311 do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal) para incluir nova causa de aumento de pena, e dá outras providências.
+- Corrige a redação do caput do art. 1.293 da Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), e dá outras providências.
+- [formulaica] Estabelece penalidades para o condutor que alterar características do veículo de carga ou de transporte de passageiro.
+- [formulaica] A pichação é um dano caudado por pessoas, que sem qualquer autorização, escrevem letreiros, fazem desenhos, as vezes obscenos, em suma danificam a propriedade privada, e fazem com que as cidades fiquem mais poluídas visu
 
-## Tópico 22 (n = 808; formulaicas atribuídas: 11)
+## Tópico 14 (n = 700; formulaicas atribuídas: 8)
 
-Termos: complementar, municípios, fiscal, estados, distrito, união, tributário, estados distrito, tributária, serviços
+Termos: eleitoral, eleições, partidos, partidos políticos, políticos, código eleitoral, eleitorais, candidatos, candidaturas, campanha
 
-- Dá nova redação ao art. 7º da Lei Complementar nº 8, de 3 dezembro de 1970, para disciplinar a imprescritibilidade e a impossibilidade de transferência dos recursos que compõem os Programas de Formação do Patrimônio do S
-- Altera a Lei Complementar nº 116, de 31 de julho de 2003, que dispõe sobre o Imposto Sobre Serviços de Qualquer Natureza, com o fulcro de retirar a competência dos Municípios para a instituição do imposto sobre serviço e
-- Define os combustíveis e lubrificantes sobre os quais incidirá uma única vez o Imposto sobre Operações relativas à Circulação de Mercadorias e Prestação de Serviços de Transporte Interestadual e Intermunicipal e de Comun
-- Altera a Lei nº 9.430, de 27 de dezembro de 1996, para permitir a cessão de créditos tributários próprios e sua compensação com débitos relativos a quaisquer tributos e contribuições administrados pela Secretaria da Rece
-- Altera a Lei nº 5.172, de 25 de outubro de 1966 (Código Tributário Nacional), para estabelecer normas gerais relativas à incidência das penalidades pecuniárias decorrentes do inadimplemento da obrigação tributária princi
-- [formulaica] Trata da dação de bens imóveis para saldar dívidas tributárias.
-- [formulaica] A Constituição Federal em seu artigo 151 veda à União instituir tributo que não seja uniforme em todo o território nacional ou que implique distinção ou preferência em relação a Estado, ao Distrito Federal ou a Município
+- Altera a Lei nº 9.504, de 30 de setembro de 1997 (Lei das Eleições) e a Lei Complementar nº 64, de 18 de maio de 1990, para declarar inelegível para a eleição a que se refere o pedido de registro aqueles que tiverem dete
+- Altera a Lei n.º 9.504, de 30 de setembro de 1997, para limitar a quantidade de candidatos que cada partido pode registrar para a Câmara dos Deputados, a Câmara Legislativa, as Assembleias Legislativas e as Câmaras Munic
+- Altera a Lei nº 4.737, de 15 de julho de 1965 (Código Eleitoral) para estabelecer nas eleições proporcionais percentual mínimo de representação por sexo, na forma e nos valores definidos.
+- Altera a Lei n.º 9.504, de 30 de setembro de 1997, para incluir a realização obrigatória de debates no segundo turno das eleições.
+- Dispensa a aplicação de multas e de outras penas previstas na legislação eleitoral ao eleitor que deixou de votar e ao membro de mesa receptora que não compareceu ao local de votação durante as eleições de 2020.
+- [formulaica] O objetivo da presente proposta de emenda à Constituição (PEC) é evitar situação que hoje ocorre no Congresso Nacional, qual seja: a posse de suplente de deputado federal e/ou de senador nos últimos dias do mandato do ti
+- [formulaica] Com a apresentação do presente PL que visa disciplinar a divulgação de pesquisa por parte dos institutos de pesquisa, contratantes, órgãos de comunicação, redes sociais e candidato beneficiário, que somente poderá ocorre
 
-## Tópico 23 (n = 425; formulaicas atribuídas: 0)
+## Tópico 15 (n = 628; formulaicas atribuídas: 3)
 
-Termos: capital, título capital, título, confere, município, confere município, estado, sul, rio, estado rio
+Termos: previdência, previdência social, social, benefícios, aposentadoria, regime geral, geral previdência, benefícios previdência, planos benefícios, inss
 
-- Concede ao município de Amparo, situado no Estado de São Paulo, o título de Capital Nacional do Café.
-- Confere ao Município de Jesuânia, no Estado de Minas Gerais, o título de Capital Nacional da terra das Congadas.
-- Reconhece no âmbito do território nacional brasileiro, o município de São João de Meriti, no Estado do Rio de Janeiro, como “Formigueiro das Américas”.
-- Confere o Título de "Capital Nacional da Pedra Preciosa de Ametista" à cidade de Ametista do Sul, no Estado do Rio Grande do Sul.
-- Confere ao Município de Patrocínio, no Estado de Minas Gerais, o título de Capital Nacional do Café.
+- Regulamenta o § 1º do art. 201 da Constituição Federal para estabelecer critérios de caracterização de atividades exercidas sob condições especiais por vigilantes, independentemente do uso de arma de fogo, para fins de c
+- Dispõe sobre a dedução das contribuições realizadas em planos de previdência complementar de caráter familiar.
+- Altera o art. 3º da Lei nº 9.491, de 9 de setembro de 1997, para explicitar que o Serviço Federal de Processamento de Dados - Serpro e a Empresa de Tecnologia e Informações da Previdência Social - Dataprev não se encontr
+- Altera os arts. 16 e 77 da Lei nº 8.213, de 24 de julho de 1991, que dispõe sobre os Planos de Benefícios da Previdência Social, para incluir, como dependentes do segurado, o filho e o irmão até 24 (vinte e quatro) anos 
+- Dispõe sobre a gratuidade das ligações destinadas à Central 135 de Atendimento do INSS para telefones móveis.
+- [formulaica] Com o advento da Emenda Constitucional nº. 103, de 13 de novembro de 2019, houve um aumento considerável das regras para que o segurado e a segurada do Regime Geral de Previdência Social possa se aposentar. Por um lado, 
+- [formulaica] Estabelece que os imóveis construídos com recursos do INSS possam ser alienados ou locados, e que as receitas provenientes destas ações sejam revertidas em favor do próprio Instituto.
 
-## Tópico 24 (n = 570; formulaicas atribuídas: 2)
+## Tópico 16 (n = 889; formulaicas atribuídas: 11)
 
-Termos: militares, segurança pública, segurança, pública, bombeiros, fundo segurança, bombeiros militares, polícias, policiais, militar
+Termos: complementar, fiscal, municípios, distrito, estados, estados distrito, serviços, despesas, união, recursos
 
-- Altera a Lei nº 13.675, de 11 de junho de 2018, que institui o Sistema Único de Segurança Pública (Susp), para dispor sobre a integração dos dados de mortalidade por causas externas ao Sinesp e sobre a redução das mortes
-- Dispõe sobre o seguro de vida para profissionais de segurança pública.
-- Estabelece aos servidores integrantes do sistema de segurança pública, previstos no Artigo 144 da Constituição Federal, aos guardas municipais e a Polícia Penal, a percepção de indenização por Atividade de Risco Policial
-- Altera a Lei nº 7.102, de 20 de junho de 1983, para dispor sobre a prestação de serviço de forma autônoma pelos agentes de segurança privada.
-- Altera a Lei nº 13.756, de 12 de dezembro de 2018 para vincular parcela da aplicação do Fundo Nacional de Segurança Pública às comunidades diretamente atingidas pela violência de operações policiais.
-- [formulaica] Inclui os militares da reserva das Forças Armadas dentre os passíveis de compor a Força Nacional de Segurança Pública.
-- [formulaica] Trata-se de projeto de lei que tem como objetivo revogar os dispositivos dos capítulos XII a XII, da Lei nº 4.878, de 3 de dezembro de 1965, para a aperfeiçoar o regime disciplinar das polícias civis da União e compatibi
+- Acrescenta o art. 3º- A à Lei Complementar nº 93 de 4 de fevereiro de 1998, que institui o Fundo de Terras e da Reforma Agrária e altera o art. 73 da Lei nº 9.605, de 1998.
+- Estabelece Novo Arcabouço Fiscal da União voltado para a sustentabilidade da dívida, a integração das regras fiscais, e dá outras providências, com amparo no Capítulo II do Título II da Constituição, inciso VIII e parágr
+- Dispensa os municípios brasileiros dos requisitos de adimplência ao CAUC para o recebimento de transferências voluntárias da União durante o período de Pandemia
+- Altera a 	Lei Complementar nº 101, de 4º de maio de 2000, que "Estabelece normas de finanças públicas voltadas para a responsabilidade na gestão fiscal e dá outras providências", para limitar a cobrança de tarifas sobre 
+- Altera a Lei Complementar nº 179, de 24 de fevereiro de 2021, que “Define os objetivos do Banco Central do Brasil e dispõe sobre sua autonomia e sobre a nomeação e a exoneração de seu Presidente e de seus Diretores” para
+- [formulaica] A Lei Complementar n.º 207, de 17 de maio de 2024 foi aprovada como verdadeiro abuso fiscal de gastos do Governo Federal, que cada vez mais tem seu foco na arrecadação e estrangulamento financeiro da população e não no c
+- [formulaica] A Medida Provisória nº 810, de 8 de dezembro de 2017, promoveu uma série de alterações na Lei nº 8.248, de 23 de outubro de 1991 – Lei da Informática, e na Lei nº 8.387, de 30 de dezembro de 1991 – Lei da Informática da 
 
-## Tópico 25 (n = 546; formulaicas atribuídas: 3)
+## Tópico 17 (n = 428; formulaicas atribuídas: 0)
 
-Termos: adolescente, criança, criança adolescente, estatuto criança, estatuto, adolescentes, crianças, crianças adolescentes, tutelar, infância
+Termos: capital, título capital, confere, título, município, confere município, estado, rio, sul, estado rio
 
-- Altera a Lei nº 9.394, de 20 de dezembro de 1996, e a Lei nº 8.080, de 19 de setembro de 1990, para fortalecer as ações de prevenção, identificação precoce, acolhimento e proteção de crianças e adolescentes vítimas de vi
-- Altera a Lei nº 8.069, de 1990 - Estatuto da Criança e do Adolescente, para prever o dever de orientar a gestante sobre manobras de emergência em caso de obstrução de vias aéreas superiores por alimentos
-- Altera o Estatuto da Criança e do Adolescente (Lei nº 8.069, de 13 de julho de 1990), para dispor sobre a perda do poder familiar e a vedação de guarda, tutela ou convivência pelo autor de homicídio tentado ou consumado 
-- Altera a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para dispor sobre o descumprimento de dever inerente ao poder familiar por gestante.
-- Qualifica a exposição de crianças e adolescentes sob guarda de pais ou responsáveis legais brasileiros a situações de violência doméstica em país estrangeiro como situação capaz de submetê-los a grave risco de ordem físi
-- [formulaica] O presente projeto de lei cuida de modificar a Lei no 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), assim como o Decreto-Lei no 5.452, de 1o de maio de 1973, e as Lei nos 8.213, de 24 de julho de 
-- [formulaica] O presente projeto de lei, tem como objetivo acrescentar ao Código Penal e ao Estatuto da Criança e Adolescente, maior proteção e segurança jurídica as crianças e aos adolescentes, contra os agressores sexuais, e propici
+- Declara a cidade de Toritama, no estado de Pernambuco, Capital Nacional do Jeans.
+- Confere ao município de Uberaba, no Estado de Minas Gerais, o título de Capital Nacional da Psicografia.
+- Confere o título de "Capital Nacional da Madeira Engenheirada" ao Município de Guarapuava, localizado no Estado do Paraná.
+- Confere ao município de Pouso Alegre, no Estado de Minas Gerais, o título de "Capital Nacional da Cidadania".
+- Confere ao Município do Rio de Janeiro, no Estado do Rio de Janeiro, o título de Capital Nacional do Voo Livre.
 
-## Tópico 26 (n = 318; formulaicas atribuídas: 1)
+## Tópico 18 (n = 545; formulaicas atribuídas: 5)
 
-Termos: vacinação, contra covid, covid, contra, vacinação contra, imunização, vacinas, imunizações, programa imunizações, grupo prioritário
+Termos: imposto renda, renda, imposto, renda pessoa, isenção, pessoa física, isenção imposto, rendimentos, física, pessoas físicas
 
-- Inclui no protocolo de vacinação a obrigação do profissional de saúde em expor a quantidade de imunizante a ser administrada no paciente antes do início do procedimento de imunização, além de estabelecer sanção de multa 
-- Altera a Lei nº 13.979, de 6 de fevereiro de 2020 para prever a vacinação prioritária contra a Covid-19 de trabalhadores de óticas
-- Dispõe sobre a prioridade na vacinação de Ministros de Cultos Religiosos, em exercício, contra a Covid-19
-- Altera a Lei nº 13.979, de 6 de fevereiro de 2020, para permitir a importação de vacinas, independentemente de autorização da autoridade sanitária, que sejam registradas pelas entidades que especifica.
-- Altera a Lei nº 9.656, de 3 de junho de 1998  para incluir a cobertura de vacina contra o Covid-19 nos planos e seguro privados de assistência à saúde.
-- [formulaica] Dada a urgência de aquisição de vacinas contra a Covid-19 para estancar a disseminação do vírus e conter os efeitos deletérios da pandemia sobre o país, a Lei n° 14.125, de 10 de março de 2021, foi aprovada com o intuito
+- Dispõe sobre a isenção de qualquer tributo sobre medicamentos de uso contínuo para idosos e portadores de doenças  crônicas, assim entendidos aqueles usados no tratamento de doenças crônicas, os quais o paciente deverá f
+- Altera a Lei nº 7.713, de 22 de dezembro de 1998 para estabelecer a isenção de Imposto de Renda para premiações de atletas em competições esportivas por entidades nacional ou internacionais, em pecúnia.
+- Institui o Adicional da Contribuição Social sobre o Lucro Líquido, no processo de adaptação da legislação brasileira às Regras Globais Contra a Erosão da Base Tributária – Regras GloBE, e dá outras providências.
+- Interrompe o prazo para aquisição de novo imóvel residencial com isenção de imposto de renda sobre o ganho de capital, previsto no art. 39 da Lei nº 11.196, de 21 de novembro de 2005, para vendas realizadas entre 11 de s
+- Altera a Lei º 7.713, de 22 de dezembro de 1988, a fim de determinar a exclusão do crédito relativo à incidência do imposto de renda sobre os rendimentos recebidos acumuladamente, quando correspondentes a anos-calendário
+- [formulaica] A legislação federal em vigor não dispensa a retenção do Imposto de Renda na retido na Fonte (IRRF) na hipótese de remessas efetuadas ao exterior a título de doação, ainda que o beneficiário seja templo de entidade relig
+- [formulaica] A proposta tem o objetivo de adequar a incidência tributária de Imposto de Renda (IR) e Contribuição Social sobre o Lucro Líquido (CSLL) em aplicações financeiras realizadas por cooperativa, por entender o Sistema OCB qu
 
-## Tópico 27 (n = 364; formulaicas atribuídas: 4)
+## Tópico 19 (n = 626; formulaicas atribuídas: 0)
 
-Termos: fogo, arma, armas, porte, arma fogo, porte arma, armas fogo, desarmamento, estatuto desarmamento, posse
+Termos: produtos, alimentos, bebidas, embalagens, comercialização, proíbe, rótulos, alcoólicas, uso, bebidas alcoólicas
 
-- Altera a Lei nº 10.826, de 22 de dezembro de 2003, para autorizar o porte de arma de fogo para os Oficiais do Ministério Público.
-- Dispõe sobre a alienação das armas de fogo de uso pessoal dos órgãos policiais aos seus integrantes, por ocasião de sua aposentadoria ou transferência para a reserva remunerada.
-- Dispõe sobre o recolhimento de armas de fogo funcionais e de propriedade particular de agentes públicos, aos quais foi outorgado o porte de arma de fogo, implicados em atos de violência contra mulher e dá outras providên
-- Dispõe sobre a concessão de porte de arma de fogo, aos profissionais da área de segurança digital e segurança da informação, e dá outras providências.
-- Altera a Lei nº 8.666, de 21 de junho de 1993, para dispor sobrea a aquisição de armamento para atender aos princípios, diretrizes e objetivos da Política Nacional de Segurança Pública e Defesa Social de que trata a Lei 
-- [formulaica] O presente Projeto de Lei propõe equiparar a advocacia no Brasil, ao demais integrantes do tripé de constitucional da administração da Justiça, vez que tal risco já se reconheceu tanto na Lei Orgânica da Magistratura qua
+- Dispõe sobre a produção, a importação, o registro, a comercialização, o uso, a inspeção e fiscalização, a pesquisa e experimentação e os incentivos à produção e ao uso de bioinsumos para a agricultura e a silvicultura e 
+- Dispõe sobre proibição de fogos de artifício e artefatos pirotécnicos que causem efeitos sonoros.
+- Dispõe sobre a obrigatoriedade de estabelecimentos hospitalares, clínicas e unidades de saúde, públicas ou privadas, de informar a presença de lactose ou proteínas lácteas na composição do medicamento ofertado.
+- Dispõe sobre a regulação da importação de leite, leite em pó, queijo mussarela e derivados, estabelece limites proporcionais ao consumo interno e proíbe a reidratação de leite em pó importado no território nacional.
+- Proíbe a produção e comercialização de tereftalato de polietileno, polietileno de alta densidade, policloreto de vinila ou cloreto de vinila, polietileno de baixa densidade e polipropileno, poliestireno, que não sejam re
+
+## Tópico 20 (n = 945; formulaicas atribuídas: 1)
+
+Termos: violência, mulheres, mulher, doméstica, violência doméstica, doméstica familiar, vítimas, familiar, contra mulher, vítimas violência
+
+- Dispõe sobre o Viva – Programa Nacional de Defesa Pessoal para Mulheres e dá outras providências.
+- Dispõe sobre a concessão de linha de crédito especial para a mulher vítima de violência doméstica e familiar, que esteja inscrita no Cadastro Único para Programas Sociais do Governo Federal (CadÚnico)
+- Dispõe sobre o direito de transferência de mulheres em situação de violência e seus dependentes em instituições de ensino superior.
+- Institui o recebimento de comunicação de violência doméstica e familiar contra a mulher, por intermédio de atendentes em farmácias e outros estabelecimentos comerciais e prestadores de serviços em todo território naciona
+- As casas noturnas, os locais exclusivos para a realização de shows e os demais estabelecimentos congêneres, que mantiverem seus quadros de funcionários terão linha de credito especial junto aos bancos públicos.
+- [formulaica] O Programa Federal de Assistência à Vítimas e à Testemunhas Ameaçadas (PROVITA), instituído por meio da Lei nº 9.807, de 13 de julho de 1999, regulamentado pelo Decreto nº 3.518, de 20 de junho de 2000; o Programa de Pro
+
+## Tópico 21 (n = 677; formulaicas atribuídas: 0)
+
+Termos: educação, diretrizes bases, bases educação, bases, diretrizes, ensino, educação básica, básica, médio, fundamental
+
+- Institui o Programa Servidor Aprendiz e estabelece suas diretrizes.
+- Altera a Lei nº 9.394, de 20 de dezembro de 1996 (Lei de Diretrizes e Bases da Educação Nacional), e a Lei nº 14.645, de 2 de agosto de 2023, para considerar os povos indígenas e quilombolas na 
+oferta de educação profis
+- Altera e acrescenta dispositivos à Lei de diretrizes e bases da educação, instituída pela Lei nº 9.394 de 20 de dezembro de 1996 para dispor sobre o atendimento psicopedagógico na educação básica.
+- Acrescenta inciso XI ao art. 4º da Lei nº 9.394, de 20 de dezembro de 1996, que estabelece as Diretrizes e Bases da Educação Nacional, para incluir entre os deveres do Estado com a educação básica pública a distribuição 
+- Altera o art. 24 da Lei nº 9.394, de 20 de dezembro de 1996, de diretrizes e bases da educação nacional, para vedar a promoção automática no ensino fundamental e médio.
+
+## Tópico 22 (n = 439; formulaicas atribuídas: 4)
+
+Termos: fogo, armas, arma, arma fogo, porte, porte arma, armas fogo, desarmamento, estatuto desarmamento, posse
+
+- Altera a Lei nº 10.826, de 22 de agosto de 2003, concedendo o porte de arma de fogo aos integrantes do quadro de agentes e guardas prisionais, tanto efetivos quanto os temporários, dentro e fora de serviço.
+- Altera o artigo 6º da Lei nº 10.826, de 22 de dezembro de 2003 – Estatuto do Desarmamento, para dispor sobre o porte de arma para agentes públicos encarregados da segurança patrimonial.
+- Altera a Lei nº 10.826, de 22 de dezembro de de 2003, que dispõe sobre registro, posse e comercialização de armas de fogo e munição, sobre o Sistema Nacional de Armas – Sinarm, define crimes e dá outras providências.
+- Altera a redação do art. 6 º da lei nº 10.826, de 2003, que dispõe sobre registro, posse e comercialização de armas de fogo e munição, sobre o Sistema Nacional de Armas - Sinarm define crimes e dá outras providências.
+- Dispõe sobre o porte, a comercialização, a fabricação e a importação de spray de pimenta (ga?s Oleorresina capsicum) em todo o território nacional; altera a Lei n. 10.826, de 22 de dezembro de 2003 - Estatuto do Desarmam
+- [formulaica] Trata do porte de arma de fogo para os parlamentares.
 - [formulaica] Estabelece que os Cursos de Formação de Vigilantes, devidamente autorizados pela Polícia Federal, poderão fornecer a seus clientes, maiores de 21 anos, cursos e treinamentos que objetivem capacitação ao uso e manuseio de
 
-## Tópico 28 (n = 329; formulaicas atribuídas: 2)
+## Tópico 23 (n = 477; formulaicas atribuídas: 2)
 
-Termos: apostas, quota fixa, quota, apostas quota, fixa, jogos, loterias, publicidade, arrecadação, modalidade lotérica
+Termos: idosa, pessoa idosa, pessoa, idoso, idosos, estatuto, idosas, pessoas idosas, estatuto pessoa, estatuto idoso
 
-- Altera a Lei nº 14.790, de 29 de dezembro de 2023, para reforçar as regras relativas à publicidade e à comunicação comercial das apostas de quota fixa.
-- Acrescenta dispositivos à legislação vigente para regular a promoção de apostas online e cassinos por influenciadores digitais, equiparando-os a agentes autônomos de investimento, estabelecendo a necessidade de certifica
-- Acrescenta inciso ao art. 30 da Lei nº 13.756, de 12 dezembro de 2018, para que 0,5% do produto da arrecadação da loteria de apostas de quota fixa em meio físico ou virtual seja destinado a programas e projetos de preven
-- Insere o inciso XIII no art. 5º da Lei nº 13.756, de 12 de dezembro de 2008, que dispõe sobre o Fundo Nacional de Segurança Pública (FNSP), sobre a destinação do produto da arrecadação das loterias e sobre a promoção com
-- Dispõe sobre a regulamentação da profissão de Influenciador Digital e dá outras providências.
-- [formulaica] Atualmente, a Lei nº. 13.756, de 12 de dezembro de 2018, destina a renda líquida de 3 (três) concursos anuais sobre a loteria de prognósticos esportivos, dividida, alternadamente, entre a Federação Nacional das Associaçõ
+- Institui o Programa Alimentação Digna da Pessoa Idosa, com a concessão de benefício alimentar mensal preferencialmente por meio de instrumento eletrônico, assegurando a segurança alimentar contínua da pessoa idosa em sit
+- Dispõe sobre a criação do Programa Nacional de Capacitação Digital para Idosos e dá outras providências.
+- Institui o Novo Marco Legal de Proteção, Cuidado e Inclusão da Pessoa Idosa e altera a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto da Pessoa Idosa), para aperfeiçoar o sistema de proteção dos direitos da pessoa ido
+- Altera a Lei nº 15.476, de 23 de julho de 2026, para explicitar ações de atenção à saúde da pessoa idosa entre as iniciativas consideradas para a concessão do título Cidade Amiga do Idoso.
+- Altera as Leis nos 8.742, de 7 de dezembro de 1993, e 10.741, de 1º de outubro de 2003, para assegurar serviço de comunicação de emergências ocorridas com a pessoa idosa e com a pessoa com deficiência.
+- [formulaica] O presente Projeto de Lei visa promover alteração no art. 16 da Lei nº 9.656, de 3 de junho de 1998, nos termos propostos pelo art. 18 da Medida Provisória nº 1301, de 2025, com o objetivo de assegurar maior celeridade n
+- [formulaica] Busca a presente proposição acrescentar dispositivo à Lei nº 10.406, de 10 de janeiro de 2002, de forma a incluir entre as hipóteses de exclusão da sucessão, os herdeiros ou legatários que houverem sido autores, coautore
+
+## Tópico 24 (n = 701; formulaicas atribuídas: 254)
+
+Termos: programa, selo, cria, selo empresa, política, amiga, cria selo, empresa, empresa amiga, destinado
+
+- Cria o Programa de Responsabilidade Social e dá outras providências
+- Institui o Programa Farmácia Veterinária Popular.
+- Dispõe sobre Pontos de Leitura na Política Nacional de Cultura Viva, instituída pela Lei nº 13.018, de 22 de julho de 2014.
+- Institui a Política Nacional do Cuidado e dá outras providências.
+- Do Sistema Financeiro Nacional.
+- [formulaica] Busca a presente proposição acrescentar dispositivo na Lei nº 10.406, de 10 de janeiro de 2002 – Código Civil, de forma a dispensar da autorização dos pais para a celebração do casamento ou união estável no caso de menor
+- [formulaica] O presente Projeto de Lei tem por objetivo reforçar e explicitar, no âmbito da Lei nº 9.656, de 3 de junho de 1998, o princípio da isonomia no atendimento aos usuários de planos privados de assistência à saúde, asseguran
+
+## Tópico 25 (n = 406; formulaicas atribuídas: 1)
+
+Termos: maria penha, penha, maria, violência, doméstica, violência doméstica, doméstica familiar, mulher, familiar, contra mulher
+
+- Altera o art. 9º da Lei nº 11.340, de 7 de agosto de 2006 - Lei Maria da Penha, para incluir a previsão de benefícios da previdência social às vítimas de violência doméstica.
+- Altera a redação do inciso II, do artigo 12-C da Lei 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), para autorizar a concessão de medida protetiva de urgência, de ofício, pelo Delegado.
+- Altera a Lei nº 11.340, de 7 de agosto de 2006 - Lei Maria da Penha, para estabelecer, como medida protetiva de urgência, o afastamento do agressor do município de domicílio da ofendida.
+- Altera o art. 28 da Lei Maria da Penha, Lei n° 11.340, de 2006, para deixar expresso que o atendimento à mulher em situação de violência doméstica pelas defensorias públicas deve ocorrer independentemente da condição soc
+- Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), para determinar que, em casos de violência doméstica e familiar contra a mulher, a revogação da prisão preventiva e a liberação do agressor preso em fl
+- [formulaica] Busca a presente proposição acrescentar dispositivo ao art. 99 da Lei nº 13.105, de 16 de março de 2015 – Código de Processo Civil, de forma a conceder gratuidade de justiça a mulher em situação de violência doméstica e 
+
+## Tópico 26 (n = 426; formulaicas atribuídas: 16)
+
+Termos: planos, saúde, assistência saúde, privados assistência, assistência, privados, suplementar, saúde suplementar, planos saúde, seguros
+
+- Altera a Lei nº 9.656, de 3 de junho de 1998, para disciplinar a hipótese de tratamento experimental como justificativa à negativa de cobertura por planos de saúde.
+- Altera a Lei nº 9.656, de 3 de junho de 1998, que dispõe sobre os planos e seguros privados de assistência à saúde, determinado que planos com até 30 pessoas sejam equiparados aos contratos individuais.
+- Altera a Lei dos Planos de Saúde para definir como exemplificativo o rol de procedimentos.
+- Altera a Lei nº 9.656, de 3 de junho de 1998, e a Lei nº 9.961, de 28 de janeiro de 2000, para dispor sobre o índice de reajuste de planos privados de assistência à saúde de contratação coletiva.
+- Altera a Lei nº 9.656, de 3 de junho de 1998, para estabelecer que a contratação de plano de segmentação hospitalar com obstetrícia pelo beneficiário-pai garante a cobertura da assistência ao parto.
+- [formulaica] O presente Projeto de Lei tem por objetivo acrescentar o art. 15-B à Lei nº 9.656, de 3 de junho de 1998, na forma proposta pelo art. 18 da Medida Provisória nº 1.301, de 2025, com vistas a estabelecer regra clara e obje
+- [formulaica] O presente Projeto de Lei tem por finalidade alterar a redação do art. 12 da Lei nº 9.656, de 3 de junho de 1998, que dispõe sobre os planos e seguros privados de assistência à saúde, para assegurar expressamente a cober
+
+## Tópico 27 (n = 679; formulaicas atribuídas: 5)
+
+Termos: adolescente, criança adolescente, criança, estatuto criança, estatuto, adolescentes, crianças adolescentes, crianças, tutelar, adolescente estatuto
+
+- Altera a Lei nº 8.069, de 13 de julho de 1990, Estatuto da Criança e do Adolescente (ECA), para dispor sobre a autonomia administrativa e orçamentária dos Conselhos Tutelares.
+- Altera o Estatuto da Criança e do Adolescente para prever causa de aumento de pena para os crimes de pedofilia previstos nos artigos 241, 241-A, 241-B e 241-C cometidos mediante o uso de conteúdo não indexado na internet
+- Altera a Lei nº 8.069/90 (Estatuto da Criança e do Adolescente) para equiparar o prazo da medida socioeducativa de internação ao prazo da pena previsto para o tipo penal cometido pelo infrator
+- Altera o art. 139 do Estatuto da Criança e do Adolescente, Lei n° 8.069, de 1990, para determinar que, no processo de escolha dos membros do conselho tutelar, cada eleitor poderá votar em apenas um candidato.
+- Altera o art. 139 da Lei n° 8.069, de 13 de julho de 1990 (Estatuto da Criança e do Adolescente), para dispor sobre a publicidade do processo de escolha dos membros do Conselho Tutelar
+- [formulaica] O presente projeto de lei, tem como objetivo acrescentar ao Código Penal e ao Estatuto da Criança e Adolescente, maior proteção e segurança jurídica as crianças e aos adolescentes, contra os agressores sexuais, e propici
+- [formulaica] O Programa Federal de Assistência à Vítimas e à Testemunhas Ameaçadas (PROVITA), instituído por meio da Lei nº 9.807, de 13 de julho de 1999, regulamentado pelo Decreto nº 3.518, de 20 de junho de 2000; o Programa de Pro
+
+## Tópico 28 (n = 407; formulaicas atribuídas: 1)
+
+Termos: produtos industrializados, isenção, industrializados, imposto produtos, ipi, imposto, isenção imposto, industrializados ipi, produtos, aquisição
+
+- Altera o Decreto-Lei 37/1966, para dispor sobre as isenções do Imposto de Importação e a segurança de acesso a bens de consumo para uso pessoal
+- Dispõe sobre isenção do Imposto sobre Produtos Industrializados (IPI) nas aquisições de automóveis de passageiros, veículos de uso misto ou ambulâncias feitas pelas instituições de assistência social, sem fins lucrativos
+- Altera a Lei nº 8.989, de 24 de fevereiro de 1995, para conceder isenção do Imposto sobre Produtos Industrializados para veículos adquiridos por profissionais de segurança pública integrantes do Sistema Único de Seguranç
+- Altera os arts. 1º, 6º e 9º da Lei nº 8.989, de 24 de fevereiro de 1995, para, respectivamente, estabelecer preços máximos dos veículos, escalonados até 2025, para efeito de aquisição de veículos por pessoas portadoras d
+- Altera a Lei nº 8.989, de 24 de fevereiro de 1995, para estender a isenção do Imposto sobre Produtos Industrializados (IPI) às aquisições de motocicletas efetuadas por moto taxistas e motoboys para a utilização nas ativi
+- [formulaica] Esta Presente Proposição visa garantir a isenção do Imposto Sobre Produtos Industrializados (IPI) nos casos estabelecidos na Lei n° 8.989/1995 na aquisição de motocicletas, motonetas, veículos ciclomotores, triciclos e q
+
+## Tópico 29 (n = 358; formulaicas atribuídas: 2)
+
+Termos: vacinação, contra covid, covid, vacinação contra, contra, imunização, vacinas, imunizações, programa imunizações, vacina
+
+- Altera a Lei nº 6.259, de 30 de outubro de 1975, para dispor sobre a vacinação digital.
+- Inclui os trabalhadores da previdência social e do banco da caixa econômica federal entre os grupos considerados prioritários no Plano Nacional de Operacionalização da Vacinação contra a Covid-19.
+- Institui em todo território nacional, a obrigatoriedade do comprovante de vacinação contra a COVID-19, a todos os servidores e agentes públicos da União, Estados e Municípios.
+- Dispõe sobre a inclusão de vacina contra o vírus sincicial respiratório – VSR no Programa Nacional de Imunizações.
+- Altera a Lei nº 6.259, de 30 de outubro de 1975 para considerar os agentes funerários como grupo prioritário nas campanhas de vacinação contra a COVID-19 e pandemias com alto índice de fatalidade.
+- [formulaica] A biomedicina desempenha um papel essencial no avanço da saúde pública e da ciência, especialmente em momentos críticos como tivemos recentemente durante a pandemia do COVID-19. Durante esse período, os biomédicos estive
+- [formulaica] Dada a urgência de aquisição de vacinas contra a Covid-19 para estancar a disseminação do vírus e conter os efeitos deletérios da pandemia sobre o país, a Lei n° 14.125, de 10 de março de 2021, foi aprovada com o intuito
+
+## Tópico 30 (n = 428; formulaicas atribuídas: 2)
+
+Termos: apostas, quota fixa, quota, apostas quota, fixa, loterias, jogos, publicidade, arrecadação, propaganda
+
+- Altera a Lei nº 14.790, de 29 de dezembro de 2023, para restringir a publicidade sobre a modalidade lotérica denominada apostas de quota fixa.
+- Altera a Lei nº 14.790, de 29 de dezembro de 2023, para vedar a comunicação mercadológica, a publicidade, a propaganda, o marketing e o patrocínio de apostas de quota fixa nos serviços de radiodifusão sonora e de sons e 
+- Acresce dispositivo à Lei nº 14.790, de 29 de dezembro de 2023, que Dispõe sobre a modalidade lotérica denominada Apostas de Quota Fixa, para vedar a pré-instalação de aplicativos de apostas em aparelhos novos, e dá outr
+- Altera a Lei nº 13.756, de 12 de dezembro 2018, para regulamentar a modalidade lotérica denominada apostas de quota fixa.
+- Altera as leis n.º 13.756, de 12 de  dezembro de 2018 e 14.790, de 29 de dezembro de 2023, para regular a publicidade de apostas esportivas e jogos on-line em outdoors em todo o território nacional e da outras providênci
 - [formulaica] A Rede Lotérica exerce, há décadas, papel estratégico no atendimento à população, atuando como extensão operacional da Caixa Econômica Federal e como importante ponto de inclusão financeira em milhares de municípios bras
+- [formulaica] Atualmente, a Lei nº. 13.756, de 12 de dezembro de 2018, destina a renda líquida de 3 (três) concursos anuais sobre a loteria de prognósticos esportivos, dividida, alternadamente, entre a Federação Nacional das Associaçõ
 
-## Tópico 29 (n = 621; formulaicas atribuídas: 1)
+## Tópico 31 (n = 418; formulaicas atribuídas: 0)
 
-Termos: ensino, escolas, educação, públicas, obrigatoriedade, escolas públicas, privadas, instituições, educação básica, básica
+Termos: animais, animal, domésticos, animais domésticos, cães, estar, cães gatos, gatos, proteção, estar animal
 
-- Trata-se da lei de instalação de câmeras de vídeo nas escolas públicas em todo território nacional e das outras providencias
-- Institui a obrigatoriedade do nutricionista em instituições privadas de ensino infantil, fundamental e médio, e dá outras providências
-- Dispõe sobre a extensão aos professores e demais trabalhadores que desempenham suas funções no ambiente escolar, do acesso à alimentação escolar servida aos alunos.
-- Dispõe sobre a obrigatoriedade de avaliação oftalmológica e o fornecimento de óculos para os alunos do ensino fundamental, médio e Centros Municipais de Educação Infantil - CMEIs da Rede Municipal e Estadual em âmbito na
-- Dispõe sobre a obrigatoriedade das instituições de ensino federais, estaduais, municipais e distritais, garantirem a segurança da comunidade escolar através da contratação de profissional de segurança pública.
-- [formulaica] Recentemente fomos surpreendidos por um crime que abalou não só o Brasil como o Mundo, com cenas de horror em Suzano na cidade de São Paulo, quando dois jovens entraram na Escola Estadual Raul Brasil, na grande São Paulo
+- Institui a Política de Prevenção de Acidentes Elétricos com Animais Silvestres, para os fins que especifica.
+- Dispõe sobre a obrigatoriedade da instalação de canis nos estabelecimentos penais.
+- Institui o Programa de Controle de Monitoramento, Saúde e Bem-Estar de animais domésticos.
+- Estabelece o Cadastro Negativo da Pecuária e dispõe sobre as regras que lhes são aplicáveis.
+- Propõe alteração na Lei nº 9.394/1996 para tornar obrigatório, nos estabelecimentos de ensino fundamental e de ensino médio, públicos e privados, o estudo da disciplina Direito Animal.
 
-## Tópico 30 (n = 358; formulaicas atribuídas: 4)
+## Tópico 32 (n = 338; formulaicas atribuídas: 2)
 
-Termos: pequeno, pequeno porte, microempresas, porte, empresas pequeno, microempresas empresas, complementar, mei, empresas, microempreendedor
+Termos: profissão, exercício, regulamenta, exercício profissão, regulamentação, regulamenta profissão, regulamentação profissão, regulamenta exercício, profissional, profissões
 
-- Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para permitir o enquadramento, como Microempreendedor Individual (MEI), de atividades de programação e desenvolvimento de software.
-- Dispõe sobre mecanismos de facilitação do crédito a microempreendedores individuais, microempresas e empresas de pequeno porte controladas e administradas por pessoas com deficiência e altera a Lei nº 13.483, de 21 de se
-- Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para elevar a R$ 120.000,00 o valor de receita bruta anual que permite o enquadramento como Microempreendedor Individual (MEI), prever a correção anual do limi
-- Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para reajustar anualmente a receita bruta para enquadramento do MEI, microempresa e empresa de pequeno porte ao índice IPCA.
-- Dispõe sobre a ampliação, por até vinte e quatro meses, dos prazos de carência e de pagamento de operações de crédito celebradas no âmbito do Programa Nacional de Apoio às Microempresas e Empresas de Pequeno Porte (Prona
-- [formulaica] Em meados de 2019 o Congresso Nacional aprovou a Lei de Liberdade Econômica (Lei n. 13.874/2019), um marco legal muito comemorado pelo setor produtivo brasileiro, uma vez que objetivava garantir ao empresário a segurança
-- [formulaica] Busca apresente proposição acrescentar dispositivo à Lei no 10.048, de 8 de novembro de 2000, dispondo que, para a concessão de alvará de funcionamento ou sua renovação, devem ser observadas e certificadas as regras de a
+- Regulamenta a profissão de agente de proteção e defesa civil municipal.
+- Dispõe sobre o exercício da profissão de Técnico em Cuidados da Pessoa Idosa e dá outras providências.
+- Regulamenta a profissão de Técnico em Resgate de Animais.
+- Regulamenta o exercício da atividade de marketing.
+- Dispõe sobre a regulamentação da atividade profissional de naturopata e dá outras providências.
+- [formulaica] A Lei nº 12.244, de 24 de maio de 2010, que Dispõe sobre a universalização das bibliotecas nas instituições de ensino do País, já mencionava, em seu art. 3º, a profissão de Bibliotecário. É o corolário natural da previsã
+- [formulaica] Trata da atividade de garimpagem.
 
-## Tópico 31 (n = 292; formulaicas atribuídas: 0)
+## Tópico 33 (n = 400; formulaicas atribuídas: 1)
 
-Termos: maria penha, penha, maria, violência, violência doméstica, doméstica, doméstica familiar, mulher, familiar, contra mulher
+Termos: energia, elétrica, energia elétrica, concessionárias, distribuição energia, distribuição, fornecimento energia, permissionárias, fornecimento, tarifa
 
-- Altera o Decreto-Lei nº 3.689, de 3 de outubro de 1941 - Código de Processo Penal, para estabelecer nova hipótese de flagrante delito, bem como modifica a Lei nº 11.340, de 7 de agosto de 2006 - Lei Maria da Penha, para 
-- Dispõe sobre a proteção dos direitos de propriedade de mulheres vítimas de violência doméstica, com fundamento no artigo 226, §8º, da Constituição Federal, que determina a assistência e proteção às vítimas de violência n
-- Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), para explicitar que o dano moral decorrente da violência doméstica e familiar contra a mulher é presumido e independe de prova específica do sofrimento
-- Altera a Lei nº 11.340, de 7 de agosto de 2006 (Lei Maria da Penha), para que ela se aplique a todos os tipos de violência contra a mulher, e não apenas aos casos de violência doméstica e familiar.
-- Dispõe sobre a perda do direito à meação e à partilha de bens por parte do autor de violência doméstica e familiar contra a mulher, reconhecendo o rompimento da boa-fé objetiva e da solidariedade conjugal como causas de 
+- Altera a Lei nº 12.212, de 20 de janeiro de 2010, que dispõe sobre a Tarifa Social de Energia Elétrica.
+- Dispõe sobre a responsabilidade das concessionárias de energia elétrica em relação à manutenção e segurança dos postes de energia e suas consequências em caso de acidentes, estabelecendo prazos para providências e sançõe
+- Altera o art. 25 da Lei Nº 10.438, de 26 de abril de 2002, para estender às cooperativas e às colônias de pescadores artesanais os descontos especiais nas tarifas de energia elétrica aplicáveis às unidades consumidoras c
+- Dispõe sobre a conversão de redes de distribuição de energia elétrica aéreas em subterrâneas e dá outras providências.
+- Altera a Lei nº 9.427, de 26 de dezembro de 1996, para determinar que a Agência Nacional de Energia Elétrica (ANEEL) publique relatórios, em linguagem acessível à população, com vistas a garantir transparência das tarifa
+- [formulaica] PROJETO DE LEI Nº DE OUTUBRO 2023 Altera a Lei no 9.074, de 7 de julho de 1995 e a Lei no 10.848, de 15 de março de 2004, e dá outras providências. As prorrogações das concessões de distribuição de energia elétrica de qu
 
-## Tópico 32 (n = 317; formulaicas atribuídas: 2)
+## Tópico 34 (n = 316; formulaicas atribuídas: 1)
 
-Termos: aeronáutica, brasileiro aeronáutica, código brasileiro, aéreas, aéreo, transporte aéreo, voos, brasileiro, transporte, passagens
+Termos: imposto renda, dedução, renda, imposto, pessoas físicas, físicas, despesas, base cálculo, cálculo imposto, renda pessoas
 
-- Altera o artigo 7º da Lei nº 6.009/73 que dispõe sobre a utilização e a exploração dos aeroportos, das facilidades à navegação aérea.
-- Dispõe sobre a obrigatoriedade de adoção de etiquetas invioláveis para bagagens despachadas em companhias aéreas e estabelece medidas de combate ao tráfico de drogas e práticas ilícitas no setor de transporte aéreo.
-- Dispõe sobre a transferência da titularidade de bilhetes de transporte aéreo de passageiros, estabelece direitos dos consumidores, deveres das transportadoras aéreas e dá outras providências.
-- Autoriza a prorrogação de contratos por tempo determinado no âmbito do Comando da Aeronáutica do Ministério da Defesa, do Instituto de Fomento e Coordenação Industrial.
-- Dispõe sobre a transferência de bilhete aéreo e sobre o reembolso em caso de cancelamento, desistência ou não comparecimento.
-- [formulaica] A preocupação com a regulação sobre a participação do capital estrangeiro, assim como o controle diretivo das empresas brasileiras que prospectem capital estrangeiro, baseia-se não só na experiência de países que utiliza
-- [formulaica] Estabelece critérios para a franquia de bagagem de mão.
-
-## Tópico 33 (n = 369; formulaicas atribuídas: 1)
-
-Termos: esporte, esportivas, atletas, geral esporte, futebol, competições, desporto, geral, esportivos, gerais desporto
-
-- Altera a Lei nº 10.671, de 15 de maio de 2003 (Estatuto de Defesa do Torcedor), para aumentar a pena do crime de promoção de tumulto, prática ou incitação de violência, ou invasão de local restrito aos competidores em ev
-- Altera a Lei nº 11.438, de 29 de dezembro de 2006, para incluir entre os incentivos ao esporte a possibilidade de financiamento de ingressos destinados a pessoas que nunca tiveram acesso a estádios em competições esporti
-- Altera a Lei nº 14.597, de 14 de junho de 2023 (Lei Geral do Esporte), para instituir incentivo educacional no âmbito do Programa Bolsa-Atleta.
-- Altera a Lei nº 14.597, de 14 de junho de 2023, para incluir o provimento de curso de conhecimentos básicos de educação financeira aos atletas profissionais entre os deveres da organização esportiva direcionada à prática
-- Dispõe sobre a padronização cromática da camisa da Seleção Brasileira de Futebol em competições oficiais e dá outras providências.
-- [formulaica] Trata da publicidade e da transparência na prática do Futebol Profissional Nacional.
-
-## Tópico 34 (n = 311; formulaicas atribuídas: 1)
-
-Termos: produtos industrializados, imposto produtos, industrializados, isenção, imposto, ipi, isenção imposto, produtos, industrializados ipi, aquisição
-
-- Concede isenção do Imposto sobre Produtos Industrializados (IPI) sobre os produtos que contenham nicotina e sejam destinados a ajudar a cessação do tabagismo, como comprimidos, gomas de mascar (pastilhas elásticas) ou ad
-- Estipula a isenção de IPI - Imposto sobre Produto Industrializado incidente sobre os produtos de higiene femininos aqui mencionados.
-- Altera a Lei n. 8.989, de 24 de fevereiro de 1995, para incluir os automóveis adquiridos por motoristas de aplicativo no rol de beneficiados na isenção do Imposto sobre Produtos Industrializados (IPI); e dá outras provid
-- Dispõe sobre a concessão de isenção do Imposto sobre Produtos Industrializados e do Imposto de Importação incidentes na importação de barcos da classe Optimist e seus acessórios; acrescenta inciso ao art. 1º da Lei nº 10
-- Altera a redação do caput do art. 2º, da Lei nº 8.989, de 24 de fevereiro de 1995, para estender a isenção do IPI a compra de veículos para substituição dos veículos inutilizados por perda total, furto ou roubo durante o
-- [formulaica] O presente projeto de lei inclui em seu artigo 7.o o inciso XXXVIII que vem a beneficiar as instituições de sociedades civis, desde que sejam sem fins lucrativos e ainda, com atuação na área de atendimento à saúde básica
-
-## Tópico 35 (n = 286; formulaicas atribuídas: 1)
-
-Termos: imposto renda, dedução, renda, imposto, pessoas físicas, físicas, despesas, base cálculo, cálculo imposto, cálculo
-
-- Dispõe sobre a dedução, do imposto de renda devido, de doações efetuadas, por pessoas físicas e por pessoas jurídicas tributadas pelo lucro real, para instituições que realizem ações de prevenção e de combate aos efeitos
-- Altera a Lei nº 9.250, de 1995, para permitir a dedução no imposto de renda das pessoas físicas de gastos com energia elétrica, água e esgoto, coleta de lixo, alimentos, combustível, vale-transporte serviços de internet,
-- Dispõe sobre a dedução de gastos com esportes e cursos de idiomas da base de cálculo do imposto de renda da pessoa física; e altera a Lei nº 9.250, de 1995.
-- Dispõe sobre benefícios fiscais na área do imposto sobre a renda da Pessoa Física, concedidos aos Hospitais das Corporações Militares Estaduais e do Distrito Federal, e aos Hospitais Militares Federais, e dá outras provi
-- Dispõe sobre estímulo para as pessoas físicas e jurídicas que investirem na escola pública, com dedução do Imposto de Renda e outras providências legais
+- Acrescenta alínea ao inciso II do art. 8º da Lei nº 9.250, de 26 de dezembro de 1995, para permitir a dedução de despesas com animais de estimação adotados.
+- Acrescenta o art. 8º-A à Lei nº 9.250, de 26 de dezembro de 1995, para permitir a dedução das despesas médicas, terapêuticas e das mensalidades de planos de saúde e odontológicos custeadas por contribuintes em benefício 
+- Acrescenta a alínea “k” ao inciso II do art. 8º da Lei nº 9.250, de 26 de dezembro de 1995, para permitir a dedução de despesas com passagens domésticas e hospedagens dentro do território nacional no Imposto de Renda de 
+- Altera a Lei nº 9.250, de 26 de dezembro de 1995, para dispor sobre a dedução das despesas com alimentação animal e de tratamento médico-veterinário no Imposto de Renda da Pessoa Física e dá outras providências.
+- Altera a Lei nº 9.249, de 26 de dezembro de 1995, a Lei nº 9.250, de 26 de dezembro de 1995, e a Lei nº 9.532, de 10 de dezembro de 1997, para autorizar a dedução de doações a entidades civis sem fins lucrativos de prote
 - [formulaica] A presente proposta não incorre em aumento de despesas para o erário, visto que objetiva exclusivamente ampliar o alcance das possibilidades de apoio e investimento da esfera privada - leia-se, o contribuinte - na direçã
 
-## Tópico 36 (n = 524; formulaicas atribuídas: 0)
+## Tópico 35 (n = 712; formulaicas atribuídas: 1)
 
-Termos: violência, doméstica, violência doméstica, mulher, mulheres, doméstica familiar, familiar, contra mulher, vítimas, vítimas violência
+Termos: ensino, escolas, educação, públicas, educação básica, básica, escolas públicas, escolar, privadas, públicas privadas
 
-- Acrescenta o art. 3º-A à Lei nº 12.845, de 1º de agosto de 2013, para garantir às vítimas de violência sexual atendimento preferencial pela autoridade policial, pelo Ministério Público e pela Defensoria Pública
-- Altera a Lei 13.105, de 16 de março de 2015, para conceder tramitação prioritária automática aos processos protocolados em qualquer juízo ou tribunal, cuja parte seja mulher vítima de violência qualquer violência: física
-- Altera a Lei 14.133, de 1º de abril de 2021, a Lei de Licitações e Contratos Administrativos, para instituir percentual mínimo de reserva de vagas para mulheres nas contratações de serviços contínuos com regime de dedica
-- Implementa medidas para conferir maior efetividade às penas dos crimes que envolvam violência doméstica e familiar contra a mulher.
-- Fortalece a proteção da mulher em situação de violência doméstica, assegurando o direito de recorrer de decisões que revoguem ou indefiram medidas protetivas de urgência.
+- Dispõe sobre o aprimoramento da segurança em creches e escolas infantis da rede pública e privada de ensino.
+- Altera a Lei nº 5.540 de 28 de novembro de 1968 para tornar obrigatória a existência de laboratórios de prática das especialidades em todos os cursos de ensino superior público ou privado.
+- Dispõe sobre a prestação de assistência religiosa e espiritual por meio de capelania nas Instituições de Ensino Superior
+- Altera a Lei nº 9.394, de 20 de dezembro de 1996, para instituir protocolo nacional de prevenção, identificação e comunicação de ameaças de violência extrema no ambiente escolar, em consonância com o Sistema Nacional de 
+- Institui a Política Nacional de Prevenção e Enfrentamento à Violência no Ambiente Escolar e dá outras providências.
+- [formulaica] Recentemente fomos surpreendidos por um crime que abalou não só o Brasil como o Mundo, com cenas de horror em Suzano na cidade de São Paulo, quando dois jovens entraram na Escola Estadual Raul Brasil, na grande São Paulo
 
-## Tópico 37 (n = 271; formulaicas atribuídas: 1)
+## Tópico 36 (n = 329; formulaicas atribuídas: 2)
 
-Termos: profissão, exercício, regulamenta, regulamentação, exercício profissão, regulamenta profissão, regulamenta exercício, regulamentação profissão, profissional, regulamentação exercício
+Termos: aeronáutica, brasileiro aeronáutica, código brasileiro, aéreas, aéreo, voos, brasileiro, transporte aéreo, transporte, aeronaves
 
-- Dispõe sobre a regulamentação e fiscalização das comunidades terapêuticas, e dá outras providências.
-- Dispõe sobre a regulamentação do exercício da profissão de Cuidador de Idosos, cria o Cadastro Nacional de Cuidadores de Idosos, e dá outras providências.
-- Dispõe sobre a regulamentação do exercício da profissão de Vendedor de Veículos Automotores, e a criação do Conselhos Federal e dos Conselhos regionais dos Vendedores de Veículos Automotores e dá outras providencias.
-- Dispõe sobre a regulamentação da profissão de criminólogo
-- Dispõe sobre o exercício da profissão de condutor de máquinas da Marinha Mercante.
-- [formulaica] Trata da Licença para o Desempenho de Mandato Classista.
+- Altera a Lei nº 7.565, de 19 de dezembro de 1986 que dispõe sobre o Código Brasileiro de Aeronáutica, para dispor sobre a transferência do bilhete de passagem.
+- Altera a Lei nº 7.565, de 1986 (Código Brasileiro de Aeronáutica), para determinar que ao adquirente da passagem seja dada a opção de se qualificar, no lugar do passageiro, como beneficiário de eventual reembolso por can
+- Altera a Lei nº 7.565, 19 de dezembro de 1986, para estabelecer direitos de passageiros, consumidores, em caso de cancelamento ou alteração da passagem aérea.
+- Altera a Lei nº 7.565, de 19 de dezembro 1986, para vedar cobrança de taxas, multas ou afins nos casos de cancelamento de passagens aéreas ou terrestres em época de pandemias decretas pela Organização Mundial da Saúde - 
+- Altera a Lei nº 7.565, de 1986,para atribuir direitos, no transporte aéreo, impedindo que pessoas com até doze anos de idade incompletos paguem preço integral da passagem aérea.
+- [formulaica] Estabelece critérios para a franquia de bagagem de mão.
+- [formulaica] Em 2016, a Agência Nacional de Aviação Civil, por meio da Resolução nº. 400, aprovou novas regras gerais sobre os direitos dos passageiros em viagens aéreas no Brasil. Em que pese a nova norma ter avançado em relação a p
 
-## Tópico 38 (n = 207; formulaicas atribuídas: 0)
+## Tópico 37 (n = 364; formulaicas atribuídas: 3)
+
+Termos: esporte, futebol, atletas, esportivas, geral esporte, desporto, gerais desporto, competições, atleta, geral
+
+- Altera a Lei n.º 9.615, de 24 de março de 1998, que dispõe sobre as normas gerais do desporto, para incluir novas exigências com vistas a garantir o direito à educação do atleta em formação.
+- Altera a Lei nº 14.597, de 14 de junho de 2023, para definir o representante de organização esportiva privada no crime de corrupção privada no esporte.
+- Acrescenta o parágrafo único ao art. 10 da Lei nº 5.700, de 1º de setembro de 1971, para vedar a proibição relativa ao uso, porte, transporte e exibição da bandeira nacional em território brasileiro, na forma do caput.
+- Altera a Lei nº 10.671, de 15 de maio de 2003 (Estatuto de Defesa do Torcedor), para aumentar a pena do crime de promoção de tumulto, prática ou incitação de violência, ou invasão de local restrito aos competidores em ev
+- Modifica texto do paragrafo único do artigo 39 da lei 5.700 de 1º de setembro de 1971 que dispões sobre a forma e a apresentação dos Símbolos Nacionais, e dá outras providências.
+- [formulaica] Trata da publicidade e da transparência na prática do Futebol Profissional Nacional.
+- [formulaica] Os Conselhos Regionais de Educação Física, apoiados pelo seu Conselho Federal, vêm reiteradamente praticando atos que exorbitam das competências que lhes foram atribuídas pela Lei nº 9.696, de 1º de setembro de 1998. Com
+
+## Tópico 38 (n = 382; formulaicas atribuídas: 2)
+
+Termos: benefício, prestação continuada, benefício prestação, continuada, família, bolsa família, programa bolsa, bolsa, assistência social, prestação
+
+- Cria o Programa de Renda Cidadã Emergencial, instrumento de garantia de renda para famílias, urbanas e rurais, em condição de vulnerabilidade social, inclusive famílias cujo principal rendimento bruto auferido pelos memb
+- Altera a Lei nº 14.284, de 29 de dezembro de 2021, para realocar os recursos do benefício extraordinário do Programa Auxílio Brasil para os benefícios Primeira Infância e Composição Familiar, bem como para atualizar mone
+- Altera a Lei nº 8.213, de 24 de julho de 1991 (Planos de Benefícios da Previdência Social), para dispor sobre adicional ao valor da aposentadoria por incapacidade permanente do segurado com neoplasia maligna; e a Lei nº 
+- Altera a Lei nº 8.742, de 7 de dezembro de 1993, que dispõe sobre a organização da Assistência Social, para instituir o Programa de Proteção e Amparo Social às crianças e aos adolescentes órfãos (Proorf).
+- Altera a Lei nº 14.601, de 19 de junho de 2023, para criar mecanismos de monitoramento da frequência escolar e implementar incentivos pedagógicos e medidas de suporte educacional para beneficiários do Programa Bolsa Famí
+- [formulaica] Nos últimos anos a sociedade brasileira tem vivenciado altos níveis de desemprego, notadamente entre a faixa etária de maior produtividade “Os jovens foram a parcela da população que mais perdeu renda no trabalho nos últ
+- [formulaica] Trata do benefício de prestação continuada (BPC) para as crianças vítimas de microcefalia.
+
+## Tópico 39 (n = 327; formulaicas atribuídas: 1)
+
+Termos: execução penal, execução, penal, prisional, penais, presos, saída temporária, regime, saída, progressão regime
+
+- Modifica a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para garantir o acesso por órgãos policiais e pelo Ministério Público dos dados e informações sobre equipamento de monitoramento eletrônico (tornoz
+- Altera a Lei nº 7.210, de 11 de julho de 1984 - Lei de Execução Penal, visando conceder autorização aos órgãos de segurança pública para atuarem na condução do condenado às dependências de uma unidade prisional, nos caso
+- Insere os Arts. 146º-E, 146º-F, 146º-G na Lei de Execuções Penais, para instituir a cobrança, a título de compensação financeira, pelo uso de equipamento de monitoração eletrônica por presos temporários ou condenados, in
+- Altera a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para disciplinar o recolhimento em residência particular do condenado com idade igual ou superior a 70 (setenta) anos, e dá outras providências.
+- Altera o art. 83 da Lei n.º 7.210, de 11 de julho de 1984 – Lei de Execução Penal, para permitir que as condenadas possam cuidar de seus filhos, inclusive amamentá-los, no mínimo, até 12 (doze) meses de idade.
+- [formulaica] Cria uma nova hipótese de suspensão do procedimento de execução, especificamente quando ocorrer diligência infrutífera na localização de bens do executado.
+
+## Tópico 40 (n = 375; formulaicas atribuídas: 6)
+
+Termos: militares, bombeiros, bombeiros militares, segurança, polícias, militar, segurança pública, polícias militares, policiais, corpos bombeiros
+
+- Acrescenta o § 1º ao art. 24 do Decreto-Lei nº 667, de 2 de julho de 1969, a fim de estabelecer normas gerais que garantam incentivo à gestão e comando no âmbito das Polícias Militares dos Estados, do Distrito Federal e 
+- Insere o inciso XXXVIII no art. 18 da Lei nº 14.751, de 12 de dezembro de 2023, que institui a Lei Orgânica Nacional das Polícias Militares e dos Corpos de Bombeiros Militares dos Estados, do Distrito Federal e dos Terri
+- Acrescenta dispositivo ao Decreto-Lei nº 667, de 2 de julho de 1969, e a Lei nº 9.713, de 25 de novembro de 1998, para vedar a distinção de sexo na seleção, promoção ou ingresso em concursos públicos para o quadro das Po
+- Altera os incisos V e VI do artigo 7º e acrescenta os artigos 20-A e 23-A à Lei 9503 de 23 de setembro de 1997 para incluir a Polícia Federal e as Polícias Civis dos Estados e do Distrito Federal como componentes do Sist
+- Cria o Programa de Proteção e Assistência Social aos Integrantes dos Órgãos descritos no artigo 144 da Constituição Federal e aos agentes penitenciários e socioeducativos, bem como altera a Lei nº 13.756, de 12 de dezemb
+- [formulaica] Devido à falta de atualização, o Código Penal Militar brasileiro carece de ajustes em diversos aspectos, e não é diferente no dispositivo em questão. O art. 166 previsto do Código Penal Militar tem suas controvérsias, in
+- [formulaica] Inclui os militares da reserva das Forças Armadas dentre os passíveis de compor a Força Nacional de Segurança Pública.
+
+## Tópico 41 (n = 303; formulaicas atribuídas: 2)
+
+Termos: hediondos, crimes hediondos, crimes, rol crimes, rol, hediondo, crime, penal, penal crimes, código penal
+
+- Insere nova qualificadora no crime de homicídio, consistente na premeditação, promovendo a respectiva inclusão na Lei dos Crimes Hediondos.
+- Altera a Lei nº 8.072, de 25 de julho de 1990 e o Decreto-Lei nº 2.848, de 7 de dezembro de 1940, que dispõe sobre crimes hediondos, nos termos do art. 5º, inciso XLIII, da Constituição Federal para conferir tratamento m
+- Altera a Lei nº 8.072, de 25 de julho de 1990, para incluir os crimes previstos nos arts. 239, 240, 241, 241-A, 244-A, todos do Estatuto da Criança e do Adolescente, no rol dos crimes hediondos.
+- Altera o Decreto-Lei nº 2.848, de 7 de Dezembro de 1940 (Código Penal) e a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar como crime qualificado os casos de furtos e roubos realizados em mei
+- Acrescenta dispositivos à Lei nº 8.072, de 25 de julho de 1990 (Lei de Crimes Hediondos), para inserir no rol de crimes hediondos os crimes de lesão corporal e homicídio praticados em unidades de ensino.
+- [formulaica] O presente projeto procura aumentar a punibilidade e estabelecer um mínimo de pena, bem como tornar os crimes contra o patrimônio público inafiançaveis. Importante ressaltar que o Código Penal Brasileiro, Decreto-Lei nº 
+- [formulaica] O presente Projeto de Lei tem como objeto a alteração da Lei nº 8.072, de 25 de julho de 1990, acrescentando também a esta, o inciso IX ao artigo 1º e o artigo 1º- A. Os crimes hediondos são aqueles cuja legislação perpa
+
+## Tópico 42 (n = 286; formulaicas atribuídas: 0)
+
+Termos: tecidos, órgãos, doação, órgãos tecidos, sangue, meia entrada, meia, doadores, entrada, partes corpo
+
+- Isenta as mães solo do pagamento de taxa de inscrição em concursos para provimento de cargo efetivo ou emprego permanente na administração pública federal.
+- Altera a Lei nº 12.933, de 26 de dezembro de 2013, para assegurar a todos o benefício de meia-entrada em salas de cinema para a exibição de obras cinematográficas brasileiras de longa-metragem, de segunda-feira a quinta-
+- Altera a Lei n.° 9.434, de 4 de fevereiro de 1997 - Lei de Transplantes, para dispor sobre a livre manifestação de vontade das pessoas para autorizar, em vida, a retirada post mortem de tecidos, órgãos e partes do corpo 
+- Altera a Lei nº 9.434, de 4 de fevereiro de 1997, para instituir medidas para ampliar o direito de candidatos a transplante de órgãos e dos transplantados.
+- Altera a Lei nº 9.434, de 4 de fevereiro de 1997, que dispõe sobre a remoção de órgãos, tecidos e partes do corpo humano para fins de transplante e tratamento, para permitir a doação recíproca de órgãos e tecidos (transp
+
+## Tópico 43 (n = 349; formulaicas atribuídas: 10)
+
+Termos: pequeno, pequeno porte, complementar, mei, porte, simples, microempresas, microempreendedor, empresas pequeno, microempreendedor individual
+
+- Acrescenta parágrafo ao art. 74 da Lei Complementar nº 123, de 14 de dezembro de 2006, que institui o Estatuto Nacional da Microempresa e da Empresa de Pequeno Porte, para possibilitar a constituição de preposto pelas mi
+- Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para permitir que prestadores de serviços de Youtuber e Influenciador Digital se cadastrem como Microempreendedor Individual - MEI.
+- Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, para dispor sobre a definição de tratamento diferenciado e favorecido para as microempresas e para as empresas de pequeno porte, inclusive regimes especiais ou
+- Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, que institui o Estatuto Nacional da Microempresa e da Empresa de Pequeno Porte e dá outras providências, para adequação dos valores de receita bruta considerad
+- Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, que “Institui o Estatuto Nacional da Microempresa e da Empresa de Pequeno Porte”.
+- [formulaica] Esta proposta de lei tem por objetivo assegurar às microempresas e empresas de pequeno porte optantes pelo SIMPLES NACIONAL o tratamento assegurado pelo artigo 179 da Constituição Federal, segundo o qual “União, os Estad
+- [formulaica] Esta proposição busca reparar situação que vem acarretando ao profissional corretor de imóveis seu afastamento do tratamento favorecido às demais categorias privilegiadas pela Lei Complementar nº 123, de 14 de dezembro d
+
+## Tópico 44 (n = 209; formulaicas atribuídas: 0)
 
 Termos: pátria, heróis, livro heróis, livro, inscreve, heroínas, heroínas pátria, heróis heroínas, nome, pátria inscreve
 
-- Inclui o nome de Alberto Pasqualini no Livro dos Heróis e Heroínas da Pátria.
-- Inscreve o nome de Francisco Xavier da Veiga Cabral no Livro dos Heróis e Heroínas da Pátria.
-- Inscreve Almerinda Farias Gama, grande sufragista da casa feminina do Brasil, no Livro dos Heróis e Heroínas da Pátria.
-- Inscreve o nome do Imperial Marinheiro Marcílio Dias no Livro dos Heróis e Heroínas da Pátria.
-- Inscreve o nome de João Guilherme da Costa Aguiar, no Livro dos Heróis da Pátria.
+- Inscreve o nome de Frei Orlando no Livro dos Heróis e Heroínas da Pátria.
+- Inscreve o nome de Zilda Arns Neumann no Livro dos Hérois e Heroínas da Pátria.
+- Inscreve o nome de Sérgio Ribeiro Miranda de Carvalho no Livro dos Heróis e Heroínas da Pátria.
+- Inscreve o nome do Cacique Serigy no Livro dos Heróis e Heroínas da Pátria.
+- Inscreve o nome de Gonçalo Ignacio de Loiola Albuquerque e Mello no Livro dos Heróis e Heroínas da Pátria.
 
-## Tópico 39 (n = 267; formulaicas atribuídas: 0)
+## Tópico 45 (n = 254; formulaicas atribuídas: 0)
 
-Termos: imposto renda, renda, imposto, isenção, isenção imposto, rendimentos, aposentadoria, proventos, pessoa física, isentar
+Termos: fgts, fundo garantia, garantia tempo, tempo serviço, tempo, fundo, garantia, serviço fgts, conta vinculada, conta
 
-- Altera a Lei nº 7.713, de 22 de dezembro de 1988, para incluir entre os rendimentos isentos do imposto de renda os prêmios pagos a atletas olímpicos ou paralímpicos, nas hipóteses que especifica.
-- Altera a legislação tributária federal, para elevar de vinte mil para quarenta mil reais o limite mensal do valor de alienações em operações no mercado à vista de ações ou com ouro ativo financeiro cujos ganhos líquidos 
-- Altera a Lei nº 7.713, de 22 de dezembro de 1988, para conceder isenção do Imposto sobre a Renda da Pessoa Física incidente sobre rendimentos de aposentadoria, pensão e demais benefícios previdenciários.
-- Reajusta os valores da tabela progressiva mensal, da parcela isenta de pensão, aposentadoria, reserva remunerada e reforma de maiores de 65 anos, das deduções por dependente e com despesas com instrução, e do valor máxim
-- Altera o inciso XIV do art. 6º da Lei nº 7713, de 1988, para incluir o diabetes mellitus (DM ) entre os agravos à saúde a cujos portadores são concedidos a isenção de imposto de renda sobre os proventos de aposentadoria 
+- Altera a Lei nº 8.036, de 11 de maio de 1990, a fim de permitir ao trabalhador movimentar sua conta vinculada no Fundo de Garantia do Tempo de Serviço - FGTS para o pagamento total ou parcial do preço de aquisição, de re
+- Dispõe sobre a autorização para o saque do Fundo de Garantia do Tempo de Serviço (FGTS) por pessoas com Transtorno do Espectro Autista (TEA) e seus responsáveis legais para custeio de tratamento e terapias.
+- "Dispõe sobre a movimentação da conta vinculada do trabalhador no Fundo de Garantia do Tempo de Serviço (FGTS) para pagamento de parcelas, vencidas ou vincendas, de financiamento habitacional, durante o estado de calamid
+- Altera o art. 20 da Lei nº 8.036, de 11 de maio de 1990, para permitir a movimentação da conta vinculada do trabalhador no Fundo de Garantia do Tempo de Serviço (FGTS) para o custeio do tratamento/despesas médicas da vít
+- Acrescenta inciso XVIII ao art. 20º da Lei nº 8.036, de 11 de maio de 1990, para permitir a movimentação da conta vinculada do Fundo de Garantia do Tempo de Serviço (FGTS) para a aquisição de órteses, próteses e demais t
 
-## Tópico 40 (n = 281; formulaicas atribuídas: 3)
+## Tópico 46 (n = 369; formulaicas atribuídas: 5)
 
-Termos: execução penal, execução, penal, prisional, penais, saída temporária, presos, saída, temporária, condenado
+Termos: escolar, alimentação, alimentação escolar, estudantes, educação, programa alimentação, ensino, programa, pnae, escolar pnae
 
-- Inclui artigo na Lei nº 7.210, de 11 de julho de 1984, Lei de Execução Penal, para dispor sobre reembolso, pela União, aos entes federados, no caso de execução de pena, em estabelecimento penitenciário estadual ou do Dis
-- Altera a Lei no 7.210, de 11 de julho de 1984, que Institui a Lei de Execução Penal, para dispor sobre a garantia do direito à educação ao preso e ao internado.
-- Altera a Lei nº 11.340, de 7 de agosto de 2006, para dispor sobre o monitoramento eletrônico como medida protetiva urgência e dá outras providências.
-- Altera a Lei nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para estabelecer critérios objetivos e avaliação técnica obrigatória nos casos de realocação prisional fundada em autodeclaração superveniente de ide
-- Extingue a concessão de saída temporária, alterando a Lei nº 7.210, de 11 de julho de 1984, Lei de Execução Penal.
-- [formulaica] Amplia o conceito de terrorismo, incluindo motivações políticas, religiosas e sociais no tipo penal.
-- [formulaica] Cria uma nova hipótese de suspensão do procedimento de execução, especificamente quando ocorrer diligência infrutífera na localização de bens do executado.
+- Altera o art. 21-A da Lei nº 11.947, de 16 de junho de 2009, para permitir o repasse dos recursos do PNAE diretamente para os pais ou responsáveis de estudantes da educação básica, na forma de pecúnia.
+- Institui a Semana Nacional de Incentivo ao Ensino Técnico Integrado ao Ensino Médio, a Educação Profissional e Tecnológica
+- Torna obrigatória a oferta de, pelo menos, duas merendas escolares por turno aos alunos da educação básica e pública, sendo a Segunda Merenda à conta da despesa obrigatória prevista no art. 212 da Constituição Federal.
+- Altera a Consolidação das Leis do Trabalho e a Lei nº 11.096, de 13 de janeiro de 2005, que "institui o Programa Universidade para Todos - PROUNI, regula a atuação de entidades beneficentes de assistência social no ensin
+- Altera a Lei nº 10.880, de 9 de junho de 2004, para autorizar a utilização do transporte escolar destinado aos alunos da educação básica pública, residentes em área rural, também por professores, profissionais de apoio, 
+- [formulaica] A presente proposta visa à alteração da Lei nº. 12.695, de 25 de julho de 2012, que trata do apoio técnico e financeiro prestado pela União aos demais entes federados, denominado Plano de Ações Articuladas – PAR, cujo ob
+- [formulaica] O Fundo Nacional do Desenvolvimento da Educação (FNDE), inicialmente denominado Instituto Nacional de Desenvolvimento da Educação e Pesquisa (INDEP), é autarquia federal criada em 21 de novembro de 1968 por Para verifica
 
-## Tópico 41 (n = 281; formulaicas atribuídas: 1)
+## Tópico 47 (n = 408; formulaicas atribuídas: 13)
 
-Termos: benefício, bolsa família, família, programa bolsa, bolsa, prestação continuada, continuada, benefício prestação, prestação, programa
+Termos: constituição, transitórias, disposições constitucionais, regulamenta, constitucionais transitórias, ato disposições, constitucionais, disposições, distrito, ato
 
-- Altera a Lei nº 14.790, de 29 de dezembro de 2023, a fim de impedir beneficiários do Programa Bolsa Família de apostar.
-- Inclui § 16 no art. 20 da Lei nº 8.742, de 7 de dezembro de 1993, para instituir a gratificação natalina aos titulares do Benefício de Prestação Continuada da Assistência Social.
-- Altera a Lei nº 14.601, de 19 de junho de 2023, que regulamenta o Programa Bolsa Família, para instituir medidas de transição e estímulo à autonomia econômica das famílias beneficiárias, promovendo educação financeira, c
-- Altera a Lei nº 8.742, de 7 de dezembro de 1993, para permitir a contratação de empréstimo de qualquer modalidade pelos beneficiários do Benefício de Prestação Continuada a partir do décimo mês de recebimento do benefíci
-- Altera o art. 6º da Lei nº 14.601, de 19 de junho de 2023, que institui o Programa Bolsa Família, para reformular os critérios de elegibilidade das famílias beneficiárias cuja responsável familiar seja mãe de criança ou 
-- [formulaica] Trata do benefício de prestação continuada (BPC) para as crianças vítimas de microcefalia.
+- Acrescenta o art. 204-A à Constituição Federal, para dispor sobre a política de combate à pobreza e assegurar a garantia de transferência de renda a unidades familiares em situação de pobreza e de extrema pobreza..
+- Altera o inciso XIX do artigo 37 da Constituição Federal, para estabelecer a obrigatoriedade de lei específica para empresa estatal criar subsidiária e participar de empresa privada.
+- Regulamenta o § 11 do art. 37 da Constituição Federal, e dá outras providências.
+- Altera o art. 12 da Constituição Federal para suprimir a perda da nacionalidade brasileira em razão da mera aquisição de outra nacionalidade, incluir a exceção para situações de apatridia e acrescentar a possibilidade de
+- Altera a Lei nº 9.296, de 24 de julho de 1996, que regulamenta o inciso XII, parte final, do art. 5º da Constituição Federal, para regular a disponibilização de informações acerca da localização geográfica de terminais t
+- [formulaica] Ampliar os mecanismos de participação direta na democracia se mostra adequado e necessário, na medida em que o art. 1º, caput, da Constituição Federal de 1988 consagra o modelo de Estado Democrático de Direito, que se ex
+- [formulaica] A Constituição Federal em seu artigo 151 veda à União instituir tributo que não seja uniforme em todo o território nacional ou que implique distinção ou preferência em relação a Estado, ao Distrito Federal ou a Município
 
-## Tópico 42 (n = 235; formulaicas atribuídas: 0)
+## Tópico 48 (n = 264; formulaicas atribuídas: 3)
 
-Termos: hediondos, crimes hediondos, crimes, rol crimes, rol, hediondo, crime, hediondos crimes, penal, penal crimes
+Termos: petróleo, gás, combustíveis, gás natural, petróleo gás, natural, exploração, preços, liquefeito petróleo, gás liquefeito
 
-- Altera a Lei nº 10.741, de 1º de outubro de 2003 (Estatuto do Idoso), e a Lei nº 8.072, de 25 de julho de 1990 (Lei dos Crimes Hediondos), para tornar hediondos e inafiançáveis os crimes de maus-tratos e abandono contra 
-- Insere o inciso IX no art. 1º da Lei nº 8.072, de 1990, que dispõe sobre os crimes hediondos, nos termos do art. 5º, inciso XLIII, da Constituição Federal, e determina outras providências.
-- Altera o Decreto nº 2.848, de 7 de dezembro de 1940, Código Penal, e a Lei nº 8.072, de 25 de julho de 1990 que dispõe sobre os crimes hediondos.
-- Inclui no rol de crimes hediondos o furto, furto qualificado e roubo quando praticados na vigência de situação de emergência ou de estado de calamidade pública.
-- Acrescenta parágrafo ao artigo 1º da Lei dos Crimes Hediondos, Lei 8.072, de 25 de julho 1990, classificando como hediondo o crime cometido contra a vida, a segurança e a integridade física de comunicadores.
-
-## Tópico 43 (n = 227; formulaicas atribuídas: 0)
-
-Termos: transporte, coletivo, gratuidade, transporte coletivo, gratuidade transporte, interestadual, transporte público, enem, deficiência, taxa inscrição
-
-- Altera a Lei n.º 14.238, de 19 de novembro de 2021, para assegurar a pessoa com câncer o direito à gratuidade nos transportes coletivos urbanos, semiurbanos, interestaduais e intermunicipais, transporte coletivo aéreo e 
-- Dispõe sobre a reserva de vagas para idosos, portadores de deficiência e gestantes, nas praças de alimentação dos shopping centers, restaurantes, galerias, lanchonetes e outros estabelecimentos do setor gastronômico, na 
-- Altera a Lei nº 13.146, de 6 de julho de 2015, Estatuto da Pessoa com Deficiência, para garantir maior acessibilidade à pessoa com deficiência no transporte urbano operado por meio de aplicativos, e dá outras providência
-- Dispõe sobre a criação do PROGRAMA PARADA SEGURA, assegurando aos usuários prioritários (PCDs, idosos, gestantes, lactantes, pessoas com criança de colo, obesos e portadores de TEA) do transporte de plataformas de aplica
-- Dispõe sobre a penalidade por estacionamento irregular de veículo em vagas reservadas a pessoas com deficiências, idosos, autistas e gestantes.
-
-## Tópico 44 (n = 272; formulaicas atribuídas: 0)
-
-Termos: transporte, aplicativos, passageiros, entrega, obrigatoriedade, motoristas, veículos, plataformas, individual, plataformas digitais
-
-- Dispõe sobre a aplicação de sanções aos prestadores de serviços pelas plataformas digitais de intermediação de serviços de transporte remunerado de passageiros ou mercadorias.
-- Dispõe sobre a regulamentação do exercício das profissões de motoristas por aplicativo e motociclistas entregadores, e dá outras providências.
-- Estabelece o direito do consumidor de serviços de transporte particular de passageiros ofertados por meio de aplicação de internet de receber atendimento por meio de canais eletrônicos de informação e de central telefôni
-- Ficam obrigadas as plataformas digitais de entrega de qualquer tipo de mercadoria a realizar o registro na Carteira de Trabalho, com todos os direitos trabalhistas garantidos pela Consolidação das Leis do Trabalho.
-- Estabelece medidas de prevenção e combate ao trabalho infantil em empresas de aplicativos de entregas ou transporte e dá outras providências.
-
-## Tópico 45 (n = 236; formulaicas atribuídas: 1)
-
-Termos: idosa, pessoa idosa, idoso, pessoa, estatuto, estatuto pessoa, estatuto idoso, idosos, idosas, pessoas idosas
-
-- Acrescenta parágrafo ao art. 41 da Lei nº 10.741, de 1º de outubro de 2003, que dispõe sobre o Estatuto do Idoso e dá outras providências.
-- Revoga o Parágrafo único do art. 40 da Lei nº 10.741, de 1º de outubro de 2003, que dispõe sobre o Estatuto do Idoso.
-- Altera a Lei nº 10.741, de 1º de outubro de 2003, que dispõe sobre o Estatuto do Idoso, para incluir o direito à estabilidade no emprego para idosos, em caso de calamidade pública reconhecida.
-- Acrescenta o art. 41-A na Lei n.º 10.741, de 1º de outubro de 2003, que dispõem sobre o Estatuto do Idoso e dá outras providências, concedendo a isenção da taxa de renovação da carteira nacional de habilitação aos maiore
-- Altera a Lei nº 10.741, de 1º outubro de 2003 (Estatuto do idoso), e a Lei nº 8.069, de 13 de julho de 1990 (Estatuto da Criança e adolescente), para prever a possibilidade de adoção de idosos, e dá outras providencias.
-- [formulaica] O presente Projeto de Lei visa promover alteração no art. 16 da Lei nº 9.656, de 3 de junho de 1998, nos termos propostos pelo art. 18 da Medida Provisória nº 1301, de 2025, com o objetivo de assegurar maior celeridade n
-
-## Tópico 46 (n = 509; formulaicas atribuídas: 2)
-
-Termos: violência, política, prevenção, mulher, mulheres, proteção, contra, programa, cria, violência contra
-
-- Institui o Programa Nacional de Solicitação Digital de Medidas Protetivas de Urgência, destinada a mulheres em situação de violência doméstica e familiar.
-- Cria o Programa Tempo de Respeitar, que dispõe sobre a reflexão, conscientização e responsabilização dos autores de violência doméstica e grupos reflexivos de homens, e dá outras providências
-- Institui o Programa de Capacitação e Conscientização dos Direitos da Mulher.
-- Institui a Política Nacional de Prevenção e Enfrentamento ao Cyberbullying em Estabelecimentos de Ensino e Instituições que Atuam com Crianças e Adolescentes, e dá outras providências.
-- Cria o Programa de Segurança e Acolhimento à Mulher (PSAM).
-- [formulaica] O Programa Federal de Assistência à Vítimas e à Testemunhas Ameaçadas (PROVITA), instituído por meio da Lei nº 9.807, de 13 de julho de 1999, regulamentado pelo Decreto nº 3.518, de 20 de junho de 2000; o Programa de Pro
-- [formulaica] O Programa Federal de Assistência à Vítimas e à Testemunhas Ameaçadas (PROVITA), instituído por meio da Lei nº 9.807, de 13 de julho de 1999, regulamentado pelo Decreto nº 3.518, de 20 de junho de 2000; o Programa de Pro
-
-## Tópico 47 (n = 204; formulaicas atribuídas: 2)
-
-Termos: petróleo, gás, combustíveis, gás natural, natural, petróleo gás, preços, royalties, liquefeito petróleo, liquefeito
-
-- Altera o Decreto-Lei nº 1.578, de 11 de outubro de 1977, a Lei nº 9.478, de 6 de agosto de 1997, a Lei nº 9.847, de 26 de outubro de 1999, e a Lei nº 12.351, de 22 de dezembro de 2010, para dispor sobre a aplicação de Im
-- Dispõe sobre a obrigatoriedade de transparência e visualização do fluxo de combustíveis em bombas medidoras destinadas ao abastecimento veicular, e dá outras providências.
-- Cria o Programa Social do Gás de Cozinha (Gás Liquefeito de Petróleo - GLP), e dá outras providências.
-- Altera a Lei nº 9.478, de 6 de agosto de 1997 (Lei do Petróleo), e a Lei nº 12.351, de 22 de dezembro de 2010 (Lei do Pré-Sal), para dispor sobre o estímulo à pesquisa e à adoção de novas tecnologias na exploração e prod
-- Permite o enchimento fracionado de botijões de gás de cozinha no Brasil, quebra o oligopólio e a cartelização do setor e estabelece o livre mercado, que favorecerá a redução dos preços do gás de cozinha, favorecendo o po
-- [formulaica] A inclusão de novos parágrafos no artigo 80, refere-se ao hiato jurídico- administrativo existente para os pagamentos de royalties de exploração de xisto betuminoso com a finalidade de produção de petróleo e gás, princip
+- Revoga-se a Lei nº 13.586, de 28 de dezembro de 2017, que dispõe sobre o tratamento tributário das atividades de exploração e de desenvolvimento de campo de petróleo ou de gás natural; institui regime tributário especial
+- Institui o Estatuto dos Royalties - Estabilidade Federativa das Receitas Petrolíferas, estabelece normas de transição fiscal, modulação de impactos financeiros e proteção federativa aos Estados e Municípios produtores de
+- Autoriza as Unidades da Federação a legislar sobre a disponibilização em seus territórios de gasolina sem adição de etanol anidro e sobre gasolina com adição de dez porcento de etanol anidro.
+- Dispõe sobre subsídio para aquisição de gás liquefeito de petróleo de uso residencial por famílias de baixa renda, denominado Vale-gás.
+- Dispõe sobre vale combustível para pessoas de baixa renda e demais categorias e da outras providências
 - [formulaica] Trata do crime de adulteração de combustível praticado no âmbito do posto de abastecimento.
+- [formulaica] A inclusão de novos parágrafos no artigo 80, refere-se ao hiato jurídico- administrativo existente para os pagamentos de royalties de exploração de xisto betuminoso com a finalidade de produção de petróleo e gás, princip
 
-## Tópico 48 (n = 187; formulaicas atribuídas: 0)
+## Tópico 49 (n = 269; formulaicas atribuídas: 3)
 
-Termos: fgts, garantia tempo, fundo garantia, tempo serviço, tempo, conta vinculada, serviço fgts, garantia, vinculada, conta
+Termos: animais, maus tratos, tratos, maus, tratos animais, contra animais, crime maus, crime, tratos contra, animal
 
-- Altera a Lei nº 13.105, de 16 de março de 2015 (Código de Processo Civil), e a Lei nº 8.036, de 11 de maio de 1990, para permitir a utilização dos valores depositados no Fundo de Garantia do Tempo de Serviço (FGTS) na ex
-- Altera a Lei nº 8.036, de 11 de maio de 1990 (FGTS), para permitir a portabilidade dos recursos do FGTS para Fundos de Investimento e Fundos de Previdência Complementar.
-- Altera a Lei n. 8036, de 11 de maio de 1990, para estabelecer hipótese de levantamento de saldo da conta vinculada do trabalhador no FGTS, na forma que especifica.
-- Altera a Lei nº 8.036, de 11 de maio de 1990, para permitir a movimentação da conta vinculada do Fundo de Garantia do Tempo de Serviço (FGTS) para quitação de dívidas e regularização de nome em cadastros de proteção ao c
-- Dispõe sobre a inclusão do inciso XXIII ao art. 20 da Lei nº 8.036, de 11 de maio de 1990, para permitir a movimentação da conta vinculada do Fundo de Garantia do Tempo de Serviço (FGTS) para aquisição de veículos automo
+- Dispõe sobre a obrigatoriedade das clínicas veterinárias, pet shops e outros estabelecimentos semelhantes, que recebem e/ou realizem tratamento médico veterinário de denunciar aos órgãos competentes o atendimento de caso
+- Dispõe sobre a proibição da guarda, posse e propriedade de animais por pessoas condenadas pelo crime de maus-tratos, institui o Cadastro Nacional de Pessoas Impedidas de Adotar ou Adquirir Animais e dá outras providência
+- Fixa responsabilização condominial pelo inadimplemento de obrigação de colocação de telas de proteção em imóveis situados em condomínios residenciais nos quais residam animais domésticos, e dá outras providências.
+- Altera a Lei nº 9.605, de 12 de fevereiro de 1998, para considerar como crime de maus-tratos aos animais a realização das denominadas “farras do boi”.
+- Dispõe sobre o custeamento das despesas com resgate e tratamento de animal submetido a maus-tratos.
+- [formulaica] - Em virtude do aumento expressivo de maus tratos a animais domésticos, domesticados, silvestres e exóticos, a explicitação do que seja maus tratos deve ser medida de lei. Portanto o presente projeto de lei visa aumentar
+- [formulaica] O artigo 225, §1º, VII da Constituição Federal assevera que o Poder Público deve proteger a fauna e a flora, sendo vedadas, na forma da lei, as práticas que coloquem em risco sua função ecológica, provoquem a extinção de
 
-## Tópico 49 (n = 153; formulaicas atribuídas: 0)
+## Tópico 50 (n = 289; formulaicas atribuídas: 4)
 
-Termos: denomina, rodovia, viaduto, trecho, estado, denomina viaduto, município, localizado, denomina rodovia, ponte
+Termos: crédito, banco, operações, consignado, financeiras, juros, operações crédito, instituições financeiras, instituições, empréstimos
 
-- Denomina “Viaduto Papa Francisco” o viaduto rodoviário localizado no Km 2,3 da rodovia BR-488, no Município de Aparecida, Estado de São Paulo.
-- Denomina “Rodovia Pedro Satélite” o trecho da rodovia BR-163 compreendido entre o Município de Guarantã do Norte e a divisa do Estado de Mato Grosso com o Estado do Pará.
-- Denomina “Antônio Carlos Belchior” o Terminal Marítimo de Passageiros do Porto de Fortaleza, no Estado do Ceará.
-- Denomina “Ponte Txai Macêdo” a conhecida como Ponte da União, estrutura estaiada sobre o Rio Juruá, localizada na BR-364, no Município de Cruzeiro do Sul, Estado do Acre.
-- Denomina a BR-050, entre o Distrito Federal e a cidade de Santos, de "Rodovia Rei Pelé".
+- Dispões sobre o controle e vedações da participação dos agentes públicos em atividades com contas offshore no âmbito do sistema financeiro mundial.
+- Veda a contratação de operações de crédito sob consignação em pagamento por aposentados e pensionistas; revoga o art. 6º da Lei nº 10.820, de 17 de dezembro de 2003, que dispõe sobre a autorização para desconto de presta
+- Estabelece critérios para o financiamento à exportação de serviços e a projetos no exterior pelo Banco Nacional de Desenvolvimento Econômico e Social.
+- Dispõe sobre a limitação para as taxas de juros cobradas por instituições financeiras e operadoras de crédito concedido a pessoas naturais ou microempreendedores individuais (MEI), e dá outras providências.
+- Estabelece que no penhor de créditos futuros, o requisito da especificação de que trata o inciso IV é satisfeito pela definição, no ato constitutivo, de critérios ou procedimentos objetivos que permitam a determinação do
+- [formulaica] O artigo 56 da Lei nº 15.042/2024, alterado pelo artigo 4º da Lei nº 15.076/2024, prevê a aquisição compulsória pelas sociedades seguradoras, entidades abertas de previdência complementar, sociedades de capitalização e r
+- [formulaica] Aos descontos efetuados diretamente em conta corrente do mutuário não se impõe a baliza de 30%, porquanto devidamente autorizados pelo próprio correntista. O artigo 45, da Lei n° 8.112/90, determina que a limitação dos d
 
-## Tópico 50 (n = 166; formulaicas atribuídas: 2)
+## Tópico 51 (n = 201; formulaicas atribuídas: 2)
 
-Termos: pis, cofins, pasep, pis pasep, contribuição, contribuição pis, pasep cofins, alíquotas, incidentes, zero
+Termos: pis, cofins, contribuição, pasep, pis pasep, contribuição pis, pasep cofins, alíquotas, incidentes, financiamento seguridade
 
-- Reduz a zero as alíquotas da Contribuição para o PIS/Pasep e da Cofins incidentes sobre operações de importação e de venda no mercado interno de bicicletas, suas partes e acessórios, e dá outras providências.
-- Dispõe sobre a isenção do Imposto sobre Produtos Industrializados (IPI) na aquisição de partes acessórias por pessoas portadoras de deficiência física e acrescenta dispositivos às Leis nº 10.637, de 30 de dezembro de 200
-- Altera a Lei nº 10.865, de 30 de abril de 2004, para reduzir a zero as alíquotas do PIS/PASEP e da COFINS incidentes sobre a receita bruta decorrente da venda no mercado interno de produtos que utilizem matéria-prima rec
-- Desonera os artigos e equipamentos esportivos adaptados para uso por pessoas com deficiência da incidência do imposto sobre produtos industrializados (IPI), da contribuição para o PIS/PASEP e da contribuição para o finan
-- Reduz a zero, enquanto durar o estado de calamidade pública reconhecido pelo Decreto Legislativo nº 6, de 2020, as alíquotas da Contribuição para o PIS/Pasep, da Contribuição para o Financiamento da Seguridade Social (Co
-- [formulaica] No bojo das discussões em torno da reforma tributária, as Leis 10.637/2002 e 10.833/2003 foram promulgadas, reestruturando as contribuições ao PIS-Pasep e à Cofins, com o objetivo de privilegiar o princípio da não-cumula
+- Dispõe sobre a exclusão dos valores relativos à Conta de Desenvolvimento Energético - CDE das bases de cálculo da Contribuição para os Programas de Integração Social e de Formação do Patrimônio do Servidor Público - PIS/
+- Permite que cooperativas de transporte
+escolar excluam receitas repassadas a
+cooperados das bases de cálculo da contribuição
+para o Pis/Pasep e da Cofins.
+- Define que os coeficientes de redução da Contribuição para o PIS/Pasep e da COFINS incidentes sobre os combustíveis, sejam equiparados proporcionalmente à redução das alíquotas de ICMS e dá outras providências.
+- Prevê a não incidência do ICMS e da Contribuição para o PIS/Pasep e da Cofins sobre a venda de tampões higiênicos, absorventes higiênicos internos ou externos, descartáveis ou reutilizáveis, calcinhas absorventes e colet
+- Altera a Lei nº 10.925, de 23 de julho de 2004, para reduzir a zero as alíquotas da Contribuição para o Financiamento da Seguridade Social (Cofins) e da Contribuição para o PIS/Pasep incidentes sobre as receitas provenie
 - [formulaica] A presente proposição tem por objetivo incluir os brinquedos educativos entre os bens sujeitos à redução de 60% das alíquotas do Imposto sobre Bens e Serviços (IBS) e da Contribuição sobre Bens e Serviços (CBS), ampliand
+- [formulaica] No bojo das discussões em torno da reforma tributária, as Leis 10.637/2002 e 10.833/2003 foram promulgadas, reestruturando as contribuições ao PIS-Pasep e à Cofins, com o objetivo de privilegiar o princípio da não-cumula
 
-## Tópico 51 (n = 205; formulaicas atribuídas: 2)
+## Tópico 52 (n = 236; formulaicas atribuídas: 0)
 
-Termos: sul, grande sul, rio grande, grande, rio, estado rio, estado, enchentes, calamidade, calamidade pública
+Termos: aplicativos, transporte, passageiros, entrega, plataformas, individual, motoristas, aplicativo, plataformas digitais, individual passageiros
 
-- Dispõe sobre a priorização da destinação de bens apreendidos pelo Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA) para o estado do Rio Grande do Sul, em razão do estado de calamidade públ
-- Dispõe sobre medidas emergenciais e temporárias de apoio a Municípios e empresas da cadeia produtiva da carne bovina com alta dependência econômica do setor exportador de carne bovina e afetados por barreiras tarifárias 
-- Institui auxílio para pequenas e médias empresas afetadas pelas enchentes no Rio Grande do Sul.
-- Concede isenção total da tarifa de energia elétrica em comunidades ribeirinhas atingidas por secas e enchentes.
-- Isenta do pagamento da fatura de energia elétrica as unidades consumidoras dos municípios do Estado do Rio Grande do Sul situadas em área alcançada pela calamidade pública decorrente da ocorrência de severos eventos clim
-- [formulaica] O DNOCS tem por sua finalidade executar políticas do Governo Federal no que se refere a beneficiamento de áreas e obras de proteção contra as secas e inundações, irrigação, radicação da população em comunidades de irriga
-- [formulaica] A Presente proposição visa facilitar o processo de doações de mantimentos, medicamentos e demais itens que possam ser recebidos por nações, empresas e cidadãos estrangeiros a título de donativos em casos de calamidades p
+- Altera a Lei n° 8.213, de 24 de julho de 1991, para equiparar ao acidente de trabalho o acidente sofrido por trabalhadores de aplicativos de transporte particular de passageiros, de entrega de comida, produtos e outros g
+- Dispõe sobre a obrigatoriedade das plataformas de entrega por aplicativo de fornecer assistência jurídica e psicológica integral aos entregadores em casos em que forem vítimas de violência no exercício da profissão ou em
+- Altera a Lei nº 15.432, de 13 de junho de 2026, para disciplinar a cessão dos direitos e obrigações decorrentes da delegação de serviços complementares de transporte público coletivo.
+- Dispõe sobre os direitos dos entregados que prestam serviços a aplicativos de entrega.
+- Institui a Lei Trajeto Seguro, que estabelece mecanismos obrigatórios de segurança preventiva em aplicativos de transporte individual de passageiros e cria protocolos tecnológicos de proteção a usuárias, especialmente mu
 
-## Tópico 52 (n = 218; formulaicas atribuídas: 0)
+## Tópico 53 (n = 186; formulaicas atribuídas: 0)
 
-Termos: idosa, pessoa idosa, idosos, idosas, pessoas idosas, pessoa, pessoas, atendimento, longa permanência, instituições longa
+Termos: universidade, campus, autoriza poder, autoriza, poder executivo, executivo, executivo criar, estado, instituto, instituto educação
 
-- Estabelece diretrizes para inclusão de idosos com deficiências físicas em atividades esportivas.
-- Dispõe sobre a inclusão do §4º no art.37 do Capítulo IX-Da Habitação, da Lei nº 10.741, de 03 de outubro de 2003, para que as instituições que abriguem idosos instalem nas suas dependências internas e externas sistemas d
-- Cria a Creche do Idoso, espaço onde os usuários poderão contar, dentre outros, com serviços de saúde, nutrição, educação física e assistência social.
-- Autoriza o Poder Executivo a instituir o Serviço Social Autônomo denominado Serviço Nacional de Aprendizagem da Pessoa Idosa.
-- Dispõe sobre a obrigatoriedade da oferta de atividades de terapia ocupacional em Instituições de Longa Permanência para Idosos (ILPIs) e dá outras providências.
+- Cria a Zona Franca da Cultura do Açaí Paraense, nas condições que especifica.
+- Autoriza o Poder Executivo federal a criar o Museu da História da Escravidão e da Consciência Negra, na cidade do Rio de Janeiro, Estado do Rio de Janeiro, e dá outras providências.
+- Dispõe sobre a denominação do Campus Carapicuíba do Instituto Federal de São Paulo.
+- Denomina "Campus Professor Ubirajara Brito" o campus do Instituto Federal de Educação, Ciência e Tecnologia da Bahia, localizado no município de Vitória da Conquista, no Estado da Bahia.
+- Autoriza a criação da MEGA DA VIRADA DOS GAÚCHOS, na forma que especifica.
 
-## Tópico 53 (n = 237; formulaicas atribuídas: 3)
+## Tópico 54 (n = 289; formulaicas atribuídas: 7)
 
-Termos: imposto renda, renda, imposto, lucro, renda pessoa, tabela, pessoa física, pessoas físicas, líquido, lucro líquido
+Termos: tributário, código tributário, recuperação judicial, tributária, judicial, falência, recuperação, judicial extrajudicial, empresário sociedade, falência empresário
 
-- Acrescenta dispositivo ao art. 1º da Lei nº 11.482, de 31 de maior de 2007, para incluir o inciso IX, para recuperar a defasagem sofrida pela tabela de imposto de renda das pessoas físicas, a partir do ano-calendário de 
-- Altera a lei 9249 de 26 de dezembro de 1995 e a Lei nº 11.312, de 27 de junho de 2006 criando a incidência de imposto de renda sobre a distribuição de lucros e dividendos pagos e creditados pelas pessoas jurídicas tribut
-- Altera a Lei nº 11.482, de 31 de maio de 2007 de dezembro de 2006, a Lei nº 7.713, de 22 de dezembro de 1988 e a Lei no 9.250, de 26 de dezembro de 1995, para permitir a atualização da tabela do imposto de renda da pesso
-- Altera a Lei nº 9.250, de 26 de dezembro de 1995, a fim de instituir atualização anual da base de cálculo da tributação do Imposto sobre a Renda das Pessoas Físicas.
-- Altera as Leis n° 7.713, de 22 de dezembro de 1988, n° 9.250, de 26 de dezembro de 1995, e n° 11.482, de 31 de maio de 2007, para modificar a tabela progressiva mensal do Imposto de Renda da Pessoa Física e para reajusta
-- [formulaica] A proposta tem o objetivo de adequar a incidência tributária de Imposto de Renda (IR) e Contribuição Social sobre o Lucro Líquido (CSLL) em aplicações financeiras realizadas por cooperativa, por entender o Sistema OCB qu
-- [formulaica] Reduz a alíquota do Imposto sobre a Renda das Pessoas Jurídicas (IRPJ).
+- Altera a Lei nº 9.430 de 27 de dezembro de 1996, que dispõe sobre a legislação tributária federal, as contribuições para a seguridade social, o processo administrativo de consulta e dá outras providências.
+- Altera o § 2º do art. 32 da Lei nº 5.172, de 25 de outubro de 1966 – Código Tributário Nacional, para explicitar que a qualificação, por lei municipal, de áreas urbanizáveis ou de expansão urbana, para fins de incidência
+- Estabelece as condições legais requeridas pelo preceito contido no § 7º do artigo 195 da Constituição Federal, para entidades beneficentes de assistência social com a finalidade de prestação de serviços nas áreas de assi
+- Dispõe sobre legislação tributária federal sobre combustíveis.
+- Altera a Lei nº 6.830, de 22 de setembro de 1980, para declarar nula a Certidão de Dívida Ativa que não observar os requisitos formais previstos no art. 2º, §§ 5º e 6º, inciso III, e dá outras providências..
+- [formulaica] Trata da dação de bens imóveis para saldar dívidas tributárias.
+- [formulaica] A presente proposta tem como fundamento a salvaguarda dos princípios constitucionais da legalidade e da segurança jurídica, frente à flexibilização da legalidade tributária, com base no permissivo legal estabelecido no §
 
-## Tópico 54 (n = 135; formulaicas atribuídas: 1)
+## Tópico 55 (n = 397; formulaicas atribuídas: 0)
 
-Termos: rodovia, denomina, trecho, ponte, viaduto, estado, município, rio, denomina rodovia, trecho rodovia
+Termos: crianças, adolescentes, crianças adolescentes, digitais, digital, plataformas, proteção, menores, redes sociais, sexual
 
-- Denomina "Viaduto da Saudade Frei Inocêncio Beniamino De Luca" o viaduto localizado na BR-365, na avenida da Saudade, em Monte Alegre de Minas, no estado de Minas Gerais.
-- Denomina "Rodovia Senador Tasso Rosado" a rodovia BR-437, na região da Chapada do Apodi, Distrito do Jucuri, em Mossoró, Estado do Rio Grande do Norte.
-- Altera a Lei nº 5.917, de 10 de setembro de 1973, que aprova o Plano Nacional de Viação, de modo a incluir na Relação Descritiva das Rodovias do Sistema Rodoviário Federal, trecho das rodovias PA-287, TO-335, TO-010 e TO
-- Altera a Lei nº 5.603, de 1970, para denominar Rodovia Vasco Neto o trecho da rodovia BR-030 compreendido entre o Município de Mambaí, no Estado de Goiás, e o Município de Carinhanha, no Estado da Bahia.
-- Denomina "Rodovia André Luís Almeida" o trecho de rodovia federal que liga o entroncamento com a rodovia MG-129 ao Distrito de Florália, no Município de Santa Bárbara, Estado de Minas Gerais.
+- Dispõe sobre a proibição do direcionamento algorítmico de conteúdos produzidos por crianças e adolescentes em redes sociais e plataformas digitais, visando impedir a formação de bolhas de conteúdo infantil que favoreçam 
+- Acrescenta parágrafos ao Estatuto da Criança e do Adolescente (Lei nº 8.069/1990) que veda exposição de crianças e adolescentes em ambientes com abordagem erótica
+- Institui o Dia Nacional do Detox Digital, com o objetivo de fomentar a discussão sobre o uso imoderado de smartphones, videogames, computadores e outras tecnologias similares.
+- Acrescenta no artigo 241-D da Lei nº 8.069, de 13 de julho de 1990 a figura do adolescente para lhe garantir maior proteção.
+- Altera a Lei nº 8.069, de 13 de julho de 1990 – Estatuto da Criança e do Adolescente, de forma a vedar que crianças e adolescentes divulguem em plataforma online de compartilhamento de vídeos, ou outro meio audiovisual, 
+
+## Tópico 56 (n = 301; formulaicas atribuídas: 2)
+
+Termos: internet, artificial, inteligência, inteligência artificial, sistemas inteligência, aplicações, redes sociais, uso, sistemas, provedores
+
+- Altera a Lei nº 12.965, de 23 de abril de 2014, para dispor sobre a remoção de conteúdos gerados pelo usuário em aplicações de internet.
+- Altera a Lei nº 12.965, de 23 de abril de 2014, com o objetivo de instituir a responsabilidade solidária do provedor de aplicações pelos prejuízos resultantes de anúncios fraudulentos por ele patrocinados, nos termos que
+- Estabelece que a obra intelectual produzida em cumprimento a dever funcional, contrato de trabalho ou de prestação de serviços pertencerá a ambas as partes.
+- Dispõe sobre a proteção dos direitos dos consumidores no uso de produtos e serviços que utilizam Inteligência Artificial (IA), estabelecendo diretrizes para garantir transparência, equidade e o respeito à privacidade dos
+- Estabelece marco regulatório para sistemas de inteligência artificial (IA) em setores de alta consequência e dá outras providências.
+- [formulaica] O aumento de utilização de meios eletrônicos para a comunicação de pessoas físicas e jurídicas, tem aumentado dia após dia, o que mais se vê são pessoas com conhecimentos básicos da acessando a rede de computadores, seja
+- [formulaica] A Lei 13.709, de 14 de agosto de 2018, que trata da Lei Geral de Proteção de Dados Pessoais (LGPD) foi criada tendo como objetivo a disciplina normativa acerca do tratamento de dados pessoais, posto que vulneráveis em u
+
+## Tópico 57 (n = 159; formulaicas atribuídas: 6)
+
+Termos: denomina, rodovia, viaduto, trecho, estado, denomina viaduto, ponte, município, localizado, denomina rodovia
+
+- Denomina o trecho da Rodovia BR-416,que liga os estados de Alagoas e Pernambuco, passando por Ibateguara e Colônia Leopoldina, de“Rodovia Expedito Antônio da Silva”.
+- Denomina “Tunel Jurandy Veloso Freire” o túnel situado no km 126 da BR-101, próximo ao Município de Escada/PE.
+- Altera a Lei nº 10.292, de 2001, para denominar "Rodovia Dra. Zilda Arns", o trecho da rodovia BR-101 no Estado de Santa Catarina.
+- Denomina os trechos contínuos das Rodovias BR-232, entre São Caetano e Salgueiro, e BR 316, entre Salgueiro e Araripina, no Estado de Pernambuco, de “Rodovia Luiz Gonzaga, o Rei do Baião”.
+- Denomina “Ponte Philippe Guédon” a estrutura rodoviária localizada no Km 58 da BR 040, com saída para o Km 34,4 da BR 495/RJ, no Distrito de Itaipava, Município de Petrópolis, Estado do Rio de Janeiro.
+- [formulaica] Nos últimos anos, diversas cidades e estados brasileiros passaram por uma agressiva crise econômica como consequência de medidas desastrosas dos governos anteriores, má gestão dos recursos públicos, ineficiência e corrup
+- [formulaica] A banalização do uso de fuzis por marginais da lei no Brasil, extrapola o aceitável. Enquanto em diversos países do mundo, o porte de fuzil é considerado terrorismo, no Brasil, passou a ser um crime acessório. Só no Esta
+
+## Tópico 58 (n = 236; formulaicas atribuídas: 2)
+
+Termos: câmeras, segurança, instalação, obrigatoriedade, banheiros, obrigatoriedade instalação, uso, públicos, normas, ambientes
+
+- Dispõe sobre normas gerais de segurança para o funcionamento de pistas de kart, para fins de recreação e lazer, com o objetivo de proteger o consumidor.
+- Dispõe sobre a obrigatoriedade dos condomínios, sejam residenciais ou comerciais, a disponibilizarem guaritas com blindagem aos vigilantes e porteiros e dá outras providências.
+- Dispõe sobre normas de segurança para a prestação de serviços de exercícios, treinamento e atividades aquáticas.
+- Altera a Lei nº 10.098, de 19 de dezembro de 2000, para dispor sobre a obrigatoriedade de instalação de banheiros família em estabelecimentos públicos e privados de grande circulação.
+- Estabelece a obrigatoriedade de instalação de câmeras de vigilância e GPS no interior do s veículos da Polícia Civil e Militar em âmbito nacional.
+- [formulaica] O Decreto 5.296, de 2004, determinou que as normas técnicas da ABNT - em especial a NBR 9050, passassem a regimentar os critérios e parâmetros técnicos a serem observados por todas as empresas brasileiras, independenteme
 - [formulaica] A materialização de obras e edificações, infraestrutura, pavimentação, barragens, portos, aeroportos, saneamento, atte corrente (galerias e bueiros), arte especiais (pontes, viadutos e passarelas), com base em projetos p
 
-## Tópico 55 (n = 134; formulaicas atribuídas: 0)
+## Tópico 59 (n = 207; formulaicas atribuídas: 0)
 
-Termos: sangue, tecidos, doação, órgãos, órgãos tecidos, doadores, partes corpo, corpo, corpo humano, partes
+Termos: animais, proíbe, proibição, território, todo território, todo, comercialização, abate, território proíbe, uso
 
-- Extingue a tributação do ISS sobre a cessão de uso de espaço em cemitérios para sepultamento e dá outras providências.
-- Altera a Lei nº 9.434, de 4 de fevereiro de 1997, para dispor sobre a retirada de tecidos, órgãos e partes do corpo de pessoas falecidas para transplantes ou outra finalidade terapêutica.
-- Acrescenta inciso VII ao art. 26 da Lei nº 8.213, de 24 de julho de 1991, para dispor sobre isenção de carência na concessão de auxílio-doença ao doador de órgão ou tecido.
-- Altera a Lei nº 12.933, de 26 de dezembro de 2013 - Lei da Meia-Entrada para conceder o benefício aos idosos nos termos do Estatuto do Idoso e doadores regulares de sangue
-- Altera o art 4º, da Lei nº 9.434, de 4 de fevereiro de 1997, que dispõe sobre a remoção de órgãos, tecidos e partes do corpo humano para fins de transplante e tratamento e dá outras providências
+- Dispõe sobre a proibição da aquisição de qualquer tipo de carne de cação para fins de abastecimento de unidades públicas federais diretas ou indiretas em todo território nacional, incluindo-se terceirizadas.
+- Dispõe sobre normas gerais de prevenção, controle e manejo de espécies vegetais exóticas invasoras tóxicas ou nocivas à fauna polinizadora, e dá outras providências.
+- Proíbe a criação e a comercialização de cães braquicefálicos.
+- Altera a Lei nº 11.794, de 8 de outubro de 2008; e a Lei nº 6.360, de 23 de setembro de 1976, para dispor sobre a proibição da utilização de animais em testes visando ao desenvolvimento de produtos acabados ou ingredient
+- Proíbe a venda de animais em pet shops e lojas, promovendo a cultura de adoção em vez de compra, e dá outras providências.
 
-## Tópico 56 (n = 245; formulaicas atribuídas: 1)
+## Tópico 60 (n = 164; formulaicas atribuídas: 0)
 
-Termos: públicos, serviços públicos, obrigatoriedade, cidadão, administração, administração pública, órgãos, serviços, transparência, pública
+Termos: pedágio, rodovias, rodovias federais, pix, pedágios, pagamento, federais, pedágio rodovias, cobrança pedágio, cobrança
 
-- Inaugura penas administrativas quanto ao não cumprimento de acessibilidade eletrônica, institui obrigatoriedade de acessibilidade eletrônica na Administração Pública e dispõe sobre recomendação para inclusão de disciplin
-- Assegura ao cidadão o direito à revisão humana e à explicação mínima de decisões administrativas tomadas por sistemas automatizados ou protocolos padronizados.
-- Dispõe sobre a obrigatoriedade de as placas de inauguração de obras públicas, custeadas por recursos de emenda ao orçamento federal, informar o nome do parlamentar ou da Comissão autora.
-- Dispõe sobre restrições e deveres de transparência relativos à manutenção de ativos financeiros e participação societária no exterior por agentes políticos ocupantes de cargos de direção e cúpula nos Poderes da República
-- Estabelece garantias ao cidadão quanto ao uso de sistemas automatizados pela Administração Pública, assegurando o direito de contestar dados utilizados em decisões automatizadas e vedando bloqueios administrativos automá
-- [formulaica] No Brasil, a informação é um direito constitucional, que assegura a todo o cidadão o direito de informar, o direito de se informar e o direito de ser informado, visto a permissão de livre acesso à informação e a dados pú
+- Altera a Lei nº 10.233, de 2001, para prever, em editais de licitação de concessão de rodovia, isenção de pedágio a veículo automotor no qual esteja sendo transportada, para tratamento de saúde, pessoa com doença grave, 
+- Institui a isenção do pagamento de pedágio em rodovias para veículos que transportem pessoas com Transtorno do Espectro Autista (TEA), síndrome de Down, deficiência ou doenças graves e degenerativas, para fins de tratame
+- Isenção da cobrança da taxa de pedágio aos veículos registrados em municípios limítrofes.
+- Dispõe sobre diferenciação tarifária em razão de variação temporal da demanda e sobre tempo máximo de espera para travessia de praça de cobrança de pedágio.
+- Dispõe sobre a isenção do pagamento de pedágio para motocicletas e veículos similares em rodovias federais e dá outras providências.
 
-## Tópico 57 (n = 129; formulaicas atribuídas: 0)
+## Tópico 61 (n = 200; formulaicas atribuídas: 0)
 
-Termos: pedágio, rodovias, rodovias federais, pedágios, federais, pagamento, pedágio rodovias, cobrança pedágio, cobrança, pagamento pedágio
+Termos: enfermagem, piso salarial, piso, salarial, profissionais, profissionais enfermagem, profissional, enfermeiro, salário profissional, técnico enfermagem
 
-- Dispõe sobre a gratuidade em praças de pedágio no Brasil para idosos acima de 65 anos e pessoas com deficiência física.
-- Dispõe sobre a regulamentação da cobrança de pedágio para caminhões e carretas, de forma a evitar cobranças indevidas nos casos de eixos erguido e peso das cargas transportadas.
-- Institui a isenção de pagamento de tarifa de pedágio em rodovias federais para os veículos que determina, quando o país for afetado por pandemia ou decretado estado de calamidade pública.
-- Dispõe sobre a isenção de cobrança de pedágio rodoviário para os veículos de transporte de carga, profissionais de saúde e da segurança pública em todo território nacional, durante 90 dias ou enquanto perdurar a pandemia
-- Dispõe sobre a isenção do pagamento da taxa de pedágio em rodovias federais, enquanto perdurar a declaração de pandemia do coronavírus pela Organização Mundial de Saúde, aos profissionais de transporte de alimentos, comb
+- Dispõe sobre a instituição do piso salarial nacional dos coveiros e dá outras providências.
+- Dispõe sobre o Piso Salarial dos Vigilantes.
+- Altera a Lei n.º 8.662, de 7 de junho de 1993, a fim de dispor sobre o piso salarial do Assistente Social.
+- Modifica a Lei nº 3.999 de 15 de dezembro de 1961, que "Altera o salário-mínimo dos médicos e cirurgiões dentistas", para dispor sobre o salário profissional desses trabalhadores.
+- Dispõe sobre a obrigatoriedade de repasse mínimo do valor correspondente ao piso salarial nacional dos profissionais de Enfermagem na assistência domiciliar (home care), estabelece critérios de transparência e dá outras 
 
-## Tópico 58 (n = 212; formulaicas atribuídas: 2)
+## Tópico 62 (n = 182; formulaicas atribuídas: 0)
 
-Termos: transparência, digitais, plataformas, artificial, inteligência artificial, inteligência, plataformas digitais, sistemas inteligência, sistemas, uso
+Termos: fies, financiamento estudantil, fundo financiamento, estudantil, financiamento, estudantil fies, fundo, mensalidades, superior, ensino
 
-- Dispõe sobre a responsabilidade das plataformas digitais por vendas de produtos ilegais, falsificados ou em desacordo com a legislação vigente, e dá outras providências.
-- Veda a cobrança de taxa de entrega ou de retirada na comercialização de ingresso para espetáculos culturais, de entretenimento e eventos desportivos, quando o bilhete for impresso pelo próprio consumidor ou for disponibi
-- Estabelece a obrigatoriedade do cadastramento e recadastramento de usuários em redes sociais e dá outras providências.
-- Dispõe sobre a possibilidade de cobrança pela exibição de notícias em plataformas digitais.
-- Institui deveres de transparência, previsibilidade e comunicação prévia nas alterações unilaterais promovidas por plataformas digitais em serviços ofertados aos consumidores.
-- [formulaica] O objetivo da presente proposição é dar maior publicidade, transparência, economicidade bem como contribuir com o meio ambiente no que diz respeito ao gasto de papel dando ênfase ao uso da rede mundial de comunicação (In
+- Dispõe sobre a Política de Concessão de Benefícios aos estudantes que concluíram a graduação e estão adimplentes com o Fundo de Financiamento Estudantil (FIES) e dá outras providências.
+- Determina que até 31 de dezembro de 2021 para todos os estudantes, e de 2023 para aqueles que não possuam vínculo de trabalho formal, está suspensa a obrigatoriedade de pagamentos relativos a financiamentos no âmbito do 
+- Dispõe sobre a ampliação dos benefícios de redução de saldo devedor previstos nos arts. 6º-B e 6º-F para todos os cursos superiores abrangidos pelo Fies.
+- Dispõe sobre a redução proporcional na cobrança das mensaldidades nas Instituições de Ensino Superior da rede privada durante a pandemia da Covid-19 em estado de calamidade pública e dá outras providências.
+- Dispõe sobre a redução de 50% (cinquenta por cento) no valor das mensalidades das instituições de ensino fundamental, médio e superior da rede privada em que as aulas presenciais estejam suspensas, durante a vigência do 
 
-## Tópico 59 (n = 182; formulaicas atribuídas: 1)
+## Tópico 63 (n = 163; formulaicas atribuídas: 1)
 
-Termos: mobilidade urbana, mobilidade, transporte, urbana, política mobilidade, passageiros, diretrizes política, transporte público, remunerado, transporte remunerado
+Termos: transporte, gratuidade, coletivo, transporte público, interestadual, gratuidade transporte, transporte coletivo, passe livre, público, coletivo interestadual
 
-- Altera a Lei nº. 12.587, de 3 de
-janeiro de 2012, que Institui as diretrizes da
-Política Nacional de Mobilidade Urbana, e
-dá outras providências, para conceituar o
-transporte privado na modalidade delivery
-por aplicativo
-- Dispõe sobre o aproveitamento de trechos ferroviários desativados para fins de mobilidade urbana e segurança viária, e dá outras providências.
-- Altera a Lei nº 12.587, de 3 de janeiro de 2012, que Institui as diretrizes da Política Nacional de Mobilidade Urbana, para garantir a reserva de vagas em estacionamentos para veículos em uso por trabalhadores de platafo
-- Altera a Lei nº 12.587, de 3 de janeiro de 2012, que institui as diretrizes da Política Nacional de Mobilidade Urbana, para dispor sobre identificação de veículos utilizados para transporte remunerado privado individual 
-- Altera a Lei nº 12.587, de 3 de janeiro de 2012, que instituiu as diretrizes da Política Nacional de Mobilidade Urbana, para estabelecer a obrigatoriedade de contratação de seguro de vida para motoristas de aplicativos.
-- [formulaica] Estabelece penalidades para o condutor que alterar características do veículo de carga ou de transporte de passageiro.
+- "Institui o Serviço Especial Gratuito de Transporte para tratamento de Saúde".
+- Dispõe sobre a gratuidade do transporte público coletivo para profissionais de saúde vinculados ao SUS, durante o período de enfrentamento da emergência de saúde pública decorrente do coronavírus.
+- Torna gratuito o transporte em ônibus interestadual, para mulheres grávidas, nas condições em que estabelece
+- Altera a Lei n° 10.741, de 1° de outubro de 2003, que dispõe sobre o Estatuto do Idoso, para disciplinar os procedimentos para o exercício da gratuidade nos serviços de transporte público coletivo urbano de passageiros.
+- Altera a lei 8.899, 29 de junho de 1994, é concede passe livre as Pessoas com Deficiência, Síndromes, Anemia Falciforme, Câncer e doenças raras no transporte coletivo interestadual e das outras providencias.
+- [formulaica] . Dos grandes centros urbanos às pequenas cidades, a mobilidade urbana é uma necessidade inerente dos idosos, seja para o trabalho, lazer ou mesmo para necessidades mais eminentes como se deslocar ao serviço médico. Dian
+
+## Tópico 64 (n = 139; formulaicas atribuídas: 0)
+
+Termos: rodovia, denomina, trecho, viaduto, ponte, estado, rio, município, denomina rodovia, trecho rodovia
+
+- Denomina "Enoré Antônio Bondan" a passarela para pedestres localizada no km 238,9 da Rodovia BR-116, no Município de Novo Hamburgo/RS.
+- Denomina "Francisco Sady de Brito" o viaduto situado no km 350 da rodovia BR-376, no Município de Ortigueira.
+- Denomina "Dispositivo Vicente Vitagliano" o conjunto de acesso viário situado no KM 72 +800, da BR-153 -- Rodovia Transbrasiliana, em São José do Rio Preto, Estado de São Paulo.
+- Denomina "PREFEITO JOSÉ DE OLIVEIRA" o trecho da BR-419 entre os municípios de Rio Verde e Rio Negro, no Estado do Mato Grosso do Sul.
+- Denomina "Estevo Luiz Foristieri" a trincheira localizada na rodovia BR-369, no Município de Cambé, no Estado do Paraná.
+
+## Tópico 65 (n = 171; formulaicas atribuídas: 1)
+
+Termos: sul, grande sul, rio grande, grande, rio, estado rio, estado, enchentes, calamidade pública, calamidade
+
+- Dispõe sobre a criação de um auxílio emergencial para os motoristas de aplicativo do Estado do Rio Grande do Sul em razão do estado de calamidade pública reconhecido por Decreto Legislativo aprovado pelo Congresso Nacion
+- Institui o Programa de Recuperação e Preservação dos Rios do Rio Grande do Sul (ProReP-RS), destinado à revitalização, desassoreamento e recuperação dos rios afetados pelas enchentes ocorridas entre abril e maio de 2024.
+- Estabelece medida excepcional de proteção social no contexto da situação de emergência decorrente das enchentes e da catástrofe ambiental ocorridas em cidades do Estado da Bahia, em razão de eventos climáticos extremos.
+- Determina isenção da taxa de iluminação pública para aqueles que comprovem que os municípios, direta ou indiretamente, não fornecem adequadamente o serviço
+- Institui o Regime de Recuperação Socioambiental (RRS) para o Estado do Rio Grande do Sul, revoga o Regime de Recuperação Fiscal (RRF) e dá outras providências.
+- [formulaica] A Presente proposição visa facilitar o processo de doações de mantimentos, medicamentos e demais itens que possam ser recebidos por nações, empresas e cidadãos estrangeiros a título de donativos em casos de calamidades p
+
+## Tópico 66 (n = 152; formulaicas atribuídas: 5)
+
+Termos: advogados, advocacia, advogados brasil, ordem advogados, oab, ordem, estatuto advocacia, brasil oab, advocacia ordem, brasil
+
+- Acrescenta parágrafo ao art. 46 da Lei n.º 8.906, de 4 de julho de 1994, para isentar de contribuições para a Ordem dos Advogados do Brasil os estagiários e advogados até dezoito meses da graduação no bacharelado em Dire
+- Permite o exercício da advocacia por ocupantes de cargos ou funções vinculados, direta ou indiretamente, à atividade policial de qualquer natureza, e por militares de qualquer natureza, na ativa, nas situações que especi
+- Altera a Lei nº 8.906, de 4 de julho de 1994, a fim de explicitar a natureza alimentar dos honorários advocatícios.
+- Altera o art. 6º da Lei nº 8.906, de 4 de julho de 1994 (Estatuto da Advocacia e da OAB), para assegurar a prerrogativa de sustentação oral em tempo real nas sessões de julgamento virtuais.
+- Altera a Lei nº 8.906, de 4 de julho de 1994, para elencar, dentre os direitos do advogado, o direito de ter reconhecida, pela fé do seu grau, a declaração de autenticidade dos documentos que fizer juntar aos autos de pr
+- [formulaica] Em decorrência do arquivamento de todas as proposições que no seu decurso tenham sido submetidas à deliberação da Câmara e ainda se encontrem em tramitação, de acordo com o que prevê o art. 105 do Regimento Interno da Câ
+- [formulaica] A sociedade brasileira está cada vez mais atenta a causas defendidas por advogados que minimamente esbarram em princípios como a moralidade. Bem sabemos que a advocacia é um direito e um dever, e o direito à ampla defesa
+
+## Tópico 67 (n = 191; formulaicas atribuídas: 1)
+
+Termos: energia, elétrica, energia elétrica, solar, distribuída, microgeração, minigeração, geração, fotovoltaica, microgeração minigeração
+
+- Dispõe sobre a obrigatoriedade de empresas e construtoras a implantar sistema de captação de energia solar em todos as construções a serem realizadas em território nacional, sejam elas públicas ou privadas e dá outras pr
+- Dispõe sobre incentivos às unidades de mini e microgeração distribuída de energia elétrica.
+- Institui o Programa de Financiamento de Energia Limpa (PFEL), que cria linhas especiais de crédito destinadas à aquisição e instalação de sistemas geradores fotovoltaicos classificados como tipo A, aerogeradores de até 1
+- Altera a Lei nº 10.438, de 26 de abril de 2002, para dispor sobre a priorização dos municípios geradores de energia aeólica, fotovoltaica e por usinas hidrelétricas no processo de universalização dos serviços públicos de
+- Dispõe sobre mecanismos de compensação e comercialização de energia elétrica por unidades consumidoras dotadas de infraestrutura de microgeração e minigeração distribuídas.
+- [formulaica] O presente projeto visa implementar ações urgentes e necessárias para impulsionar o desenvolvimento socioeconômico do Brasil, por meio da promoção de projetos voltados à geração de energia elétrica limpa e renovável, ao 
+
+## Tópico 68 (n = 216; formulaicas atribuídas: 2)
+
+Termos: ambientais, meio ambiente, administrativas, sanções, atividades lesivas, condutas atividades, lesivas meio, crimes ambientais, lesivas, penais administrativas
+
+- Altera a Lei nº 9.605, de 12 de fevereiro de 1998 que dispõe sobre as sanções penais e administrativas derivadas de condutas e atividades lesivas ao meio ambiente, e dá outras providências; e a Lei nº 13.260, de 16 de ma
+- Altera a Lei nº 9.605, de 12 de fevereiro de 1998, que "dispõe sobre as sanções penais e administrativas derivadas de condutas e atividades lesivas ao meio ambiente", para aprimorar a proporcionalidade e a efetividade da
+- Altera a Lei nº 9.605, de 12 de fevereiro de 1998 (Lei de Crimes Ambientais), para especificar a destinação da multa simples e de outros valores pagos a título de reparação de danos em caso de desastre ambiental.
+- Altera a redação do artigo 14, §1º, da Lei nº 6.938/81 e acrescenta parágrafo ao artigo 19 da Lei nº 9.605/98 para prever a obrigatoriedade de quantificação do dano ao sistema climático no caso de condutas e atividades l
+- Altera a redação da Lei 9.605 de 1988 (Dispõe sobre as sanções penais e administrativas derivadas de condutas e atividades lesivas ao meio ambiente, e dá outras providências) para acrescentar o art. 32-A e 32-B.
+- [formulaica] Todo aquele que pratica alguma das condutas previstas na Lei n.º 8.429/92 no trato de recursos públicos, mais que ressarcir os danos provocados, deve estar sujeito às suas sanções civis e políticas estabelecidas no aludi
+- [formulaica] Conforme o previsto no artigo 225 da Constituição da República Federativa do Brasil (CRFB/88), todos têm direito ao Meio Ambiente ecologicamente equilibrado, bem de uso comum do povo e essencial à sadia qualidade de vida
+
+## Tópico 69 (n = 203; formulaicas atribuídas: 3)
+
+Termos: condenadas, nomeação, crimes, contra, cargos, vedação, pessoas, escravo, proibição, condenados
+
+- Estabelece regras de proteção funcional aos denunciantes de crimes praticados por funcionários, entes e agentes de empresas e sociedades anônimas.
+- Altera as Leis nº 8.112, de 11 de dezembro de 1990, e Lei 14.133, de 1º de Abril de 2021, para impedir a posse em concurso público ou contratação com a Administração Pública de pessoas que estejam sob medidas cautelares 
+- Dispõe sobre a proibição de denominação de qualquer logradouro, no território nacional, de pessoa ou instituição que tenha contra si representação julgada procedente pela Justiça, em decisão transitada em julgado ou prof
+- Dispõe sobre a vedação à prática de constelação familiar no âmbito do Poder Judiciário.
+- Dispõe sobre a vedação de benefício tributário ou de incentivos fiscais a pessoas jurídicas condenadas por crimes ambientais ou em situação de mão de obra análoga à escravidão, e dá outras providências.
+- [formulaica] Juristas e leiloeiros públicos observam com base na experiência em alienação antecipada para preservação de valor de bens sob constrição judicial adquiridos em razão dos crimes previstos na Lei 9.613/1998, nota-se que di
+- [formulaica] A Presente proposição visa punir os maus funcionários públicos que criam óbices na chegada de doações e donativos após casos de calamidade pública, impedindo que o socorro possa chegar aos flagelados pelas respectivas tr
+
+## Tópico 70 (n = 139; formulaicas atribuídas: 0)
+
+Termos: libras, língua, brasileira sinais, língua brasileira, sinais, sinais libras, brasileira, intérprete, intérpretes, portuguesa
+
+- Altera a Lei nº 13.146, de 6 de julho de 2015 (Estatuto da Pessoa com Deficiência), a Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), e a Lei nº 9.099, de 26 de setembro de 1995 (Lei dos Juizados Especiais), para
+- Dispõe sobre diretrizes para a garantia da acessibilidade comunicacional por meio da atuação de tradutores e intérpretes da Língua Brasileira de Sinais – Libras nas universidades federais, e dá outras providências.
+- Dispõe sobre a utilização língua brasileira de sinais (libras), destinada a pessoas com deficiência auditiva, na veiculação de eventos esportivos e culturais.
+- Altera a Lei n° 6.001, de 19 de dezembro de 1973 (Estatuto do Índio), para incluir a obrigatoriedade da contratação de intérpretes de línguas indígenas nos órgãos de proteção que atendem povos indígenas em situação de vi
+- Concede,  à  pessoa  com  deficiência  auditiva gestante, o direito a um intérprete da Língua Brasileira    de    Sinais    -    LIBRAS,    para acompanhar   a   consulta   de   pré-natal   e   o trabalho de parto.
+
+## Tópico 71 (n = 192; formulaicas atribuídas: 1)
+
+Termos: política, programa, educação, jovens, ensino, inclusão digital, apoio, empreendedorismo, digital, básica
+
+- “Institui a Política Nacional de Promoção do Esporte na Primeira Infância e na Infância Escolar (PNPEPI), no âmbito da União, e dá outras providências’.
+- Institui o Programa Nacional de Identificação e Desenvolvimento de Talentos Esportivos em Áreas Remotas – BRASIL QUE REVELA, destinado ao mapeamento, apoio e desenvolvimento de crianças e adolescentes com potencial espor
+- Institui o Programa Nacional "Escola Segura e Conectada" no âmbito das redes públicas de ensino fundamental e médio, destinado ao controle de acesso e à notificação eletrônica de frequência aos pais ou responsáveis legai
+- Institui a Política Nacional de Melhoria da Escolaridade Indígena.
+- Institui o Programa Nacional Bibliotecas Vivas, destinado a fortalecer bibliotecas públicas municipais e estaduais por meio de incentivos fiscais culturais e parcerias com a iniciativa privada, promovendo o acesso à leit
+- [formulaica] A Política Nacional do Livro, instituída pela Lei nº 10.753, de 30 de outubro de 2003, tem como umas de suas diretrizes basilares assegurar ao cidadão o pleno exercício do direito de acesso e uso do livro, assim como apo
+
+## Tópico 72 (n = 161; formulaicas atribuídas: 2)
+
+Termos: criminosas, organizações criminosas, criminosa, terrorismo, organizações, organização criminosa, organização, crime, terroristas, terrorista
+
+- Altera a Lei nº 13.260, de 16 de março de 2016, para considerar atos de terrorismo as condutas previstas nos arts. 15 e 16 da Lei nº 10.826, de 22 de dezembro de 2003, quando envolverem fuzil ou arma de guerra.
+- Altera a Lei nº 7.960, de 21 de dezembro de 1989, para ampliar o rol dos delitos passíveis de prisão temporária, e dá outras providências.
+- Altera as Lei nº 13.260, de 2016 (Lei antiterrorismo) e Lei nº 13.810, de 2019, para dispor sobre organização terrorista e estabelece medidas de combate ao terrorismo.
+- Altera a Lei n.º 12.850, de 2 de agosto de 2013, (Define organização criminosa e dispõe sobre a investigação criminal, os meios de obtenção da prova, infrações penais correlatas e o procedimento criminal; altera o Decret
+- Revoga o § 2º do art. 2º e altera a redação do caput do art. 2º da Lei nº 13.260, de 16 de março de 2016, que regulamenta o disposto no inciso XLIII do art. 5º da Constituição Federal, disciplinando o terrorismo, tratand
+- [formulaica] O Projeto de Lei em pauta acrescenta um § 2º ao art. 6º da Lei nº 13.675, de 11 de junho de 2018, visando a aumentar a capacidade operativa das polícias em crimes graves ou violentos, bem como para aproveitar o increment
+- [formulaica] Amplia o conceito de terrorismo, incluindo motivações políticas, religiosas e sociais no tipo penal.
+
+## Tópico 73 (n = 132; formulaicas atribuídas: 0)
+
+Termos: radiodifusão, emissoras, radiodifusão comunitária, serviço radiodifusão, comunitária, sons, televisão, serviço, sons imagens, radiodifusão sonora
+
+- Altera a Lei nº 9.612, de 19 de fevereiro de 1998, para permitir a inserção de anúncios, na programação de emissoras de radiodifusão comunitária, de estabelecimentos situados na área da comunidade atendida ou dos governo
+- Altera a Lei nº 4.117, de 27 de agosto de 1962, para dispor sobre o cumprimento das finalidades culturais de emissoras de radiodifusão.
+- Estabelece normas gerais, princípios, diretrizes e garantias sobre os serviços de radiodifusão de sons e imagens e seus ancilares com vistas à proteção do consumidor, à inclusão digital e à preservação do acesso gratuito
+- Altera a Lei nº 9.610, de 19 de fevereiro de 1998, para isentar as prestadoras do Serviço de Radiodifusão Comunitária do pagamento do ECAD.
+- Dispõe sobre a concessão de benefícios 
+emergenciais às Instituições Sem Fins Lucrativos 
+de Radiodifusão comunitária a ser adotado 
+durante o Estado de Emergência em Saúde que 
+trata a Lei nº 13.979, de 6 de fevereiro d
+
+## Tópico 74 (n = 149; formulaicas atribuídas: 0)
+
+Termos: mobilidade, mobilidade urbana, urbana, política mobilidade, transporte, diretrizes política, diretrizes, política, transporte público, coletivo
+
+- Altera a Lei nº 12.587, de 3 de janeiro de 2012, que institui as diretrizes da Política Nacional de Mobilidade Urbana, para dispor sobre desembarque, de mulheres e pessoas com mobilidade reduzida, de veículos integrantes
+- Altera a Lei nº 12.587, de 3 de janeiro de 2012, (Política Nacional de Mobilidade Urbana) para incluir a regulamentação do serviço de transporte remunerado privado individual de passageiros no conteúdo obrigatório do Pla
+- Estabelece diretrizes para priorização de veículos movidos a energia renovável nas contratações públicas e dá outras providências.
+- Institui o Regime Especial de Transporte Público Coletivo do Entorno do Distrito Federal e dá outras providências.
+- Estabelece diretrizes para a disponibilização de infraestrutura mínima de estacionamento seguro para bicicletas em estabelecimentos de grande circulação de público, como medida de incentivo à mobilidade ativa, acessibili

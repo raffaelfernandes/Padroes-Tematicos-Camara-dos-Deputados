@@ -23,6 +23,7 @@ import pandas as pd
 from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
 
 sys.path.insert(0, "src")
+from seed import SEED  # noqa: E402
 import fase5_rqs as f5  # noqa: E402
 from fase5_figuras import ROTULOS  # noqa: E402
 
@@ -123,7 +124,7 @@ def main() -> None:
                 corr.append(pd.DataFrame({"topico_bertimbau": ct.index, f"jaccard_{mb}": melhor_a.round(3),
                                           f"par_{mb}": ct.columns[jac.argmax(1)]}).set_index("topico_bertimbau"))
     acaso = []
-    rng = np.random.default_rng(130)
+    rng = np.random.default_rng(SEED)
     for _ in range(5):
         acaso.append(adjusted_rand_score(lab["BERTimbau"], rng.permutation(lab["e5"])))
     conc = pd.DataFrame(linhas).round(3)

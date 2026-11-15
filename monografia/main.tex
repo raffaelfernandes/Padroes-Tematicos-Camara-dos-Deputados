@@ -59,14 +59,14 @@ Universidade Federal do Piauí (UFPI)\\
 
 \begin{resumo}
   \small
-  A Câmara dos Deputados classifica manualmente o tema de cada proposição. Este trabalho investigou se a modelagem neural de tópicos descobre agrupamentos coerentes nas ementas de 40.006 proposições (PL, PEC e PLP) de 2019 a 2026 e onde eles divergem da classificação oficial. Três modelos de \textit{embeddings} (BERTimbau Large, multilingual-e5-large e Serafim) foram combinados com BERTopic, UMAP e HDBSCAN e comparados com a classificação oficial pelo BCubed estendido e com três abordagens clássicas. O BERTimbau gerou 66 tópicos, com precisão de 0,747 (0,245 ao acaso e 0,471 no LDA) e recall de 0,098, abaixo do teto de 0,435 que a classificação multirrótulo impõe a qualquer partição, e reuniu 66,7\% dos pares de proposições apensadas, mais que todas as alternativas. Os tópicos são mais específicos que os 32 temas oficiais e revelam agendas que a classificação divide, como a proteção das mulheres, classificada ora como Direito Penal, ora como Direitos Humanos. Como aplicação, os tópicos recuperam assinaturas temáticas conhecidas dos partidos.
+  A Câmara dos Deputados classifica manualmente o tema de cada proposição. Este trabalho investigou se a modelagem neural de tópicos descobre agrupamentos coerentes nas ementas de 40.006 proposições (PL, PEC e PLP) de 2019 a 2026 e onde eles divergem da classificação oficial. Três modelos de \textit{embeddings} (BERTimbau Large, multilingual-e5-large e Serafim) foram combinados com BERTopic, UMAP e HDBSCAN e comparados com a classificação oficial pelo BCubed estendido e com três abordagens clássicas. O BERTimbau gerou 67 tópicos, com precisão de 0,760 (0,245 ao acaso e 0,471 no LDA) e recall de 0,101, contra 0,435 de uma referência prática que agrupa cada proposição pelo seu tema oficial mais frequente, e reuniu 68,9\% dos pares de proposições apensadas, contra no máximo 55\% nas abordagens clássicas. Os tópicos são mais específicos que os 32 temas oficiais e revelam agendas que a classificação divide, como a proteção das mulheres, classificada ora como Direito Penal, ora como Direitos Humanos. Como aplicação, os tópicos mostram concentrações temáticas conhecidas nas proposições apresentadas pelos partidos.
 
   \noindent Palavras-chave: Processamento de Linguagem Natural. Modelagem de Tópicos. Dados Abertos. Câmara dos Deputados. Aprendizado Não Supervisionado.
 \end{resumo}
 
 \begin{abstract}
   \small
-  The Brazilian Chamber of Deputies manually assigns themes to each legislative proposal. This study investigated whether neural topic modeling discovers coherent groups in the summaries of 40,006 proposals (PL, PEC, and PLP) from 2019 to 2026, and where they diverge from the official classification. Three embedding models (BERTimbau Large, multilingual-e5-large, and Serafim) were combined with BERTopic, UMAP, and HDBSCAN and compared with the official classification using extended BCubed and with three classical approaches. BERTimbau produced 66 topics, with a precision of 0.747 (0.245 by chance and 0.471 for LDA) and a recall of 0.098, below the 0.435 ceiling that the multi-label classification imposes on any partition, and it grouped 66.7\% of the pairs of attached proposals together, more than any alternative. The topics are more specific than the 32 official themes and reveal agendas that the classification splits, such as the protection of women, labeled either as Criminal Law or as Human Rights. As an application, the topics recover known thematic signatures of parties.
+  The Brazilian Chamber of Deputies manually assigns themes to each legislative proposal. This study investigated whether neural topic modeling discovers coherent groups in the summaries of 40,006 proposals (PL, PEC, and PLP) from 2019 to 2026, and where they diverge from the official classification. Three embedding models (BERTimbau Large, multilingual-e5-large, and Serafim) were combined with BERTopic, UMAP, and HDBSCAN and compared with the official classification using extended BCubed and with three classical approaches. BERTimbau produced 67 topics, with a precision of 0.760 (0.245 by chance and 0.471 for LDA) and a recall of 0.101, against 0.435 for a practical reference that groups each proposal by its most frequent official theme, and it grouped 68.9\% of the pairs of attached proposals together, against at most 55\% for the classical approaches. The topics are more specific than the 32 official themes and reveal agendas that the classification splits, such as the protection of women, labeled either as Criminal Law or as Human Rights. As an application, the topics show known thematic concentrations in the proposals submitted by parties.
 
   \noindent Keywords: Natural Language Processing. Topic Modeling. Open Data. Chamber of Deputies. Unsupervised Learning
 \end{abstract}
@@ -137,18 +137,18 @@ Os dados vêm dos arquivos anuais em CSV do portal de Dados Abertos da Câmara (
 \subsection{Pré-processamento}
 \label{subsec:texto}
 
-A unidade de análise é a ementa, que deve explicitar de modo conciso o objeto da lei \citep{brasil1998lc95}. As 493 ementas (1,2\%) que só indicam a lei alterada, como ``Altera o Decreto-Lei nº 2.848, de 1940'', foram chamadas de \textit{formulaicas}: para elas, o texto do modelo é a ementa detalhada ou o início da justificação, obtido do PDF do inteiro teor, e o tópico é atribuído depois do ajuste (critério e validação no Apêndice~\ref{app:formulaicas}). As ementas inteiramente em maiúsculas foram convertidas para minúsculas, e os números e as datas das leis citadas foram retirados do texto do modelo (``Lei nº 12.850, de 2 de agosto de 2013'' passa a ``Lei''), mantendo os nomes de leis e códigos, porque as primeiras rodadas mostraram grupos formados pela caixa alta e pelo número da lei.
+A unidade de análise é a ementa, que deve explicitar de modo conciso o objeto da lei \citep{brasil1998lc95}. As 493 ementas (1,2\%) que só indicam a lei alterada, como ``Altera o Decreto-Lei nº 2.848, de 1940'', foram chamadas de \textit{formulaicas}: para elas, o texto do modelo é a ementa detalhada ou o início da justificação, obtido do PDF do inteiro teor, e o tópico é atribuído depois do ajuste (critério e validação no Apêndice~\ref{app:formulaicas}). As ementas inteiramente em maiúsculas foram convertidas para minúsculas, e os números e as datas das leis citadas foram retirados do texto do modelo (``Lei nº 12.850, de 2 de agosto de 2013'' passa a ``Lei''), mantendo os nomes de leis e códigos, porque as primeiras rodadas mostraram grupos formados pela caixa alta e pelo número da lei. Pelo mesmo motivo, foram retiradas as expressões das fórmulas legislativas (``altera'', ``dispõe sobre'', ``dá nova redação'', ``e dá outras providências'' etc.), que aparecem em quase todas as ementas e aproximariam proposições pela forma da frase.
 
 \subsection{Representação vetorial e agrupamento}
 \label{subsec:agrupamento}
 
-Os textos foram convertidos em vetores por três modelos de código aberto (Seção~\ref{subsec:teoria-nlp}): o BERTimbau Large (\texttt{neuralmind/bert-large-portuguese-cased}), modelo principal; o multilingual-e5-large (\texttt{intfloat/multilingual-e5-large}), com o prefixo ``query:~'' recomendado pelos autores para tarefas simétricas; e o Serafim 335M (\texttt{PORTULAN/serafim-335m-portuguese-pt-sentence-encoder}), que é o próprio BERTimbau Large ajustado para similaridade de frases, o que permite isolar o efeito desse ajuste. O vetor de cada texto é a média dos vetores dos \textit{tokens} da última camada, normalizada, com limite de 256 \textit{tokens} (a mediana das ementas é de 38, e só 0,02\% dos textos foram truncados). O agrupamento segue o BERTopic: o UMAP reduz os vetores a 5 dimensões, o HDBSCAN os agrupa e o c-TF-IDF rotula os tópicos. As palavras das fórmulas legislativas (altera, dispõe, institui etc.) são ignoradas nos rótulos, mas mantidas no texto do \textit{embedding}, porque fazem parte da frase que o modelo interpreta e aparecem em quase todas as ementas.
+Os textos foram convertidos em vetores por três modelos de código aberto (Seção~\ref{subsec:teoria-nlp}). O BERTimbau Large é o modelo principal, usado em todas as análises; os outros dois servem para verificar se os resultados dependem do modelo de \textit{embedding}, e as análises de divergência e de assinaturas foram repetidas com eles (Apêndice~\ref{app:modelos}). Os modelos são o BERTimbau Large (\texttt{neuralmind/bert-large-portuguese-cased}); o multilingual-e5-large (\texttt{intfloat/multilingual-e5-large}), com o prefixo ``query:~'' recomendado pelos autores para tarefas simétricas; e o Serafim 335M (\texttt{PORTULAN/serafim-335m-portuguese-pt-sentence-encoder}), que é o próprio BERTimbau Large ajustado para similaridade de frases, o que permite isolar o efeito desse ajuste. O vetor de cada texto é a média dos vetores dos \textit{tokens} da última camada, normalizada, com limite de 256 \textit{tokens} (a mediana dos textos é de 32, e só 0,02\% foram truncados). O agrupamento segue o BERTopic: o UMAP reduz os vetores a 5 dimensões, o HDBSCAN os agrupa e o c-TF-IDF rotula os tópicos, ignorando as palavras vazias e as das fórmulas legislativas.
 
-A configuração foi escolhida em uma grade de número de vizinhos do UMAP, tamanho mínimo de grupo e parâmetros do HDBSCAN (Apêndice~\ref{app:grade}), só com métricas intrínsecas, sem consultar o \texttt{codTema}: fração de \textit{outliers}, tamanho do maior tópico (até 10\% do \textit{corpus}), coerência NPMI \citep{lau2014machine}, diversidade dos termos \citep{dieng2020topic} e ausência de tópicos dominados por um único autor. A decisão final veio depois da leitura das ementas de cada tópico. A configuração escolhida (30 vizinhos, tamanho mínimo 100, método \textit{eom} e \texttt{min\_samples} 10) tem 66 tópicos, maior tópico com 5,6\% das ementas, NPMI de 0,439 e diversidade de 0,84.
+A configuração foi escolhida em uma grade de número de vizinhos do UMAP, tamanho mínimo de grupo e parâmetros do HDBSCAN (Apêndice~\ref{app:grade}), só com métricas intrínsecas, sem consultar o \texttt{codTema}: fração de \textit{outliers}, tamanho do maior tópico (até 10\% do \textit{corpus}), coerência NPMI \citep{lau2014machine}, diversidade dos termos \citep{dieng2020topic} e ausência de tópicos dominados por um único autor. A decisão final veio depois da leitura das ementas de cada tópico. A configuração escolhida (30 vizinhos, tamanho mínimo 100, método \textit{eom} e \texttt{min\_samples} 10) tem 67 tópicos, maior tópico com 5,6\% das ementas, NPMI de 0,434 e diversidade de 0,84.
 
-Depois da descoberta dos tópicos, cada proposição fora do núcleo do HDBSCAN (\textit{outlier}) recebe o tópico mais votado entre as 15 proposições mais parecidas do núcleo, no espaço original dos vetores. Essa etapa de pós-processamento foi escolhida entre três formas de reatribuir, comparando-as também com o \texttt{codTema} (Apêndice~\ref{app:outliers}).
+Depois da descoberta dos tópicos, cada proposição fora do núcleo do HDBSCAN (\textit{outlier}) recebe o tópico mais votado entre as 15 proposições mais parecidas do núcleo, no espaço original dos vetores. Essa etapa de pós-processamento foi escolhida entre três formas de reatribuir, por uma anotação manual feita sem acesso aos temas oficiais e pela comparação com o \texttt{codTema} (Apêndice~\ref{app:outliers}).
 
-\textbf{Baselines.} Para medir o que os \textit{embeddings} acrescentam, o mesmo protocolo foi aplicado ao LDA com 66 tópicos (cada texto no tópico de maior peso), ao TF-IDF com K-Means de 66 grupos e ao TF-IDF reduzido a 300 dimensões por SVD no mesmo \textit{pipeline} do modelo principal, o que isola o efeito dos \textit{embeddings}.
+\textbf{Baselines.} Para medir o que os \textit{embeddings} acrescentam, o mesmo protocolo foi aplicado, no mesmo \textit{corpus}, a três abordagens clássicas: o LDA, usado por \citet{batista2020quais} nas ementas da Câmara, com 66 tópicos, o número do modelo principal na exploração da grade (cada texto no tópico de maior peso); o TF-IDF com K-Means de 66 grupos; e o TF-IDF reduzido a 300 dimensões por SVD no mesmo \textit{pipeline} do modelo principal, o que isola o efeito dos \textit{embeddings}. O LDA foi refeito aqui porque o trabalho de Batista usa outro período, sete tópicos e não compara os tópicos com a classificação oficial, de modo que os números dele não são comparáveis com os deste trabalho.
 
 \subsection{Comparação com a classificação oficial}
 \label{subsec:avaliacao}
@@ -160,9 +160,9 @@ R(e, e') &= \frac{\min\big(|\mathrm{Top}(e) \cap \mathrm{Top}(e')|,\, |\mathrm{T
 \end{align}
 A precisão de $e$ é a média de $P$ sobre as proposições que dividem algum tópico com $e$, e o recall, a média de $R$ sobre as que dividem algum tema; os valores do modelo são as médias sobre todas as proposições, e a F é a média harmônica das duas. As medidas descrevem concordância, e não acerto: precisão alta indica tópicos coerentes com a classificação oficial, e recall baixo indica que o modelo reúne as proposições de outro jeito.
 
-Como cada proposição tem 2,14 temas oficiais em média e o modelo atribui um só tópico, o recall tem um teto estrutural. Por isso os valores vêm com três referências: um agrupamento aleatório com os mesmos tamanhos de grupo (cinco sementes), que também serve para dividir cada métrica pelo seu valor ao acaso; um grupo único com tudo; e um teto prático, em que cada proposição vai para o seu tema oficial mais frequente, com 31 grupos (Ciências Exatas e da Terra, com 5 proposições, sempre aparece ao lado de um tema mais frequente) e recall de 0,435. Para comparar com o número de temas oficiais, os tópicos foram reduzidos pela fusão hierárquica do BERTopic, pedida para 32 tópicos (33 grupos no BERTimbau e no e5).
+Como cada proposição tem 2,14 temas oficiais em média e o modelo atribui um só tópico, o recall tende a ser baixo em qualquer partição que não junte grupos muito grandes, e juntá-los derruba a precisão. Por isso os valores vêm com três referências: um agrupamento aleatório com os mesmos tamanhos de grupo (cinco sementes), que também serve para dividir cada métrica pelo seu valor ao acaso; um grupo único com tudo, que tem recall alto e precisão de acaso; e uma referência prática, em que cada proposição vai para o seu tema oficial mais frequente, com 31 grupos (Ciências Exatas e da Terra, com 5 proposições, sempre aparece ao lado de um tema mais frequente), precisão de 1,000 e recall de 0,435. Essa referência indica o recall de uma partição que nunca mistura temas e não é um limite máximo, já que partições com grupos maiores chegam a recall mais alto. Para comparar com o número de temas oficiais, os tópicos foram reduzidos pela fusão hierárquica do BERTopic, pedida para 32 tópicos (33 grupos nos três modelos).
 
-\textbf{Validação sem a classificação oficial.} Uma proposição sobre matéria análoga à de outra que já tramita é apensada a ela, numa relação registrada no processo legislativo e independente do \texttt{codTema}; a fração dos 10.439 pares de apensada e principal no mesmo tópico mede a coerência sem a classificação oficial. Além disso, um avaliador externo fez um teste de intrusão \citep{chang2009reading} adaptado para documentos: em 24 tópicos, 16 do BERTimbau e 8 do LDA, misturados, ele viu os 10 termos e seis ementas, uma delas de outro tópico, apontou a intrusa (1 em 6 ao acaso) e deu uma nota de coerência de 1 a 3.
+\textbf{Validação sem a classificação oficial.} Uma proposição sobre matéria análoga à de outra que já tramita é apensada a ela, numa relação registrada no processo legislativo e independente do \texttt{codTema}; a fração dos 10.439 pares de apensada e principal no mesmo tópico mede a coerência sem a classificação oficial e serviu também para conferir a escolha do modelo principal e da reatribuição. Além disso, um avaliador externo fez um teste de intrusão \citep{chang2009reading} adaptado para documentos: em 24 tópicos, 16 do BERTimbau e 8 do LDA, misturados, ele viu os 10 termos e seis ementas, uma delas de outro tópico, apontou a intrusa (1 em 6 ao acaso) e deu uma nota de coerência de 1 a 3.
 
 \textbf{Divergências.} Foram medidas a pureza de cada tópico, que é a fração das suas proposições com o tema oficial mais comum, e a fragmentação de cada tema, que é o número de tópicos necessários para reunir 80\% das suas proposições. Para um par de temas $a$ e $b$, sejam $n_a$ e $n_b$ as proposições com cada tema, $n_{ab}$ as que têm os dois, $c_{ka}$ as proposições do tópico $k$ com o tema $a$ e $N_k$ o tamanho do tópico. A razão sobre o acaso no CEDI e no modelo é
 \begin{equation}
@@ -177,7 +177,7 @@ em que $r_{\mathrm{mod}}$ é a fração dos pares de proposições, uma com cada
 \subsection{Assinaturas temáticas dos partidos}
 \label{subsec:rq2}
 
-A análise é feita por legislatura, com os partidos que têm pelo menos 100 proposições. A assinatura é medida pelo \textit{log-odds} com \textit{prior} de Dirichlet informativo \citep{monroe2008fightin}, que compara a frequência de cada tópico $k$ no partido $i$ com a do restante $j$:
+A análise é feita por legislatura, com os partidos que têm pelo menos 100 proposições. A análise descreve as proposições que cada partido apresentou, sem votações, relatorias ou discursos. A assinatura é medida pelo \textit{log-odds} com \textit{prior} de Dirichlet informativo \citep{monroe2008fightin}, que compara a frequência de cada tópico $k$ no partido $i$ com a do restante $j$:
 \begin{align}
 \delta_k &= \log\frac{y_{ik} + \alpha_k}{n_i + \alpha_0 - y_{ik} - \alpha_k} - \log\frac{y_{jk} + \alpha_k}{n_j + \alpha_0 - y_{jk} - \alpha_k}, \\
 z_k &= \delta_k \bigg/ \sqrt{\frac{1}{y_{ik} + \alpha_k} + \frac{1}{y_{jk} + \alpha_k}},
@@ -190,7 +190,9 @@ em que $y_{ik}$ é o número de proposições do partido $i$ no tópico $k$, $n_
 \subsection{QP1: coerência dos tópicos e comparação com abordagens clássicas}
 \label{subsec:res-qp1}
 
-O BERTimbau teve a maior precisão entre todos os modelos e baselines (Tabela~\ref{tab:modelos}), três vezes a do acaso. O recall é baixo para todos, porque nenhuma partição passa de 0,435, e por isso é mais informativo dividi-lo pelo acaso: o BERTimbau fica 3,9 vezes acima, perto do Serafim e acima do e5 e dos baselines. O TF-IDF com K-Means mostra por que a F engana: ela é um pouco maior que a do BERTimbau porque ele forma um grupo com 27\% das proposições, e seu recall fica só 1,3 vez acima do acaso.
+O BERTimbau teve a maior precisão entre todos os modelos e baselines (Tabela~\ref{tab:modelos}), três vezes a do acaso. O recall é baixo para todos, já que mesmo a referência prática, que agrupa cada proposição pelo seu tema mais frequente, fica em 0,435, e por isso é mais informativo dividi-lo pelo acaso: o BERTimbau fica cerca de 4 vezes acima, como o Serafim, e acima do e5 e dos baselines.
+
+Os baselines têm perfis diferentes. O TF-IDF com K-Means tem o maior recall e a maior F entre modelos e baselines (0,108 e 0,181, contra 0,101 e 0,179 do BERTimbau), mas com um agrupamento desbalanceado: um grupo reúne 27\% das proposições, o que eleva o recall à custa da precisão (0,571), e o recall dele fica só 1,3 vez acima do acaso. O LDA fica abaixo do BERTimbau em todas as métricas, e o TF-IDF no mesmo \textit{pipeline} tem precisão menor que a dos três modelos neurais. A vantagem do BERTimbau sobre os baselines está na precisão e nas apensadas, as duas medidas que dependem de os grupos serem coerentes; na F, o K-Means fica um pouco acima.
 
 \begin{table}[H]
 \centering
@@ -202,9 +204,9 @@ O BERTimbau teve a maior precisão entre todos os modelos e baselines (Tabela~\r
 \textbf{Versão} & \textbf{Grupos} & \textbf{P} & \textbf{R} & \textbf{F} & \textbf{P/ac.} & \textbf{R/ac.} & \textbf{Apensadas} \\
 \midrule
 \multicolumn{8}{l}{\textit{BERTopic com embeddings neurais}} \\
-BERTimbau Large (modelo principal) & 66 & 0,747 & 0,098 & 0,173 & 3,05 & 3,94 & 66,7\% \\
-Serafim 335M & 72 & 0,707 & 0,090 & 0,159 & 2,88 & 4,05 & 65,7\% \\
-multilingual-e5-large & 60 & 0,661 & 0,097 & 0,169 & 2,70 & 2,91 & 59,2\% \\
+BERTimbau Large (modelo principal) & 67 & 0,760 & 0,101 & 0,179 & 3,10 & 3,95 & 68,9\% \\
+Serafim 335M & 70 & 0,710 & 0,100 & 0,175 & 2,89 & 3,98 & 69,8\% \\
+multilingual-e5-large & 75 & 0,722 & 0,090 & 0,160 & 2,94 & 3,66 & 66,8\% \\
 \midrule
 \multicolumn{8}{l}{\textit{Baselines clássicos}} \\
 TF-IDF no mesmo \textit{pipeline} (UMAP e HDBSCAN) & 155 & 0,661 & 0,030 & 0,057 & 2,68 & 3,76 & 39,8\% \\
@@ -212,21 +214,21 @@ TF-IDF + K-Means & 66 & 0,571 & 0,108 & 0,181 & 2,33 & 1,31 & 44,7\% \\
 LDA & 66 & 0,471 & 0,056 & 0,100 & 1,92 & 2,54 & 44,6\% \\
 \midrule
 \multicolumn{8}{l}{\textit{Referências}} \\
-Aleatório com os tamanhos do BERTimbau & 66 & 0,245 & 0,025 & 0,045 & 1,00 & 1,00 & 2,5\% \\
-Teto prático (tema oficial mais frequente) & 31 & 1,000 & 0,435 & 0,606 & -- & -- & 61,8\% \\
+Aleatório com os tamanhos do BERTimbau & 67 & 0,245 & 0,026 & 0,046 & 1,00 & 1,00 & 2,6\% \\
+Referência prática (tema oficial mais frequente) & 31 & 1,000 & 0,435 & 0,606 & -- & -- & 61,8\% \\
 Um grupo só & 1 & 0,244 & 0,963 & 0,389 & -- & -- & 100\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-A validação sem a classificação oficial aponta na mesma direção: o BERTimbau colocou 66,7\% dos pares de apensada e principal no mesmo tópico, contra 2,5\% ao acaso, no máximo 55\% nos baselines e 61,8\% no próprio teto prático. Na avaliação humana, o avaliador achou a ementa intrusa em \pendente{X de 16} tópicos do BERTimbau e em \pendente{Y de 8} do LDA (17\% ao acaso), com coerência média de \pendente{a} e \pendente{b}. O TF-IDF no mesmo \textit{pipeline} formou 155 tópicos e mesmo assim teve precisão menor e reuniu só 39,8\% das apensadas, o que indica que o ganho vem das representações neurais, já que o resto do \textit{pipeline} era o mesmo. A vantagem do BERTimbau em precisão se mantém com 32 tópicos (0,569, contra 0,521 do e5 e 0,491 do Serafim), no \textit{bootstrap} (0,745 a 0,750) e em cinco sementes do UMAP (Apêndice~\ref{app:grade}); no recall e na F, a ordem entre os modelos varia com a semente.
+A validação sem a classificação oficial aponta na mesma direção: o BERTimbau colocou 68,9\% dos pares de apensada e principal no mesmo tópico, contra 2,6\% ao acaso, no máximo 55\% nos baselines e 61,8\% na referência prática. Na avaliação humana, o avaliador achou a ementa intrusa em \pendente{X de 16} tópicos do BERTimbau e em \pendente{Y de 8} do LDA (17\% ao acaso), com coerência média de \pendente{a} e \pendente{b}. O TF-IDF no mesmo \textit{pipeline} formou 155 tópicos e mesmo assim teve precisão menor e reuniu só 39,8\% das apensadas. Como o resto do \textit{pipeline} é igual, isso sugere que as representações neurais contribuem para grupos mais alinhados à classificação oficial e às apensadas, embora a comparação não isole só a representação, já que o número e o tamanho dos grupos também mudam. A vantagem do BERTimbau em precisão se mantém com 32 tópicos (0,563, contra 0,530 do Serafim e 0,490 do e5), no \textit{bootstrap} (0,757 a 0,762) e em cinco sementes do UMAP (Apêndice~\ref{app:grade}); no recall e na F, BERTimbau e Serafim se alternam conforme a semente.
 
-O resultado contraria a expectativa de que o ajuste para similaridade de frases melhoraria os tópicos. O Serafim corrige a anisotropia (o cosseno médio entre pares aleatórios cai de 0,805 no BERTimbau para 0,352), mas perde precisão, e o e5, de espaço mais concentrado (0,909), formou um tópico genérico com milhares de ementas do tipo ``Altera a Lei, para\ldots''. Uma explicação é que o BERTimbau sem ajuste dá mais peso a termos lexicais fortes, como o nome da lei alterada, que antecipa o tema oficial: pares que citam a mesma lei dividem algum tema em 95,9\% dos casos, contra 24,2\% de pares quaisquer. Os tópicos do BERTimbau de fato se organizam mais pela lei citada (pureza de lei de 0,454, contra 0,371 do Serafim, 0,381 do e5 e 0,081 ao acaso), e em 21 deles, com 32,5\% das proposições, uma única lei responde por mais da metade das citações. A vantagem, porém, não depende só disso: nas 19.325 ementas sem lei citada, a precisão do BERTimbau (0,721) segue acima da do Serafim (0,686) e da do e5 (0,660), em linha com o resultado de \citet{ferreira2025semantic}.
+O resultado contraria a expectativa de que o ajuste para similaridade de frases melhoraria os tópicos. O Serafim corrige a anisotropia (o cosseno médio entre pares aleatórios cai de 0,763 no BERTimbau para 0,275) e reúne tantas apensadas quanto o BERTimbau, mas forma tópicos menos puros (pureza mediana de 79\%, contra 85\%) e menos estáveis, com 67 a 79 tópicos conforme a semente. Parte da precisão vem de agrupar pela lei alterada, que antecipa o tema oficial: pares que citam a mesma lei dividem algum tema em 95,9\% dos casos, contra 24,2\% de pares quaisquer. Os tópicos do BERTimbau e do e5 se organizam mais pela lei citada que os do Serafim (pureza de lei de 0,453 e 0,459, contra 0,365 e 0,080 ao acaso), e em 21 tópicos do BERTimbau, com 32,2\% das proposições, uma única lei responde por mais da metade das citações. A vantagem do BERTimbau, porém, não depende disso: nas 19.325 ementas sem lei citada, a precisão dele (0,737) segue acima da do Serafim e da do e5 (0,707 nos dois), em linha com o resultado de \citet{ferreira2025semantic}.
 
 \subsection{QP2: onde os tópicos divergem da classificação oficial}
 \label{subsec:res-frag}
 
-Os 66 tópicos têm de 146 a 2.750 proposições (mediana de 462) e são, em geral, mais específicos que os temas oficiais, com tópicos próprios para o Código de Trânsito, a Lei Maria da Penha, o autismo e as apostas de quota fixa. A pureza mediana é de 83\%, e a Figura~\ref{fig:topicos-temas} mostra três tipos de relação com a classificação oficial.
+Os 67 tópicos têm de 138 a 2.974 proposições (mediana de 460) e são, em geral, mais específicos que os temas oficiais, com tópicos próprios para o Código de Trânsito, a Lei Maria da Penha, o autismo e as apostas de quota fixa. A pureza mediana é de 85\%, e a Figura~\ref{fig:topicos-temas} mostra três tipos de relação com a classificação oficial.
 
 \begin{figure}[H]
 \centering
@@ -235,23 +237,23 @@ Os 66 tópicos têm de 146 a 2.750 proposições (mediana de 462) e são, em ger
 \label{fig:topicos-temas}
 \end{figure}
 
-A primeira é a correspondência, com uma célula forte por linha, como no SUS (97\% em Saúde). A segunda é a fragmentação: Administração Pública precisa de 27 tópicos para reunir 80\% das suas proposições, enquanto Direito Penal precisa de 9 e Homenagens, de 5; os temas que descrevem uma área de atuação do Estado se dividem em subagendas, e os que descrevem um gênero de proposição ou um código ficam reunidos. Direitos Humanos e Minorias aparece com 30\% a 90\% em vários tópicos porque funciona como indexação transversal: está em 11.076 proposições e é o único tema de só 4,8\% delas.
+A primeira é a correspondência, com uma célula forte por linha, como no SUS (95\% em Saúde). A segunda é a fragmentação: Administração Pública precisa de 26 tópicos para reunir 80\% das suas proposições, enquanto Direito Penal precisa de 9 e Homenagens, de 5; os temas que descrevem uma área de atuação do Estado se dividem em subagendas, e os que descrevem um gênero de proposição ou um código ficam reunidos. Direitos Humanos e Minorias aparece com 30\% a 90\% em vários tópicos porque funciona como indexação transversal: está em 11.076 proposições e é o único tema de só 4,8\% delas. Um dos tópicos grandes não tem tema dominante: o de programas de desenvolvimento e inovação (1.081 proposições, pureza de 30\%) reúne políticas de incentivo de várias áreas, que o CEDI classifica pela área atendida, como agricultura ou ciência e tecnologia.
 
-A terceira são as agendas que atravessam a classificação, medidas pela razão sobre o acaso (Equação~\ref{eq:razao}; Tabela~\ref{tab:pares-modelos}, no Apêndice~\ref{app:modelos}). O modelo junta o que o CEDI separa: Direito Penal e Direitos Humanos têm razão de 1,24 no CEDI, perto do acaso, e de 1,89 no modelo, e Direito Penal e Direito e Justiça, de 1,40 e 2,65. Nas ementas, o PL 1322/2021, que obriga o ``botão do pânico'' para dar efetividade às medidas protetivas de urgência, recebeu do CEDI Direito Penal e Defesa e Segurança, sem Direitos Humanos; o PL 3893/2024, que cria as Rondas Maria da Penha nas polícias militares, recebeu Direitos Humanos e Defesa e Segurança, sem Direito Penal. As duas tratam da proteção policial às mulheres, e o modelo as colocou no mesmo tópico. O modelo também separa o que o CEDI junta: Economia e Relações Internacionais têm razão de 4,25 no CEDI e de 1,42 no modelo. Aqui o CEDI acrescenta temas de contexto, como no PL 5302/2019, que institui o Dia da OCDE e recebeu Economia, Relações Internacionais e Homenagens, enquanto o modelo o colocou junto das outras datas comemorativas. Os mesmos sentidos de divergência aparecem no Serafim e no e5 em 79\% a 85\% dos 378 pares de temas e em todos os seis pares destacados.
+A terceira são as agendas que atravessam a classificação, medidas pela razão sobre o acaso (Equação~\ref{eq:razao}; Tabela~\ref{tab:pares-modelos}, no Apêndice~\ref{app:modelos}). O modelo junta o que o CEDI separa: Direito Penal e Direitos Humanos têm razão de 1,24 no CEDI, perto do acaso, e de 1,73 no modelo, e Direito Penal e Direito e Justiça, de 1,40 e 2,45. Nas ementas, o PL 1322/2021, que obriga o ``botão do pânico'' para dar efetividade às medidas protetivas de urgência, recebeu do CEDI Direito Penal e Defesa e Segurança, sem Direitos Humanos; o PL 3893/2024, que cria as Rondas Maria da Penha nas polícias militares, recebeu Direitos Humanos e Defesa e Segurança, sem Direito Penal. As duas tratam da proteção policial às mulheres, e o modelo as colocou no mesmo tópico. O modelo também separa o que o CEDI junta: Arte, Cultura e Religião e Turismo têm razão de 6,82 no CEDI e de 3,29 no modelo, e Economia e Relações Internacionais, de 4,25 e 1,80. Aqui o CEDI acrescenta temas de contexto, como no PL 2957/2026, que confere a um município o título de Capital Nacional do Risoto e recebeu quatro temas, entre eles Homenagens, Turismo e Arte, Cultura e Religião, enquanto o modelo o colocou junto dos outros títulos de capital. Os mesmos sentidos de divergência aparecem no Serafim e no e5 em 85\% e 80\% dos 378 pares de temas e nos quatro pares citados aqui, embora os tópicos de cada modelo tenham fronteiras diferentes (Apêndice~\ref{app:modelos}).
 
-Os exemplos sugerem que parte das divergências reflete escolhas diferentes para proposições parecidas. Em 5,8\% dos 82.338 pares (proposição, tema oficial), nenhuma das 15 proposições mais parecidas tem aquele tema, o que atinge 11,3\% das proposições. Na anotação cega, o tema foi julgado parcial ou inadequado em \pendente{X\% dos pares isolados}, contra \pendente{Y\% dos pares de controle}, e o tema mais comum entre as vizinhas também se aplicaria em \pendente{Z\%} dos isolados. \pendente{Interpretação, depois da anotação.}
+Os exemplos sugerem que parte das divergências reflete escolhas diferentes para proposições parecidas. Em 5,6\% dos 81.751 pares (proposição, tema oficial), nenhuma das 15 proposições mais parecidas tem aquele tema, o que atinge 11,0\% das proposições. Na anotação cega, o tema foi julgado parcial ou inadequado em \pendente{X\% dos pares isolados}, contra \pendente{Y\% dos pares de controle}, e o tema mais comum entre as vizinhas também se aplicaria em \pendente{Z\%} dos isolados. \pendente{Interpretação, depois da anotação.}
 
 \subsection{Os \textit{outliers}}
 \label{subsec:res-outliers}
 
-O HDBSCAN deixou 33,1\% das ementas fora dos tópicos, taxa parecida nos três modelos (de 30\% a 34\%), o que indica que ela vem, em boa parte, do próprio \textit{corpus}. A anotação de 100 \textit{outliers} e um novo agrupamento feito só com eles (Apêndice~\ref{app:outliers}) mostraram que essa fração se divide em duas metades: agendas de nicho, menores que o tamanho mínimo de 100, como saúde mental e alimentação escolar, que o CEDI também reconhece (pureza mediana de 76\%, contra 31\% ao acaso); e proposições que misturam assuntos e não se agrupam nem entre si. Como a reatribuição concorda menos com a classificação oficial que o núcleo, as assinaturas foram conferidas também só com o núcleo.
+O HDBSCAN deixou 33,2\% das ementas fora dos tópicos, taxa parecida nos três modelos (de 31\% a 34\%), o que indica que ela vem, em boa parte, do próprio \textit{corpus}. A anotação de 100 \textit{outliers} e um novo agrupamento feito só com eles (Apêndice~\ref{app:outliers}) mostraram que essa fração se divide em duas metades: agendas de nicho, menores que o tamanho mínimo de 100, como saúde mental e crédito rural, que o CEDI também reconhece (pureza mediana de 76\%, contra 31\% ao acaso); e proposições que misturam assuntos e não se agrupam nem entre si. Como a reatribuição concorda menos com a classificação oficial que o núcleo, as assinaturas foram conferidas também só com o núcleo.
 
 \subsection{QP3, aplicação: assinaturas temáticas dos partidos}
 \label{subsec:res-rq2}
 
-As assinaturas se concentram em poucos partidos: 11 dos 24 na 56ª legislatura e 5 dos 20 na 57ª (Tabela~\ref{tab:rq2}), e recuperam perfis já esperados, o que funciona como validação de face dos tópicos. O PSL, na 56ª, e o PL, na 57ª, concentram Código Penal, armas de fogo, execução penal e polícias; parte dessa continuidade vem dos mesmos deputados, que migraram do PSL para o PL em 2022, quando o PSL se fundiu ao DEM no União Brasil. PT, PSOL e PCdoB concentram a COVID na 56ª e, nas duas legislaturas, a CLT e a violência doméstica.
+As assinaturas se concentram em poucos partidos: 11 dos 24 na 56ª legislatura e 5 dos 20 na 57ª (Tabela~\ref{tab:rq2}), e correspondem a perfis já esperados, o que funciona como validação de face dos tópicos. Elas indicam em que temas as proposições de um partido se concentram, sem medir a atuação parlamentar completa. O PSL, na 56ª, e o PL, na 57ª, concentram Código Penal, armas de fogo, execução penal e polícias; parte dessa continuidade vem dos mesmos deputados, que migraram do PSL para o PL em 2022, quando o PSL se fundiu ao DEM no União Brasil. PT, PSOL e PCdoB concentram a COVID na 56ª, e PT e PSOL, a CLT e a violência doméstica na 57ª.
 
-\begin{table}[H]
+\begin{table}[tbp]
 \centering
 \caption{Assinaturas partidárias por legislatura (entre parênteses, a posição de 0 a 10 na escala esquerda-direita de \citet{bolognesi2023nova}; PL e Republicanos pelas siglas anteriores, PR e PRB)}
 \label{tab:rq2}
@@ -260,38 +262,46 @@ As assinaturas se concentram em poucos partidos: 11 dos 24 na 56ª legislatura e
 \toprule
 \textbf{Partido} & \textbf{56ª legislatura (2019--2023)} & \textbf{57ª legislatura (2023--2026)} \\
 \midrule
-PSL (8,11) / PL (7,78) & Código Penal, armas de fogo, execução e processo penal, polícias, ambiente digital e crianças (PSL); Código Penal (PL) & Código Penal, armas de fogo, segurança pública, execução e processo penal, polícias, esporte (PL) \\
-\addlinespace
-PT (2,97) & COVID, CLT & Heróis e Heroínas da Pátria, CLT, violência doméstica \\
-\addlinespace
-PSOL (1,28) & COVID, violência doméstica & Desastres e defesa civil, Heróis e Heroínas da Pátria, violência doméstica \\
-\addlinespace
-PCdoB (1,92) & COVID & Regulamentação de profissões \\
-\addlinespace
-NOVO (8,13) & CLT & Finanças públicas e repasses \\
-\addlinespace
-PSB (4,05) & COVID, ensino superior e cotas & nenhuma \\
-\addlinespace
+PSL (8,11) / PL (7,78) & Código Penal, armas de fogo, execução e processo penal, segurança pública e polícias, ambiente digital e crianças (PSL); Código Penal (PL) & Código Penal, armas de fogo, segurança pública e polícias, terrorismo e organizações criminosas, execução e processo penal, terras e meio ambiente, esporte, licitações (PL) \\
+\midrule
+PT (2,97) & COVID, CLT & Heróis e Heroínas da Pátria, universidades e campi, violência doméstica, CLT, datas comemorativas \\
+\midrule
+PSOL (1,28) & COVID, prevenção à violência & Desastres e defesa civil, Heróis e Heroínas da Pátria, violência doméstica, CLT \\
+\midrule
+PCdoB (1,92) & COVID & nenhuma \\
+\midrule
+NOVO (8,13) & CLT, normas para os entes federativos & Finanças públicas e repasses \\
+\midrule
+Podemos (7,24) & nenhuma & Animais domésticos \\
+\midrule
+PSD (7,09) & Micro e pequenas empresas & nenhuma \\
+\midrule
 MDB (7,01), PP (8,20), Republicanos (7,78), União & Títulos de capital (MDB); rodovias e energia elétrica (PP); consumidor (Republicanos); patrimônio cultural (União) & nenhuma \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-As assinaturas não acompanham só a posição na escala: PP (8,20) e PSL (8,11) estão no mesmo ponto, mas o perfil do PSL é bem mais marcado. Com o mesmo critério para todos, há assinaturas simbólicas (homenagens, títulos, denominações) tanto no MDB e no PP quanto no PT e no PSOL, com os Heróis e Heroínas da Pátria. O que distingue os partidos é o número de assinaturas de políticas substantivas: muitas no PSL, no PL, no PT, no PSOL e no PCdoB; poucas em MDB, PP, Republicanos e União, de direita na escala, com exceções como energia elétrica no PP. Na 57ª, esses partidos não têm assinatura no BERTimbau, mas União, Podemos e PP aparecem no Serafim ou no e5 com causas como a proteção animal (Apêndice~\ref{app:modelos}).
+As assinaturas não acompanham só a posição na escala: PP (8,20) e PSL (8,11) estão no mesmo ponto, mas o perfil do PSL é bem mais marcado. Com o mesmo critério para todos, há assinaturas simbólicas (homenagens, títulos, denominações) tanto no MDB e no PP quanto no PT e no PSOL, com os Heróis e Heroínas da Pátria. O que distingue os partidos é o número de assinaturas de políticas substantivas: muitas no PSL, no PL, no PT e no PSOL; poucas em MDB, PP, Republicanos e União, de direita na escala, com exceções como energia elétrica no PP. Na 57ª, esses partidos não têm assinatura no BERTimbau, mas União e PP aparecem no Serafim ou no e5, a União com a proteção animal, que no BERTimbau é assinatura do Podemos (Apêndice~\ref{app:modelos}).
 
-As assinaturas se mantêm sem os autores de produção em massa (de 94\% a 100\%), cerca de 75\% delas só com o núcleo e de 64\% a 91\% nos outros modelos. Em 15 das 20 combinações de $\alpha_0$ (100 a 2.000) e do percentil (75 a 100), pelo menos 80\% das assinaturas do texto se mantêm; valores mais rígidos retiram assinaturas sem trocá-las, e sempre restam Código Penal, execução penal e armas no PSL e no PL (Apêndice~\ref{app:assinaturas}).
+As assinaturas se mantêm sem os autores de produção em massa (de 90\% a 100\%), de 65\% a 75\% delas só com o núcleo e de 65\% a 80\% nos outros modelos. Em 14 (56ª) e 13 (57ª) das 20 combinações de $\alpha_0$ (100 a 2.000) e do percentil (75 a 100), pelo menos 80\% das assinaturas do texto se mantêm; valores mais rígidos retiram assinaturas quase sem trocá-las, e sempre restam Código Penal, execução penal e armas no PSL e no PL (Apêndice~\ref{app:assinaturas}).
 
 \subsection{Ameaças à validade}
 \label{subsec:ameacas}
 
-O modelo principal e a forma de reatribuir os \textit{outliers} foram escolhidos também pela comparação com o \texttt{codTema}, o que pode favorecer as métricas do modelo principal; a configuração do agrupamento não a usou, e a validação pelas apensadas não depende dela. As anotações das formulaicas, dos \textit{outliers} e das inconsistências foram feitas pelo autor, o que a avaliação externa só compensa em parte. O recall é limitado pela classificação multirrótulo, mas permitir mais de um tópico por proposição só o eleva de 0,10 para 0,15, com um terço delas em dois tópicos ou mais. As fronteiras dos tópicos mudam entre os modelos, e as conclusões se apoiam em padrões agregados. Na análise partidária, as coautorias não são consideradas, a 57ª legislatura está incompleta e a pandemia, que formou o maior tópico, pesa só na 56ª.
+\textbf{Validade de construto.} A classificação oficial é multirrótulo e não foi tratada como resposta certa. Por isso as métricas vêm com referências que as tornam interpretáveis (acaso, referência prática e grupo único) e com uma validação que não depende dela, as apensadas. O recall tende a ser baixo quando uma partição é comparada a uma classificação multirrótulo, e permitir mais de um tópico por proposição só o eleva de 0,10 para 0,155, com um terço delas em dois tópicos ou mais.
+
+\textbf{Validade interna.} O modelo principal e a forma de reatribuir os \textit{outliers} foram comparados também pelo \texttt{codTema}, o que poderia favorecer as métricas do modelo principal. As duas escolhas se sustentam por critérios que não usam a classificação oficial: nas apensadas, BERTimbau e Serafim ficam empatados (68,8\% e 69,3\% em média nas cinco sementes) e acima do e5 (66,4\%), e o BERTimbau é o mais estável entre as sementes (de 67 a 69 tópicos, contra 67 a 79 no Serafim); a reatribuição pelos vizinhos foi a preferida na anotação dos \textit{outliers}, feita sem acesso aos temas (Apêndice~\ref{app:outliers}). A configuração do agrupamento foi escolhida só com métricas intrínsecas.
+
+\textbf{Confiabilidade.} As anotações das formulaicas, dos \textit{outliers} e das inconsistências foram feitas pelo autor, com regras fixadas antes e amostras sorteadas e registradas no repositório antes da anotação. A avaliação dos tópicos foi feita por um avaliador externo, sem saber de qual modelo vinha cada tópico.
+
+\textbf{Validade externa.} Os resultados valem para as ementas da Câmara de 2019 a 2026 e se apoiam em padrões agregados, já que as fronteiras dos tópicos mudam entre os modelos (ARI de 0,30 a 0,38). Na análise partidária, as coautorias não são consideradas, a 57ª legislatura está incompleta e a pandemia, que formou o maior tópico, pesa só na 56ª.
 
 \section{Conclusão e Trabalhos Futuros}
 \label{sec:conclusao}
 
-Quanto à QP1, o BERTimbau encontrou 66 tópicos coerentes: a precisão de 0,747 é três vezes a do acaso e maior que a de todos os baselines, e a validação pelas apensadas (66,7\%) supera o teto prático da classificação oficial; parte da vantagem vem de agrupar pela lei alterada, mas ela se mantém sem lei citada. Quanto à QP2, os tópicos fragmentam os temas amplos e reúnem agendas que o CEDI divide, como a proteção das mulheres, padrões que se repetem nos três modelos. \pendente{Resultado do teste de inconsistências.} Quanto à QP3, os tópicos recuperam assinaturas partidárias conhecidas e estáveis às escolhas do método.
+Quanto à QP1, o BERTimbau encontrou 67 tópicos coerentes: a precisão de 0,760 é três vezes a do acaso e maior que a de todos os baselines, e a validação pelas apensadas (68,9\%) supera a referência prática da classificação oficial (61,8\%); parte da vantagem vem de agrupar pela lei alterada, mas ela se mantém sem lei citada. Quanto à QP2, os tópicos fragmentam os temas amplos e reúnem agendas que o CEDI divide, como a proteção das mulheres, padrões agregados que se repetem nos três modelos, embora as fronteiras dos tópicos mudem entre eles. \pendente{Resultado do teste de inconsistências.} Quanto à QP3, as proposições apresentadas pelos partidos se concentram em tópicos que correspondem a perfis conhecidos, de forma estável às escolhas do método.
 
-Como limitações, o recall fica em cerca de 0,10 pela classificação multirrótulo, um terço das ementas fica fora do núcleo dos grupos e as anotações foram feitas por um único anotador. Como trabalhos futuros, ficam a análise das divergências com servidores do CEDI, o uso da vizinhança semântica para sugerir temas e priorizar revisões, a repetição das análises do Serafim com várias sementes e um modelo com vários tópicos por proposição.
+Como limitações, o recall fica em cerca de 0,10, o que é esperado ao comparar uma partição com uma classificação multirrótulo, um terço das ementas fica fora do núcleo dos grupos, as anotações foram feitas por um único anotador e as assinaturas descrevem só as proposições apresentadas, sem votações, relatorias ou discursos. Como trabalhos futuros, ficam a análise das divergências com servidores do CEDI, o uso da vizinhança semântica para sugerir temas e priorizar revisões e um modelo com vários tópicos por proposição.
 
 \bibliography{ref.bib}
 
@@ -300,7 +310,7 @@ Como limitações, o recall fica em cerca de 0,10 pela classificação multirró
 \section{Ementas formulaicas}
 \label{app:formulaicas}
 
-Uma ementa é formulaica quando começa com uma abertura de alteração (altera, acrescenta, revoga, dá nova redação, inclui, modifica, insere ou suprime), não cita o nome de uma lei ou código e tem no máximo uma palavra de conteúdo depois de retiradas as referências legais e as palavras vazias. O critério foi desenvolvido em 300 ementas, com a pergunta ``só pela ementa, é possível chegar a um dos 32 temas oficiais?''. Essa amostra foi enriquecida com ementas que começam por uma abertura de alteração (225 das 300), já que ao acaso ela teria cerca de quatro formulaicas, e tinha 58 formulaicas. A validação usou uma amostra nova e estratificada, com 50 formulaicas e 50 não formulaicas segundo a anotação, e o critério acertou todas (precisão e recall de 1,00). Sem nenhum erro em 50 casos, o limite superior de 95\% da taxa de erro em cada classe é de cerca de 6\%; a anotação foi feita por um único anotador. O critério identificou 493 formulaicas (1,23\% do \textit{corpus}). Em 27 casos o texto do modelo é o da ementa detalhada, e nos outros 466 é o início da justificação, preferida ao articulado, que agruparia as proposições pelo formato (``passa a vigorar com a seguinte redação''). O modelo é ajustado só nas ementas substantivas, e as formulaicas recebem o tópico depois, pela semelhança de c-TF-IDF.
+Uma ementa é formulaica quando começa com uma abertura de alteração (altera, acrescenta, revoga, dá nova redação, inclui, modifica, insere ou suprime), não cita o nome de uma lei ou código e tem no máximo uma palavra de conteúdo depois de retiradas as referências legais e as palavras vazias. O critério foi desenvolvido em 300 ementas, com a pergunta ``só pela ementa, é possível chegar a um dos 32 temas oficiais?''. Essa amostra foi enriquecida com ementas que começam por uma abertura de alteração (225 das 300), já que ao acaso ela teria cerca de quatro formulaicas, e tinha 58 formulaicas. A validação usou uma amostra nova e estratificada, com 50 formulaicas e 50 não formulaicas segundo a anotação, e o critério acertou todas (precisão e recall de 1,00). Sem nenhum erro em 50 casos, o limite superior de 95\% da taxa de erro em cada classe é de cerca de 6\%; a anotação foi feita por um único anotador. O critério identificou 493 formulaicas (1,23\% do \textit{corpus}). Em 27 casos o texto do modelo é o da ementa detalhada; em 465, é o início do inteiro teor, quase sempre da justificação (457), preferida ao articulado, que agruparia as proposições pelo formato (``passa a vigorar com a seguinte redação''); e um caso ficou sem texto útil. O modelo é ajustado só nas ementas substantivas, e as formulaicas recebem o tópico depois, pela semelhança de c-TF-IDF.
 
 \section{Grade de hiperparâmetros e estabilidade}
 \label{app:grade}
@@ -320,36 +330,41 @@ HDBSCAN & Método de seleção (\texttt{cluster\_selection\_method}) & \textit{e
 HDBSCAN & \texttt{min\_samples} & igual ao tamanho mínimo, 5, 10 & 10 \\
 \midrule
 \multicolumn{4}{l}{\texttt{min\_samples} 5 e 10 testados com 30 vizinhos, \textit{eom} e tamanhos mínimos 50 e 100.} \\
-\multicolumn{4}{l}{Fixos: UMAP com 5 dimensões, distância mínima 0, métrica do cosseno e semente 42.} \\
+\multicolumn{4}{l}{Fixos: UMAP com 5 dimensões, distância mínima 0, métrica do cosseno e semente 42 (130 na etapa refeita).} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-As execuções com outras sementes do UMAP (1, 2, 3 e 4, além da 42) mantiveram a configuração escolhida e refizeram o UMAP, o HDBSCAN e a reatribuição. Nelas, as formulaicas foram atribuídas pelo centroide dos tópicos, mais simples de refazer que o c-TF-IDF; na semente 42, a diferença entre as duas formas é de no máximo 0,003 no BCubed, e essa semente reproduziu os números da Tabela~\ref{tab:modelos}. Com 32 tópicos, o e5 tem o maior recall (0,131, contra 0,112 do BERTimbau) porque um grupo reúne 18,8\% das proposições: dividido pelo acaso, ele fica 2,0 vezes acima, contra 2,9 do BERTimbau, e sua precisão (0,521) segue abaixo da do BERTimbau (0,569). O \textit{bootstrap} das proposições (1.000 reamostras) deu intervalos de 95\% de 0,745 a 0,750 na precisão do BERTimbau, de 0,704 a 0,710 na do Serafim e de 0,658 a 0,664 na do e5, e de 0,038 a 0,043 e de 0,084 a 0,089 para as diferenças do BERTimbau em relação a cada um.
+A grade completa foi rodada em uma versão preliminar do pré-processamento, com a semente 42. A rodada final usa outra semente, 130, de modo que a configuração escolhida foi avaliada em uma semente diferente da usada na exploração. Com o texto e a semente finais, a última etapa da grade (30 vizinhos, tamanhos mínimos 50 e 100, \textit{eom} e os três valores de \texttt{min\_samples}) foi refeita nos três modelos, e a configuração escolhida continuou entre as melhores pelos mesmos critérios, praticamente empatada com \texttt{min\_samples} 5 (69 tópicos, 31,5\% de \textit{outliers} e NPMI de 0,435).
+
+As execuções com outras sementes do UMAP (131 a 134, além da 130) mantiveram a configuração escolhida e refizeram o UMAP, o HDBSCAN e a reatribuição. Nelas, as formulaicas foram atribuídas pelo centroide dos tópicos, mais simples de refazer que o c-TF-IDF; na semente 130, a diferença entre as duas formas é de no máximo 0,003 no BCubed, e essa semente reproduziu os números da Tabela~\ref{tab:modelos}. Com 32 tópicos, o e5 tem recall um pouco maior que o BERTimbau (0,121, contra 0,118) porque um grupo reúne 15,8\% das proposições: dividido pelo acaso, ele fica 2,1 vezes acima, contra 2,8 do BERTimbau, e sua precisão (0,490) segue abaixo da do BERTimbau (0,563). O \textit{bootstrap} das proposições (1.000 reamostras) deu intervalos de 95\% de 0,757 a 0,762 na precisão do BERTimbau, de 0,708 a 0,713 na do Serafim e de 0,719 a 0,725 na do e5, e de 0,047 a 0,052 e de 0,035 a 0,040 para as diferenças do BERTimbau em relação ao Serafim e ao e5.
 
 \begin{table}[H]
 \centering
-\caption{Variação das métricas com cinco sementes do UMAP (média, desvio e intervalo)}
+\caption{Variação das métricas com cinco sementes do UMAP (média, desvio e intervalo; desvio das apensadas em pontos percentuais)}
 \label{tab:sementes}
 \tabfont
 \begin{tabular}{l l r r r r}
 \toprule
 \textbf{Modelo} & \textbf{Métrica} & \textbf{Média} & \textbf{Desvio} & \textbf{Mín.} & \textbf{Máx.} \\
 \midrule
-BERTimbau & Tópicos & 66,4 & 2,7 & 62 & 69 \\
- & Precisão & 0,748 & 0,005 & 0,741 & 0,753 \\
- & Recall & 0,099 & 0,005 & 0,096 & 0,108 \\
- & F & 0,175 & 0,007 & 0,170 & 0,188 \\
+BERTimbau & Tópicos & 67,6 & 0,9 & 67 & 69 \\
+ & Precisão & 0,757 & 0,003 & 0,754 & 0,760 \\
+ & Recall & 0,101 & 0,002 & 0,098 & 0,104 \\
+ & F & 0,179 & 0,004 & 0,174 & 0,183 \\
+ & Apensadas & 68,8\% & 0,3 & 68,3\% & 69,1\% \\
 \midrule
-Serafim & Tópicos & 73,6 & 4,2 & 68 & 79 \\
- & Precisão & 0,701 & 0,020 & 0,666 & 0,713 \\
- & Recall & 0,097 & 0,018 & 0,087 & 0,130 \\
- & F & 0,170 & 0,026 & 0,156 & 0,217 \\
+Serafim & Tópicos & 71,6 & 4,9 & 67 & 79 \\
+ & Precisão & 0,709 & 0,010 & 0,696 & 0,718 \\
+ & Recall & 0,095 & 0,008 & 0,084 & 0,104 \\
+ & F & 0,168 & 0,013 & 0,150 & 0,181 \\
+ & Apensadas & 69,3\% & 1,0 & 68,3\% & 70,7\% \\
 \midrule
-e5 & Tópicos & 64,8 & 4,4 & 60 & 71 \\
- & Precisão & 0,656 & 0,004 & 0,650 & 0,661 \\
- & Recall & 0,090 & 0,005 & 0,084 & 0,097 \\
- & F & 0,158 & 0,008 & 0,150 & 0,169 \\
+e5 & Tópicos & 74,2 & 2,2 & 71 & 77 \\
+ & Precisão & 0,716 & 0,002 & 0,714 & 0,720 \\
+ & Recall & 0,090 & 0,006 & 0,081 & 0,096 \\
+ & F & 0,160 & 0,009 & 0,146 & 0,169 \\
+ & Apensadas & 66,4\% & 0,4 & 66,0\% & 67,0\% \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -357,7 +372,7 @@ e5 & Tópicos & 64,8 & 4,4 & 60 & 71 \\
 \section{Análise dos \textit{outliers}}
 \label{app:outliers}
 
-A taxa de \textit{outliers} sobe com o número de temas oficiais da proposição (26,7\% com um tema e 43,4\% com quatro ou mais), é alta em temas de nicho ou difusos, como Relações Internacionais (61\%), e baixa em gêneros padronizados, como Homenagens (14\%); chega a 52\% nas PEC. Os 100 \textit{outliers} sorteados foram anotados, sem acesso aos temas oficiais, quanto ao motivo de terem ficado fora do núcleo e à adequação do tópico recebido na reatribuição (Tabela~\ref{tab:anotacao}). As categorias e as regras foram fixadas antes da anotação, e a principal é julgar pela finalidade da proposição, e não pelas leis alteradas. As proporções têm intervalo de Wilson de 95\% \citep{wilson1927probable}.
+A taxa de \textit{outliers} sobe com o número de temas oficiais da proposição (26,7\% com um tema e 45,0\% com quatro ou mais), é alta em temas de nicho ou difusos, como Relações Internacionais (59\%), e baixa em gêneros padronizados, como Homenagens (9\%); chega a 44\% nas PEC. Os 100 \textit{outliers} sorteados foram anotados em uma rodada preliminar do modelo, com a mesma configuração, sem acesso aos temas oficiais, quanto ao motivo de terem ficado fora do núcleo e à adequação do tópico recebido na reatribuição (Tabela~\ref{tab:anotacao}). As categorias e as regras foram fixadas antes da anotação, e a principal é julgar pela finalidade da proposição, e não pelas leis alteradas. As proporções têm intervalo de Wilson de 95\% \citep{wilson1927probable}.
 
 \begin{table}[H]
 \centering
@@ -382,7 +397,7 @@ Inadequado & 41\% & 32\% a 51\% \\
 \end{tabular}
 \end{table}
 
-Agrupando de novo só os \textit{outliers} (UMAP com 15 vizinhos e HDBSCAN com tamanho mínimo de 30), metade deles forma 79 pequenos grupos, com mediana de 63 textos (Tabela~\ref{tab:nichos}), e a outra metade (6.473 proposições) continua sem grupo. Baixar o tamanho mínimo no \textit{corpus} inteiro não revela os nichos: com 50, o modelo passa a ter de 106 a 127 tópicos e os \textit{outliers} ficam entre 34\% e 40\%, porque o HDBSCAN usa o tamanho menor para dividir as agendas grandes. A metade sem grupo tem mais temas oficiais por proposição (2,29, contra 2,08 no núcleo), o que combina com as híbridas.
+Agrupando de novo só os \textit{outliers} (UMAP com 15 vizinhos e HDBSCAN com tamanho mínimo de 30), metade deles forma 86 pequenos grupos, com mediana de 61 textos (Tabela~\ref{tab:nichos}), e a outra metade (6.019 proposições) continua sem grupo. Baixar o tamanho mínimo no \textit{corpus} inteiro não revela os nichos: com 50, o BERTimbau passa a ter de 88 a 130 tópicos e os \textit{outliers} ficam entre 36\% e 39\%, porque o HDBSCAN usa o tamanho menor para dividir as agendas grandes. A metade sem grupo tem mais temas oficiais por proposição (2,34, contra 2,07 no núcleo), o que combina com as híbridas.
 
 \begin{table}[H]
 \centering
@@ -393,27 +408,27 @@ Agrupando de novo só os \textit{outliers} (UMAP com 15 vizinhos e HDBSCAN com t
 \toprule
 \textbf{Nicho (descrição a partir dos termos principais)} & \textbf{Prop.} & \textbf{Tema oficial mais comum} & \textbf{Pureza} \\
 \midrule
-Consumo em plataformas digitais & 220 & Direito e Defesa do Consumidor & 69\% \\
-Telecomunicações e universalização dos serviços & 199 & Comunicações & 53\% \\
-Saúde mental e prevenção do suicídio & 176 & Saúde & 80\% \\
-Violência contra crianças e adolescentes & 166 & Direitos Humanos e Minorias & 83\% \\
-Cultura e Pronac & 136 & Arte, Cultura e Religião & 94\% \\
-Veículos elétricos e postos de combustível & 133 & Energia, Recursos Hídricos e Minerais & 61\% \\
-Inteligência artificial e governança de dados & 129 & Administração Pública & 54\% \\
-Pessoas desaparecidas & 109 & Defesa e Segurança & 74\% \\
-Alimentação escolar (PNAE) & 103 & Educação & 89\% \\
-Povos indígenas e comunidades tradicionais & 82 & Direitos Humanos e Minorias & 83\% \\
+Crédito rural e operações de crédito & 317 & Economia & 63\% \\
+Cultura de povos indígenas e comunidades tradicionais & 302 & Arte, Cultura e Religião & 63\% \\
+Fraudes digitais e consumo em plataformas & 247 & Direito e Defesa do Consumidor & 63\% \\
+Medicamentos e vigilância sanitária & 180 & Saúde & 94\% \\
+Inteligência artificial e governança de dados & 145 & Administração Pública & 68\% \\
+Saúde mental e prevenção do suicídio & 144 & Saúde & 78\% \\
+Preconceito e discriminação racial & 128 & Direitos Humanos e Minorias & 89\% \\
+Advocacia e OAB & 110 & Trabalho e Emprego & 68\% \\
+Financiamento estudantil (Fies) & 92 & Educação & 99\% \\
+Doação de órgãos, tecidos e sangue & 91 & Saúde & 90\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Nas mesmas proposições dos nichos, a precisão do BCubed é de 0,704 com os nichos e de 0,630 com os tópicos recebidos na reatribuição (0,278 ao acaso), o que mostra um custo da reatribuição: em média, só 36\% das proposições de um mesmo nicho foram para o mesmo tópico. As 176 proposições sobre saúde mental, por exemplo, foram distribuídas entre os tópicos do SUS, de prevenção à violência, de violência doméstica, de parto e outros.
+Nas mesmas proposições dos nichos, a precisão do BCubed é de 0,725 com os nichos e de 0,641 com os tópicos recebidos na reatribuição (0,289 ao acaso), o que mostra um custo da reatribuição: em média, só 39\% das proposições de um mesmo nicho foram para o mesmo tópico. As 144 proposições sobre saúde mental, por exemplo, foram distribuídas entre os tópicos do SUS (67), de prevenção à violência, de segurança pública, da CLT e outros.
 
-A concordância da reatribuição é a fração do núcleo do tópico recebido que divide algum tema oficial com a proposição. A reatribuição pelos 15 vizinhos foi a melhor das três formas testadas (Tabela~\ref{tab:reatrib}): na anotação, quando o espaço do UMAP e o espaço original escolhiam tópicos diferentes, a escolha do espaço original foi a preferida em 36 de 58 casos, e o método troca 33 das 41 reatribuições inadequadas e mantém 9 das 11 adequadas. A concordância é de 0,686, contra 0,248 com um tópico sorteado e 0,837 no próprio núcleo; ela chega a 0,817 nos 20\% de \textit{outliers} mais parecidos com o tópico recebido e cai a 0,583 nos 20\% menos parecidos.
+A concordância da reatribuição é a fração do núcleo do tópico recebido que divide algum tema oficial com a proposição. Na rodada preliminar, a reatribuição pelos 15 vizinhos foi a melhor das três formas testadas (Tabela~\ref{tab:reatrib}): na anotação, quando o espaço do UMAP e o espaço original escolhiam tópicos diferentes, a escolha do espaço original foi a preferida em 36 de 58 casos, e o método troca 33 das 41 reatribuições inadequadas e mantém 9 das 11 adequadas. Na versão final, a concordância é de 0,700, contra 0,689 com o centroide do núcleo, 0,252 com um tópico sorteado e 0,845 no próprio núcleo; ela chega a 0,832 nos 20\% de \textit{outliers} mais parecidos com o tópico recebido e cai a 0,585 nos 20\% menos parecidos.
 
 \begin{table}[H]
 \centering
-\caption{Três formas de reatribuir os \textit{outliers}}
+\caption{Três formas de reatribuir os \textit{outliers} (rodada preliminar)}
 \label{tab:reatrib}
 \tabfont
 \begin{tabular}{l r r r}
@@ -430,9 +445,9 @@ Centroide do núcleo no espaço original & 0,745 & 0,089 & 0,666 \\
 \section{Comparação entre os três modelos}
 \label{app:modelos}
 
-As análises de divergência e de assinaturas partidárias foram refeitas com os tópicos do Serafim (72 tópicos) e do e5 (60 tópicos), com o mesmo tratamento do BERTimbau: \textit{outliers} reatribuídos pelos 15 vizinhos do núcleo e formulaicas atribuídas pelo c-TF-IDF.
+As análises de divergência e de assinaturas partidárias foram refeitas com os tópicos do Serafim (70 tópicos) e do e5 (75 tópicos), com o mesmo tratamento do BERTimbau: \textit{outliers} reatribuídos pelos 15 vizinhos do núcleo e formulaicas atribuídas pelo c-TF-IDF.
 
-\textbf{Os tópicos em si.} As três partições concordam bem mais que o acaso, mas traçam fronteiras diferentes (Tabela~\ref{tab:particoes}). O índice de Rand ajustado (ARI) fica entre 0,26 e 0,33, contra praticamente zero com tópicos embaralhados, e só de 15\% a 27\% dos tópicos de um modelo têm no outro um tópico quase igual (Jaccard de pelo menos 0,5). O BERTimbau e o Serafim, que partem do mesmo modelo de base, são o par com maior ARI.
+\textbf{Os tópicos em si.} As três partições concordam bem mais que o acaso, mas traçam fronteiras diferentes (Tabela~\ref{tab:particoes}). O índice de Rand ajustado (ARI) fica entre 0,30 e 0,38, contra praticamente zero com tópicos embaralhados, e só de 17\% a 34\% dos tópicos de um modelo têm no outro um tópico quase igual (Jaccard de pelo menos 0,5). O par mais parecido é o BERTimbau e o e5 (ARI de 0,38). O BERTimbau e o Serafim, que partem do mesmo modelo de base, ficam em 0,33, o que sugere que o ajuste para similaridade de frases muda bastante as fronteiras dos tópicos. Por isso, a convergência entre os modelos aparece nos padrões agregados (quais temas se fragmentam, quais pares de temas são aproximados ou separados e quais partidos têm assinaturas), e a identidade de cada tópico muda de um modelo para outro.
 
 \begin{table}[H]
 \centering
@@ -443,9 +458,9 @@ As análises de divergência e de assinaturas partidárias foram refeitas com os
 \toprule
 \textbf{Par de modelos} & \textbf{ARI} & \textbf{NMI} & \textbf{Tópicos com par (A $\to$ B)} & \textbf{Tópicos com par (B $\to$ A)} \\
 \midrule
-BERTimbau e Serafim & 0,327 & 0,530 & 17\% & 15\% \\
-BERTimbau e e5 & 0,279 & 0,517 & 24\% & 27\% \\
-Serafim e e5 & 0,263 & 0,501 & 17\% & 20\% \\
+BERTimbau e Serafim & 0,325 & 0,555 & 22\% & 21\% \\
+BERTimbau e e5 & 0,378 & 0,584 & 34\% & 31\% \\
+Serafim e e5 & 0,298 & 0,537 & 19\% & 17\% \\
 \midrule
 \multicolumn{5}{l}{Tópicos com par: fração dos tópicos de A cujo tópico mais parecido em B tem Jaccard $\geq 0{,}5$.} \\
 \multicolumn{5}{l}{ARI do BERTimbau contra o e5 com os tópicos embaralhados: 0,000.} \\
@@ -453,7 +468,7 @@ Serafim e e5 & 0,263 & 0,501 & 17\% & 20\% \\
 \end{tabular}
 \end{table}
 
-\textbf{Fragmentação e pares de temas.} A ordem dos temas pela fragmentação é parecida nos três modelos (correlação de Spearman entre 0,78 e 0,91), e os mesmos temas amplos se espalham por mais tópicos (Tabela~\ref{tab:frag-modelos}). Nos 378 pares de temas com pelo menos 300 proposições em cada tema, os modelos divergem do CEDI no mesmo sentido, ambos aproximando ou ambos separando, em 79\% (BERTimbau e Serafim) a 85\% (BERTimbau e e5) dos casos, e a correlação entre as razões dos modelos fica entre 0,84 e 0,87. Os seis pares destacados no texto seguem o mesmo sentido nos três (Tabela~\ref{tab:pares-modelos}). A exceção é Economia e Turismo, que o BERTimbau separa e o Serafim mantém perto do CEDI, e que por isso não foi usado como exemplo no texto.
+\textbf{Fragmentação e pares de temas.} A ordem dos temas pela fragmentação é parecida nos três modelos (correlação de Spearman entre 0,86 e 0,92), e os mesmos temas amplos se espalham por mais tópicos (Tabela~\ref{tab:frag-modelos}). Nos 378 pares de temas com pelo menos 300 proposições em cada tema, os modelos divergem do CEDI no mesmo sentido, ambos aproximando ou ambos separando, em 76\% (Serafim e e5) a 85\% (BERTimbau e Serafim) dos casos, e a correlação entre as razões dos modelos fica entre 0,73 e 0,84. Os quatro pares citados no texto seguem o mesmo sentido nos três modelos (Tabela~\ref{tab:pares-modelos}). As exceções da tabela são Saúde e Trabalho, que o Serafim deixa perto do acaso, e Estrutura Fundiária e Agricultura, que o e5 aproxima ainda mais que o CEDI; por isso esses pares não foram usados como exemplo no texto.
 
 \begin{table}[H]
 \centering
@@ -464,41 +479,41 @@ Serafim e e5 & 0,263 & 0,501 & 17\% & 20\% \\
 \toprule
 \textbf{Tema} & \textbf{BERTimbau} & \textbf{Serafim} & \textbf{e5} \\
 \midrule
-Administração Pública & 27 & 30 & 20 \\
-Direitos Humanos e Minorias & 22 & 31 & 21 \\
-Indústria, Comércio e Serviços & 22 & 24 & 19 \\
-Finanças Públicas e Orçamento & 21 & 24 & 19 \\
-Direito Penal e Processual Penal & 9 & 10 & 9 \\
-Homenagens e Datas Comemorativas & 5 & 5 & 6 \\
-Política, Partidos e Eleições & 5 & 5 & 4 \\
+Administração Pública & 26 & 28 & 28 \\
+Direitos Humanos e Minorias & 23 & 28 & 27 \\
+Indústria, Comércio e Serviços & 22 & 22 & 25 \\
+Finanças Públicas e Orçamento & 19 & 20 & 23 \\
+Direito Penal e Processual Penal & 9 & 7 & 11 \\
+Homenagens e Datas Comemorativas & 5 & 5 & 5 \\
+Política, Partidos e Eleições & 5 & 5 & 6 \\
 \midrule
-Total de tópicos do modelo & 66 & 72 & 60 \\
+Total de tópicos do modelo & 67 & 70 & 75 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{Pares de temas em que o modelo e o CEDI discordam, nos três modelos (razão sobre o acaso, Equação~\ref{eq:razao}; 1 é o esperado ao acaso). Os seis primeiros são os destacados no texto}
+\caption{Pares de temas em que o modelo e o CEDI discordam, nos três modelos (razão sobre o acaso, Equação~\ref{eq:razao}; 1 é o esperado ao acaso). Acima, pares que o BERTimbau aproxima; abaixo, pares que ele separa. Os dois primeiros de cada bloco são os citados no texto}
 \label{tab:pares-modelos}
 \tabfont
 \begin{tabular}{l r r r r}
 \toprule
 \textbf{Par de temas} & \textbf{CEDI} & \textbf{BERTimbau} & \textbf{Serafim} & \textbf{e5} \\
 \midrule
-Direito Penal e Processual Penal $\times$ Direito e Justiça & 1,40 & 2,65 & 3,57 & 2,43 \\
-Direito Penal e Processual Penal $\times$ Direitos Humanos e Minorias & 1,24 & 1,89 & 1,34 & 1,45 \\
-Saúde $\times$ Trabalho e Emprego & 1,09 & 1,66 & 1,24 & 1,39 \\
+Direito Penal e Processual Penal $\times$ Direito e Justiça & 1,40 & 2,45 & 3,61 & 2,85 \\
+Direito Penal e Processual Penal $\times$ Direitos Humanos e Minorias & 1,24 & 1,73 & 2,38 & 1,59 \\
+Saúde $\times$ Trabalho e Emprego & 1,09 & 1,84 & 0,96 & 1,33 \\
 \midrule
-Economia $\times$ Relações Internacionais e Comércio Exterior & 4,25 & 1,42 & 1,73 & 1,31 \\
-Estrutura Fundiária $\times$ Agricultura, Pecuária, Pesca e Extrativismo & 11,05 & 4,08 & 4,68 & 6,80 \\
-Arte, Cultura e Religião $\times$ Turismo & 6,82 & 2,98 & 2,96 & 2,68 \\
-Economia $\times$ Turismo & 2,12 & 0,78 & 2,16 & 1,33 \\
+Arte, Cultura e Religião $\times$ Turismo & 6,82 & 3,29 & 2,74 & 5,04 \\
+Economia $\times$ Relações Internacionais e Comércio Exterior & 4,25 & 1,80 & 1,46 & 1,75 \\
+Estrutura Fundiária $\times$ Agricultura, Pecuária, Pesca e Extrativismo & 11,05 & 3,77 & 2,67 & 12,85 \\
+Economia $\times$ Turismo & 2,12 & 1,15 & 1,38 & 1,64 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{Assinaturas partidárias.} O número de partidos com alguma assinatura partidária é parecido nos três modelos: 11, 10 e 11 na 56ª legislatura (BERTimbau, Serafim e e5) e 5, 5 e 7 na 57ª. Das 22 assinaturas partidárias do BERTimbau na 56ª, 20 reaparecem no e5 e 14 no Serafim, e das 16 da 57ª, 12 e 11, considerando que uma assinatura reaparece quando o mesmo partido tem assinatura em um tópico do outro modelo que recebe pelo menos 20\% das proposições do tópico do BERTimbau. Na 56ª, os três modelos encontram o Código Penal e as armas de fogo no PSL, a COVID no PT, no PSOL e no PSB, a CLT no NOVO, os títulos de capital no MDB e a denominação de rodovias no PP. A Tabela~\ref{tab:rq2-modelos} compara a 57ª.
+\textbf{Assinaturas partidárias.} O número de partidos com alguma assinatura partidária é parecido nos três modelos: 11, 9 e 11 na 56ª legislatura (BERTimbau, Serafim e e5) e 5, 6 e 6 na 57ª. Das 20 assinaturas partidárias do BERTimbau na 56ª, 15 reaparecem no e5 e 13 no Serafim, e das 20 da 57ª, 13 e 16, considerando que uma assinatura reaparece quando o mesmo partido tem assinatura em um tópico do outro modelo que recebe pelo menos 20\% das proposições do tópico do BERTimbau. Na 56ª, os três modelos encontram o Código Penal e as armas de fogo no PSL, a COVID no PT e no PSOL, os títulos de capital no MDB, a denominação de rodovias no PP, as micro e pequenas empresas no PSD e o consumidor no Republicanos. A Tabela~\ref{tab:rq2-modelos} compara a 57ª.
 
 \begin{table}[H]
 \centering
@@ -509,21 +524,19 @@ Economia $\times$ Turismo & 2,12 & 0,78 & 2,16 & 1,33 \\
 \toprule
 \textbf{Partido} & \textbf{BERTimbau} & \textbf{Serafim} & \textbf{e5} \\
 \midrule
-PL & Código Penal, armas de fogo, segurança pública, execução penal, polícias, processo penal, esporte & Código Penal, armas de fogo, crimes sexuais, militares & Armas de fogo, Código Penal, segurança pública, execução penal, ambiente digital e crianças, esporte \\
-\addlinespace
-PT & Heróis e Heroínas da Pátria, CLT, violência doméstica & Violência contra a mulher, CLT, universidades, Heróis e Heroínas da Pátria, violência doméstica, datas comemorativas, previdência & Heróis e Heroínas da Pátria, datas comemorativas, violência doméstica, CLT, educação básica, petróleo e gás \\
-\addlinespace
-PSOL & Desastres e defesa civil, Heróis e Heroínas da Pátria, violência doméstica & Educação básica, Heróis e Heroínas da Pátria, violência contra a mulher & Heróis e Heroínas da Pátria \\
-\addlinespace
+PL & Código Penal, armas de fogo, segurança pública e polícias, terrorismo e organizações criminosas, execução e processo penal, terras e meio ambiente, esporte, licitações & Código Penal, armas de fogo, segurança pública e militares, imóveis e habitação & Armas de fogo, Código Penal, segurança pública e bombeiros militares, organizações criminosas e terrorismo, execução penal \\
+\midrule
+PT & Heróis e Heroínas da Pátria, universidades e campi, violência doméstica, CLT, datas comemorativas & CLT, datas comemorativas, cultura, Heróis e Heroínas da Pátria, universidades, violência doméstica & Violência contra a mulher, Heróis e Heroínas da Pátria, universidades, CLT, datas comemorativas, regulamentação de profissões \\
+\midrule
+PSOL & Desastres e defesa civil, Heróis e Heroínas da Pátria, violência doméstica, CLT & Mudança do clima, Heróis e Heroínas da Pátria, meio ambiente, violência doméstica & Heróis e Heroínas da Pátria, nomeação de condenados para cargos públicos \\
+\midrule
 NOVO & Finanças públicas e repasses & nenhuma & nenhuma \\
-\addlinespace
-PCdoB & Regulamentação de profissões & nenhuma & nenhuma \\
-\addlinespace
-União & nenhuma & Autismo, proteção animal, Código Penal, crimes contra crianças & Proteção animal \\
-\addlinespace
-Podemos & nenhuma & Proteção animal & Proteção animal \\
-\addlinespace
-PP, PRD & nenhuma & nenhuma & Títulos de capital e denominação de rodovias (PP); pessoa idosa (PRD) \\
+\midrule
+Podemos & Animais domésticos & Maus-tratos a animais & Animais domésticos \\
+\midrule
+União & nenhuma & Maus-tratos a animais, Código Penal, autismo & Maus-tratos a animais \\
+\midrule
+PCdoB, PP & nenhuma & Piso salarial da enfermagem (PCdoB) & Títulos de capital e denominação de rodovias (PP) \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -547,13 +560,15 @@ PP, PRD & nenhuma & nenhuma & Títulos de capital e denominação de rodovias (P
 \toprule
 $\alpha_0$ & \textbf{Percentil 75} & \textbf{Percentil 90} & \textbf{Percentil 95} & \textbf{Sem limite} \\
 \midrule
-100 & 100\% e 94\% & 100\% e 100\% & 100\% e 100\% & 100\% e 100\% \\
-250 & 100\% e 81\% & 100\% e 100\% & 100\% e 100\% & 100\% e 100\% \\
-500 & 91\% e 81\% & 100\% e 100\% & 100\% e 100\% & 95\% e 94\% \\
-1.000 & 36\% e 56\% & 86\% e 88\% & 86\% e 94\% & 91\% e 88\% \\
-2.000 & 23\% e 31\% & 32\% e 69\% & 41\% e 75\% & 45\% e 69\% \\
+100 & 100\% e 90\% & 100\% e 100\% & 100\% e 100\% & 100\% e 95\% \\
+250 & 90\% e 75\% & 100\% e 100\% & 100\% e 100\% & 100\% e 90\% \\
+500 & 65\% e 65\% & 100\% e 100\% & 100\% e 100\% & 100\% e 85\% \\
+1.000 & 30\% e 40\% & 80\% e 80\% & 85\% e 90\% & 80\% e 85\% \\
+2.000 & 20\% e 30\% & 35\% e 50\% & 35\% e 60\% & 40\% e 70\% \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+Com $\alpha_0 = 2.000$, a lista encolhe, mas quase não muda de composição: as assinaturas que restam são quase todas da lista do texto (no máximo duas novas), e entre elas estão sempre o Código Penal, a execução penal e as armas de fogo no PSL e no PL.
 
 \end{document}

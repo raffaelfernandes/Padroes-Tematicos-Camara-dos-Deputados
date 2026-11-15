@@ -11,7 +11,7 @@ code/
 ├── README.md
 ├── pyproject.toml, uv.lock, .python-version
 ├── src/                              scripts, com prefixo da fase
-│   ├── seed.py                       seed global (130)
+│   ├── seed.py                       todas as sementes (130 para o que roda a partir de 15/11; congeladas registradas)
 │   ├── fase1_montar_base.py
 │   ├── fase1_investigacoes.py
 │   ├── fase2_criterio_formulaicas.py
@@ -86,7 +86,7 @@ O teste deve imprimir `True` e o nome da GPU. Máquina usada: RTX 3050 Laptop (6
    ```powershell
    uv run python src/fase2_texto_modelo.py --base data/processed/base_proposicoes_20261027.parquet --sem-download
    ```
-   Padrões: trecho de 500 caracteres do início da **justificação** do inteiro teor (`--parte articulado` usa o articulado sem as fórmulas legislativas) e ementas em caixa alta normalizadas para minúsculas. Também cria a coluna `texto_embedding`, igual ao `texto_modelo` mas sem números e datas de referências legais (`src/texto_referencias.py`); é esse texto que entra no modelo de embedding, e o `texto_modelo` fica legível para a leitura dos tópicos. Sem os PDFs baixados, retire `--sem-download`.
+   Padrões: trecho de 500 caracteres do início da **justificação** do inteiro teor (`--parte articulado` usa o articulado sem as fórmulas legislativas) e ementas em caixa alta normalizadas para minúsculas. Também cria a coluna `texto_embedding`, igual ao `texto_modelo` mas sem números e datas de referências legais e, desde 15/11/2026, sem as expressões e palavras de fórmula legislativa (altera, revoga, institui, dispõe sobre, dá nova redação, e dá outras providências, artigo, inciso...), preservando os nomes de leis (`src/texto_referencias.py`); é esse texto que entra no modelo de embedding, e o `texto_modelo` fica legível para a leitura dos tópicos. `--manter-formulas` reproduz o texto do embedding anterior. Sem os PDFs baixados, retire `--sem-download`.
 
 ### Fase 3: embeddings e clustering
 
@@ -154,6 +154,79 @@ O teste deve imprimir `True` e o nome da GPU. Máquina usada: RTX 3050 Laptop (6
 - `src/extras/inconsistencias_cedi.py`: sorteia pares (proposição, tema) isolados na vizinhança semântica e controles para anotação cega (`amostrar`) e resume a anotação (`resumir`). Planilha em `anotacoes/cedi_inconsistencias.csv`.
 - `src/extras/avaliacao_humana.py`: teste de intrusão de ementas com tópicos do BERTimbau e do LDA misturados (`gerar`) e resumo das respostas (`resumir`). Caderno em `anotacoes/avaliacao_humana.xlsx`.
 
+## Experimento: texto do embedding sem fórmulas (branch `exp/embedding-sem-formulas`)
+
+Pergunta: tirar do texto do embedding as palavras que já saem dos rótulos melhora os tópicos? Motivação: com o
+texto atual, o maior tópico do e5 (3.974 proposições) tem pureza de 31% e termos genéricos. Duas variantes,
+aplicadas ao e5 e ao BERTimbau, com a mesma configuração do modelo principal (nn30, mcs100, eom, min_samples 10,
+reatribuição pelos 15 vizinhos):
+
+- `semformulas`: tira expressões e palavras de fórmula (altera, revoga, institui, dispõe sobre, dá nova redação,
+  e dá outras providências, artigo, inciso...), preservando nomes de leis e a gramática;
+- `rotulos`: o mesmo pré-processamento dos rótulos do c-TF-IDF (sem stopwords, sem fórmulas, sem números).
+
+Critério fixado antes dos resultados: uma variante só substitui o modelo principal se superar o BERTimbau atual
+em precisão BCubed e em apensadas no mesmo tópico, sem tópico pega-tudo. Caso contrário, entra como análise de
+sensibilidade. Comandos (PowerShell, a partir de `code/`):
+
+```powershell
+uv run python src/experimentos/variantes_texto.py gerar
+foreach ($v in "semformulas", "rotulos") {
+  uv run python src/fase3_embeddings.py --base data/processed/exp_texto/base_fase2_${v}_20261101.parquet --saida data/processed/exp_texto/emb_$v --modelos e5 bertimbau --refazer
+  foreach ($m in "e5", "bertimbau") {
+    uv run python src/fase3_clustering.py grade --modelo $m --base data/processed/exp_texto/base_fase2_${v}_20261101.parquet --emb data/processed/exp_texto/emb_$v --saida data/processed/exp_texto/fase3_$v --nn 30 --mcs 50 100 --metodos eom --min-samples padrao 5 10
+    uv run python src/fase3_clustering.py final --modelo $m --base data/processed/exp_texto/base_fase2_${v}_20261101.parquet --emb data/processed/exp_texto/emb_$v --saida data/processed/exp_texto/fase3_$v --nn 30 --mcs 100 --metodo eom --min-samples 10
+  }
+}
+uv run python src/experimentos/variantes_texto.py avaliar
+```
+
+Saídas em `data/processed/exp_texto/` (`variantes.md`, `avaliacao.md` e, em `fase3_<variante>/`, a grade e a
+leitura dos tópicos). Nada do pipeline principal é sobrescrito.
+
+## Rodada com o texto sem fórmulas (15/11/2026)
+
+Decisão: o experimento da seção anterior passou no critério fixado antes dos resultados (o BERTimbau sem fórmulas ficou acima do texto atual em precisão e em apensadas nas cinco sementes do UMAP, sem tópico pega-tudo). O texto do embedding passa a ser sem fórmulas em todo o pipeline, para os três modelos, com `SEED = 130`. Os resultados anteriores ficam em `_arquivo_antigo/texto_com_formulas_20261115/` e entram no apêndice como comparação.
+
+Sequência completa (PowerShell, a partir de `code/`; `AAAAMMDD` é a data da nova base da Fase 2):
+
+```powershell
+# Fase 2: novo texto do embedding (PDFs já baixados)
+uv run python src/fase2_texto_modelo.py --base data/processed/base_proposicoes_20261027.parquet --sem-download
+$B = (Get-ChildItem data/processed/base_fase2_*.parquet | Sort-Object Name | Select-Object -Last 1).FullName
+$T = "data/processed/temas_long_20261027.parquet"
+# Fase 3: embeddings e tópicos dos três modelos (mesmas configurações de antes)
+uv run python src/fase3_embeddings.py --base $B --modelos bertimbau e5 serafim --refazer
+uv run python src/fase3_clustering.py grade --modelo bertimbau --base $B --nn 30 --mcs 50 100 --metodos eom --min-samples padrao 5 10
+uv run python src/fase3_clustering.py grade --modelo e5 --base $B --nn 30 --mcs 50 100 --metodos eom --min-samples padrao 5 10
+uv run python src/fase3_clustering.py grade --modelo serafim --base $B --nn 30 --mcs 50 100 --metodos eom --min-samples padrao 5 10
+uv run python src/fase3_clustering.py final --modelo bertimbau --base $B --nn 30 --mcs 100 --metodo eom --min-samples 10
+uv run python src/fase3_clustering.py final --modelo e5 --base $B --nn 30 --mcs 100 --metodo eom --min-samples 10
+uv run python src/fase3_clustering.py final --modelo serafim --base $B --nn 30 --mcs 100 --metodo eom --min-samples 5
+$F3 = "data/processed/fase3"
+$BT = "$F3/topicos_bertimbau_nn30_mcs100_eom_ms10_rk.parquet"
+# Fase 4
+uv run python src/fase4_avaliacao.py --base $B --temas $T --topicos $BT "$F3/topicos_e5_nn30_mcs100_eom_ms10_rk.parquet" "$F3/topicos_serafim_nn30_mcs100_eom_ms5_rk.parquet"
+uv run python src/fase4_outliers.py metricas --base $B --temas $T --topicos $BT
+uv run python src/fase4_nichos.py --base $B --temas $T --topicos $BT
+uv run python src/fase4_multitopico.py --base $B --temas $T --topicos $BT
+# Fase 5
+uv run python src/fase5_rqs.py --base $B --topicos $BT
+# Extras
+uv run python src/extras/robustez_modelos.py tabela
+uv run python src/extras/robustez_modelos.py bootstrap --b 1000
+uv run python src/extras/robustez_modelos.py apensadas
+uv run python src/extras/robustez_modelos.py sementes --modelos bertimbau serafim e5
+uv run python src/extras/robustez_modelos.py resumo
+uv run python src/extras/baselines_classicos.py --so nenhum
+uv run python src/extras/leis_citadas.py
+uv run python src/extras/sensibilidade_rq2.py
+uv run python src/extras/inconsistencias_cedi.py amostrar --refazer
+uv run python src/extras/avaliacao_humana.py gerar --refazer
+```
+
+Depois desta sequência, os rótulos curtos dos tópicos (`ROTULOS` em `src/fase5_figuras.py`) precisam ser refeitos, porque a numeração dos tópicos muda; só então rodam `src/fase5_figuras.py`, `src/extras/figura_topicos_temas.py` e `src/extras/comparar_modelos.py` (que usa os rótulos nas listas de assinaturas). A análise de erros dos 100 outliers (`anotacoes/outliers_analise_erros.csv`) não é refeita: ela descreve a versão anterior e motivou a reatribuição pelos vizinhos.
+
 ## Arquivos em uso
 
 | Artefato | Arquivo atual | Observação |
@@ -191,7 +264,7 @@ O teste deve imprimir `True` e o nome da GPU. Máquina usada: RTX 3050 Laptop (6
 ## Reprodutibilidade
 
 - Data de corte: 30/09/2026. Data do download: sufixo `AAAAMMDD` de cada arquivo gerado.
-- Seeds: `src/seed.py` define 130 como seed global. As amostras de anotação das formulaicas usaram 42 (desenvolvimento) e 7 (validação), a análise de erros dos outliers usou 130, e o UMAP da Fase 3 usa 42. Esses valores ficam registrados aqui e não devem mudar depois de usados.
+- Sementes: todas ficam em `src/seed.py`, e os scripts importam de lá. Tudo o que é executado a partir de 15/11/2026 usa `SEED = 130`: UMAP da Fase 3 e dos nichos, referências aleatórias, bootstrap, amostra do teste de vários tópicos, cosseno médio e as amostras novas de anotação (CEDI e avaliação humana). O teste de estabilidade usa `SEMENTES_ESTABILIDADE` (130 a 134). Ficam congeladas, porque já foram anotadas: 42 (300 ementas de desenvolvimento das formulaicas), 7 (100 de validação) e 130 (100 outliers da análise de erros). Os baselines clássicos (`SEED_BASELINES = 42`) foram ajustados em 14/11 sobre o `texto_modelo`, que não muda com o texto do embedding, e não são reajustados. Até 14/11, o UMAP da Fase 3 usava 42; os resultados dessa versão estão em `_arquivo_antigo/texto_com_formulas_20261115/`.
 - Versões das bibliotecas: `uv.lock`. Os embeddings guardam modelo, versões e dispositivo em `emb_<modelo>.json`.
 
 ## Convenções

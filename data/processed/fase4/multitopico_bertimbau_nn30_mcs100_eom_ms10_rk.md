@@ -4,22 +4,22 @@ Tópicos extras pelo voto dos 15 vizinhos do núcleo (espaço original). BCubed 
 
 | tópicos extras | tópicos por proposição | com 2 ou mais | P | R | P aleatório | R aleatório | P / aleatório | R / aleatório |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 tópico (versão atual) | 1.0 | 0.0% | 0.739 | 0.096 | 0.243 | 0.025 | 3.04 | 3.91 |
-| ≥ 50% dos votos | 1.01 | 0.9% | 0.739 | 0.098 | 0.243 | 0.025 | 3.04 | 3.86 |
-| ≥ 34% dos votos | 1.05 | 4.9% | 0.737 | 0.104 | 0.242 | 0.027 | 3.04 | 3.78 |
-| ≥ 25% dos votos | 1.21 | 19.7% | 0.716 | 0.125 | 0.243 | 0.036 | 2.95 | 3.46 |
-| ≥ 15% dos votos | 1.39 | 32.9% | 0.685 | 0.149 | 0.241 | 0.045 | 2.84 | 3.27 |
+| 1 tópico (versão atual) | 1.0 | 0.0% | 0.756 | 0.1 | 0.244 | 0.026 | 3.1 | 3.9 |
+| ≥ 50% dos votos | 1.01 | 0.9% | 0.757 | 0.102 | 0.243 | 0.026 | 3.11 | 3.93 |
+| ≥ 34% dos votos | 1.05 | 5.2% | 0.752 | 0.11 | 0.243 | 0.028 | 3.09 | 3.85 |
+| ≥ 25% dos votos | 1.21 | 19.8% | 0.731 | 0.132 | 0.242 | 0.037 | 3.02 | 3.55 |
+| ≥ 15% dos votos | 1.39 | 32.8% | 0.697 | 0.155 | 0.241 | 0.047 | 2.89 | 3.32 |
 
 ## Ambiguidade no texto por número de temas oficiais (limiar de 25%)
 
 | faixa | proposicoes | com_2_topicos |
 | --- | --- | --- |
-| 1 | 10428 | 16.7% |
-| 2 | 16729 | 20.0% |
-| 3 | 10049 | 21.4% |
-| 4 ou mais | 2746 | 23.2% |
+| 1 | 10428 | 16.6% |
+| 2 | 16729 | 19.9% |
+| 3 | 10049 | 22.0% |
+| 4 ou mais | 2746 | 24.1% |
 
-Com 2 ou mais tópicos: núcleo do HDBSCAN 9.5%; outliers reatribuídos 39.1%.
+Com 2 ou mais tópicos: núcleo do HDBSCAN 9.6%; outliers reatribuídos 39.3%.
 
 ## Temas oficiais e quanto aparecem sozinhos (temas com 300 ou mais proposições)
 
@@ -58,7 +58,7 @@ Com 2 ou mais tópicos: núcleo do HDBSCAN 9.5%; outliers reatribuídos 39.1%.
 
 | motivo | anotados | com_2_topicos |
 | --- | --- | --- |
-| B | 17 | 35% |
+| B | 17 | 18% |
 | G | 1 | 0% |
-| H | 38 | 37% |
-| N | 44 | 25% |
+| H | 38 | 47% |
+| N | 44 | 39% |

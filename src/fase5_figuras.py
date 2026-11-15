@@ -12,7 +12,7 @@ Lê as saídas do src/fase5_rqs.py, versão "todas".
 Uso (a partir de code/; precisa do matplotlib: uv add matplotlib):
     uv run python src/fase5_figuras.py
 
-Os rótulos curtos dos tópicos (ROTULOS) foram escritos à mão a partir dos termos do c-TF-IDF
+Os rótulos curtos dos tópicos (ROTULOS) foram escritos à mão (refeitos em 15/11/2026 para a versão sem fórmulas) a partir dos termos do c-TF-IDF
 e das ementas representativas de cada tópico. Eles só servem para as figuras.
 """
 
@@ -29,29 +29,29 @@ import pandas as pd  # noqa: E402
 from matplotlib.colors import LinearSegmentedColormap  # noqa: E402
 
 ROTULOS = {
-    0: "COVID e calamidade pública", 1: "Código Penal: crimes e penas", 2: "Código de Processo Civil",
-    3: "Datas comemorativas", 4: "SUS", 5: "Código de Trânsito", 6: "Violência doméstica",
-    7: "Ambiente digital e crianças", 8: "CLT e relações de trabalho", 9: "LDB e educação básica",
-    10: "Imposto de Renda", 11: "Regulamentação de profissões", 12: "Previdência Social",
-    13: "Propaganda e venda de produtos", 14: "Títulos de capital nacional", 15: "Eleições e partidos",
-    16: "Energia elétrica", 17: "Licitações e administração", 18: "Terras, mineração e meio ambiente",
-    19: "Polícias e bombeiros militares", 20: "Autismo (TEA)", 21: "Patrimônio cultural imaterial",
-    22: "Defesa do consumidor", 23: "Isenção de IPI", 24: "Pessoa com deficiência",
-    25: "Finanças públicas e repasses", 26: "Animais domésticos", 27: "Transporte e mobilidade urbana",
-    28: "BPC e Bolsa Família", 29: "Planos de saúde", 30: "Denominação de rodovias",
-    31: "Ensino superior e cotas", 32: "Micro e pequenas empresas", 33: "Esporte",
-    34: "Execução penal", 35: "Armas de fogo", 36: "Aviação", 37: "Código Tributário",
-    38: "Apostas e loterias", 39: "ECA", 40: "Heróis e Heroínas da Pátria", 41: "Pessoa idosa",
-    42: "Código de Processo Penal", 43: "Parto e recém-nascidos", 44: "Obrigações a estabelecimentos",
-    45: "PIS/Cofins", 46: "Segurança pública", 47: "Resíduos sólidos", 48: "Prevenção à violência",
-    49: "Telecomunicações", 50: "Agricultura familiar", 51: "FGTS", 52: "Desastres e defesa civil",
-    53: "Saneamento e água", 54: "Inovação e pesquisa", 55: "Improbidade administrativa",
-    56: "Servidores públicos federais", 57: "Maus-tratos a animais", 58: "Desenvolvimento regional",
-    59: "Código Penal (alterações gerais)", 60: "Minha Casa, Minha Vida", 61: "Radiodifusão",
-    62: "Concursos públicos", 63: "Código Penal (outras alterações)", 64: "Rodovias e pedágios",
-    65: "Petróleo e gás",
+    0: "COVID e calamidade pública", 1: "Código Penal: crimes e penas", 2: "SUS",
+    3: "Código Civil e de Processo Civil", 4: "Datas comemorativas", 5: "CLT e relações de trabalho",
+    6: "Código de Trânsito", 7: "LDB e educação básica", 8: "Imposto de Renda",
+    9: "Segurança pública e polícias", 10: "Violência doméstica", 11: "Títulos de capital nacional",
+    12: "Previdência Social", 13: "Regulamentação de profissões", 14: "Finanças públicas e repasses",
+    15: "Patrimônio cultural imaterial", 16: "Energia elétrica", 17: "Programas de desenvolvimento e inovação",
+    18: "Terras, mineração e meio ambiente", 19: "Animais domésticos", 20: "Transporte e mobilidade urbana",
+    21: "Eleições e partidos", 22: "Autismo (TEA)", 23: "Isenção de IPI", 24: "Defesa do consumidor",
+    25: "Pessoa com deficiência", 26: "Ensino superior e estudantes", 27: "BPC e Bolsa Família",
+    28: "Internet, dados e IA", 29: "Denominação de rodovias", 30: "Planos de saúde",
+    31: "Obrigações a estabelecimentos", 32: "Licitações e administração", 33: "Execução penal",
+    34: "Armas de fogo", 35: "Alimentos, bebidas e rotulagem", 36: "Apostas e loterias", 37: "Aviação",
+    38: "Heróis e Heroínas da Pátria", 39: "Esporte", 40: "Prevenção à violência",
+    41: "Código de Processo Penal", 42: "Universidades e campi", 43: "Pessoa idosa",
+    44: "Micro e pequenas empresas", 45: "PIS/Cofins", 46: "Resíduos sólidos", 47: "Petróleo e gás",
+    48: "Ambiente digital e crianças", 49: "ECA", 50: "Maus-tratos a animais", 51: "Telefonia",
+    52: "FGTS", 53: "Desastres e defesa civil", 54: "Saneamento e água", 55: "Minha Casa, Minha Vida",
+    56: "Concursos públicos", 57: "Normas para os entes federativos", 58: "Selos e programas nacionais",
+    59: "Infraestrutura de telecomunicações", 60: "Código Tributário", 61: "Instituições financeiras",
+    62: "Radiodifusão", 63: "Rodovias e pedágios", 64: "Terrorismo e organizações criminosas",
+    65: "Crimes ambientais", 66: "Improbidade administrativa",
 }
-SERIES_TOPICOS = [29, 0, 52, 6, 53, 15]
+SERIES_TOPICOS = [30, 0, 53, 10, 54, 21]
 
 AZUL, LARANJA, CINZA, CINZA_CLARO = "#2a78d6", "#eb6834", "#8a8984", "#d9d8d3"
 TINTA, TINTA2 = "#0b0b0b", "#52514e"
@@ -95,7 +95,7 @@ def fig_series(serie: pd.DataFrame, pasta: Path) -> None:
         ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:.0f}%"))
         ax.xaxis.set_major_locator(matplotlib.dates.YearLocator(2))
         ax.xaxis.set_major_formatter(matplotlib.dates.DateFormatter("%Y"))
-        if t == 29:
+        if t == 30:   # planos de saúde
             pico = x.loc[x["taxa_deputados"].idxmax()]
             ax.annotate("jun/2022: decisão do STJ\nsobre o rol da ANS", xy=(pico["data"], pico["taxa_deputados"] * 100),
                         xytext=(pd.Timestamp("2023-02-01"), pico["taxa_deputados"] * 100 * 0.62), fontsize=7, color=TINTA2,

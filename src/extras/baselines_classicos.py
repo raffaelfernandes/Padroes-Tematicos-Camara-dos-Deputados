@@ -14,7 +14,7 @@ comparando o modelo principal com três baselines que não usam modelos de lingu
 
 Mesmo protocolo do modelo principal: ajuste só nos textos únicos das ementas substantivas, formulaicas
 atribuídas depois pelo próprio modelo (transform/predict, ou vizinhos no caso do tfidf_bt), mesmo
-vetorizador do c-TF-IDF, mesma semente (42). Avaliação: BCubed estendido contra o codTema, pares de
+vetorizador do c-TF-IDF, semente SEED_BASELINES (42, de src/seed.py). Avaliação: BCubed estendido contra o codTema, pares de
 apensada e principal no mesmo grupo, NPMI das 10 palavras de c-TF-IDF e diversidade (mesmas funções
 da Fase 3), tamanho do maior grupo. Os tópicos dos três modelos neurais entram na mesma tabela,
 medidos pelas mesmas funções.
@@ -22,6 +22,7 @@ medidos pelas mesmas funções.
 Uso (a partir de code/):
     uv run python src/extras/baselines_classicos.py
     uv run python src/extras/baselines_classicos.py --k 66 32 --so lda kmeans
+    uv run python src/extras/baselines_classicos.py --so nenhum     (só reavalia os modelos neurais)
 
 Saídas em data/processed/fase4/baselines/ (resultados.csv, relatorio.md e os rótulos de cada baseline).
 """
@@ -47,7 +48,7 @@ from fase4_avaliacao import Gabarito  # noqa: E402
 
 P = Path("data/processed")
 SAIDA = P / "fase4" / "baselines"
-SEED = 42
+from seed import SEED as SEED_ACASO, SEED_BASELINES as SEED  # noqa: E402  (ver src/seed.py)
 NEURAIS = {
     "BERTimbau Large (modelo principal)": "bertimbau_nn30_mcs100_eom_ms10_rk",
     "Serafim 335M": "serafim_nn30_mcs100_eom_ms5_rk",
@@ -81,7 +82,8 @@ def main() -> None:
     ap.add_argument("--base", type=Path, default=sorted(P.glob("base_fase2_*.parquet"))[-1])
     ap.add_argument("--temas", type=Path, default=P / "temas_long_20261027.parquet")
     ap.add_argument("--k", type=int, nargs="+", default=[66, 32])
-    ap.add_argument("--so", nargs="+", default=["lda", "kmeans", "tfidf_bt"])
+    ap.add_argument("--so", nargs="+", default=["lda", "kmeans", "tfidf_bt"], choices=["lda", "kmeans", "tfidf_bt", "nenhum"],
+                    help='"nenhum": só reavalia os modelos neurais e mantém as linhas dos baselines do resultados.csv anterior')
     a = ap.parse_args()
     SAIDA.mkdir(parents=True, exist_ok=True)
 
@@ -122,7 +124,7 @@ def main() -> None:
         pal = palavras_por_topico(X_fit, lab_u[fit], vocab)
         tam = pd.Series(lab_p).value_counts(normalize=True)
         # acaso com os mesmos tamanhos de grupo (5 sementes): separa o ganho real do efeito do tamanho dos grupos
-        rng = np.random.default_rng(130)
+        rng = np.random.default_rng(SEED_ACASO)
         ale = [gab.bcubed(rng.permutation(lab_p[ok])) for _ in range(5)]
         p_ale = float(np.mean([x["P"] for x in ale])); r_ale = float(np.mean([x["R"] for x in ale]))
         ap_ale = float(np.mean([(lambda q: (q[ia] == q[ib]).mean())(rng.permutation(lab_p)) for _ in range(5)]))
@@ -200,11 +202,23 @@ def main() -> None:
         exemplos["tfidf_bt"] = lab_u
 
     res = pd.DataFrame(linhas)
-    res.to_csv(SAIDA / "resultados.csv", index=False)
-    pd.DataFrame({"id": base["id"], **{k: v[mapa] for k, v in exemplos.items()}}).to_parquet(
-        SAIDA / "rotulos_baselines.parquet", index=False)
+    anterior = SAIDA / "resultados.csv"
+    if anterior.exists():   # mantém as linhas dos baselines que não foram reajustados nesta execução
+        velho = pd.read_csv(anterior)
+        refeitos = set(res["modelo"] + "|" + res["k_pedido"].astype(str))
+        velho = velho[~(velho["modelo"] + "|" + velho["k_pedido"].astype(str)).isin(refeitos)
+                      & ~velho["modelo"].isin(list(NEURAIS))]
+        res = pd.concat([res, velho], ignore_index=True)
+    res.to_csv(anterior, index=False)
+    if exemplos:            # só regrava os rótulos se algum baseline foi reajustado
+        rot_p = SAIDA / "rotulos_baselines.parquet"
+        rot = pd.read_parquet(rot_p) if rot_p.exists() else pd.DataFrame({"id": base["id"]})
+        for k, v in exemplos.items():
+            rot = rot.drop(columns=[k], errors="ignore").merge(pd.DataFrame({"id": base["id"], k: v[mapa]}), on="id", how="right")
+        rot.to_parquet(rot_p, index=False)
     rel = ["# Baselines clássicos contra os modelos neurais\n",
-           f"Base: `{a.base.name}`. Ajuste nas {len(fit)} ementas substantivas únicas; semente {SEED}. "
+           f"Base: `{a.base.name}`. Ajuste nas {len(fit)} ementas substantivas únicas; semente dos baselines {SEED} "
+           f"(ajustados em 14/11/2026 sobre o texto_modelo, que não muda com o texto do embedding). "
            "NPMI e diversidade calculados com as funções da Fase 3 sobre as palavras de c-TF-IDF de cada grupo "
            "(todos os grupos, depois da reatribuição), então o NPMI dos modelos neurais aqui difere um pouco do "
            "da grade, que olhava só o núcleo do HDBSCAN.\n", md(res)]

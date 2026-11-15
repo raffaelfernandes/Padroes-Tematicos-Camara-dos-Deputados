@@ -34,7 +34,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-SEED = 130
+from seed import SEED  # noqa: E402  (130; ver src/seed.py)
 COL = "topico_alt_ctfidf"
 LIMIARES = [(None, "1 tópico (versão atual)"), (0.5, "≥ 50% dos votos"), (0.34, "≥ 34% dos votos"),
             (0.25, "≥ 25% dos votos"), (0.15, "≥ 15% dos votos")]

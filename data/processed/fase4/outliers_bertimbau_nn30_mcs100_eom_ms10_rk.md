@@ -1,6 +1,6 @@
 # Outliers: bertimbau_nn30_mcs100_eom_ms10_rk
 
-Outliers entre as substantivas: 33.1% (13042 de 39459).
+Outliers entre as substantivas: 33.2% (13120 de 39459).
 
 ## Qualidade da reatribuição
 
@@ -8,22 +8,22 @@ P_nucleo: fração do núcleo do tópico que compartilha ao menos um tema oficia
 
 | grupo | n | P_nucleo |
 | --- | --- | --- |
-| núcleo do tópico (HDBSCAN) | 26417 | 0.837 |
-| outliers reatribuídos | 13042 | 0.686 |
-| formulaicas | 493 | 0.656 |
-| outliers num tópico aleatório (5 sementes) | 13042 | 0.248 |
-| outliers pelo centroide no espaço original | 13042 | 0.666 |
+| núcleo do tópico (HDBSCAN) | 26340 | 0.845 |
+| outliers reatribuídos | 13120 | 0.7 |
+| formulaicas | 492 | 0.653 |
+| outliers num tópico aleatório (5 sementes) | 13120 | 0.252 |
+| outliers pelo centroide no espaço original | 13120 | 0.689 |
 
 
 ### Outliers por faixa de similaridade com o tópico atribuído
 
 | faixa | n | sim_min | sim_max | P_nucleo |
 | --- | --- | --- | --- | --- |
-| Q1 (menor) | 2610 | 0.756 | 0.893 | 0.5830000042915344 |
-| Q2 | 2607 | 0.893 | 0.911 | 0.6330000162124634 |
-| Q3 | 2608 | 0.911 | 0.923 | 0.6690000295639038 |
-| Q4 | 2608 | 0.923 | 0.935 | 0.7289999723434448 |
-| Q5 (maior) | 2609 | 0.935 | 0.973 | 0.8169999718666077 |
+| Q1 (menor) | 2624.0 | 0.651 | 0.869 | 0.585 |
+| Q2 | 2624.0 | 0.869 | 0.89 | 0.646 |
+| Q3 | 2624.0 | 0.89 | 0.905 | 0.698 |
+| Q4 | 2624.0 | 0.905 | 0.92 | 0.741 |
+| Q5 (maior) | 2624.0 | 0.92 | 0.963 | 0.832 |
 
 
 ## Perfil
@@ -33,66 +33,66 @@ P_nucleo: fração do núcleo do tópico que compartilha ao menos um tema oficia
 | n_temas | n | pct_outliers |
 | --- | --- | --- |
 | 1 | 10236 | 26.7 |
-| 2 | 16534 | 33.1 |
-| 3 | 9956 | 36.6 |
-| 4 ou mais | 2733 | 43.4 |
+| 2 | 16534 | 32.4 |
+| 3 | 9956 | 38.2 |
+| 4 ou mais | 2733 | 45.0 |
 
 
 ### Por tipo
 
 | siglaTipo | n | pct_outliers |
 | --- | --- | --- |
-| PEC | 218 | 52.3 |
-| PL | 37697 | 33.0 |
-| PLP | 1544 | 31.7 |
+| PEC | 218 | 43.6 |
+| PL | 37697 | 33.1 |
+| PLP | 1544 | 35.8 |
 
 
 ### Por ano
 
 | ano | n | pct_outliers |
 | --- | --- | --- |
-| 2019 | 5644 | 31.8 |
-| 2020 | 4881 | 25.6 |
-| 2021 | 4111 | 29.1 |
-| 2022 | 2619 | 30.9 |
-| 2023 | 5633 | 33.2 |
-| 2024 | 4620 | 34.0 |
-| 2025 | 6751 | 37.0 |
-| 2026 | 5200 | 39.4 |
+| 2019 | 5644 | 31.5 |
+| 2020 | 4881 | 25.8 |
+| 2021 | 4111 | 29.6 |
+| 2022 | 2619 | 31.3 |
+| 2023 | 5633 | 32.8 |
+| 2024 | 4620 | 33.6 |
+| 2025 | 6751 | 37.4 |
+| 2026 | 5200 | 40.9 |
 
 
 ### Por tema oficial (temas com 200+ proposições)
 
 | tema | n | pct_outliers |
 | --- | --- | --- |
-| Relações Internacionais e Comércio Exterior | 372 | 61.0 |
-| Educação | 3808 | 47.3 |
-| Agricultura, Pecuária, Pesca e Extrativismo | 1354 | 46.5 |
-| Direito Constitucional | 238 | 44.1 |
-| Economia | 2464 | 43.5 |
-| Administração Pública | 5937 | 43.1 |
-| Ciência, Tecnologia e Inovação | 1092 | 42.3 |
-| Meio Ambiente e Desenvolvimento Sustentável | 3096 | 40.5 |
-| Turismo | 464 | 40.3 |
-| Processo Legislativo e Atuação Parlamentar | 215 | 39.1 |
-| Defesa e Segurança | 4090 | 38.7 |
-| Cidades e Desenvolvimento Urbano | 1637 | 38.2 |
-| Arte, Cultura e Religião | 1551 | 37.5 |
-| Direitos Humanos e Minorias | 11013 | 36.7 |
-| Indústria, Comércio e Serviços | 3755 | 36.3 |
-| Energia, Recursos Hídricos e Minerais | 1382 | 34.4 |
-| Comunicações | 1712 | 33.4 |
-| Finanças Públicas e Orçamento | 5981 | 33.3 |
-| Estrutura Fundiária | 370 | 33.0 |
-| Direito e Justiça | 972 | 32.5 |
-| Direito Civil e Processual Civil | 2370 | 32.0 |
-| Saúde | 8169 | 31.3 |
-| Direito Penal e Processual Penal | 5071 | 31.0 |
-| Trabalho e Emprego | 5195 | 30.6 |
-| Previdência e Assistência Social | 2226 | 29.8 |
-| Direito e Defesa do Consumidor | 2431 | 29.1 |
-| Viação, Transporte e Mobilidade | 3063 | 29.0 |
-| Esporte e Lazer | 1157 | 27.5 |
-| Política, Partidos e Eleições | 805 | 21.0 |
-| Homenagens e Datas Comemorativas | 2644 | 13.7 |
+| Relações Internacionais e Comércio Exterior | 372 | 59.4 |
+| Direito Constitucional | 238 | 49.2 |
+| Processo Legislativo e Atuação Parlamentar | 215 | 48.8 |
+| Economia | 2464 | 46.8 |
+| Ciência, Tecnologia e Inovação | 1092 | 44.5 |
+| Direito e Justiça | 972 | 44.4 |
+| Administração Pública | 5937 | 44.3 |
+| Agricultura, Pecuária, Pesca e Extrativismo | 1354 | 43.1 |
+| Indústria, Comércio e Serviços | 3755 | 41.4 |
+| Educação | 3808 | 40.7 |
+| Direitos Humanos e Minorias | 11013 | 38.4 |
+| Defesa e Segurança | 4090 | 38.1 |
+| Direito Penal e Processual Penal | 5071 | 37.3 |
+| Arte, Cultura e Religião | 1551 | 36.9 |
+| Comunicações | 1712 | 36.0 |
+| Finanças Públicas e Orçamento | 5981 | 35.6 |
+| Direito Civil e Processual Civil | 2370 | 35.1 |
+| Cidades e Desenvolvimento Urbano | 1637 | 33.9 |
+| Meio Ambiente e Desenvolvimento Sustentável | 3096 | 33.7 |
+| Trabalho e Emprego | 5195 | 31.9 |
+| Saúde | 8169 | 31.8 |
+| Previdência e Assistência Social | 2226 | 30.4 |
+| Direito e Defesa do Consumidor | 2431 | 30.2 |
+| Estrutura Fundiária | 370 | 29.5 |
+| Energia, Recursos Hídricos e Minerais | 1382 | 29.1 |
+| Turismo | 464 | 27.2 |
+| Política, Partidos e Eleições | 805 | 25.5 |
+| Esporte e Lazer | 1157 | 25.2 |
+| Viação, Transporte e Mobilidade | 3063 | 24.0 |
+| Homenagens e Datas Comemorativas | 2644 | 9.2 |
 

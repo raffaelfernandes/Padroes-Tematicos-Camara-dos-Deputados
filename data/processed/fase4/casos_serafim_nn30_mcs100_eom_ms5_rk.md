@@ -4,105 +4,107 @@ Leia as ementas e escolha de 3 a 5 casos para a Discussão. Os números são do 
 
 ## Convergência: tópicos que juntam vários temas oficiais
 
-### Tópico 48: constituição, registro, registros públicos, registros (n = 493; pureza 27%)
+### Tópico 10: desenvolvimento, inovação, programa, política (n = 1082; pureza 34%)
 
-Temas: Direito Civil e Processual Civil (27%); Administração Pública (25%); Finanças Públicas e Orçamento (17%)
+Temas: Finanças Públicas e Orçamento (34%); Agricultura, Pecuária, Pesca e Extrativismo (32%); Indústria, Comércio e Serviços (28%)
 
-- [Direito Civil e Processual Civil] Alterar a Lei nº 8.935, de 18 de novembro de 1994, que dispõe sobre serviços notariais e de registro, Lei dos Cartórios e dá outras providências.
-- [Direito Civil e Processual Civil] Altera a Lei nº 10.169, de 29 de dezembro de 2000, para definir que taxas e emolumentos referentes aos atos notariais necessários ao funcionamento de pessoas jurídicas sem fins lucrativos deverão ter 
-- [Administração Pública] Altera a Lei nº 14.133, de 1º de abril de 2021, para inserir dispositivos para instituir o Sistema de Compra Instantânea (Cix).
-- [Administração Pública] Altera a Lei nº 12.527, de 18 de novembro de 2011, para criar o Bancodocs, nos termos que especifica.
-- [Finanças Públicas e Orçamento] Acrescenta o parágrafo 7º ao art. 155 da Constituição Federal para facultar aos estados-membros e ao Distrito Federal aderir, ou não, ao disposto na letra a, inciso X, parágrafo 2º do mesmo artigo.
-- [Finanças Públicas e Orçamento] Altera o § 4º, do Art. 90 da LEI Nº 14.436, de 9 de agosto de 2022, para dispor sobre a emissão de nota de empenho, a realização das transferências de recursos e a assinatura dos instrumentos, não dep
+- [Finanças Públicas e Orçamento] Cria o Fundo Nacional da Fumicultura (FNF) para incentivar e estimular a diversificação de atividades econômicas nas áreas cultivadas com tabaco e institui a Contribuição de Intervenção no Domínio Eco
+- [Finanças Públicas e Orçamento] Dispõe sobre o Cadastro Integrado de Projetos de Investimento.
+- [Agricultura, Pecuária, Pesca e Extrativismo] Dispõe sobre a Política Nacional de Incentivo ao Desenvolvimento da Apicultura e da Meliponicultura
+- [Agricultura, Pecuária, Pesca e Extrativismo] Dispõe sobre a atividade pesqueira embarcada para a captura das espécies de camarão que especifica e adota outras providências.
+- [Indústria, Comércio e Serviços] Altera a Lei nº 13.999, de 18 de maio de 2020, para tornar permanente o Programa Nacional de Apoio às Microempresas e Empresas de Pequeno Porte (Pronampe).
+- [Indústria, Comércio e Serviços] Institui o Programa Nacional de Produção Sazonal e Economia Local – PRONAPSEL, destinado a fomentar a produção local de bens e serviços em períodos de maior consumo ao longo do calendário nacional, pr
 
-### Tópico 8: desenvolvimento, cria, política, programa (n = 1369; pureza 29%)
+### Tópico 13: imóveis, imóvel, casa, programa casa (n = 860; pureza 35%)
 
-Temas: Meio Ambiente e Desenvolvimento Sustentável (29%); Finanças Públicas e Orçamento (27%); Economia (27%)
+Temas: Direito Civil e Processual Civil (35%); Cidades e Desenvolvimento Urbano (31%); Estrutura Fundiária (25%)
 
-- [Meio Ambiente e Desenvolvimento Sustentável] Cria o Programa Nacional de Recuperação de Áreas Degradadas - PRADE e dá outras providencias
-- [Meio Ambiente e Desenvolvimento Sustentável] Institui o Fundo Amazônia.
-- [Finanças Públicas e Orçamento] Institui o Fundo Soberano Brasileiro para regulamentar a destinação dos recursos obtidos por meio da aplicação do Programa Nacional de Desestatização, institui aplicações específicas para tais recurso
-- [Finanças Públicas e Orçamento] Cria o Programa NOTA FISCAL BRASIL e dá  providências.
-- [Economia] Autoriza o Poder Executivo a criar a Região Integrada de Desenvolvimento dos Municípios do Litoral Sul de Pernambuco e Alagoas, a instituir o Programa Especial de Desenvolvimento dos Municípios do Lit
-- [Economia] Autoriza o Poder Executivo a criar a Região Integrada de Desenvolvimento dos Municípios do agreste de Pernambuco e Paraíba, a instituir o Programa Especial de Desenvolvimento dos Municípios do Agreste
-
-### Tópico 20: rural, imóveis, agrária, rurais (n = 636; pureza 32%)
-
-Temas: Agricultura, Pecuária, Pesca e Extrativismo (32%); Estrutura Fundiária (29%); Finanças Públicas e Orçamento (25%)
-
-- [Agricultura, Pecuária, Pesca e Extrativismo] Altera o Decreto-Lei nº 79, de 19 de dezembro de 1966, que “institui normas para a fixação de preços mínimos e execução das operações de financiamento e aquisição de produtos agropecuários e adota out
-- [Agricultura, Pecuária, Pesca e Extrativismo] Altera a Lei nº 8.629, de 25 de fevereiro de 1993, que “dispõe sobre a regulamentação dos dispositivos constitucionais relativos à reforma agrária, previstos no Capítulo III, Título VII, da Constituiç
-- [Estrutura Fundiária] Altera a Lei nº 8.629, de 25 de fevereiro de 1993, que "Dispõe sobre a regulamentação dos dispositivos constitucionais relativos à reforma agrária, previstos no Capítulo III, Título VII, da Constituiç
+- [Direito Civil e Processual Civil] Altera a Lei nº 7.433, de 18 de dezembro de 1985, para dispor sobre os requisitos para a lavratura de escrituras públicas, bem como sobre registro e averbação no registro imobiliário de escritos parti
+- [Direito Civil e Processual Civil] Dispõe sobre a impenhorabilidade dos direitos aquisitivos de bens imóveis.
+- [Cidades e Desenvolvimento Urbano] Altera a Lei nº 6.766, de 19 de dezembro de 1979, que dispõe sobre o Parcelamento do Solo Urbano e dá outras Providências.
+- [Cidades e Desenvolvimento Urbano] Altera a redação do art. 4º da Lei nº 14.620, de 13 de julho de 2023, que dispõe sobre o Programa Minha Casa, Minha Vida, para vedar a construção de habitações em áreas de riscos climáticos.
 - [Estrutura Fundiária] Altera a Lei nº 11.952, de 25 de junho de 2009, para determinar a extinção das cláusulas resolutivas constantes de títulos de domínio expedidos anteriormente a 10 de outubro de 1997.
 
 NOVA EMENTA: A
-- [Finanças Públicas e Orçamento] Fixa diretriz para o estabelecimento critério de isenção do Imposto sobre a Propriedade Predial e Territorial Urbana.
-- [Finanças Públicas e Orçamento] Altera a Lei nº 13.259, de 16 de março de 2016, e dá outras providências.
+- [Estrutura Fundiária] Altera a Lei nº 8.629 de 26 de fevereiro de 1993 para redefinir os requisitos da função social da propriedade para fins de desapropriação.
 
-### Tópico 6: calamidade, calamidade pública, estado calamidade, estado (n = 1098; pureza 37%)
+### Tópico 8: calamidade, calamidade pública, estado, estado calamidade (n = 1006; pureza 38%)
 
-Temas: Finanças Públicas e Orçamento (37%); Saúde (36%); Administração Pública (23%)
+Temas: Finanças Públicas e Orçamento (38%); Saúde (37%); Direitos Humanos e Minorias (21%)
 
-- [Finanças Públicas e Orçamento] Estabelece critérios para o refinanciamento, pela União, de obrigações assumidas pelos Estados e do Distrito Federal nas hipóteses que especifica.
-- [Finanças Públicas e Orçamento] Dispõe sobre a prioridade no recebimento da restituição do Imposto de Renda em 2024 para os residentes do Estado do Rio Grande do Sul
-- [Saúde] Garante a realização de cirurgias reparadoras e reconstrutivas e assistência social e psicológica, gratuitamente, às vítimas de escalpelamento.
-- [Saúde] Dispõe sobre o atendimento a pessoas em situações de emergência.
-- [Administração Pública] Dispõe sobre medidas excepcionais para a aquisição de bens e a contratação de obras e de serviços, inclusive de engenharia, destinados ao enfrentamento de impactos decorrentes de estado de calamidade 
-- [Administração Pública] Inclui os §§ 4º e 5º no art. 45 da Lei nº 8.443, de 16 de julho de 1992, para disciplinar a competência do Tribunal de Contas da União para determinar a suspensão cautelar de pagamentos a cargo da Adm
+- [Finanças Públicas e Orçamento] Estabelece as condições para transação extraordinária na cobrança da dívida ativa da União, em função dos efeitos da decretação de estado de calamidade pública na capacidade de geração de resultado do
+- [Finanças Públicas e Orçamento] Prorroga o prazo para pagamento de tributos federais, nos termos do § 1º do art. 167-F da Constituição Federal, em áreas afetadas por calamidade pública, reconhecida pelo Governo Federal
+- [Saúde] Dispõe sobre o uso obrigatório máscaras em todo território nacional enquanto durarem os efeitos do Decreto Legislativo nº 6 de 20 de março de 2020.
+- [Saúde] Institui o Programa Nacional de Salas de Estabilização em Municípios Isolados – SALVAR+, destinado ao fortalecimento da resposta emergencial em localidades remotas, rurais e de difícil acesso antes da
+- [Direitos Humanos e Minorias] Altera as Leis nº 13.684, de 2018, e nº 8.443, de 1992, para dispor sobre a aplicação do princípio da solidariedade federativa no processo de acolhimento em território nacional de pessoas em reconheci
+- [Direitos Humanos e Minorias] Institui o Programa Nacional de Assistência Integral às Populações Ribeirinhas em Situação de Vulnerabilidade (PNAIR) e dá outras providências
 
-### Tópico 23: alimentação, alimentos, alimentação escolar, escolar (n = 391; pureza 38%)
+### Tópico 26: alimentação, alimentos, alimentação escolar, escolar (n = 385; pureza 39%)
 
-Temas: Direitos Humanos e Minorias (38%); Educação (38%); Saúde (34%)
+Temas: Educação (39%); Direitos Humanos e Minorias (38%); Saúde (36%)
 
-- [Direitos Humanos e Minorias] Dispõe sobre alteração da Lei nº 12.764, de 27 de dezembro de 2012, que “Institui a Política Nacional de Proteção dos Direitos da Pessoa com Transtorno do Espectro Autista”, para permitir à pessoa com
-- [Direitos Humanos e Minorias] Estabelece diretrizes para a política de segurança alimentar e nutricional e altera a Lei nº 11.346, de 15 de setembro de 2006, para incluir o Programa Nacional "Prato Feito" no âmbito do Sistema Naci
-- [Educação] Altera a Lei nº 10.880, de 9 de junho de 2004, para corrigir os valores repassados no âmbito do Programa Nacional de Apoio ao Transporte do Escolar – PNATE e prever o seu reajuste anual.
-- [Educação] Torna obrigatória a oferta de, pelo menos, duas merendas escolares por turno aos alunos da educação básica e pública, sendo a Segunda Merenda à conta da despesa obrigatória prevista no art. 212 da Con
-- [Saúde] Dispõe sobre a disponibilização de alimentos alternativos para alunos que tenham intolerância ou alergia que os imponha restrições alimentares e dá outras providências.
-- [Saúde] Determina a inclusão obrigatória dos Nutricionistas nas equipes da Estratégia Saúde da Família.
+- [Educação] Determina o fornecimento de refeições às crianças e adolescentes, nas escolas publicas no âmbito federal, estadual e municipal durante o período de férias e dá outras providências.
+- [Educação] Dispõe sobre o fornecimento de alimentação escolar aos professores e demais profissionais da educação em efetivo exercício nas escolas públicas estaduais e municipais, e dá outras providências.
+- [Direitos Humanos e Minorias] Altera a Lei nº 12.764, de 27 de dezembro de 2012, para permitir à pessoa com Transtorno do Espectro Autista o ingresso e permanência em qualquer local portando utensílios de uso pessoal e alimentos p
+- [Direitos Humanos e Minorias] Assegura o direito de pessoas com Transtorno do Espectro Autista (TEA) e outras pessoas com deficiência de ingressarem em locais públicos ou privados abertos ao público portando utensílios e alimentos
+- [Saúde] Altera a Lei nº 14.238, de 19 de novembro de 2021, que institui o Estatuto da Pessoa com Câncer, para garantir o acesso à terapia nutricional para os pacientes com neoplasias.
+- [Saúde] Institui o Programa Páscoa Digna da Criança, destinado à promoção de ações de segurança alimentar, inclusão social e bem estar de crianças em situação de vulnerabilidade, e dá outras providências.
 
-### Tópico 34: água, saneamento, saneamento básico, básico (n = 380; pureza 44%)
+### Tópico 44: prazo, prorrogar, prorroga, prorrogar prazo (n = 344; pureza 47%)
 
-Temas: Meio Ambiente e Desenvolvimento Sustentável (44%); Energia, Recursos Hídricos e Minerais (42%); Cidades e Desenvolvimento Urbano (28%)
+Temas: Finanças Públicas e Orçamento (47%); Administração Pública (23%); Indústria, Comércio e Serviços (21%)
 
-- [Meio Ambiente e Desenvolvimento Sustentável] Altera a Lei nº 12.340, de 1º de dezembro de 2010, para obrigar as prestadoras de serviço de telefonia e as empresas de rádio e televisão a transmitirem as informações de alerta e as orientações que e
-- [Meio Ambiente e Desenvolvimento Sustentável] Altera a Lei nº 12.187, de 29 de dezembro de 2009 (Política Nacional sobre Mudança do Clima), para incluir regras de consolidação e fomento à adoção de medidas para mitigação e para remoção de gases d
-- [Energia, Recursos Hídricos e Minerais] Transfere para o Exército Brasileiro (EB) a gestão, a manutenção, a guarda e a conservação das barragens de Flores, Pericumã e Tabuleiro de São Bernardo, todas do Estado do Maranhão (PL Transferência 
-- [Energia, Recursos Hídricos e Minerais] Cria o Programa Nacional de Dessalinização e Segurança Hídrica.
-- [Cidades e Desenvolvimento Urbano] Altera a Lei nº 11.445, de 5 de janeiro de 2007, que estabelece as diretrizes nacionais para o saneamento básico, para prever a capacitação técnica dos Municípios pela União para a elaboração e implem
-- [Cidades e Desenvolvimento Urbano] Altera a Lei nº 11.124, de 16 de junho de 2005, que dispõe sobre o Sistema Nacional de Habitação de Interesse Social - SNHIS, para tornar obrigatória a implementação de saneamento básico, infraestrutu
+- [Finanças Públicas e Orçamento] Altera a Lei nº 13.988, de 14 de abril de 2020, para ampliar os descontos e os prazos para quitação dos créditos de transação.
+- [Finanças Públicas e Orçamento] Altera a o art. 33 da Lei Complementar nº 87, de 13 de setembro de 1996 (Lei Kandir), para prorrogar prazos em relação à apropriação dos créditos do imposto estadual sobre operações relativas à circul
+- [Administração Pública] Restabelece e altera dispositivos
+da Lei n° 8.429, de 2 de junho de
+1992.
+- [Administração Pública] Altera a Lei nº 14.341, de 18 de maio de 2022, para prorrogar por mais dois anos o prazo de adequação das associações de Municípios ao disposto na lei.
+- [Indústria, Comércio e Serviços] Revoga o parágrafo único do art. 40 da Lei nº 9.279, de 14 de maio de 1996, que determina o prazo de vigência não inferior a 10 (dez) anos para a patente de invenção e a 7 (sete) anos para a patente d
+- [Indústria, Comércio e Serviços] Altera a Lei nº 6.404, de 15 de dezembro de 1976, para dispor sobre prazos diferenciados de realização da Assembleia Geral Ordinária para companhias com faturamento anual de até R$ 500 milhões.
+
+### Tópico 15: militares, segurança pública, segurança, cargos (n = 974; pureza 50%)
+
+Temas: Administração Pública (51%); Defesa e Segurança (46%); Trabalho e Emprego (34%)
+
+- [Administração Pública] Dispõe sobre a atualização salarial dos servidores inativos e pensionistas com direito a paridade
+- [Administração Pública] Dispõe sobre a transformação de cargos vagos no quadro permanente do Tribunal Regional do Trabalho da 23ª Região  sem aumento de despesas.
+- [Defesa e Segurança] Assegura aos servidores integrantes do sistema de segurança pública, previstos no art. 144 da Constituição Federal, aos agentes penitenciários, aos policiais legislativos federais, aos agentes socioed
+- [Defesa e Segurança] Estabelece normas aplicáveis aos militares em operações de Garantia da Lei e da Ordem e aos integrantes dos órgãos a que se refere o caput do art. 144 da Constituição e da Força Nacional de Segurança 
+- [Trabalho e Emprego] Acrescenta parágrafo único ao art. 2º da Lei 9.696, de 1º de setembro de 1998.
+- [Trabalho e Emprego] Acrescenta parágrafo único ao art. 7º-B da Lei nº 8.906, de 4 de julho de 1994, que "Dispõe sobre o Estatuto da Advocacia e a Ordem dos Advogados do Brasil (OAB) ".
 
 ## Fragmentação: temas oficiais espalhados por muitos tópicos
 
-### Administração Pública (n = 6022; 72 tópicos; 29 cobrem 80%)
+### Relações Internacionais e Comércio Exterior (n = 374; 55 tópicos; 22 cobrem 80%)
 
-Principais tópicos: 26 transparência, administração, administra (7%); 11 eleitoral, eleições, partidos, políticos (5%); 0 covid, coronavírus, pandemia, emergência (5%)
+Principais tópicos: 1 penal, código penal, código, crime (9%); 10 desenvolvimento, inovação, programa, pol (9%); 0 trânsito, código trânsito, trânsito bras (7%)
 
-### Direitos Humanos e Minorias (n = 11076; 72 tópicos; 31 cobrem 80%)
+### Administração Pública (n = 6022; 70 tópicos; 28 cobrem 80%)
 
-Principais tópicos: 4 transtorno, autista, espectro, espectro  (11%); 17 deficiência, pessoa deficiência, pessoas (5%); 24 mulheres, violência, mulher, doméstica (5%)
+Principais tópicos: 20 transparência, administração, administra (11%); 15 militares, segurança pública, segurança, (8%); 27 fundo, recursos, complementar, fiscal (5%)
 
-### Relações Internacionais e Comércio Exterior (n = 374; 57 tópicos; 21 cobrem 80%)
+### Saúde (n = 8247; 68 tópicos; 26 cobrem 80%)
 
-Principais tópicos: 8 desenvolvimento, cria, política, program (13%); 48 constituição, registro, registros públic (7%); 43 imposto, imposto renda, renda, tributári (7%)
+Principais tópicos: 3 covid, coronavírus, pandemia, emergência (13%); 16 transtorno, autista, espectro, espectro  (6%); 36 saúde, planos, assistência saúde, privad (5%)
 
-### Finanças Públicas e Orçamento (n = 6075; 68 tópicos; 24 cobrem 80%)
+### Direitos Humanos e Minorias (n = 11076; 70 tópicos; 28 cobrem 80%)
 
-Principais tópicos: 13 produtos industrializados, industrializa (8%); 43 imposto, imposto renda, renda, tributári (8%); 40 complementar, fundo, recursos, fiscal (7%)
+Principais tópicos: 2 violência, mulher, doméstica, violência  (16%); 16 transtorno, autista, espectro, espectro  (7%); 1 penal, código penal, código, crime (6%)
 
-### Trabalho e Emprego (n = 5248; 71 tópicos; 25 cobrem 80%)
+### Educação (n = 3850; 68 tópicos; 22 cobrem 80%)
 
-Principais tópicos: 15 trabalho, consolidação, consolidação tra (11%); 0 covid, coronavírus, pandemia, emergência (9%); 22 profissão, exercício, regulamentação, re (7%)
+Principais tópicos: 33 educação, diretrizes bases, bases educaç (14%); 16 transtorno, autista, espectro, espectro  (7%); 50 ensino, escolas, escolar, prevenção (7%)
 
 ## Dispersão
 
-3159 proposições (7.9%) dividem tema oficial com o resto do tópico menos do que o acaso prevê para elas. Tópicos com mais casos: 2 (275); 1 (181); 8 (170); 48 (138); 3 (130)
+3218 proposições (8.1%) dividem tema oficial com o resto do tópico menos do que o acaso prevê para elas. Tópicos com mais casos: 0 (576); 1 (203); 9 (139); 20 (126); 5 (123)
 
-- tópico 36 (segurança pública, segurança, públi) | temas: Previdência e Assistência Social; Direito e Defesa do Consumidor | Dispõe sobre a proteção dos aposentados, pensionistas e beneficiários do Regime Geral de Previdência Social (RGPS) contra descontos indevidos em seus benefícios
-- tópico 29 (consumidor, defesa consumidor, códi) | temas: Administração Pública; Defesa e Segurança; Direito e Justiça | Cria o Cadastro Nacional de Condenados por Estelionato e estabelece restrições administrativas voltadas à prevenção de fraudes financeiras.
-- tópico 26 (transparência, administração, admin) | temas: Economia; Direitos Humanos e Minorias | Altera a Lei nº 6.385, de 7 de dezembro de 1976, para dispor sobre a transparência quanto à promoção da diversidade racial na composição do conselho de administ
-- tópico 8 (desenvolvimento, cria, política, pr) | temas: Direitos Humanos e Minorias; Estrutura Fundiária | Dispõe sobre o procedimento para a identificação, a delimitação, o reconhecimento e a titulação das terras ocupadas por remanescentes das comunidades dos quilom
-- tópico 12 (educação, ensino, diretrizes bases,) | temas: Administração Pública; Direito Civil e Processual Civil | Altera a Lei nº 10.406, de 2002, para prever responsabilidade subsidiária dos entes públicos por atos de seus agentes que percebam acima de 10 salários mínimos.
-- tópico 15 (trabalho, consolidação, consolidaçã) | temas: Administração Pública; Previdência e Assistência Social | Altera o art. 115 da Lei nº 8.213, de 24 de julho de 1991, para dispor sobre descontos relativos a mensalidades associativas, sindicais ou assemelhados nos bene
-- tópico 0 (covid, coronavírus, pandemia, emerg) | temas: Turismo | Torna obrigatória a aquisição de seguro-saúde pelos estrangeiros que ingressarem no País, nas condições que especifica.
-- tópico 66 (crédito, financeiras, instituições ) | temas: Direito Penal e Processual Penal | Tipifica como crime, na forma qualificada, a apropriação de coisa havida por erro de transferência PIX ou a recusa em devolvê-la.
+- tópico 13 (imóveis, imóvel, casa, programa cas) | temas: Meio Ambiente e Desenvolvimento Sustentável | Acrescenta inciso ao caput do art. 4° da Lei nº 12.651, de 25 de maio de 2012, a fim de incluir nas Áreas de Preservação Permanente (APPs) os Igapós.
+- tópico 13 (imóveis, imóvel, casa, programa cas) | temas: Defesa e Segurança | Altera a Lei nº 6.634, de 2 de maio de 1979, que dispõe sobre a Faixa de Fronteira, e dá outras providências.
+- tópico 17 (benefício, social, prestação contin) | temas: Direito Penal e Processual Penal; Finanças Públicas e Orçamento | Institui o Crédito de Reparação à Vítima de Crime Patrimonial, destinado ao ressarcimento parcial do prejuízo material sofrido pelo cidadão cujo Boletim de Ocor
+- tópico 0 (trânsito, código trânsito, trânsito) | temas: Direitos Humanos e Minorias; Indústria, Comércio e Serviços | Institui a reserva de 5% (cinco por cento) de mesas e cadeiras para idosos e deficientes físicos nas praças de alimentação dos Shopping Centers.
+- tópico 4 (dia, conscientização, anualmente, d) | temas: Administração Pública | Institui a "Semana Nacional do Combate à Corrupção".
+- tópico 1 (penal, código penal, código, crime) | temas: Meio Ambiente e Desenvolvimento Sustentável | Torna mais rigorosa a pena cominada para o crime de pichação ou conspurcação de edificação ou monumento urbano, alterando a Lei nº 9.605, de 12 de fevereiro de 
+- tópico 3 (covid, coronavírus, pandemia, emerg) | temas: Viação, Transporte e Mobilidade | Prevê a prorrogação dos prazos de exame de aptidão físico e mental e da carteira nacional de habilitação - CNH durante o estado de calamidade pública provocada 
+- tópico 27 (fundo, recursos, complementar, fisc) | temas: Direitos Humanos e Minorias; Saúde | Institui a Modalidade de Assistência de Transição de Cuidados no âmbito do Sistema Único de Saúde (SUS), altera a Lei nº 8.080, de 19 de setembro de 1990, e dis

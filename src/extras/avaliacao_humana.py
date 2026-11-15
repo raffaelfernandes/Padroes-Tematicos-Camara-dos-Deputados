@@ -37,7 +37,7 @@ from fase3_clustering import palavras_por_topico, vetorizador  # noqa: E402
 
 P = Path("data/processed")
 ANOT = Path("anotacoes")
-SEED = 130
+from seed import SEED  # noqa: E402  (130; ver src/seed.py)
 N_BERT, N_LDA, N_DOCS = 16, 8, 5
 CADERNO = ANOT / "avaliacao_humana.xlsx"
 OCULTO = ANOT / "avaliacao_humana_OCULTO.csv"

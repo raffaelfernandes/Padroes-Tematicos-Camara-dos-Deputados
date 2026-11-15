@@ -24,6 +24,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from seed import SEED_AMOSTRA_FORMULAICAS_DEV
+
 # --------------------------------------------------------------------------
 # BCubed estendido (Amigó et al., 2009) para agrupamento rígido x gabarito
 # multirrótulo. Com um cluster por item, |C(e) ∩ C(e')| vale 0 ou 1, então:
@@ -105,7 +107,7 @@ def main() -> None:
     ap.add_argument("--base", required=True, type=Path)
     ap.add_argument("--temas", required=True, type=Path)
     ap.add_argument("--saida", default="data/processed/investigacoes", type=Path)
-    ap.add_argument("--seed", default=42, type=int)
+    ap.add_argument("--seed", default=SEED_AMOSTRA_FORMULAICAS_DEV, type=int)
     a = ap.parse_args()
     a.saida.mkdir(parents=True, exist_ok=True)
     rng = np.random.default_rng(a.seed)

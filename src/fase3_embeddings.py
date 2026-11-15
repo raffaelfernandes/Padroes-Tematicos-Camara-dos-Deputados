@@ -26,6 +26,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from seed import SEED
+
 MODELOS = {
     # nome: (repositório no Hugging Face, prefixo do texto)
     "bertimbau": ("neuralmind/bert-large-portuguese-cased", ""),
@@ -39,7 +41,7 @@ MODELOS = {
 }
 
 
-def cos_medio_aleatorio(emb: np.ndarray, n: int = 20000, seed: int = 42) -> float:
+def cos_medio_aleatorio(emb: np.ndarray, n: int = 20000, seed: int = SEED) -> float:
     """Cosseno médio entre pares aleatórios de textos. Perto de 1 = espaço "achatado"
     (anisotrópico), em que tudo parece parecido com tudo e o HDBSCAN acha menos regiões densas."""
     rng = np.random.default_rng(seed)

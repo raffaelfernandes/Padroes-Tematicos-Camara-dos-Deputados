@@ -49,7 +49,8 @@ import pandas as pd
 import requests
 
 from fase2_criterio_formulaicas import eh_formulaica
-from texto_referencias import mascarar_referencias
+from seed import SEED
+from texto_referencias import mascarar_referencias, remover_formulas
 
 CABECALHO_FIM = re.compile(
     r"(o\s+congresso\s+nacional\s+decreta\s*:|"
@@ -190,6 +191,8 @@ def main() -> None:
     ap.add_argument("--parte", choices=["justificacao", "articulado"], default="justificacao")
     ap.add_argument("--manter-ementa", action="store_true",
                     help="põe a ementa formulaica na frente do trecho do inteiro teor (comportamento antigo)")
+    ap.add_argument("--manter-formulas", action="store_true",
+                    help="mantém as fórmulas legislativas no texto do embedding (formato anterior a 15/11/2026)")
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--sem-download", action="store_true")
     a = ap.parse_args()
@@ -272,6 +275,11 @@ def main() -> None:
     base["texto_embedding"] = base["texto_modelo"].map(mascarar_referencias)
     n_mask = int((base["texto_embedding"] != base["texto_modelo"]).sum())
     print(f"Textos com referências legais removidas para o embedding: {n_mask}")
+    # Fórmulas legislativas fora do embedding (desde 15/11/2026; --manter-formulas volta ao formato anterior)
+    if not a.manter_formulas:
+        antes = base["texto_embedding"].copy()
+        base["texto_embedding"] = base["texto_embedding"].map(remover_formulas)
+        print(f"Textos com fórmulas legislativas removidas para o embedding: {int((base['texto_embedding'] != antes).sum())}")
 
     # 4. Textos únicos (pelo texto do embedding) ---------------------------------
     norm = base["texto_embedding"].str.lower().str.replace(r"\s+", " ", regex=True).str.strip().str.rstrip(".")
@@ -282,7 +290,7 @@ def main() -> None:
     base.to_parquet(a.saida / f"base_fase2_{suf}.parquet", index=False)
 
     it = base[base["fonte_texto"] == "inteiro_teor"]
-    it.sample(min(30, len(it)), random_state=42)[["id", "ementa", "parte_inteiro_teor", "texto_modelo", "texto_embedding"]] \
+    it.sample(min(30, len(it)), random_state=SEED)[["id", "ementa", "parte_inteiro_teor", "texto_modelo", "texto_embedding"]] \
         .to_csv(a.saida / f"inteiro_teor_amostra_{suf}.csv", index=False)
 
     vc = base["fonte_texto"].value_counts()
@@ -292,7 +300,8 @@ def main() -> None:
     linhas = [
         f"# Relatório da Fase 2\n",
         f"Gerado em {date.today().isoformat()} | K = {a.K} | trecho do inteiro teor = {a.n_chars} caracteres "
-        f"| parte preferida = {a.parte} | ementa na frente do trecho = {'sim' if a.manter_ementa else 'não'}\n",
+        f"| parte preferida = {a.parte} | ementa na frente do trecho = {'sim' if a.manter_ementa else 'não'} "
+        f"| fórmulas no texto do embedding = {'mantidas' if a.manter_formulas else 'removidas'}\n",
         f"- Formulaicas: {n_form} ({n_form / len(base):.2%})",
         f"- Resolvidas pela ementaDetalhada: {int(usa_det.sum())}",
         f"- Resolvidas pelo inteiro teor: {int(vc.get('inteiro_teor', 0))}",

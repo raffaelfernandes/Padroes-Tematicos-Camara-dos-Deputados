@@ -37,7 +37,7 @@ from scipy import sparse
 from sklearn.cluster import HDBSCAN
 from sklearn.feature_extraction.text import CountVectorizer
 
-SEED = 42
+from seed import SEED  # noqa: E402  (130; ver src/seed.py)
 
 STOP_PT = set("""a à às ao aos aquela aquelas aquele aqueles aquilo as até com como da das de dela delas dele
 deles depois do dos e é ela elas ele eles em entre era essa essas esse esses esta está estas este estes
@@ -86,7 +86,7 @@ def assinatura(emb: np.ndarray) -> str:
 
 
 def umap_cache(emb: np.ndarray, modelo: str, nn: int, pasta: Path) -> np.ndarray:
-    destino = pasta / f"umap_{modelo}_nn{nn}_{assinatura(emb)}.npy"
+    destino = pasta / f"umap_{modelo}_nn{nn}_s{SEED}_{assinatura(emb)}.npy"
     if destino.exists():
         return np.load(destino)
     from umap import UMAP

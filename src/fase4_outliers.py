@@ -36,7 +36,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).parent))
 from fase4_avaliacao import Gabarito, md as tabela_md  # noqa: E402
 
-SEED = 130
+from seed import SEED, SEED_AMOSTRA_OUTLIERS  # noqa: E402  (ver src/seed.py)
 SAIDA = Path("data/processed/fase4")
 ANOT = Path("anotacoes")          # anotações humanas ficam versionadas, como as das formulaicas
 
@@ -169,7 +169,7 @@ def amostrar(a) -> None:
     d, E, nome_tema, info, tag = carregar(a.base, a.temas, a.topicos)
     nu = Nucleo(d, E)
     idx_out = np.nonzero(nu.org == "reduce_outliers")[0]
-    rng = np.random.default_rng(SEED)
+    rng = np.random.default_rng(SEED_AMOSTRA_OUTLIERS)
     am = np.sort(rng.choice(idx_out, size=a.n, replace=False))
     S = E[am] @ nu.cent.T
     atrib = nu.top[am]
@@ -203,7 +203,7 @@ def amostrar(a) -> None:
     pd.DataFrame(linhas).to_csv(dest, index=False, encoding="utf-8-sig")
     pd.DataFrame(oculto).to_csv(ANOT / "outliers_analise_erros_OCULTO.csv", index=False, encoding="utf-8-sig")
     (ANOT / "outliers_analise_erros_codigos.json").write_text(json.dumps({"motivo": CODIGOS_MOTIVO, "reatribuicao": CODIGOS_REATRIB,
-        "outro_seria_melhor": {"S": "sim", "N": "não"}, "modelo": tag, "seed": SEED, "n": a.n},
+        "outro_seria_melhor": {"S": "sim", "N": "não"}, "modelo": tag, "seed": SEED_AMOSTRA_OUTLIERS, "n": a.n},
         indent=2, ensure_ascii=False), encoding="utf-8")
     cat = [f"# Catálogo de tópicos ({tag})\n",
            "Apoio à anotação: para decidir entre N (não existe tópico para o assunto) e B (existe), "
@@ -212,7 +212,7 @@ def amostrar(a) -> None:
         cat += [f"## {t.Topic} ({t.Count} proposições)", "**Termos:** " + ", ".join(eval(t.Representation)[:10]), ""]
         cat += [f"- {x[:220]}" for x in eval(t.Representative_Docs)[:3]] + [""]
     (ANOT / "outliers_analise_erros_catalogo_topicos.md").write_text("\n".join(cat), encoding="utf-8")
-    print(f"{a.n} outliers sorteados (seed {SEED}) de {len(idx_out)}. Planilha: {dest}")
+    print(f"{a.n} outliers sorteados (seed {SEED_AMOSTRA_OUTLIERS}) de {len(idx_out)}. Planilha: {dest}")
     print("Não abra o arquivo _OCULTO antes de terminar a anotação.")
 
 

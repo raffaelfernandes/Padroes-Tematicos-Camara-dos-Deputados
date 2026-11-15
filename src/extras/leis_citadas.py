@@ -31,6 +31,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, "src")
+from seed import SEED  # noqa: E402
 from fase4_avaliacao import Gabarito  # noqa: E402
 
 P = Path("data/processed")
@@ -99,7 +100,7 @@ def main() -> None:
            + "; ".join(f"{k} ({v})" for k, v in base["lei"].value_counts().head(8).items()) + ".\n"]
 
     linhas = []
-    rng = np.random.default_rng(130)
+    rng = np.random.default_rng(SEED)
     for m, tag in MODELOS.items():
         t = pd.read_parquet(P / f"fase3/topicos_{tag}.parquet")[["id", "topico_alt_ctfidf"]]
         d = base.merge(t, on="id")

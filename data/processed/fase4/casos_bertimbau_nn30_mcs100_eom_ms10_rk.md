@@ -4,102 +4,103 @@ Leia as ementas e escolha de 3 a 5 casos para a Discussão. Os números são do 
 
 ## Convergência: tópicos que juntam vários temas oficiais
 
-### Tópico 7: internet, digitais, proteção, dados (n = 1489; pureza 39%)
+### Tópico 17: política, desenvolvimento, programa, inovação (n = 1070; pureza 30%)
 
-Temas: Direitos Humanos e Minorias (39%); Comunicações (37%); Ciência, Tecnologia e Inovação (24%)
+Temas: Finanças Públicas e Orçamento (30%); Agricultura, Pecuária, Pesca e Extrativismo (30%); Meio Ambiente e Desenvolvimento Sustentável (22%)
 
-- [Direitos Humanos e Minorias] Altera a Lei nº 8.069, de 13 de julho de 1990, que dispõe sobre o Estatuto da Criança e do Adolescente, para estabelecer que o poder público regulará o acesso de crianças e adolescentes a exposições e
-- [Direitos Humanos e Minorias] Dispõe sobre proibição do uso de imagens de crianças e adolescentes em propaganda e manifestação LGBTQIAPN+
-- [Comunicações] Acrescenta artigo à Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais - LGPD), para dispor sobre a proteção de contas de redes sociais invadidas e os direitos dos consumi
-- [Comunicações] Estabelece exigências e prescreve medidas para prevenção do uso indevido dos serviços de telecomunicações por aplicativos "mobile" ou aplicações "web", na exploração ou prestação dos serviços de redes
-- [Ciência, Tecnologia e Inovação] Estabelece fundamentos, princípios e diretrizes e a aplicação da Inteligência Artificial no Brasil.
-- [Ciência, Tecnologia e Inovação] Dispõe sobre o acesso e compartilhamento de dados de titularidade de pessoas físicas e jurídicas por meio da abertura e integração de plataformas e sistemas de informação
-
-### Tópico 44: estabelecimentos, obrigatoriedade, comerciais, instalação (n = 506; pureza 42%)
-
-Temas: Indústria, Comércio e Serviços (42%); Direitos Humanos e Minorias (26%); Direito e Defesa do Consumidor (23%)
-
-- [Indústria, Comércio e Serviços] Obriga os estabelecimentos comerciais em aeroportos e áreas perimetrais a praticarem preços equivalentes aos de mercados fora dessas áreas, com base em preços médios de venda
-- [Indústria, Comércio e Serviços] Dispõe sobre a obrigatoriedade de testes de visibilidade para roupas de banho infantis comercializadas no território nacional, com o objetivo de garantir maior segurança visual das crianças em ambient
-- [Direitos Humanos e Minorias] Dispõe sobre a obrigatoriedade de comunicação de crimes de racismo e injúria racial às autoridades policiais nas ocorrências em estabelecimentos comerciais, de lazer, casas de show, eventos e similare
-- [Direitos Humanos e Minorias] Estabelece a obrigatoriedade de instalação de banheiro familiar e fraldário acessíveis em edifícios públicos ou privados destinados ao uso coletivo.
-- [Direito e Defesa do Consumidor] Disciplina o direito de entrada, em estabelecimentos que promovam atividades culturais, esportivas ou de lazer, de consumidores que portem produtos alimentícios adquiridos em outros estabelecimentos.
-- [Direito e Defesa do Consumidor] Determina a inclusão da data de vencimento do produto no seu respectivo código de barras, utilizado na sua identificação nas gôndolas e nos caixas de pagamento nos estabelecimentos comerciais.
-
-### Tópico 19: militares, constituição, cargos, bombeiros (n = 836; pureza 43%)
-
-Temas: Administração Pública (43%); Defesa e Segurança (38%); Trabalho e Emprego (24%)
-
-- [Administração Pública] Altera a Lei nº 12.300, de 28 de julho de 2010, para reajustar as Tabelas de Vencimentos Básicos dos Servidores Ocupantes de Cargo Efetivo do Quadro de Pessoal do Senado Federal.
-- [Administração Pública] Revoga o caput, bem como, o §1º e o §2º, do Art. 1º, da Lei 7.474/1986, que dispõe sobre medidas de segurança aos ex-Presidentes da República, e dá outras providências, na forma que especifica.
-- [Defesa e Segurança] Dispõe sobre a doação de armas de fogo, utilizada durante o serviço ativo, aos integrantes das polícias federal e rodoviária federal, civis e militares das unidades federativas, polícia penal e guarda
-- [Defesa e Segurança] Institui o seguro de vida para os servidores integrantes do art. 144 da Constituição Federal, bem como para os policiais legislativos federais e estaduais, agentes de trânsito, agentes penitenciários 
-- [Trabalho e Emprego] Acrescenta artigo à Lei Complementar nº 150, de 1º de junho de 2015, para dispor sobre a realização de campanhas de divulgação dos direitos trabalhistas dos empregados domésticos e de promoção da igua
-- [Trabalho e Emprego] Altera a redação do art. 93 da Lei nº 8.213, de 24 de julho de 1991, a fim de garantir a contratação de trabalhadores transplantados.
-
-### Tópico 54: inovação, desenvolvimento, pesquisa, tecnológica (n = 424; pureza 46%)
-
-Temas: Ciência, Tecnologia e Inovação (46%); Finanças Públicas e Orçamento (38%); Indústria, Comércio e Serviços (26%)
-
-- [Ciência, Tecnologia e Inovação] Acrescenta artigo à Lei nº 13.243, de 11 de janeiro de 2016, para assegurar a proteção aos pesquisadores em suas atividades de pesquisa científica.
-- [Ciência, Tecnologia e Inovação] Altera a Lei nº 8.010, de 29 de março de 1990, para dispor sobre o valor do limite global anual, para o exercício de 2021, relativo à importação de bens destinados à pesquisa científica e tecnológica.
-- [Finanças Públicas e Orçamento] Institui Contribuição de Intervenção no Domínio Econômico destinada a financiar ações públicas de apoio ao trabalhador e de recolocação no mercado de trabalho e a financiar projetos de investimento.
 - [Finanças Públicas e Orçamento] Estabelece critérios para o financiamento à exportação de serviços e a projetos no exterior pelo Banco Nacional de Desenvolvimento Econômico e Social.
-- [Indústria, Comércio e Serviços] Institui o Selo de Origem do Norte – SONORTE, destinado à identificação, valorização, rastreabilidade e promoção comercial de produtos de base local oriundos da Região Norte do Brasil, e dá outras pro
-
-### Tópico 50: política, programa, agricultura, agricultura familiar (n = 452; pureza 47%)
-
-Temas: Agricultura, Pecuária, Pesca e Extrativismo (47%); Meio Ambiente e Desenvolvimento Sustentável (31%); Direitos Humanos e Minorias (26%)
-
-- [Agricultura, Pecuária, Pesca e Extrativismo] "Dá nova redação ao caput do artigo 3º da Lei nº 11.326, de 24 de julho de 2006, que estabelece as diretrizes para a formulação da Política Nacional da Agricultura Familiar e Empreendimentos Familiare
-- [Agricultura, Pecuária, Pesca e Extrativismo] Altera a Lei nº 12.188, de 11 de janeiro de 2010, que “Institui a Política Nacional de Assistência Técnica e Extensão Rural para a Agricultura Familiar e Reforma Agrária - PNATER e o Programa Nacional
+- [Finanças Públicas e Orçamento] Dispõe sobre o Cadastro Integrado de Projetos de Investimento.
+- [Agricultura, Pecuária, Pesca e Extrativismo] Institui o Plano Nacional de Incentivo a Hortas Residenciais e Comunitárias.
+- [Agricultura, Pecuária, Pesca e Extrativismo] Institui linha especial de crédito rural
 - [Meio Ambiente e Desenvolvimento Sustentável] Institui a Política Nacional de Infraestrutura Verde.
-- [Meio Ambiente e Desenvolvimento Sustentável] Cria a Política de Incentivo ao saneamento básico de áreas rurais mediante a instalação de Fossas Sépticas Biodigestoras e Jardins Filtrantes.
-- [Direitos Humanos e Minorias] Institui a Política Nacional de Incentivo ao Uso de Tecnologias Sociais e dá outras providências.
-- [Direitos Humanos e Minorias] Cria o Fundo de Desenvolvimento das Comunidades Carentes e Quilombolas de Alcântara.
+- [Meio Ambiente e Desenvolvimento Sustentável] Institui a Política de Convivência com a Seca Nordestina.
 
-### Tópico 18: ambiental, terras, conservação, áreas (n = 883; pureza 55%)
+### Tópico 31: estabelecimentos, obrigatoriedade, segurança, eventos (n = 551; pureza 34%)
 
-Temas: Meio Ambiente e Desenvolvimento Sustentável (54%); Estrutura Fundiária (26%); Agricultura, Pecuária, Pesca e Extrativismo (22%)
+Temas: Indústria, Comércio e Serviços (34%); Direitos Humanos e Minorias (30%); Defesa e Segurança (28%)
 
-- [Meio Ambiente e Desenvolvimento Sustentável] Altera a Lei nº 9.605, de 12 de fevereiro de 1998, que "dispõe sobre as infrações e sanções administrativas ao meio ambiente, estabelece o processo administrativo federal para apuração destas infraçõe
-- [Meio Ambiente e Desenvolvimento Sustentável] Altera a descrição do Código 20 do Anexo VIII da Lei nº 6.938, de 31 de agosto de 1981, acrescido pela Lei nº 10.165, de 27 de dezembro de 2000, para excluir a silvicultura do rol de atividades potenc
-- [Estrutura Fundiária] Altera a Lei nº 8.629, de 25 de fevereiro de 1993, que "dispõe sobre a regulamentação dos dispositivos constitucionais relativos à reforma agrária, previstos no Capítulo III, Título VII, da Constituiç
-- [Estrutura Fundiária] Altera o art. 2º da Lei nº 8.629, de 25 de fevereiro de 1993.
-- [Agricultura, Pecuária, Pesca e Extrativismo] Altera a Lei nº 9.456, de 25 de abril de 1997 (Lei de Proteção de Cultivares), para aumentar o prazo de vigência do direito de proteção de novas cultivares, e dá outras providências.
-- [Agricultura, Pecuária, Pesca e Extrativismo] Altera a Lei nº 8.629, de 25 de fevereiro de 1993, que “dispõe sobre a regulamentação dos dispositivos constitucionais relativos à reforma agrária, previstos no Capítulo III, Título VII, da Constituiç
+- [Indústria, Comércio e Serviços] Estabelece que as lojas de materiais de construção prestam serviço essencial, estando submetidas a regime especial de funcionamento, nos termos em que especifica.
+- [Indústria, Comércio e Serviços] Dispõe sobre a obrigatoriedade de testes de visibilidade para roupas de banho infantis comercializadas no território nacional, com o objetivo de garantir maior segurança visual das crianças em ambient
+- [Direitos Humanos e Minorias] Dispõe sobre a obrigatoriedade dos hospitais públicos e privados e instituições similares a notificarem ocorrências de uso de bebida alcoólica e entorpecentes por crianças e adolescentes.
+- [Direitos Humanos e Minorias] Institui o Protocolo Nacional Antirracista para prevenção, acolhimento, atendimento e encaminhamento de vítimas de racismo e injúria racial em estabelecimentos privados de grande circulação de pessoas
+- [Defesa e Segurança] Dispõe sobre a instalação de sistema de monitoramento com câmeras de segurança em estacionamentos de locais privados abertos ao público com fins comerciais.
+- [Defesa e Segurança] Dispõe sobre a obrigatoriedade de instalação de câmeras de vigilância no uniforme  de seguranças e vigilantes de empresas particulares que exploram serviços de vigilância e de transporte de valores. A
+
+### Tópico 28: internet, dados, digitais, dados pessoais (n = 786; pureza 43%)
+
+Temas: Comunicações (43%); Ciência, Tecnologia e Inovação (34%); Indústria, Comércio e Serviços (20%)
+
+- [Comunicações] Altera a Lei nº 12.965, de 23 de abril de 2014, para dispor sobre a publicação na internet de imagens de pessoas falecidas.
+- [Comunicações] Altera o Art. 18 da Lei nº 12.965, de 23 de abril de 2014, o Marco Civil da Internet - MCI, para proibir a censura sobre palavras e expressões ou posições políticas nos conteúdos postados por usuários
+- [Ciência, Tecnologia e Inovação] Altera a Lei nº 9.279, de 14 de maio de 1996, que regula direitos e obrigações relativos à propriedade industrial, para dispor sobre a extensão da vigência da patente.
+- [Ciência, Tecnologia e Inovação] Altera a Lei nº 13.709/2018 para incluir os dados neurais no rol de dados pessoais sensíveis, definir parâmetros técnicos para seu tratamento, estabelecer regras especiais para coleta, uso, armazename
+- [Indústria, Comércio e Serviços] Dispõe sobre a regulamentação e funcionamento dos escritórios virtuais, business centers, coworkings e assemelhados em todo território nacional, e dá outras providências.
+- [Indústria, Comércio e Serviços] Estabelece diretrizes nacionais para o compartilhamento de indicadores de fraude digital, a cooperação entre agentes públicos e privados na prevenção de golpes eletrônicos e a proteção dos consumidore
+
+### Tópico 42: universidade, campus, autoriza poder, desenvolvimento (n = 250; pureza 47%)
+
+Temas: Economia (47%); Educação (38%); Finanças Públicas e Orçamento (24%)
+
+- [Economia] Altera a Lei Complementar nº 94, de 19 de fevereiro de 1998, que autoriza o Poder Executivo a criar a Região Integrada de Desenvolvimento do Distrito Federal e Entorno - RIDE e instituir o Programa Es
+- [Economia] Cria a Zona Franca do Distrito Federal e Entorno.
+- [Educação] Autoriza o Poder Executivo a criação da Universidade Federal de Teófilo Otoni (UFTO), com sede no Município de Teófilo Otoni – MG.
+- [Educação] Dispõe sobre a criação do Instituto Federal de Educação, Ciência e Tecnologia do Sertão da Paraíba - IFSPB, por desmembra-mento do Instituto Federal de Educação, Ciência e Tecnologia da Paraíba - IFPB
+- [Finanças Públicas e Orçamento] Altera a Lei nº 9.532, de 10 de dezembro de 1997, para aplicar o prazo de vigência dos benefícios fiscais das Áreas de Livre Comércio à Amazônia Ocidental.
+
+NOVA EMENTA: Altera a Lei nº 9.532, de 10
+
+### Tópico 58: selo, selo empresa, programa, amiga (n = 220; pureza 48%)
+
+Temas: Educação (48%); Direitos Humanos e Minorias (45%); Trabalho e Emprego (19%)
+
+- [Educação] Institui o Programa “Mães na Escola” e dá outras providências.
+- [Educação] Revoga a Lei nº 13.415, de 16 de fevereiro de 2017, que estabeleceu a chamada “Reforma do Ensino Médio”.
+- [Direitos Humanos e Minorias] Institui a Política Nacional de Enfrentamento ao Capacitismo.
+- [Trabalho e Emprego] Altera dispositivo da Lei nº 12.852, de 5 de agosto de 2013, que institui o Estatuto da Juventude, para dispor sobre a Central do Jovem Trabalhador Inovador.
+- [Trabalho e Emprego] Institui o Estatuto do Aprendiz e dá outras providências.
+
+### Tópico 18: terras, conservação, áreas, ambiental (n = 753; pureza 48%)
+
+Temas: Meio Ambiente e Desenvolvimento Sustentável (48%); Estrutura Fundiária (31%); Administração Pública (24%)
+
+- [Meio Ambiente e Desenvolvimento Sustentável] Obriga o Poder Público e a iniciativa privada a priorizar a reintrodução de espécies similares ou compatíveis à vegetação local ao promover o reflorestamento
+- [Meio Ambiente e Desenvolvimento Sustentável] Altera a Lei Complementar nº 140, de 2011, para dirimir situação decorrente da lavratura de auto de infração e termo de embargo ambiental por mais de um órgão fiscalizador, prevalecendo o auto de infr
+- [Estrutura Fundiária] Altera a Lei nº 8.629, de 25 de fevereiro de 1993, para estabelecer o prazo de dois anos para a titulação definitiva de beneficiários de programas de reforma agrária, a partir da concessão de uso.
+- [Estrutura Fundiária] Regulamenta o art. 190 da Constituição Federal para dispor sobre a aquisição e o exercício de qualquer modalidade de posse, inclusive o arrendamento, de propriedades rurais por pessoas físicas ou jurí
+- [Administração Pública] Altera a Lei 9. 784 (Lei de Processo Administrativo), para estabelecer como motivação de decisão a avaliação de impactos econômicos, sociais e ambientais.
+- [Administração Pública] Disciplina a cessão onerosa de direitos à denominação de bens públicos pertencentes à União ou às pessoas jurídicas da administração indireta federal.
 
 ## Fragmentação: temas oficiais espalhados por muitos tópicos
 
-### Administração Pública (n = 6022; 66 tópicos; 27 cobrem 80%)
+### Administração Pública (n = 6022; 67 tópicos; 26 cobrem 80%)
 
-Principais tópicos: 17 administração, administração pública, li (12%); 0 covid, coronavírus, pública, calamidade (8%); 19 militares, constituição, cargos, bombeir (6%)
+Principais tópicos: 0 covid, coronavírus, calamidade, pública (9%); 32 administração, administração pública, li (8%); 14 complementar, constituição, recursos, fi (7%)
 
-### Direitos Humanos e Minorias (n = 11076; 66 tópicos; 22 cobrem 80%)
+### Direitos Humanos e Minorias (n = 11076; 67 tópicos; 23 cobrem 80%)
 
-Principais tópicos: 6 violência, doméstica, violência doméstic (11%); 1 penal, código penal, crime, crimes (7%); 20 transtorno, autista, espectro, transtorn (6%)
-
-### Relações Internacionais e Comércio Exterior (n = 374; 51 tópicos; 17 cobrem 80%)
-
-Principais tópicos: 23 imposto, produtos industrializados, indu (12%); 0 covid, coronavírus, pública, calamidade (9%); 1 penal, código penal, crime, crimes (7%)
+Principais tópicos: 2 saúde, único saúde, sistema único, sus (9%); 10 violência, doméstica, violência doméstic (8%); 1 código penal, penal, crime, código (7%)
 
 ### Indústria, Comércio e Serviços (n = 3808; 64 tópicos; 22 cobrem 80%)
 
-Principais tópicos: 13 produtos, medicamentos, alimentos, comer (11%); 22 consumidor, defesa consumidor, código de (9%); 32 pequeno, pequeno porte, microempresas, p (8%)
+Principais tópicos: 0 covid, coronavírus, calamidade, pública (9%); 35 produtos, alimentos, bebidas, comerciali (9%); 44 pequeno porte, pequeno, complementar, po (8%)
 
-### Cidades e Desenvolvimento Urbano (n = 1648; 61 tópicos; 19 cobrem 80%)
+### Relações Internacionais e Comércio Exterior (n = 374; 50 tópicos; 18 cobrem 80%)
 
-Principais tópicos: 5 trânsito, código trânsito, trânsito bras (12%); 0 covid, coronavírus, pública, calamidade (8%); 60 programa casa, casa, casa vida, vida (8%)
+Principais tópicos: 0 covid, coronavírus, calamidade, pública (16%); 23 imposto, produtos industrializados, indu (13%); 17 política, desenvolvimento, programa, ino (7%)
+
+### Cidades e Desenvolvimento Urbano (n = 1648; 62 tópicos; 17 cobrem 80%)
+
+Principais tópicos: 6 trânsito, código trânsito, trânsito bras (12%); 20 transporte, passageiros, mobilidade, col (9%); 17 política, desenvolvimento, programa, ino (9%)
 
 ## Dispersão
 
-2842 proposições (7.1%) dividem tema oficial com o resto do tópico menos do que o acaso prevê para elas. Tópicos com mais casos: 2 (264); 0 (241); 19 (192); 7 (172); 3 (145)
+2460 proposições (6.2%) dividem tema oficial com o resto do tópico menos do que o acaso prevê para elas. Tópicos com mais casos: 0 (255); 3 (244); 1 (129); 14 (121); 17 (108)
 
-- tópico 5 (trânsito, código trânsito, trânsito) | temas: Meio Ambiente e Desenvolvimento Sustentável | Altera o § 3º, do art. 25, da Lei nº 9.605, de 12 de fevereiro de 1998, para dispor sobre a destinação de produto perecível ou madeira apreendidos em caso de in
-- tópico 20 (transtorno, autista, espectro, tran) | temas: Meio Ambiente e Desenvolvimento Sustentável; Ciência, Tecnologia e Inovação | Institui o Programa Nacional de Fomento e Apoio à Produção de Órteses para Animais com Deficiência de Mobilidade em parceria com Universidades Federais e dá out
-- tópico 0 (covid, coronavírus, pública, calami) | temas: Educação | Acrescenta o artigo 5º-D à Lei nº 10.260, de 12 de julho de 2020, que dispõe sobre o Fundo de Financiamento ao estudante do Ensino Superior e dá outras providên
-- tópico 2 (civil, processo civil, código civil) | temas: Direito Penal e Processual Penal; Direitos Humanos e Minorias; Defesa e Segurança | Modifica o art. 226 do Decreto-Lei n° 3.689, de 1941, que dispõe sobre o reconhecimento de pessoas e coisas.
-- tópico 0 (covid, coronavírus, pública, calami) | temas: Administração Pública; Defesa e Segurança | Torna privativo a Oficial General da Ativa das Forças Armadas, MARINHA, EXÉRCITO E AERONÁUTICA, a nomeação para o COMANDO DO MINISTÉRIO DA DEFESA, obedecendo ao
-- tópico 19 (militares, constituição, cargos, bo) | temas: Comunicações | Altera a Lei nº 12.965, de 23 de abril de 2014, para estabelecer a autoridade policial a requisição de dados.
-- tópico 16 (energia, elétrica, energia elétrica) | temas: Esporte e Lazer; Finanças Públicas e Orçamento | Dispõe sobre incentivos tributários para a produção de energia elétrica a partir de fontes eólica e solar.
-- tópico 2 (civil, processo civil, código civil) | temas: Direito Penal e Processual Penal; Direitos Humanos e Minorias | Determina que a sustentação oral seja realizada preferencialmente de forma presencial no processo penal.
+- tópico 17 (política, desenvolvimento, programa) | temas: Cidades e Desenvolvimento Urbano; Energia, Recursos Hídricos e Minerais; Saúde | Institui a Política Nacional de Soluções Sanitárias Simplificadas – “Lei da Fossa Segura”, voltada à implantação, regularização e manutenção de sistemas de esgo
+- tópico 13 (profissão, exercício, exercício pro) | temas: Esporte e Lazer; Meio Ambiente e Desenvolvimento Sustentável; Agricultura, Pecuária, Pesca e Extrativismo | Dispõe sobre a definição geral de pesca esportiva, proíbe a intermediação obrigatória, estabelece a prioridade da pesca artesanal e dá outras providências.
+- tópico 14 (complementar, constituição, recurso) | temas: Meio Ambiente e Desenvolvimento Sustentável | Incluem-se os artigos 9-A, §§1º ao 3º e 9-B a Lei nº 7.173, de 14 de dezembro de 1983 e dá outras providências.
+- tópico 48 (crianças adolescentes, crianças, ad) | temas: Saúde; Indústria, Comércio e Serviços; Direito e Defesa do Consumidor | "Altera  a Lei nº 9.294, de 15 de julho de 1996 (Lei Murad), para restringir a publicidade de medicamentos nos meios de comunicação social."
+- tópico 0 (covid, coronavírus, calamidade, púb) | temas: Direitos Humanos e Minorias; Energia, Recursos Hídricos e Minerais; Indústria, Comércio e Serviços; Direito e Defesa do Consumidor | Proíbe a cobrança de taxa de religação da unidade consumidora após a quitação de débito com a distribuidora responsável pelo fornecimento durante o estado de ca
+- tópico 66 (improbidade, improbidade administra) | temas: Processo Legislativo e Atuação Parlamentar; Defesa e Segurança | Institui o Programa Nacional de Proteção a Parlamentar, de qualquer nível da Federação, que esteja exposto a grave ameaça que dificulte ou possa impossibilitar 
+- tópico 65 (meio ambiente, ambientais, administ) | temas: Comunicações | Estabelece que a disseminação deliberada de informações falsas que causem danos à saúde mental ou à integridade física de outrem estará sujeita às medidas restr
+- tópico 2 (saúde, único saúde, sistema único, ) | temas: Direito Penal e Processual Penal; Defesa e Segurança | Altera a Lei 11.343, de 23 de agosto de 2006, que institui o Sistema Nacional de Políticas Públicas sobre Drogas - Sisnad; prescreve medidas para prevenção do u

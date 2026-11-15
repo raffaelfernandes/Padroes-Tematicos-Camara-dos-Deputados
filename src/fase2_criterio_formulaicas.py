@@ -28,6 +28,8 @@ from __future__ import annotations
 import argparse
 import re
 
+from seed import SEED_AMOSTRA_FORMULAICAS_VAL
+
 ABERTURA = re.compile(
     r"^[\s\"'“”«»]*(altera(-se)?|acrescenta(-se)?|acresce|revoga|d[áa] nova reda[çc][ãa]o|"
     r"inclui|modifica|insere|suprime)\b",
@@ -187,7 +189,7 @@ if __name__ == "__main__":
     s.add_argument("--n", type=int, default=100)
     s.add_argument("--K", type=int, default=1)
     s.add_argument("--saida", default="amostra_validacao.csv")
-    s.add_argument("--seed", type=int, default=7)
+    s.add_argument("--seed", type=int, default=SEED_AMOSTRA_FORMULAICAS_VAL)
     v = sub.add_parser("validar", help="métricas na amostra de validação anotada")
     v.add_argument("csv")
     v.add_argument("--gabarito", required=True)
