@@ -213,7 +213,9 @@ def p_normal(z: np.ndarray) -> np.ndarray:
     return np.array([math.erfc(abs(v) / math.sqrt(2)) for v in z])
 
 
-def rq2(d: pd.DataFrame, nomes: dict, leg: int) -> tuple[pd.DataFrame, float]:
+def rq2(d: pd.DataFrame, nomes: dict, leg: int, a0: float = PRIOR_A0, pct: float = 90) -> tuple[pd.DataFrame, float]:
+    """a0: força do prior de Dirichlet; pct: percentil da produção por deputado usado como limite C
+    (os padrões são os do texto; outros valores servem à análise de sensibilidade)."""
     x = d[(d["legislatura"] == leg) & d["partido"].notna()].copy()
     tam = x["partido"].value_counts()
     partidos = sorted(tam[tam >= MIN_PROP_PARTIDO].index)
@@ -222,14 +224,14 @@ def rq2(d: pd.DataFrame, nomes: dict, leg: int) -> tuple[pd.DataFrame, float]:
     # proposições do deputado no partido e na legislatura e C é o percentil 90 de n_d. Quem produz
     # em massa passa a valer C proposições; ninguém é inflado.
     n_d = x.groupby(["partido", "dep"])["id"].transform("size")
-    C = float(np.percentile(x.groupby(["partido", "dep"]).size(), 90))
+    C = float(np.percentile(x.groupby(["partido", "dep"]).size(), pct))
     x["peso"] = np.minimum(1.0, C / n_d)
     bruto = pd.crosstab(x["partido"], x["topico"]).reindex(columns=tops, fill_value=0)
     limit = x.pivot_table(index="partido", columns="topico", values="peso", aggfunc="sum", fill_value=0) \
              .reindex(columns=tops, fill_value=0)
     tot_b, tot_l = bruto.sum(0).to_numpy(float), limit.sum(0).to_numpy(float)
-    prior_b = PRIOR_A0 * tot_b / tot_b.sum()
-    prior_l = PRIOR_A0 * tot_l / tot_l.sum()
+    prior_b = a0 * tot_b / tot_b.sum()
+    prior_l = a0 * tot_l / tot_l.sum()
     blocos = []
     for p in partidos:
         y_b, y_l = bruto.loc[p].to_numpy(float), limit.loc[p].to_numpy(float)
