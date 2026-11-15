@@ -147,6 +147,12 @@ O teste deve imprimir `True` e o nome da GPU. Máquina usada: RTX 3050 Laptop (6
 - `src/extras/exportar_painel.py`: gera `data/processed/fase4/painel_dados.json`, com os dados do painel interativo dos resultados.
 - `src/extras/robustez_modelos.py`: compara os três modelos no BCubed (tabela lado a lado, IC por bootstrap, teto das apensadas e variação com cinco sementes do UMAP). Saídas em `data/processed/fase4/robustez/`.
 - `src/extras/comparar_modelos.py`: refaz com o Serafim e o e5 a fragmentação, os pares de temas e as assinaturas partidárias, e mede a concordância entre as partições (ARI, NMI e correspondência de tópicos). Saídas em `data/processed/fase4/comparacao_modelos/` (`relatorio.md` e CSVs). Rodar com `uv run python src/extras/comparar_modelos.py`.
+- `src/extras/baselines_classicos.py`: LDA, TF-IDF com K-Means e TF-IDF no mesmo pipeline do BERTopic, avaliados como o modelo principal (BCubed, acaso com os mesmos tamanhos, apensadas, NPMI). Saídas em `data/processed/fase4/baselines/`.
+- `src/extras/leis_citadas.py`: mede quanto os tópicos se organizam pela lei citada na ementa e o BCubed nas ementas com e sem lei citada. Saída em `data/processed/fase4/leis_citadas.md`.
+- `src/extras/sensibilidade_rq2.py`: refaz as assinaturas partidárias com outros valores de a0 e do percentil do peso. Saída em `data/processed/fase5/sensibilidade_rq2.md`.
+- `src/extras/figura_topicos_temas.py`: heatmap dos 15 maiores tópicos contra os temas oficiais (`outputs/figs/fig_topicos_temas.pdf`).
+- `src/extras/inconsistencias_cedi.py`: sorteia pares (proposição, tema) isolados na vizinhança semântica e controles para anotação cega (`amostrar`) e resume a anotação (`resumir`). Planilha em `anotacoes/cedi_inconsistencias.csv`.
+- `src/extras/avaliacao_humana.py`: teste de intrusão de ementas com tópicos do BERTimbau e do LDA misturados (`gerar`) e resumo das respostas (`resumir`). Caderno em `anotacoes/avaliacao_humana.xlsx`.
 
 ## Arquivos em uso
 
