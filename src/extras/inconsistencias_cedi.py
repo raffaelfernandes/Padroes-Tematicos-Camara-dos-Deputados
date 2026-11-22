@@ -151,6 +151,13 @@ def amostrar(a) -> None:
 def resumir(a) -> None:
     v = pd.read_csv(PLANILHA, encoding="utf-8-sig", dtype=str).fillna("")
     o = pd.read_csv(OCULTO, encoding="utf-8-sig")
+    
+    # Normaliza a chave usada no relacionamento
+    v["item"] = v["item"].astype("string").str.strip()
+    o["item"] = o["item"].astype("string").str.strip()
+
+    d = v.merge(o, on="item")
+    
     d = v.merge(o, on="item")
     d["tema_adequado"] = d["tema_adequado"].str.strip().str.upper()
     d["sugerido_se_aplica"] = d["sugerido_se_aplica"].str.strip().str.upper()
